@@ -5,6 +5,6 @@ nav:
   - Home:
       - Home: ''
   - Introduction and Prerequisites:
-      - intro/intro
+      - Introduction: intro/intro
   - Hello Tapis:
-      - hello/hello
+      - Hello Tapis: hello/hello
