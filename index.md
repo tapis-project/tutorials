@@ -8,13 +8,13 @@ and functionality.
 These tutorials utilize the Python programming language to invoke calls to Tapis. All 
 examples utilize the Tapis Python SDK (`tapipy`).  We assume familiarity with Python and basic Unix shell 
 commands throughout this tutorial. We also assume the reader has a TACC account. See the 
-introduction for more details.
+[introduction](https://tapis-project.github.io/tutorials/intro/intro/) for more details.
 
 ## Setting Up The Environment
 A Unix operating system (i.e., Linux or Mac OSX) as well as a recent version of Python 3 
 and the `tapipy` library are required to work through these tutorials (it is likely the
 tutorials will work on WSL but this has not been extensively tested). Additionally, a 
-worker installation of a recent version of Docker (e.g., 20.10.11) is required to build
+working installation of a recent version of Docker (e.g., 20.10.11) is required to build
 the applications.
 
 We have provided a Docker image which can be used for all tutorials that includes all 
