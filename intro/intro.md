@@ -63,7 +63,7 @@ to this:
 
 <img src="../images/jupyter1.png" class="img-responsive" alt="Jupyter interface"> 
 
-## Creating a new Notebook.
+## Creating a New Notebook
 
 To create a new notebook for writing code, start by clicking 'New' in the upper right 
 corner. From here, you will be able to choose what type of notebook you want. For this 
