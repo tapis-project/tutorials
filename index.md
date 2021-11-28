@@ -32,5 +32,6 @@ then start the container from the `tapis/jupyter` image, mounting in the directo
 $ docker run -v $(pwd)/tapis-tutorials:/home/jovyan/data --rm -it -p 8888:8888 tapis/jupyter
 ```
 
-It should have started a single container from the `tapis/jupyter` image, which prints out a url to access the jupyter notebook from the browser.
-You can copy paste this url in your browser and access the jupyter notebook
+The commmand above should have started a single container from the `tapis/jupyter` image, 
+which prints out a url to access the jupyter notebook from the browser.
+You can copy and paste this URL into your browser and access the jupyter notebook.

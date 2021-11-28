@@ -52,6 +52,28 @@ then start the container from the `tapis/jupyter` image, mounting in the directo
 $ docker run -v $(pwd)/tapis-tutorials:/home/jovyan/data --rm -it -p 8888:8888 tapis/jupyter
 ```
 
+## Starting up your Jupyter Notebook Environment
+
+Your jupyter notebook server should be already running at `http://127.0.0.1:8888/?token=` (The one you got in the 
+previous section after running the docker container). You can reach it by going to 
+that location in a browser window.
+
+Once you open a browser with your Jupyter environment, you should see something similar 
+to this: 
+
+<img src="../images/jupyter1.png" class="img-responsive" alt="Jupyter interface"> 
+
+## Creating a new Notebook.
+
+To create a new notebook for writing code, start by clicking 'New' in the upper right 
+corner. From here, you will be able to choose what type of notebook you want. For this 
+tutorial, we will be using Python 3. 
+
+<img src="../images/jupyter2.png" alt="Jupyter Notebook">
+
+Once you open a notebook, you can write and run python code. To execute a line of code, 
+press `shift + Enter`. 
+
 ## Additional Resources
 The following additional resources are also available to you:
 
