@@ -43,6 +43,26 @@ t.get_tokens()
 # Print Tapis v3 token
 t.access_token
 ```
+The output should look something similar to the following:
+
+```
+
+access_token: eyJ0eXAiOiJKV1...
+claims: {'jti': 'dfada014-66ca-4f6e-a57a-48b618a79678', 'iss': 'https://tacc.tapis.io/v3/tokens', 
+'sub': 'jstubbs@tacc', 'tapis/tenant_id': 'tacc', 'tapis/token_type': 'access', 
+'tapis/delegation': False, 'tapis/delegation_sub': None, 'tapis/username': 'jstubbs', 
+'tapis/account_type': 'user', 'exp': 1638153035, 'tapis/client_id': None, 
+'tapis/grant_type': 'password'}
+expires_at: 2021-11-29 02:30:35+00:00
+expires_in: <function Tapis.add_claims_to_token.<locals>._expires_in at 0x7f110806a8b0>
+jti: dfada014-66ca-4f6e-a57a-48b618a79678
+original_ttl: 14400
+```
+
+The actual access token is the string labeled `access_token` beginning with `eyJ..` in 
+the output above. The library dervived the other fields from the token itself, including 
+the set of `claims`. When you make an API request to Tapis passing the token, the API uses
+the claims to determine who you are and what accesses you have.
 
 Now that we have an access token, we are ready to make our first authenticated API 
 request to Tapis. For this "Hello, Tapis" tutorial, we'll make a call to the Profiles 
@@ -54,6 +74,27 @@ Copy the following block into your notebook and run it.
 t.authenticator.get_userinfo()
 
 ```
+You should see your user information in output similar to the following:
+
+```
+create_time: None
+dn: cn=jstubbs,ou=People,dc=tacc,dc=utexas,dc=edu
+email: jstubbs@tacc.utexas.edu
+given_name: Joe
+last_name: Stubbs
+mobile_phone: None
+phone: None
+uid: 811324
+username: jstubbs
+```
+The API request syntax `t.authenticator.get_userinfo()` follows a common 
+pattern: `t.<service>.<endpoint>(<parameters>`. Here, the Tapis service we
+are using is `authenticator` and the specific endpoint we are invoking is the
+`get_userinfo()` endpoint. The `authenticator` service has many other endpoints which
+you can read about in the Tapis reference 
+[documentation](https://tapis.readthedocs.io/en/latest/technical/authentication.html) 
+or in API [specification](https://tapis-project.github.io/live-docs/?service=Authenticator).
+
 
 ## Additional Resources
 See the following links for more information about the above topics.
