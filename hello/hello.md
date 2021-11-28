@@ -27,7 +27,7 @@ password = getpass.getpass(prompt="Password: ", stream=None)
 All of our interactions with Tapis will go through the `Tapis` python object.
 In particular, we can use it to generate a token. 
 
-In your Jupyter notebook copy the blocks below and run them.
+In your Jupyter notebook copy the block below and run it.
 You will get a Tapis v3 token to interact with the Tapis services.
 
 ```
@@ -35,11 +35,30 @@ from tapipy.tapis import Tapis
 base_url = "https://tacc.tapis.io"
 
 # Create python Tapis client for user
-client = Tapis(base_url= base_url, username=username, password=password)
+t = Tapis(base_url= base_url, username=username, password=password)
 
 # *** Tapis v3: Call to Tokens API
-client.get_tokens()
+t.get_tokens()
 
 # Print Tapis v3 token
-client.access_token
+t.access_token
 ```
+
+Now that we have an access token, we are ready to make our first authenticated API 
+request to Tapis. For this "Hello, Tapis" tutorial, we'll make a call to the Profiles 
+service to see that Tapis knows who we are.
+
+Copy the following block into your notebook and run it.
+
+```
+t.authenticator.get_userinfo()
+
+```
+
+## Additional Resources
+See the following links for more information about the above topics.
+
+* _Authentication in Tapis_ - Reference [documentation](https://tapis.readthedocs.io/en/latest/technical/authentication.html)
+* _Details on Tapis JWT_ - Reference [documentation](https://tapis.readthedocs.io/en/latest/technical/authentication.html#using-a-token)
+* _Create a Token API Request_ - API [specification](https://tapis-project.github.io/live-docs/?service=Authenticator#operation/create_token)
+* _User Info API Request_ - API [specification](https://tapis-project.github.io/live-docs/?service=Authenticator#operation/get_userinfo).
