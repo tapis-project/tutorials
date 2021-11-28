@@ -1,4 +1,4 @@
-## Introduction
+# Introduction
 
 The Tapis framework is an application programming interface (API) hosted in the cloud.
 Using Tapis, computational researchers can manage data and execute software on a
@@ -26,7 +26,7 @@ Additionally, the tutorials assume the reader has access to the following:
 * A working computer with Unix (Linux, Mac OSX) 
 * A recent version of Docker installed
 
-## Resources
+## Additional Resources
 The following additional resources are also available to you:
 
 * Tapis reference documentation: https://tapis.readthedocs.org
