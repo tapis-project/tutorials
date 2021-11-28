@@ -88,7 +88,7 @@ uid: 811324
 username: jstubbs
 ```
 The API request syntax `t.authenticator.get_userinfo()` follows a common 
-pattern: `t.<service>.<endpoint>(<parameters>`. Here, the Tapis service we
+pattern: `t.<service>.<endpoint>(<parameters>)`. Here, the Tapis service we
 are using is `authenticator` and the specific endpoint we are invoking is the
 `get_userinfo()` endpoint. The `authenticator` service has many other endpoints which
 you can read about in the Tapis reference 

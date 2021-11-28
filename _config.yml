@@ -6,5 +6,11 @@ nav:
       - Home: ''
   - Introduction and Prerequisites:
       - Introduction: intro/intro
-  - Hello Tapis:
-      - Hello Tapis: hello/hello
+  - Hello, Tapis:
+      - Hello, Tapis: hello/hello
+  - Tapis Systems:
+      - Intro to Systems: systems/intro
+  - Tapis Apps:
+      - Intro to Apps: apps/intro
+  - Tapis Jobs:
+      - Intro to Jobs: jobs/intro
