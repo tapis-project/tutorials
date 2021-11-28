@@ -10,6 +10,9 @@ nav:
       - Hello, Tapis: hello/hello
   - Tapis Systems:
       - Intro to Systems: systems/intro
+      - Creating a VM System: systems/vm
+      - Creating an HPC System: systems/hpc
+      - Creaging an S3 Bucket System: systems/s3
   - Tapis Apps:
       - Intro to Apps: apps/intro
   - Tapis Jobs:
