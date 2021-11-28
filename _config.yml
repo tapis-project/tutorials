@@ -1,0 +1,10 @@
+remote_theme: marella/jekyll-theme-documentation
+
+permalink: pretty
+nav:
+  - Home:
+      - : ''
+  - Introduction and Prerequisites:
+      - intro/intro
+  - Hello Tapis:
+      - hello/hello
