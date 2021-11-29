@@ -64,6 +64,3 @@ system definition:
   "batchDefaultLogicalQueue": "tapisNormal",
 }
 ```
-
-We now need to register credentials for our system so that Tapis can connect to it. We'll
-register an SSH key pair that is authorized for the user we

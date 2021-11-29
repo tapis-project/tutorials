@@ -39,4 +39,14 @@ At a high level a system represents the following information:
 Note that a system may be created as a storage-only resource (*canExec=false*) or as a system that can be used for both
 execution and storage (*canExec=True*).
 
+## Next Steps
+Now that we have covered the concept of Tapis systems, let's begin by registering 
+an HPC system. If you do not have access to an HPC system, you might be interested in 
+registering another kind of system, such as a server or an S3 bucket. The S
+
+
+ [Next-> Registering an HPC System](hpc.md)
+
+
+## Additional Resources 
 For more information about systems and the Systems service please see [Tapis Systems Service documentation](https://tapis.readthedocs.io/en/latest/technical/systems.html).

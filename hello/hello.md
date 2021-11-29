@@ -95,6 +95,12 @@ you can read about in the Tapis reference
 [documentation](https://tapis.readthedocs.io/en/latest/technical/authentication.html) 
 or in API [specification](https://tapis-project.github.io/live-docs/?service=Authenticator).
 
+## Next Steps
+Now that we have covered authenticating with Tapis, let's look at Tapis's concept of a 
+_system_ -- these are the storage and computing resources Tapis will interact with
+on your behalf.
+
+ [Next-> ](../systems/intro.md)
 
 ## Additional Resources
 See the following links for more information about the above topics.
@@ -103,3 +109,4 @@ See the following links for more information about the above topics.
 * _Details on Tapis JWT_ - Reference [documentation](https://tapis.readthedocs.io/en/latest/technical/authentication.html#using-a-token)
 * _Create a Token API Request_ - API [specification](https://tapis-project.github.io/live-docs/?service=Authenticator#operation/create_token)
 * _User Info API Request_ - API [specification](https://tapis-project.github.io/live-docs/?service=Authenticator#operation/get_userinfo).
+

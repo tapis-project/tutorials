@@ -10,13 +10,19 @@ nav:
       - Hello, Tapis: hello/hello
       - Intro to Systems: systems/intro
       - Creating an HPC System: systems/hpc
+      - Registering System Credentials: systems/credentials
       - Managing Data on a System: files/data
-      - Registering an App
+  - Creating Applications and Running Jobs:
+      - Intro to Apps: apps/intro
+      - Creating and Registering a Hello, Tapis app: apps/hello
+      - Executing the Hello, Tapis app: jobs/hello
+      -
   - Tapis Systems:
       - Intro to Systems: systems/intro
       - Registering a Server: systems/vm
       - Registering an HPC System: systems/hpc
       - Registering an S3 Bucket System: systems/s3
+      - Registering System Credentials: systems/credentials
   - Tapis Apps:
       - Intro to Apps: apps/intro
   - Tapis Jobs:
