@@ -39,6 +39,23 @@ At a high level a system represents the following information:
 Note that a system may be created as a storage-only resource (*canExec=false*) or as a system that can be used for both
 execution and storage (*canExec=True*).
 
+## First API Calls With the Systems Service
+As with other Tapis services, using `tapipy` to make API calls to the Systems service will 
+use take the form `t.systems.<endpoint>(args)` for some `<endpoint>`.  
+
+For example, we can get a list of all the systems we have access to using:
+```python
+t.systems.getSystms()
+```
+The response will show us a summary of each system. If we want full details about a 
+specific system, we can use
+
+```python
+ t.systems.getSystem(systemId='<some_system_id')
+```
+Note that you will not have access to any systems until you have registered some. We will
+do that in the next tutorial.
+
 ## Next Steps
 Now that we have covered the concept of Tapis systems, let's begin by registering 
 an HPC system. If you do not have access to an HPC system, you might be interested in 
