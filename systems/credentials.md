@@ -8,13 +8,15 @@ registering a password.
 Copy and paste the following code into your notebook.
 
 ``` python
-t.systems.createUserCredential(systemId='tapisv3-exec-<userid>', 
-                               userName='<userid>', 
+t.systems.createUserCredential(systemId='<system_id>', 
+                               userName='<system_user>', 
                                privateKey='<private_key>',
                                publicKey='<publicKey>'))
 ```
 Replace:
-* ``<userid>`` with your username
+* `<system_id>` with the id of the system you registered in the previous tutorial.
+* ``<system_user>`` with the POSIX user name on the host that Tapis is using on the system
+  (i.e., the effective user).
 * `<private_key>` with the private key for the host.
 * `<public_key>` with the public key for the host.
 
