@@ -60,7 +60,7 @@ original_ttl: 14400
 ```
 
 The actual access token is the string labeled `access_token` beginning with `eyJ..` in 
-the output above. The library dervived the other fields from the token itself, including 
+the output above. The library derived the other fields from the token itself, including 
 the set of `claims`. When you make an API request to Tapis passing the token, the API uses
 the claims to determine who you are and what accesses you have.
 

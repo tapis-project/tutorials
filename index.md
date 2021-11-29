@@ -6,7 +6,7 @@ and functionality.
 
 ## About These Tutorials
 These tutorials utilize the Python programming language to invoke calls to Tapis. All 
-examples utilize the Tapis Python SDK (`tapipy`).  We assume familiarity with Python and basic Unix shell 
+examples use the Tapis Python SDK (`tapipy`).  We assume familiarity with Python and basic Unix shell 
 commands throughout this tutorial. We also assume the reader has a TACC account. See the 
 [introduction](https://tapis-project.github.io/tutorials/intro/intro/) for more details.
 
