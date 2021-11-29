@@ -24,6 +24,7 @@ s2_system = {
   "systemType": "LINUX",
   "host": "stampede2.tacc.utexas.edu",
   "defaultAuthnMethod": "PKI_KEYS",
+  "effectiveUserId": "${apiUserId}",
   "port": 22,
   "rootDir": "/",
   "canExec": True,
@@ -51,8 +52,15 @@ s2_system = {
   ]
 }
 ```
-Note that our description of Stampede2 includes just one queue, the normal queue. We can
-add additional queues to the description if we wish to submit jobs to them.
+In the description above, we set `effectiveUserId` to the string `${apiUserId}`. That
+tells Tapis to use the identity (that is, the `username`) associated with the token on
+the API request whenever it interacts with this system. We could have just hard-coded our
+own username (e.g., `"jstubbs"`) instead, but this approach means that if we share the 
+system with another Tapis user, Tapis will use that user's identity to interact with the
+system instead of our own. We'll cover sharing in more detail in a future tutorial.
+
+To keep things simple, our description of Stampede2 includes just one queue, the normal 
+queue. We can add additional queues to the description if we wish to submit jobs to them.
 
 Note also our use of `HOST_EVAL($WORK2)` for `jobWorkingDir`. The `HOST_EVAL()` function
 instructs tapis to evaluate an environment variable (in this case, the `$WORK2` variable)
@@ -119,3 +127,7 @@ Note that before we can actually use this system with Tapis, we will need to reg
 at least one credential for it. We will do that next.
 
 [Next-> Registering System Credentials](credentials.md)
+
+
+## Additional Resources
+* _Additional details about the Systems endpoints_ - API [specification](https://tapis-project.github.io/live-docs/?service=Systems)

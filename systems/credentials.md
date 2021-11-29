@@ -1,7 +1,8 @@
 # Registering Credentials for a System
 Now that you have registered a system you will need to register credentials to allow 
 Tapis to access the host. Various authentication methods can be used to access a system, 
-such as PASSWORD and PKI_KEYS. Here we will cover registering keys first and then 
+such as PASSWORD and PKI_KEYS. Here we will cover registering keys first (this was the
+default authentication method we used when registering our Stampede2 system) and then 
 registering a password.
 
 ## Registering SSH Keys

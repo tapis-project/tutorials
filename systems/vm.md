@@ -64,3 +64,6 @@ system definition:
   "batchDefaultLogicalQueue": "tapisNormal",
 }
 ```
+
+## Additional Resources
+* _Additional details about the Systems endpoints_ - API [specification](https://tapis-project.github.io/live-docs/?service=Systems) 
