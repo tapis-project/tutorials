@@ -16,7 +16,6 @@ nav:
       - Intro to Apps: apps/intro
       - Creating and Registering a Hello, Tapis app: apps/hello
       - Executing the Hello, Tapis app: jobs/hello
-      -
   - Tapis Systems:
       - Intro to Systems: systems/intro
       - Registering a Server: systems/vm
