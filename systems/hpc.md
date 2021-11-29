@@ -111,4 +111,11 @@ minMemoryMB: 1
 minMinutes: 1
 minNodeCount: 1
 name: tapisNormal]
+...
 ```
+
+## Next Steps
+Note that before we can actually use this system with Tapis, we will need to register
+at least one credential for it. We will do that next.
+
+[Next-> Registering System Credentials](credential.md)

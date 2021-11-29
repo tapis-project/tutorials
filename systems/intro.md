@@ -66,4 +66,4 @@ registering another kind of system, such as a server or an S3 bucket. The S
 
 
 ## Additional Resources 
-For more information about systems and the Systems service please see [Tapis Systems Service documentation](https://tapis.readthedocs.io/en/latest/technical/systems.html).
+* _Additional information about the Systems_ - Reference [documentation](https://tapis.readthedocs.io/en/latest/technical/systems.html).
