@@ -100,7 +100,7 @@ Now that we have covered authenticating with Tapis, let's look at Tapis's concep
 _system_ -- these are the storage and computing resources Tapis will interact with
 on your behalf.
 
- [Next-> ](../systems/intro.md)
+ [Next-> Introduction to Systems](../systems/intro.md)
 
 ## Additional Resources
 See the following links for more information about the above topics.
