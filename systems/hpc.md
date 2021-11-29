@@ -118,4 +118,4 @@ name: tapisNormal]
 Note that before we can actually use this system with Tapis, we will need to register
 at least one credential for it. We will do that next.
 
-[Next-> Registering System Credentials](credential.md)
+[Next-> Registering System Credentials](credentials.md)
