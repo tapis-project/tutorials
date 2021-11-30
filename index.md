@@ -7,8 +7,26 @@ and functionality.
 ## About These Tutorials
 These tutorials utilize the Python programming language to invoke calls to Tapis. All 
 examples use the Tapis Python SDK (`tapipy`).  We assume familiarity with Python and basic Unix shell 
-commands throughout this tutorial. We also assume the reader has a TACC account. See the 
+commands throughout these tutorials. We also assume the reader has a TACC account. See the 
 [introduction](https://tapis-project.github.io/tutorials/intro/intro/) for more details.
+
+## How To Use These Tutorials
+Each tutorial is a short and (relatively) self-contained unit covering a single topic.
+If you know what you want to do, in theory, you should be able to jump straight to the 
+tutorial covering the partical topic. For example, if you are interested in working
+with S3 in Tapis, you might want to jump straight to the tutorial on 
+[Registering an S3 Bucket](systems/s3.md).
+
+While the tutorials are constructed to be modular units, some of them also naturally
+build on each other to form a series. We have collected some of these into tutorial series
+which can be found in the left nav. The "Registering Systems and Managing Data" series
+and the "Creating Applications and Running Jobs" are two examples.
+
+If you are entirely new to Tapis and just want to get a general sense for its capabilities,
+it is probably best to start with the Introduction and work through the tutorial series in
+the order that they appear in the left nav. Thus, move to the "Registering Systems and 
+Managing Data" after the Introduction, then to "Creating Applications and Running Jobs",
+etc. 
 
 ## Setting Up The Environment
 A Unix operating system (i.e., Linux or Mac OSX) as well as a recent version of Python 3 

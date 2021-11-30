@@ -6,7 +6,7 @@ nav:
       - Home: ''
   - Introduction and Prerequisites:
       - Introduction: intro/intro
-  - First Steps -- Registering Systems and Managing Data:
+  - Registering Systems and Managing Data:
       - Hello, Tapis: hello/hello
       - Intro to Systems: systems/intro
       - Creating an HPC System: systems/hpc
