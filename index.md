@@ -8,7 +8,7 @@ and functionality.
 These tutorials utilize the Python programming language to invoke calls to Tapis. All 
 examples use the Tapis Python SDK (`tapipy`).  We assume familiarity with Python and basic Unix shell 
 commands throughout these tutorials. We also assume the reader has a TACC account. See the 
-[introduction](https://tapis-project.github.io/tutorials/intro/intro/) for more details.
+[introduction](intro/intro.md) for more details.
 
 ## How To Use These Tutorials
 Each tutorial is a short and (relatively) self-contained unit covering a single topic.
@@ -25,18 +25,14 @@ and the "Creating Applications and Running Jobs" are two examples.
 If you are entirely new to Tapis and just want to get a general sense for its capabilities,
 it is probably best to start with the Introduction and work through the tutorial series in
 the order that they appear in the left nav. Thus, move to the "Registering Systems and 
-Managing Data" after the Introduction, then to "Creating Applications and Running Jobs",
-etc. 
+Managing Data" series after the Introduction, then to "Creating Applications and Running Jobs",
+series, etc. 
 
 ## Setting Up The Environment
-A Unix operating system (i.e., Linux or Mac OSX) as well as a recent version of Python 3 
-and the `tapipy` library are required to work through these tutorials (it is likely the
-tutorials will work on WSL but this has not been extensively tested). Additionally, a 
-working installation of a recent version of Docker (e.g., 20.10.11) is required to build
-the applications.
+Details about setting up the environment are provided in the [introduction](intro/intro.md).
 
-We have provided a Docker image which can be used for all tutorials that includes all 
-necessary software pre-installed.
+If you are rearing to get started, you can use the Docker image we have provided for all 
+tutorials; it includes all necessary software pre-installed.
 
 To use it, first create a directory to hold your work:
 
@@ -50,6 +46,6 @@ then start the container from the `tapis/jupyter` image, mounting in the directo
 $ docker run -v $(pwd)/tapis-tutorials:/home/jovyan/data --rm -it -p 8888:8888 tapis/jupyter
 ```
 
-The commmand above should have started a single container from the `tapis/jupyter` image, 
+The command above should have started a single container from the `tapis/jupyter` image, 
 which prints out a url to access the jupyter notebook from the browser.
 You can copy and paste this URL into your browser and access the jupyter notebook.
