@@ -1,12 +1,14 @@
 # Introduction to Tapis Systems
-Once you are authorized to make calls to the various services, one of first things you may want to do is view storage
-and execution resources available to you or create your own. In Tapis a storage or execution resource is referred
-to as a **system**. Note that a single system in Tapis can act as both a storage and execution resource. It can also be
-shared among users in the tenant.
+Once you are authorized to make calls to the various services, one of first things you may 
+want to do is view storage
+and execution resources available to you or create your own. In Tapis, a storage or 
+execution resource is referred
+to as a **system**. Note that a single system in Tapis can act as both a storage and 
+execution resource. It can also be shared among Tapis users.
 
 ## Overview
 A Tapis system represents a server or collection of servers exposed through a single host name or IP address.
-Each system is associated with a specific tenant. A system can be used for the following purposes:
+A system can be used for the following purposes:
 
 * Running a job, including:
 
@@ -16,8 +18,10 @@ Each system is associated with a specific tenant. A system can be used for the f
 
 * Storing and retrieving files and data.
 
-Each system is of a specific type (such as LINUX or S3) and owned by a specific user who has special privileges for
-the system. The system definition also includes the user that is used to access the system, referred to as
+Each system is of a specific type (such as `LINUX` or `S3`) and owned by a specific user 
+who has special privileges for
+the system. The system definition also includes the user that is used to access the system, 
+referred to as
 *effectiveUserId*. This access user can be a specific user (such as a service account) or dynamically specified as
 ``${apiUserId}``. For the case of ``${apiUserId}``, the username is extracted from the identity associated with the
 request to the service.
@@ -36,8 +40,8 @@ At a high level a system represents the following information:
 * **canExec** - Flag indicating if the system can be used to execute jobs.
 * **job execution attributes** - Various attributes related to job execution such as *jobRuntimes*, *jobWorkingDir*, etc.
 
-Note that a system may be created as a storage-only resource (*canExec=false*) or as a system that can be used for both
-execution and storage (*canExec=True*).
+Note that a system may be created as a storage-only resource (`canExec=false`) or as a system that can be used for both
+execution and storage (`canExec=True`).
 
 ## First API Calls With the Systems Service
 As with other Tapis services, using `tapipy` to make API calls to the Systems service will 

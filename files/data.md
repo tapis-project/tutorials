@@ -1,8 +1,8 @@
 # Managing Data on a System
 
-Now that we have a system registered and credential added, we can now start using Tapis to 
-do some "real" work. In this short tutorial, we will use the Files API to get a file 
-listing on a directory, upload and download files.
+Now that we have a system created and a credential registered, we can now start using Tapis
+to do some "real" work. In this short tutorial, we will use the Files API to get a file 
+listing on a directory, upload a file to the directory, and download a file.
 
 ## Listing Files in a Directory
 To list files on a path, use the `listFiles()` endpoint of the `files` service, like so:

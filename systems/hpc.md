@@ -3,15 +3,15 @@ HPC systems usually rely on a batch scheduler such as Slurm to schedule jobs on 
 of machines. You can register an HPC cluster as a Tapis system to enable to Tapis to 
 submit and monitor jobs on the cluster for you.
 
-In this example, we will register the Stampede2 supercomputer at TACC. Registering 
-Stampede2 with Tapis requires that your TACC account have a valid allocation on 
+In this example, we will register the Stampede2 supercomputer at TACC. Access to 
+Stampede2 requires that your TACC account have a valid allocation on 
 Stampede2. If you do not have an allocation on Stampede2, you can still use the concepts
 illustrated in this tutorial to register another HPC cluster that you do have access to.
 
 ## The System Description 
 To register a system with Tapis, you describe the system in a JSON object. The description
 includes information about how to connect to the system, what kind of conatiner runtimes
-are available, what scheduler types and the queues defined.
+are available, what scheduler types, the queues defined, and more.
 
 The following contains a description of the Stampede2 cluster. Copy and paste the code
 below into your Jupyter notebook, and update `<username>` in the `id` field to your
@@ -52,7 +52,7 @@ s2_system = {
   ]
 }
 ```
-In the description above, we set `effectiveUserId` to the string `${apiUserId}`. That
+In the description above, we set `effectiveUserId` to the string `${apiUserId}`. Recall that
 tells Tapis to use the identity (that is, the `username`) associated with the token on
 the API request whenever it interacts with this system. We could have just hard-coded our
 own username (e.g., `"jstubbs"`) instead, but this approach means that if we share the 
@@ -63,9 +63,10 @@ To keep things simple, our description of Stampede2 includes just one queue, the
 queue. We can add additional queues to the description if we wish to submit jobs to them.
 
 Note also our use of `HOST_EVAL($WORK2)` for `jobWorkingDir`. The `HOST_EVAL()` function
-instructs tapis to evaluate an environment variable (in this case, the `$WORK2` variable)
+instructs Tapis to evaluate an environment variable (in this case, the `$WORK2` variable)
 _on the host itself_ to determine the working directory for jobs. This is useful 
-whenever you want the job working directory to vary for different users.
+whenever you want the job working directory to be dynamically determined from a variable
+defined on the system.
 
 With the system description defined, we are ready to register it with Tapis. We do that
 as follows:

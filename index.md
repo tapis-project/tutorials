@@ -8,7 +8,7 @@ and functionality.
 These tutorials utilize the Python programming language to invoke calls to Tapis. All 
 examples use the Tapis Python SDK (`tapipy`).  We assume familiarity with Python and basic Unix shell 
 commands throughout these tutorials. We also assume the reader has a TACC account. See the 
-[introduction](intro/intro.md) for more details.
+[Introduction](intro/intro.md) for more details.
 
 ## How To Use These Tutorials
 Each tutorial is a short and (relatively) self-contained unit covering a single topic.
@@ -23,13 +23,14 @@ which can be found in the left nav. The "Registering Systems and Managing Data" 
 and the "Creating Applications and Running Jobs" are two examples.
 
 If you are entirely new to Tapis and just want to get a general sense for its capabilities,
-it is probably best to start with the Introduction and work through the tutorial series in
+it is probably best to start with the [Introduction](intro/intro.md) and work through the 
+tutorial series in
 the order that they appear in the left nav. Thus, move to the "Registering Systems and 
-Managing Data" series after the Introduction, then to "Creating Applications and Running Jobs",
-series, etc. 
+Managing Data" series after the Introduction, then to the "Creating Applications and 
+Running Jobs" series, etc. 
 
 ## Setting Up The Environment
-Details about setting up the environment are provided in the [introduction](intro/intro.md).
+Details about setting up the environment are provided in the [Introduction](intro/intro.md).
 
 If you are rearing to get started, you can use the Docker image we have provided for all 
 tutorials; it includes all necessary software pre-installed.

@@ -1,6 +1,6 @@
 # Hello, Tapis
-In this first tutorial, we learn to authenticate with Tapis using our TACC username 
-and password and make our first API request.
+In this first tutorial, we will learn to authenticate with Tapis using our TACC username 
+and password; then we will make our first API request to Tapis.
 
 As discussed in the introduction, we will use the official Tapis Python SDK for all of our 
 interactions with the APIs. The Python SDK provides Python-native methods and objects for 
@@ -15,7 +15,7 @@ TACC username and password. (If you do not have a TACC account, check the
 [prerequisites](https://tapis-project.github.io/tutorials/intro/intro/#prerequisites)
 and sign up for an account [here](https://portal.tacc.utexas.edu/account-request).)
 
-In your Jupyter notebook copy the blocks below and run them.
+In your Jupyter notebook copy the block below and execute it (`Control+Shift`).
 ```
 # Enter your TACC username and password
 import getpass
@@ -46,7 +46,6 @@ t.access_token
 The output should look something similar to the following:
 
 ```
-
 access_token: eyJ0eXAiOiJKV1...
 claims: {'jti': 'dfada014-66ca-4f6e-a57a-48b618a79678', 'iss': 'https://tacc.tapis.io/v3/tokens', 
 'sub': 'jstubbs@tacc', 'tapis/tenant_id': 'tacc', 'tapis/token_type': 'access', 
@@ -60,19 +59,20 @@ original_ttl: 14400
 ```
 
 The actual access token is the string labeled `access_token` beginning with `eyJ..` in 
-the output above. The library derived the other fields from the token itself, including 
-the set of `claims`. When you make an API request to Tapis passing the token, the API uses
-the claims to determine who you are and what accesses you have.
+the output above. The `tapipy` library derived the other fields from the token, including 
+the set of `claims`. The `claims` represent information about the authentication, including
+the username and when the token expires. When you make an API request to Tapis 
+passing the token, the service uses the claims to determine who you are and what accesses 
+you have. 
 
 Now that we have an access token, we are ready to make our first authenticated API 
-request to Tapis. For this "Hello, Tapis" tutorial, we'll make a call to the Profiles 
+request to Tapis. For this "Hello, Tapis" tutorial, we'll make a call to the Authenticator 
 service to see that Tapis knows who we are.
 
 Copy the following block into your notebook and run it.
 
 ```
 t.authenticator.get_userinfo()
-
 ```
 You should see your user information in output similar to the following:
 
