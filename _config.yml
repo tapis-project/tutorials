@@ -6,7 +6,7 @@ nav:
       - Home: ''
   - Introduction and Prerequisites:
       - Introduction: intro/intro
-  - First steps:
+  - First Steps -- Registering Systems and Managing Data:
       - Hello, Tapis: hello/hello
       - Intro to Systems: systems/intro
       - Creating an HPC System: systems/hpc
@@ -16,13 +16,13 @@ nav:
       - Intro to Apps: apps/intro
       - Creating and Registering a Hello, Tapis app: apps/hello
       - Executing the Hello, Tapis app: jobs/hello
-  - Tapis Systems:
+  - All Tapis Systems Tutorials:
       - Intro to Systems: systems/intro
       - Registering a Server: systems/vm
       - Registering an HPC System: systems/hpc
       - Registering an S3 Bucket System: systems/s3
       - Registering System Credentials: systems/credentials
-  - Tapis Apps:
+  - All Tapis Apps Tutorials:
       - Intro to Apps: apps/intro
-  - Tapis Jobs:
+  - All Tapis Jobs Tutorials:
       - Intro to Jobs: jobs/intro

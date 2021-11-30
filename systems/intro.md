@@ -59,11 +59,12 @@ do that in the next tutorial.
 ## Next Steps
 Now that we have covered the concept of Tapis systems, let's begin by registering 
 an HPC system. If you do not have access to an HPC system, you might be interested in 
-registering another kind of system, such as a server or an S3 bucket. The S
+registering another kind of system, such as a server or an S3 bucket. See the list
+of all Tapis Systems tutorials from the [home page](https://tapis-project.github.io/tutorials/).
 
 
  [Next-> Registering an HPC System](hpc.md)
 
 
 ## Additional Resources 
-* _Additional information about the Systems_ - Reference [documentation](https://tapis.readthedocs.io/en/latest/technical/systems.html).
+* _Additional information about Systems_ - Reference [documentation](https://tapis.readthedocs.io/en/latest/technical/systems.html).
