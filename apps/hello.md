@@ -1,4 +1,4 @@
-# Creating and Registering a Tapis App
+# Creating and Registering a Classifier App
 
 In this tutorial, we cover how to create an application and how to retrieve application 
 details. As a starting point for this tutorial, we have some software that has been 

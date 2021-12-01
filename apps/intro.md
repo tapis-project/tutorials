@@ -52,6 +52,13 @@ At a high level an application represents the following information:
 * **Job related attributes** - Various attributes related to job execution such as *execSystemId*, *execSystemExecDir*,
   *execSystemInputDir*, *execSystemLogicalQueue* *archiveSystemId*, *fileInputs*, etc. Many of these are optional.
 
+## Next Steps
+Next we'll actually look at what is involved with registering a specific application.
+
+[Next-> Creating and Registering a Classifier App](hello.md)
+
+
+## Additional Resources
 For more information about applications and the Applications service 
 please see [Tapis Applications Service documentation](https://tapis.readthedocs.io/en/latest/technical/apps.html).
 
