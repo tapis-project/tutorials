@@ -31,6 +31,7 @@ s2_system = {
   "jobRuntimes": [ { "runtimeType": "SINGULARITY" } ],
   "jobWorkingDir": "HOST_EVAL($WORK2)",
   "jobIsBatch": True,
+  "canRunBatch": True,
   "batchScheduler": "SLURM",
   "batchSchedulerProfile": "tacc",
   "batchDefaultLogicalQueue": "tapisNormal",

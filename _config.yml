@@ -14,8 +14,8 @@ nav:
       - Managing Data on a System: files/data
   - Creating Applications and Running Jobs:
       - Intro to Apps: apps/intro
-      - Creating and Registering a Hello, Tapis app: apps/hello
-      - Executing the Hello, Tapis app: jobs/hello
+      - Creating and Registering a Classifier app: apps/hello
+      - Executing the Classifier app: jobs/hello
   - All Tapis Systems Tutorials:
       - Intro to Systems: systems/intro
       - Registering a Server: systems/vm
@@ -24,5 +24,6 @@ nav:
       - Registering System Credentials: systems/credentials
   - All Tapis Apps Tutorials:
       - Intro to Apps: apps/intro
+      - Creating and Registering a Classifier app: apps/hello
   - All Tapis Jobs Tutorials:
       - Intro to Jobs: jobs/intro
