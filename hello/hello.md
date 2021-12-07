@@ -2,12 +2,12 @@
 In this first tutorial, we will learn to authenticate with Tapis using our TACC username 
 and password; then we will make our first API request to Tapis.
 
-As discussed in the introduction, we will use the official Tapis Python SDK for all of our 
+As discussed in the introduction, we will use the official **Tapis Python SDK** for all of our
 interactions with the APIs. The Python SDK provides Python-native methods and objects for 
 making HTTP requests and parsing HTTP responses to and from the Tapis API. In order to do 
 just about anything with Tapis, we will need to authenticate.
 
-Tapis authentication is based on tokens (specifically, [JSON Web Tokens](jwt.io)). To
+Tapis authentication is based on tokens (specifically, [JSON Web Tokens](https://jwt.io)). To
 make an API request to Tapis, you first need to generate a token. Tapis can be configured
 to support the requirements of different projects and institutions, including different
 mechanisms for generating tokens. For this tutorial, we will generate a token using our
@@ -66,7 +66,7 @@ passing the token, the service uses the claims to determine who you are and what
 you have. 
 
 Now that we have an access token, we are ready to make our first authenticated API 
-request to Tapis. For this "Hello, Tapis" tutorial, we'll make a call to the Authenticator 
+request to Tapis. For this **Hello, Tapis** tutorial, we'll make a call to the Authenticator
 service to see that Tapis knows who we are.
 
 Copy the following block into your notebook and run it.

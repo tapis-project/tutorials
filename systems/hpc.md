@@ -3,7 +3,7 @@ HPC systems usually rely on a batch scheduler such as Slurm to schedule jobs on 
 of machines. You can register an HPC cluster as a Tapis system to enable to Tapis to 
 submit and monitor jobs on the cluster for you.
 
-In this example, we will register the Stampede2 supercomputer at TACC. Access to 
+In this example, we will register system on the Stampede2 supercomputer at TACC. Access to
 Stampede2 requires that your TACC account have a valid allocation on 
 Stampede2. If you do not have an allocation on Stampede2, you can still use the concepts
 illustrated in this tutorial to register another HPC cluster that you do have access to.
@@ -30,7 +30,6 @@ s2_system = {
   "canExec": True,
   "jobRuntimes": [ { "runtimeType": "SINGULARITY" } ],
   "jobWorkingDir": "HOST_EVAL($WORK2)",
-  "jobIsBatch": True,
   "canRunBatch": True,
   "batchScheduler": "SLURM",
   "batchSchedulerProfile": "tacc",
@@ -54,7 +53,7 @@ s2_system = {
 }
 ```
 In the description above, we set `effectiveUserId` to the string `${apiUserId}`. Recall that
-tells Tapis to use the identity (that is, the `username`) associated with the token on
+this tells Tapis to use the identity (that is, the `username`) associated with the token on
 the API request whenever it interacts with this system. We could have just hard-coded our
 own username (e.g., `"jstubbs"`) instead, but this approach means that if we share the 
 system with another Tapis user, Tapis will use that user's identity to interact with the

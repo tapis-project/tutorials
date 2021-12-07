@@ -29,7 +29,7 @@ different from your Tapis user name.
 Copy and paste the following code into your notebook.
 
 ``` python
-t.systems.createUserCredential(systemId='tapisv3-exec-<userid>', 
+t.systems.createUserCredential(systemId='<system_id>',
                                userName='<userid>', 
                                password='<password>'))
 ```

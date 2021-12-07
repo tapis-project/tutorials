@@ -1,13 +1,13 @@
 # Managing Data on a System
 
 Now that we have a system created and a credential registered, we can now start using Tapis
-to do some "real" work. In this short tutorial, we will use the Files API to get a file 
+to do some **real** work. In this short tutorial, we will use the Files API to get a file
 listing on a directory, upload a file to the directory, and download a file.
 
 ## Listing Files in a Directory
 To list files on a path, use the `listFiles()` endpoint of the `files` service, like so:
 
-```python
+```pythonx
 t.files.listFiles(systemId='<system_id>', path="/some/path")
 ```
 replacing `<system_id>` with the system id and `/some/path` with the path on the system
@@ -79,7 +79,7 @@ For example:
 ```python
 t.upload(system_id='stampede2.jstubbs', 
          source_file_path='hello-tapis.ipynb', 
-         dest_file_path="/work2/01837/jstubbs/stampede2/hello-tapis.pynb")
+         dest_file_path="/work/01837/jstubbs/stampede2/hello-tapis.pynb")
 ```
 
 And we should now see our file when we do another listing:

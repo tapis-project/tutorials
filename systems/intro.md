@@ -49,13 +49,13 @@ use take the form `t.systems.<endpoint>(args)` for some `<endpoint>`.
 
 For example, we can get a list of all the systems we have access to using:
 ```python
-t.systems.getSystms()
+t.systems.getSystems()
 ```
 The response will show us a summary of each system. If we want full details about a 
 specific system, we can use
 
 ```python
- t.systems.getSystem(systemId='<some_system_id')
+ t.systems.getSystem(systemId='some_system_id')
 ```
 Note that you will not have access to any systems until you have registered some. We will
 do that in the next tutorial.
@@ -64,7 +64,7 @@ do that in the next tutorial.
 Now that we have covered the concept of Tapis systems, let's begin by registering 
 an HPC system. If you do not have access to an HPC system, you might be interested in 
 registering another kind of system, such as a server or an S3 bucket. See the list
-of all Tapis Systems tutorials from the [home page](https://tapis-project.github.io/tutorials/).
+of **All Tapis Systems Tutorials** from the [home page](https://tapis-project.github.io/tutorials/).
 
 
  [Next-> Registering an HPC System](hpc.md)

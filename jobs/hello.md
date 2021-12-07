@@ -2,7 +2,7 @@
 In this tutorial, we will execute our classifier application on Stampede2. If you haven't
 already, you might want to work through these tutorials first:
 * [Creating an HPC System](../systems/hpc.md)
-* [Creating and Registering a Classifier app](../apps/hello)
+* [Creating and Registering a Classifier app](../apps/hello.md)
 
 To execute our classifier application on a system, we submit a _job_ to the Tapis Jobs
 service, passing any required and optional arguments controlling how the application is
@@ -12,7 +12,7 @@ the application on the system, etc.). If validation is successful, the Jobs serv
 generates a `jobId` for our job and returns a response.
 
 ## Submitting the Job
-First, we describe the job we want to execute. Enter the following into a Jupyter cell:
+First, we describe the job we want to execute. Enter the following into a Jupyter notebook cell:
 ```python
 input_url = 'https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12231410/Labrador-Retriever-On-White-01.jpg'
 job = {
@@ -105,11 +105,11 @@ job_id = job.uuid
 ##  Get the Job Status
 We can use `job_id` to check on the job's status:
 ```
-t.jobs.getJobStatus(jobUuid=job_id))
+t.jobs.getJobStatus(jobUuid=job_id)
 ```
 You should see
 ```
-status: <some staus>
+status: <some status>
 ```
 
 ### Download job output

@@ -36,12 +36,12 @@ The first step is to build a Singularity image for our application. In fact, wha
 actually do is build a _Docker_ image for our application and then convert it to 
 Singularity. We'll even instruct Tapis to do the conversion to Singularity for us.
 
-So we bgin now by building a Docker image for our application. A complete discussion
+So we begin now by building a Docker image for our application. A complete discussion
 of writing a Dockerfile for building a Docker image is beyond the scope of this tutorial. 
 For our purposes, we'll assume we have the Dockerfile written (the repository above
 includes one).
 
-If we clone the repository and change into the `img-classify/docker_build` directory, 
+If we clone the [repository](https://github.com/tapis-project/application-repository.git) and change into the `img-classify/docker_build` directory,
 we can build a Docker image with the following command:
 
 ```
@@ -58,7 +58,7 @@ input via the `--image_file` flag.
 
 Run the following command in your shell: 
 ```
-docker run tapis/classify --image_file=https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12231410/Labrador-Retriever-On-White-01.jpg
+docker run tapis/img-classify:0.1 --image_file=https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12231410/Labrador-Retriever-On-White-01.jpg
 ```
 You should see output similar to the following
 ```
@@ -106,15 +106,14 @@ app_def = {
   "runtime": "SINGULARITY",
   "runtimeOptions": ["SINGULARITY_RUN"],
   "containerImage": "docker://tapis/img-classify:0.1.0",
+  "jobType": "BATCH",
   "jobAttributes": {
     "parameterSet": {
-      "appArgs": [ { "arg": "--image_file",
-                       "meta": { "name": "arg1" } }
+      "appArgs": [ { "arg": "--image_file","name":"arg-img-file"}
       ],
       "archiveFilter": { "includeLaunchFiles": False }
     },
-    "jobType": "BATCH",
-    "executionSystem": "stampede2.<userid>",
+    "execSystemId": "stampede2.<userid>",
     "nodeCount": 1,
     "coresPerNode": 1,
     "memoryMB": 1,

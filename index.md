@@ -1,6 +1,6 @@
 # Tapis Tutorials
 
-Tapis is an NSF-funded API platform for computational research. This
+[Tapis](https://tapis-project.org) is an NSF-funded API platform for computational research. This
 website provides self-paced tutorials covering the primary Tapis concepts
 and functionality. 
 
@@ -19,8 +19,8 @@ with S3 in Tapis, you might want to jump straight to the tutorial on
 
 While the tutorials are constructed to be modular units, some of them also naturally
 build on each other to form a series. We have collected some of these into tutorial series
-which can be found in the left nav. The "Registering Systems and Managing Data" series
-and the "Creating Applications and Running Jobs" are two examples.
+which can be found in the left nav. The **Registering Systems and Managing Data** series
+and the **Creating Applications and Running Jobs** are two examples.
 
 If you are entirely new to Tapis and just want to get a general sense for its capabilities,
 it is probably best to start with the [Introduction](intro/intro.md) and work through the 
