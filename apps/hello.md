@@ -109,7 +109,7 @@ app_def = {
   "jobType": "BATCH",
   "jobAttributes": {
     "parameterSet": {
-      "appArgs": [ { "arg": "--image_file","name":"arg-img-file"}
+      "appArgs": [ {"name": "arg1", "arg": "--image_file", "inputMode": "FIXED"}
       ],
       "archiveFilter": { "includeLaunchFiles": False }
     },
@@ -178,7 +178,7 @@ parameterSet:
 appArgs: [
 arg: --image_file
 description: None
-inputMode: INCLUDE_ON_DEMAND
+inputMode: FIXED
 name: arg1]
 archiveFilter: 
 excludes: []

@@ -19,7 +19,7 @@ job = {
     "name": "test_job",
     "appId": "img-classify.jstubbs", 
     "appVersion": "0.1.0",
-    "parameterSet": {"appArgs": [{"name": "arg1", 
+    "parameterSet": {"appArgs": [{"name": "arg2", 
                                   "arg": input_url}]        
                     }
 }
@@ -66,7 +66,7 @@ parameterSet:
 appArgs: [
 arg: --image_file
 description: None
-inputMode: INCLUDE_ON_DEMAND
+inputMode: FIXED
 name: arg1]
 archiveFilter: 
 excludes: []
