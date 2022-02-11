@@ -97,6 +97,18 @@ create a Tapis app description of it. Recall that we are planning to register th
 application as a Singularity application. We'll instruct Tapis to convert the Docker
 image to Singularity for us.
 
+### Application Arguments
+
+As we can see in the example above the application takes two arguments. One is the fixed argument *--image_file*
+and the second is the file to process which must be provided by the user. We can incorporate this in
+our application definition by defining two *appArgs* in *jobAttributes->parameterSet* as shown below. The first
+argument has an *inputMode* of FIXED and the second an *inputMode* of REQUIRED. For more information please see
+the information on inputs in the Apps [documentation](https://tapis.readthedocs.io/en/latest/technical/apps.html)
+and the Jobs [documentation](https://tapis.readthedocs.io/en/latest/technical/jobs.html).
+
+
+### Application Definition
+
 Here is an example of an application definition:
 ``` python
 app_def = {
@@ -109,7 +121,9 @@ app_def = {
   "jobType": "BATCH",
   "jobAttributes": {
     "parameterSet": {
-      "appArgs": [ {"name": "arg1", "arg": "--image_file", "inputMode": "FIXED"}
+      "appArgs": [
+       {"name": "arg1", "arg": "--image_file", "inputMode": "FIXED"},
+       {"name": "input_file", "inputMode": "REQUIRED"}
       ],
       "archiveFilter": { "includeLaunchFiles": False }
     },
@@ -179,7 +193,10 @@ appArgs: [
 arg: --image_file
 description: None
 inputMode: FIXED
-name: arg1]
+name: arg1,
+description: None
+inputMode: REQUIRED
+name: input_file]
 archiveFilter: 
 excludes: []
 includeLaunchFiles: False

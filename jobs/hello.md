@@ -19,7 +19,7 @@ job = {
     "name": "test_job",
     "appId": "img-classify.jstubbs", 
     "appVersion": "0.1.0",
-    "parameterSet": {"appArgs": [{"name": "arg2", 
+    "parameterSet": {"appArgs": [{"name": "input_file", 
                                   "arg": input_url}]        
                     }
 }
@@ -67,7 +67,11 @@ appArgs: [
 arg: --image_file
 description: None
 inputMode: FIXED
-name: arg1]
+name: arg1,
+arg: https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12231410/Labrador-Retriever-On-White-01.jpg
+description: None
+inputMode: REQUIRED
+name: input_file]
 archiveFilter: 
 excludes: []
 includeLaunchFiles: False
