@@ -5,6 +5,22 @@ such as PASSWORD and PKI_KEYS. Here we will cover registering keys first (this w
 default authentication method we used when registering our Stampede2 system) and then 
 registering a password.
 
+
+Please make sure to generate a SSH Key pair on Stampede2. Create a .ssh directory in your home directory and run the command below:
+
+```
+ssh-keygen -m PEM -f id_rsa
+
+```
+Do not ennter passphrase. Once the keys are created copy the public key to authorized keys file on Stampede2. <br/>
+Keep the public key and private key handy, these are required for creating user credentials. For private key, it is recommended to get a one liner private key using the command below. 
+
+```
+awk -v ORS='\\n' '1' private_key_name
+
+```
+
+
 ## Registering SSH Keys
 Copy and paste the following code into your notebook.
 

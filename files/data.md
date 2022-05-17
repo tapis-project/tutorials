@@ -17,7 +17,7 @@ provide.
 
 For example, to list files on our Stampede2 system, we could use a call like this:
 ```python
-t.files.listFiles(systemId='stampede2.jstubbs', path="/work/01837/jstubbs/stampede2")
+t.files.listFiles(systemId='stampede2.jstubbs', path="/work2/01837/jstubbs/stampede2")
 ```
 And produces the following output:
 ```
@@ -28,10 +28,10 @@ And produces the following output:
  name: bar
  nativePermissions: rw-r--r--
  owner: 811324
- path: /work/01837/jstubbs/stampede2/bar
+ path: /work2/01837/jstubbs/stampede2/bar
  size: 0
  type: file
- url: tapis://stampede2.jstubbs-2/work/01837/jstubbs/stampede2/bar,
+ url: tapis://stampede2.jstubbs-2/work2/01837/jstubbs/stampede2/bar,
  
  group: 814212
  lastModified: 2021-10-27T14:38:14Z
@@ -39,10 +39,10 @@ And produces the following output:
  name: baz
  nativePermissions: rw-r--r--
  owner: 811324
- path: /work/01837/jstubbs/stampede2/baz
+ path: /work2/01837/jstubbs/stampede2/baz
  size: 0
  type: file
- url: tapis://stampede2.jstubbs-2/work/01837/jstubbs/stampede2/baz,
+ url: tapis://stampede2.jstubbs-2/work2/01837/jstubbs/stampede2/baz,
  
  group: 814212
  lastModified: 2019-05-07T14:10:22Z
@@ -50,10 +50,10 @@ And produces the following output:
  name: foo
  nativePermissions: rwxrwxrwx
  owner: 811324
- path: /work/01837/jstubbs/stampede2/foo
+ path: /work2/01837/jstubbs/stampede2/foo
  size: 0
  type: file
- url: tapis://stampede2.jstubbs-2/work/01837/jstubbs/stampede2/foo,
+ url: tapis://stampede2.jstubbs-2/work2/01837/jstubbs/stampede2/foo,
  
  group: 814212
  lastModified: 2021-12-02T00:03:44Z
@@ -61,10 +61,10 @@ And produces the following output:
  name: jobs
  nativePermissions: rwx------
  owner: 811324
- path: /work/01837/jstubbs/stampede2/jobs
+ path: /work2/01837/jstubbs/stampede2/jobs
  size: 4096
  type: dir
- url: tapis://stampede2.jstubbs-2/work/01837/jstubbs/stampede2/jobs]
+ url: tapis://stampede2.jstubbs-2/work2/01837/jstubbs/stampede2/jobs]
  ```
 
 ## Uploading Files
@@ -79,14 +79,14 @@ For example:
 ```python
 t.upload(system_id='stampede2.jstubbs', 
          source_file_path='hello-tapis.ipynb', 
-         dest_file_path="/work/01837/jstubbs/stampede2/hello-tapis.pynb")
+         dest_file_path="/work2/01837/jstubbs/stampede2/hello-tapis.pynb")
 ```
 
 And we should now see our file when we do another listing:
 ```python
 # check that file is now there:
 t.files.listFiles(systemId='stampede2.jstubbs', 
-                  path="/work/01837/jstubbs/stampede2/hello-tapis.ipynb")
+                  path="/work2/01837/jstubbs/stampede2/hello-tapis.ipynb")
 ```
 The output confirms the presence of the file:
 ```
@@ -97,10 +97,10 @@ The output confirms the presence of the file:
  name: hello-tapis.ipynb
  nativePermissions: rw-------
  owner: 811324
- path: /work/01837/jstubbs/stampede2/hello-tapis.ipynb
+ path: /work2/01837/jstubbs/stampede2/hello-tapis.ipynb
  size: 40469
  type: file
- url: tapis://stampede2.jstubbs-2/work/01837/jstubbs/stampede2/hello-tapis.ipynb]
+ url: tapis://stampede2.jstubbs-2/work2/01837/jstubbs/stampede2/hello-tapis.ipynb]
  ```
 
 ## Downloading Files
@@ -112,7 +112,7 @@ t.files.getContents(system_id=<system_id>,
 
 For example,
 ```python
-t.files.getContents(systemId='stampede2.jstubbs-2', 
-                    path="/work/01837/jstubbs/stampede2/hello-tapis.ipynb")
+t.files.getContents(system_id='stampede2.jstubbs-2', 
+                    path="/work2/01837/jstubbs/stampede2/hello-tapis.ipynb")
 ```
 Note that the function returns the file contents as a raw bytes object.

@@ -75,7 +75,7 @@ Saint Bernard, St Bernard (score = 0.00067)
 The output says our image classifier application classified the image as a labrador
 retriever with 97.4% certainty. Looks like it is working pretty well!
 
-## Publishing the Image to a Public Image Registry
+## Publishing the Image to a Public Image Registry (Optional Step)
 The command above created a Docker image on our local machine. In order for Tapis to make
 use of it, we need to publish the image to a Docker registry. The Docker 
 [Hub](https://hub.docker.com) is a popular registry with millions of images, but Tapis 
@@ -85,8 +85,9 @@ For this tutorial, we'll publish the image to Docker Hub. We can do that with th
 following command:
 
 ```
-docker push tapis/img-classify:0.1
+docker push  private_repo/img-classify:0.1
 ```
+
 Note that in order to push your image to Docker Hub, you must have an account and login 
 with the `docker login` command. Additionally, you must have publish writes for the 
 organization where you are trying to publish the image.
@@ -117,7 +118,7 @@ app_def = {
   "description": "Simple image classifier demo application",
   "runtime": "SINGULARITY",
   "runtimeOptions": ["SINGULARITY_RUN"],
-  "containerImage": "docker://tapis/img-classify:0.1.0",
+  "containerImage": "docker://tapis/img-classify:0.1",
   "jobType": "BATCH",
   "jobAttributes": {
     "parameterSet": {
