@@ -15,7 +15,7 @@ TACC username and password. (If you do not have a TACC account, check the
 [prerequisites](https://tapis-project.github.io/tutorials/intro/intro/#prerequisites)
 and sign up for an account [here](https://portal.tacc.utexas.edu/account-request).)
 
-In your Jupyter notebook copy the block below and execute it (`Control+Shift`).
+In your Jupyter notebook that is connected to a TACC server, copy the block below and execute it (`Shift+Enter`).
 ```
 # Enter your TACC username and password
 import getpass
@@ -65,7 +65,12 @@ the username and when the token expires. When you make an API request to Tapis
 passing the token, the service uses the claims to determine who you are and what accesses 
 you have. 
 
-Now that we have an access token, we are ready to make our first authenticated API 
+Take the `access_token` value and export it to a JWT variable on the command line as follows:
+```bash
+export JWT=eyJ..
+```
+
+Now that we have an allocated access token, we are ready to make our first authenticated API 
 request to Tapis. For this **Hello, Tapis** tutorial, we'll make a call to the Authenticator
 service to see that Tapis knows who we are.
 
