@@ -33,7 +33,7 @@ At a high level a system represents the following information:
 * **systemType** - Type of system: LINUX, S3. Support for  IRODS and GLOBUS is under development.
 * **owner** - A specific user set at system creation. By default, this is ``${apiUserId}``, the user making the request to
               create the system.
-* **host** Host name or IP address.
+* **host** - Host name or IP address.
 * **effectiveUserId** - The username to use when accessing the system. A specific user (such as a service account) or the dynamic user ``${apiUserId}`` 
 * **bucketName** For an S3 system this is the name of the bucket.
 * **rootDir** - Effective root directory. Directory to be used when listing files or moving files to and from the system.
