@@ -28,17 +28,17 @@ request to the service.
 
 At a high level a system represents the following information:
 
-* `**id** - A short descriptive name for the system that is unique within the tenant.`
-* `**description** - An optional more verbose description for the system.`
-* `**systemType** - Type of system: LINUX, S3. Support for  IRODS and GLOBUS is under development.`
-* `**owner** - A specific user set at system creation. By default, this is ``${apiUserId}``, the user making the request to
-              create the system.`
-* `**host** Host name or IP address.`
-* `**effectiveUserId** - The username to use when accessing the system. A specific user (such as a service account) or the dynamic user ``${apiUserId}`` `
-* `**bucketName** For an S3 system this is the name of the bucket.`
-* `**rootDir** - Effective root directory. Directory to be used when listing files or moving files to and from the system.`
-* `**canExec** - Flag indicating if the system can be used to execute jobs.`
-* `**job execution attributes** - Various attributes related to job execution such as *jobRuntimes*, *jobWorkingDir*, etc.`
+* **id** - A short descriptive name for the system that is unique within the tenant.
+* **description** - An optional more verbose description for the system.
+* **systemType** - Type of system: LINUX, S3. Support for  IRODS and GLOBUS is under development.
+* **owner** - A specific user set at system creation. By default, this is ``${apiUserId}``, the user making the request to
+              create the system.
+* **host** Host name or IP address.
+* **effectiveUserId** - The username to use when accessing the system. A specific user (such as a service account) or the dynamic user ``${apiUserId}`` 
+* **bucketName** For an S3 system this is the name of the bucket.
+* **rootDir** - Effective root directory. Directory to be used when listing files or moving files to and from the system.
+* **canExec** - Flag indicating if the system can be used to execute jobs.
+* **job execution attributes** - Various attributes related to job execution such as *jobRuntimes*, *jobWorkingDir*, etc.
 
 Note that a system may be created as a storage-only resource (`canExec=false`) or as a system that can be used for both
 execution and storage (`canExec=True`).
