@@ -13,7 +13,7 @@ t.files.listFiles(systemId='<system_id>', path="/some/path")
 replacing `<system_id>` with the system id and `/some/path` with the path on the system
 you want to list. Note that `/some/path` is relative to the `rootDir` of the system; that
 is, Tapis will prepend the `rootDir` path defined for the system to the `path` you 
-provide.
+provide. In this example system we created, `/` is the the rootDir and `work2` is the working directory created in the system initalization script. 
 
 For example, to list files on our Stampede2 system, we could use a call like this:
 ```python
@@ -81,6 +81,9 @@ t.upload(system_id='stampede2.jstubbs',
          source_file_path='hello-tapis.ipynb', 
          dest_file_path="/work2/01837/jstubbs/stampede2/hello-tapis.pynb")
 ```
+
+It's important to note that if you are using the Jupyter notebook, the `/some/local/file.txt` path is relative to the Jupyter notebook path itself. As such, you can check the path of the notebook through the `pwd` command and can create a dummy script to test the upload.  
+
 
 And we should now see our file when we do another listing:
 ```python
