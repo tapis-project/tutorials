@@ -6,13 +6,13 @@ default authentication method we used when registering our Stampede2 system) and
 registering a password.
 
 
-Please make sure to generate a SSH Key pair on Stampede2. Create a .ssh directory in your home directory and run the command below:
+Please make sure to generate a SSH Key pair on Stampede2.  In the case of Stampede2, the HPC system automatically creates SSH Key pair when logging into Stampede2 for the first time, as such alleviating any need to create a SSH Key pair. A .ssh directory will be created and can be accessed. However, if the system being used does not generate any keys, please generate a pair. After generating keys, head into the ```.ssh``` directory and run the following command: 
 
 ```
 ssh-keygen -m PEM -f id_rsa
 
 ```
-Do not ennter passphrase. Once the keys are created copy the public key to authorized keys file on Stampede2. <br/>
+Do not enter passphrase. Once the keys are created copy the public key to authorized keys file on Stampede2. <br/>
 Keep the public key and private key handy, these are required for creating user credentials. For private key, it is recommended to get a one liner private key using the command below. 
 
 ```
