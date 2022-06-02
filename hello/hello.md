@@ -27,7 +27,7 @@ password = getpass.getpass(prompt="Password: ", stream=None)
 All of our interactions with Tapis will go through the `Tapis` python object.
 In particular, we can use it to generate a token. 
 
-In your Jupyter notebook copy the block below and run it.
+In your Jupyter notebook that is connected to a TACC server, copy the block below and execute it using the (`Shift+Enter`) method. 
 You will get a Tapis v3 token to interact with the Tapis services.
 
 ```
@@ -65,7 +65,12 @@ the username and when the token expires. When you make an API request to Tapis
 passing the token, the service uses the claims to determine who you are and what accesses 
 you have. 
 
-Now that we have an access token, we are ready to make our first authenticated API 
+Take the `access_token` value and export it to a JWT variable on the command line as follows:
+```bash
+export JWT=eyJ..
+```
+
+Now that we have an allocated access token, we are ready to make our first authenticated API 
 request to Tapis. For this **Hello, Tapis** tutorial, we'll make a call to the Authenticator
 service to see that Tapis knows who we are.
 

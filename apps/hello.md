@@ -52,6 +52,15 @@ Note that the `tapis` organization in the image name (`tapis/img-classify`) abov
 restricted to Tapis administrators. You should use your personal account or a different 
 organization that you have access to. 
 
+If you cannot run the above command, please run the following command:
+
+```
+sudo chmod 666 /var/run/docker.sock
+```
+
+Now you should be able to run the above Docker build image command. 
+
+
 ## Testing the Application Container Locally
 We can test our image by executing a container locally, passing a URL to a file as the
 input via the `--image_file` flag.
