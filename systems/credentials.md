@@ -20,7 +20,7 @@ awk -v ORS='\\n' '1' private_key_name
 ```
 
 It is important to note that these are case sensitive, and as such need to be handled with care. Copy and pasting between systems and languages can be tricky, it is a common error for the following step for the private key to not be able to validate due to hidden copying issues. 
-When copying down the private key for the following step, make sure to copy all of the lines, including the `-----BEGIN RSA PRIVATE KEY-----\n` & `\n-----END RSA PRIVATE KEY-----\n` and any newline characters.Without this, errors will occur.
+When copying down the private key for the following step, make sure to copy all of the lines, including the `-----BEGIN RSA PRIVATE KEY-----\n` & `\n-----END RSA PRIVATE KEY-----\n` and any newline characters. Without this, errors will occur.
 
 ## Registering SSH Keys
 Copy and paste the following code into your notebook.

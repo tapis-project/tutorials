@@ -32,7 +32,6 @@ job["schedulerOptions"] = [{"arg": f"--account {some_project}"}]
 ```
 We can now submit the job with:
 ```python
-
 job = t.jobs.submitJob(**job)
 ```
 If successful, the `job` object should look something like.
