@@ -34,7 +34,6 @@ We can now submit the job with:
 ```python
 
 job = t.jobs.submitJob(**job)
-job
 ```
 If successful, the `job` object should look something like.
 ```

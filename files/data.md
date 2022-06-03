@@ -13,7 +13,7 @@ t.files.listFiles(systemId='<system_id>', path="/some/path")
 replacing `<system_id>` with the system id and `/some/path` with the path on the system
 you want to list. Note that `/some/path` is relative to the `rootDir` of the system; that
 is, Tapis will prepend the `rootDir` path defined for the system to the `path` you 
-provide. In this example system we created, `/` is the the rootDir and `work2` is the working directory created in the system initalization script. 
+provide. In this example system we created, `/` is the the rootDir and `work2` is the working directory created in the system initialization script. 
 
 For example, to list files on our Stampede2 system, we could use a call like this:
 ```python
