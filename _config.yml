@@ -27,3 +27,5 @@ nav:
       - Creating and Registering a Classifier app: apps/hello
   - All Tapis Jobs Tutorials:
       - Intro to Jobs: jobs/intro
+  - All Tapis Pods Tutorials:
+      - Intro to Pods: pods/intro
