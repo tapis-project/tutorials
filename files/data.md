@@ -108,13 +108,13 @@ The output confirms the presence of the file:
 ## Downloading Files
 Finally, we can download a file using the syntax:
 ```python
-t.files.getContents(system_id=<system_id>, 
+t.files.getContents(systemId='<system_id>', 
                     path='/some/remote/file.txt')
 ```
 
 For example,
 ```python
-t.files.getContents(system_id='stampede2.jstubbs-2', 
+t.files.getContents(systemId='stampede2.jstubbs', 
                     path="/work2/01837/jstubbs/stampede2/hello-tapis.ipynb")
 ```
 Note that the function returns the file contents as a raw bytes object.
