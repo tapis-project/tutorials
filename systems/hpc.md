@@ -10,7 +10,7 @@ illustrated in this tutorial to register another HPC cluster that you do have ac
 
 ## The System Description 
 To register a system with Tapis, you describe the system in a JSON object. The description
-includes information about how to connect to the system, what kind of conatiner runtimes
+includes information about how to connect to the system, what kind of container runtimes
 are available, what scheduler types, the queues defined, and more.
 
 The following contains a description of the Stampede2 cluster. Copy and paste the code
