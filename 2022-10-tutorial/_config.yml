@@ -1,6 +1,17 @@
 remote_theme: marella/jekyll-theme-documentation
+plugins_dir:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
+title: Tapis Tutorials
+description: NSF-funded API platform for computational research tutorials
+baseurl: "/tutorials"
+url: "http://localhost:4000"
 
+# Build settings
+markdown: kramdown
 permalink: pretty
+
 nav:
   - Home:
       - Home: ''

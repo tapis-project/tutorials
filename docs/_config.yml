@@ -1,0 +1,20 @@
+# theme: jekyll-theme-minimal
+remote_theme: marella/jekyll-theme-documentation
+
+permalink: pretty
+nav:
+- Intro to Tapis:
+  - Intro to Tapis: ./Intro_Tapis/01-intro-to-tapis
+  - Intro to TapisUI: ./Intro_Tapis/01-intro-to-tapis
+
+- Guided TapisUI Demo:
+  - Hands-on TapisUI Exercises: ./Guided_Demo/guided_demo
+- Natural Language Processing:
+  - NLP: ./NLP/nlp
+- Tapis Service Introductions:
+  - Intro to Tapis Systems: ./Tapis_systems/02-systems
+  - Intro to Tapis Apps: ./Tapis_apps_jobs/03-apps
+  - Intro to Tapis Jobs: ./Tapis_apps_jobs/04-jobs
+  - Intro to Tapis Pods: ./Tapis_pods/05-pods
+
+theme: jekyll-theme-minimal

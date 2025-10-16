@@ -1,7 +1,7 @@
 # Introduction to Tapis Pods service
 The Tapis Pods service provides easy-to-deploy network-accessible long-running Pods on demand. In this case, the physical manifestation of the service comes in the form of Kubernetes Pods in a private cluster networked through a dynamic proxy based off of this API.
 The Pods service serves a niche for applications that don't require an all out VM, but still need reliable networking and round-the-clock availability.
-Initially the service was created for databases, in particular Neo4J databases serving through a custom "Bolt" protocol. The project has been expanded since then and now allows for broad HTTP and TCP networking, even making room for custom protocols required for the likes of Postgres.
+Initially the service was created for databases, in particular Neo4j databases serving through a custom "Bolt" protocol. The project has been expanded since then and now allows for broad HTTP and TCP networking, even making room for custom protocols required for the likes of Postgres.
 
 ## Life cycle of Pods
 When a job request is received as the payload of an POST call, the following steps are taken:
@@ -12,7 +12,7 @@ The top-level overview of pod creation works is as follows. A user create a pod,
 
 
 ## Pod Workflow - With more precision.
-**status_requested**: This can be user set to `ON`, `OFF`, or `RESTART`. This is used as an overall, "what do we want to do with the pod" field. Instead of using only the pod `status` field, we can use this to control workflow.
+**status_requested**: The user can set their pod to `ON`, `OFF`, or `RESTART`. This is used as an overall, "what do we want to do with the pod" field. Instead of using only the pod `status` field, we can use this to control workflow.
 - **ON** - Create pod and get to `RUNNING` status. Default during `create_pod`. Can also be set by `start_pod`.
 - **OFF** - Attempts to delete and get to `STOPPED` status. Can be set by `stop_pod`. This will disrupt and pod creation currently happening.
 - **RESTART** - Functions as `OFF`. Set `status_requested` to `ON` once pod hits `STOPPED` status.
@@ -57,6 +57,46 @@ A few additional arguments that often get used are:
 * **time_to_stop_default** - Time (sec) for pod to run from instance start before the service stops it.
 * **time_to_stop_instance** - Specify time_to_stop for one particular instance.
 
+The complete set of Pod submission parameters are listed here [Pod Submission Parameters](https://tapis-project.github.io/live-docs/?service=Pods#tag/Pods/operation/create_pod). All Pod endpoints are specified with inputs and outputs at the live-docs link above.
 
+## Tutorial Pods
+Users have restricted access to images and templates that they can run. Depending on the tenant, users might have some default images that they have access to. However, most users will have no images or templates that they are allowed to run. Users should reach out to a Tapis admin in order to add images or templates to their profiles.
 
-The complete set of Pod submission parameters are listed here [Pod Submission Parameters](https://tapis-project.github.io/live-docs/?service=Pods#tag/Pods/operation/create_pod)
+During tutorials users should have access to a fastapi image and template:
+
+Image definition:
+```
+{
+  "image": "tiangolo/uvicorn-gunicorn-fastapi",
+  "tenants": [
+    "**"
+  ],
+  "description": "Official fastapi author. Runs a FastAPI app with Uvicorn and Gunicorn",
+  "creation_ts": "2025-07-20T16:16:37.325Z",
+  "added_by": "cgarcia"
+}
+```
+
+Template definition:
+```{
+  "template_id": "fastapi",
+  "description": "Collection of fastapi templates with different configurations.",
+  "metatags": [
+    "TACC",
+    "API",
+    "FastAPI"
+  ],
+  "archive_message": "",
+  "creation_ts": "2025-07-21T17:35:06.723Z",
+  "update_ts": "2025-07-21T17:35:06.723Z"
+}
+```
+
+Creating a pod with Tapipy (python sdk) is done as so:
+
+```
+{
+  "pod_id": "testid",
+  "template": "fastapi:fastapinetworked"
+}
+```
