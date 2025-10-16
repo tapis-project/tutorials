@@ -5,7 +5,7 @@ permalink: pretty
 nav:
 - Intro to Tapis:
   - Intro to Tapis: ./Intro_Tapis/01-intro-to-tapis
-  - Intro to TapisUI: ./Intro_Tapis/01-intro-to-tapis
+#  - Intro to TapisUI: ./Intro_Tapis/01-intro-to-tapis
 
 - Guided TapisUI Demo:
   - Hands-on TapisUI Exercises: ./Guided_Demo/guided_demo

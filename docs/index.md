@@ -31,12 +31,12 @@ The resources you will be using today are provided by funding from the National 
 ## Links & Documentation
 [The tutorial covers TapisUI in the training tenant: training.tapis.io](https://training.tapis.io)
 
-<img src="/assets/tapisui_home.png" alt="Tapis UI Dashboard" width="500">
+<img src="/tutorials/assets/tapisui_home.png" alt="Tapis UI Dashboard" width="500">
 
 [Full documentation and guides for using Tapis](https://tapis.readthedocs.io/en/latest)
 
-<img src="/assets/docs.png" alt="Tapis Documentation" width="500">
+<img src="/tutorials/assets/docs.png" alt="Tapis Documentation" width="500">
 
 [Live Documentation of OpenAPI V3 Specs for all Tapis Services](https://tapis-project.github.io/live-docs)
 
-<img src="/assets/livedocs.png" alt="Tapis Live-Docs" width="500">
+<img src="/tutorials/assets/livedocs.png" alt="Tapis Live-Docs" width="500">

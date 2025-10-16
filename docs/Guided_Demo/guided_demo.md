@@ -2,7 +2,7 @@
 
 Login to https://training.tapis.io. Use the username and password provided to you to authenticate.
 
-<img src="/assets/demo/login-tapis.png" style="max-width:60%;">
+<img src="/tutorials/assets/demo/login-tapis.png" style="max-width:60%;">
 
 ## Systems
 
@@ -23,7 +23,7 @@ Click on Systems from the left-hand menu, then click the Create System button in
 
 For this tutorial, we will use the JSON Editor.
 
-<img src="/assets/demo/create-system.png" style="max-width:80%;">
+<img src="/tutorials/assets/demo/create-system.png" style="max-width:80%;">
 
 Copy the system JSON provided below into the editor, then click Create System.
 
@@ -52,22 +52,22 @@ Tapis supports various authentication methods, such as PASSWORD and PKI_KEYS. In
 
 You will need to use the provided vm_password for this step.
 
-<img src="/assets/demo/authenticate-system.png" style="max-width:80%;">
+<img src="/tutorials/assets/demo/authenticate-system.png" style="max-width:80%;">
 
 Click on the AUTHENTICATE and add Password
 
-<img src="/assets/demo/add-password-system.png" style="max-width:80%;">
+<img src="/tutorials/assets/demo/add-password-system.png" style="max-width:80%;">
 
 You should see Successfully created credentials. If there is any error please try to enter the vm_password again
 
-<img src="/assets/demo/credentials-success.png" style="max-width:80%;">
+<img src="/tutorials/assets/demo/credentials-success.png" style="max-width:80%;">
 
 Now that you have successfully added your credentials, your system is ready to use.
 
 To verify this, go to the Files tab from the left-hand menu and try listing the files.
 You should see something similar to the image below.
 
-<img src="/assets/demo/files-list-vm.png" style="max-width:92%;">
+<img src="/tutorials/assets/demo/files-list-vm.png" style="max-width:92%;">
 
 We will now learn to create a Sentiment Analysis Application with Tapis.
 
@@ -97,11 +97,11 @@ TODO TODO TODO - ADD RESULT CODE BLOCK
 ### Create App with TapisUI
 
 We'll be creating an App with TapisUI now. Create an app by navigating to the Apps Tab in TapisUI and click on "+ NEW APP" at the top right.
-<img src="/assets/demo/create-app-button.png" style="max-width:80%;">
+<img src="/tutorials/assets/demo/create-app-button.png" style="max-width:80%;">
 
 Once we have the app creation modal, we want to switch to "JSON EDITOR" and paste in our VM configuration.
 
-<img src="/assets/demo/create-app-vm.png" style="max-width:80%;">
+<img src="/tutorials/assets/demo/create-app-vm.png" style="max-width:80%;">
 
 The following is our app definition:
 
@@ -133,7 +133,7 @@ Click on Create App and it should give a success message.
 
 In the Apps Tab, click on the Application you created. You should see Submit job button, click that and enter the below job json in the JSON EDITOR, and click submit.
 
-<img src="/assets/demo/submitjobjson.png" style="max-width:80%;">
+<img src="/tutorials/assets/demo/submitjobjson.png" style="max-width:80%;">
 
 ```json
 {
@@ -156,7 +156,7 @@ In the Apps Tab, click on the Application you created. You should see Submit job
 
 Once the job successfully finishes you should see a results.csv file which has the results from sentiment analysis on the sentences provided in the job
 
-<img src="/assets/demo/job-vm-success.png" style="max-width:80%;">
+<img src="/tutorials/assets/demo/job-vm-success.png" style="max-width:80%;">
 
 ## Running on HPC Systems
 
@@ -218,13 +218,13 @@ As before, now you will need to register credentials for your username. Use the 
 Once you get a message that system credentials were successfully created, you should be able to list files on that system.
 Go to the files tab and click on the system-id that was created recently.
 
-<img src="/assets/demo/files-list-hpc.png" style="max-width:92%;">
+<img src="/tutorials/assets/demo/files-list-hpc.png" style="max-width:92%;">
 
 ## Create HPC Application
 
 In order to run a job on a system you will need to create a Tapis application that can be run on the VM host or the HPC cluster.
 
-<img src="/assets/demo/create-app-hpc.png" style="max-width:80%;">
+<img src="/tutorials/assets/demo/create-app-hpc.png" style="max-width:80%;">
 
 Copy the json in JSON EDITOR + NEW APP
 
