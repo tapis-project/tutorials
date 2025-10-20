@@ -256,8 +256,6 @@ Go to the Files tab and click on the System ID that was created recently.
 
 In order to run a Job on a System you will need to create a Tapis application that can be run on the VM host or the HPC cluster.
 
-<img src="/tutorials/assets/demo/create-app-hpc.png" style="max-width:80%;">
-
 Copy the following App definition JSON into JSON Editor after pressing "+ New App".
 
 ```json
@@ -282,6 +280,11 @@ Copy the following App definition JSON into JSON Editor after pressing "+ New Ap
     }
 }
 ```
+
+This is an example of creating the new System with TapisUI:
+
+<img src="/tutorials/assets/demo/create-app-hpc.png" style="max-width:80%;">
+
 
 ### Submit Job on HPC
 
