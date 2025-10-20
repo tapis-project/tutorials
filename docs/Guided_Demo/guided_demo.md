@@ -32,10 +32,12 @@ Click on Systems from the left-hand menu, then click the Create System button in
 
 For this tutorial, we will use the JSON Editor in order to utilize copy-paste from snippets provided here.
 
+> ⚠️ Note: All System and Application IDs must be unique. To satisfy this during the tutorial we ask that users replace UNIQUEID in JSON with their user ID.
+
 Copy the system JSON provided below into the editor, then click Create System:
 ```json
 {
-  "id": "gateways25-vm-system-training",
+  "id": "gateways25-vm-system-trainingUNIQUEID",
   "description": "Test system",
   "systemType": "LINUX",
   "host": "129.114.35.138",
@@ -116,7 +118,7 @@ Once we have the app creation modal, we want to switch to "JSON Editor" and past
 
 ```json
 {
-    "id": "gateways25-sentiment-analysis-app-vm",
+    "id": "gateways25-sentiment-analysis-app-vmUNIQUEID",
     "version": "0.1",
     "description": "Application utilizing the sentiment analysis model from Hugging Face",
     "jobType": "FORK",
@@ -158,9 +160,9 @@ Once the "Submit Job" modal appears, copy and paste the following Job JSON into 
 {
     "name":"sentiment analysis",
     "description":"sentiment analysis with hugging face transformer pipelines",
-    "appId":"gateways25-sentiment-analysis-app-vm",
+    "appId":"gateways25-sentiment-analysis-app-vmUNIQUEID",
     "appVersion":"0.1",
-    "execSystemId":"gateways25-vm-system-training", 
+    "execSystemId":"gateways25-vm-system-trainingUNIQUEID", 
     "parameterSet": {
     "appArgs": [
             {"arg": "--sentences"},
@@ -208,7 +210,7 @@ In the TapisUI Systems Tab, click on "+ Create System" like before. Copy the bel
 
 ```json
 {
-  "id": "gateways25-system-id-hpc",
+  "id": "gateways25-system-id-hpcUNIQUEID",
   "description": "System for testing jobs on an HPC type host for Gateways25",
   "systemType": "LINUX",
   "host": "129.114.35.138",
@@ -260,7 +262,7 @@ Copy the following App definition JSON into JSON Editor after pressing "+ New Ap
 
 ```json
 {
-    "id": "gateways25-sentiment-analysis-app-hpc-training",
+    "id": "gateways25-sentiment-analysis-app-hpc-trainingUNIQUEID",
     "version": "0.1",
     "description": "Application utilizing the sentiment analysis model from Hugging Face.",
     "jobType": "BATCH",
@@ -294,9 +296,9 @@ Now that the app is created you can submit a new job with your HPC System and Ap
 {
     "name":"sentiment analysis hpc",
     "description":"sentiment analysis with hugging face transformer pipelines",
-    "appId":"gateways25-sentiment-analysis-app-hpc-training",
+    "appId":"gateways25-sentiment-analysis-app-hpc-trainingUNIQUEID",
     "appVersion":"0.1",
-    "execSystemId":"gateways25-system-id-hpc", 
+    "execSystemId":"gateways25-system-id-hpcUNIQUEID", 
     "parameterSet": {
     "appArgs": [
             {"arg": "--sentences"},
@@ -317,9 +319,9 @@ Note: Make sure to add your email address in the submitJob call.
 {
     "name":"sentiment analysis hpc",
     "description":"sentiment analysis with hugging face transformer pipelines",
-    "appId":"gateways25-sentiment-analysis-app-hpc-training",
+    "appId":"gateways25-sentiment-analysis-app-hpc-trainingUNIQUEID",
     "appVersion":"0.1",
-    "execSystemId":"gateways25-system-id-hpc", 
+    "execSystemId":"gateways25-system-id-hpcUNIQUEID", 
     "parameterSet": {
     "appArgs": [
             {"arg": "--sentences"},

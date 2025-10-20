@@ -36,7 +36,7 @@ That means you can use CURL to access any of the API functions from a command li
 ​
 ### Tapis tools
 ​
-While CURL is straightforward it is not the most handy. Tapis has additional tools to make using it simplier, such as the `tapipy` Python library, Tapis CLI, Tapis UI.
+While CURL is straightforward it is not the most handy. Tapis has additional tools to make using it simplier, such as the `tapipy` Python library, Tapis CLI, TapisUI.
 ​
 These tools make it easier to utilize and build complex workflows and applications with Tapis using some of the programming and scripting skills you may already have.
 
@@ -48,17 +48,24 @@ You don't have to do a lot of complex things to use Tapis.  If you just want som
 ## Links & Documentation
 [The tutorial covers TapisUI in the training tenant: training.tapis.io](https://training.tapis.io)
 
-<img src="/tutorials/assets/tapisui_home.png" alt="Tapis UI Dashboard" width="500">
+<a href="https://training.tapis.io" target="_blank">
+<img src="/tutorials/assets/tapisui_home.png" alt="TapisUI Dashboard" width="50%">
+</a>
 
 [Live Documentation of OpenAPI V3 Specs for all Tapis Services](https://tapis-project.github.io/live-docs)
 
-<img src="/tutorials/assets/livedocs.png" alt="Tapis Live-Docs" width="500">
+<a href="https://tapis-project.github.io/live-docs" target="_blank">
+<img src="/tutorials/assets/livedocs.png" alt="Tapis Live-Docs" width="50%">
+</a>
 
 [Full documentation and guides for using Tapis](https://tapis.readthedocs.io/en/latest)
 
-<img src="/tutorials/assets/docs.png" alt="Tapis Documentation" width="500">
+<a href="https://tapis.readthedocs.io/en/latest" target="_blank">
+<img src="/tutorials/assets/docs.png" alt="Tapis Documentation" width="50%">
+</a>
 
 [TapisUI specific documentation page](https://tapis.readthedocs.io/en/latest/technical/tapisui.html)
 
-<img src="/tutorials/assets/docstapisui.png" alt="TapisUI Documentation" width="500">
-
+<a href="https://tapis.readthedocs.io/en/latest/technical/tapisui.html" target="_blank">
+<img src="/tutorials/assets/docstapisui.png" alt="TapisUI Documentation" width="50%">
+</a>

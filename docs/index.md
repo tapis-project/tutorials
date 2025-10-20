@@ -21,7 +21,7 @@
 | Time | Duration | Description |
 |------|----------|-------------|
 | 12:00 PM | 30 min | Introduction to Tapis (Lecture) |
-| 12:30 PM | 30 min | Tapis Authentication, Tapis UI (Hands-on) |
+| 12:30 PM | 30 min | Tapis Authentication, TapisUI (Hands-on) |
 | 12:50 PM | 20 min | Intro to NLP (Transformers, Hugging Face) (Lecture) |
 | 01:00 PM | 10 min | Coffee Break |
 | 01:10 PM | 30 min | Tapis Systems, Tapis Apps (Hands-on) |
@@ -48,18 +48,24 @@ The resources you will be using today are provided by funding from the National 
 ## Links & Documentation
 [The tutorial covers TapisUI in the training tenant: training.tapis.io](https://training.tapis.io)
 
-<img src="/tutorials/assets/tapisui_home.png" alt="Tapis UI Dashboard" width="50%">
+<a href="https://training.tapis.io" target="_blank">
+<img src="/tutorials/assets/tapisui_home.png" alt="TapisUI Dashboard" width="50%">
+</a>
 
 [Live Documentation of OpenAPI V3 Specs for all Tapis Services](https://tapis-project.github.io/live-docs)
 
+<a href="https://tapis-project.github.io/live-docs" target="_blank">
 <img src="/tutorials/assets/livedocs.png" alt="Tapis Live-Docs" width="50%">
-
+</a>
 
 [Full documentation and guides for using Tapis](https://tapis.readthedocs.io/en/latest)
 
+<a href="https://tapis.readthedocs.io/en/latest" target="_blank">
 <img src="/tutorials/assets/docs.png" alt="Tapis Documentation" width="50%">
+</a>
 
 [TapisUI specific documentation page](https://tapis.readthedocs.io/en/latest/technical/tapisui.html)
 
+<a href="https://tapis.readthedocs.io/en/latest/technical/tapisui.html" target="_blank">
 <img src="/tutorials/assets/docstapisui.png" alt="TapisUI Documentation" width="50%">
-
+</a>
