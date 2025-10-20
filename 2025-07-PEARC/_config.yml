@@ -2,6 +2,7 @@
 remote_theme: marella/jekyll-theme-documentation
 
 permalink: pretty
+baseurl: "/tutorials"
 nav:
 - Intro to Tapis:
   - Intro to Tapis: ./Intro_Tapis/01-intro-to-tapis

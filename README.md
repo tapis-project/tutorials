@@ -8,29 +8,27 @@ Over the years, Tapis tutorials have been delivered at various conferences and w
 
 The latest tutorial is available at: [https://tapis-project.github.io/tutorials](https://tapis-project.github.io/tutorials/)
 
-## Available Tutorials
+This is a list of some archived Tapis tutorial repositories, ordered by recency:
 
-Below is a list of some Tapis tutorials, ordered by recency:
+| Tutorial | Date | Description |
+|----------|------|-------------|
+| [PEARC25](https://github.com/tapis-project/pearc25-tapis-tutorial) | 2025-07 | 2025 PEARC tutorial |
+| [TACCSTER24](https://github.com/tapis-project/taccster24-tapis-tutorial) | 2024-09 | TACCSTER24 tutorial |
+| [PEARC24](https://github.com/tapis-project/pearc24-tapis-tutorial) | 2024-07 | PEARC24 Tapis tutorial |
+| [SGX3](https://github.com/tapis-project/sgx3-tapis-tutorial) | 2024-06 | Science Gateways tutorial |
+| [Tapis ML](https://github.com/tapis-project/tapis-ml-tutorial) | 2024-06 | Tapis tutorial explaining ML workflow |
+| [Gateways24](https://github.com/tapis-project/gateways24-tapis-tutorial) | 2024-02 | Gateways conference tutorial |
+| [Workflows](https://github.com/tapis-project/workflows-tutorial) | 2023-10 | CI/CD for High Performance Computation with Tapis Workflows API |
+| [PEARC20](https://github.com/tapis-project/pearc20-tapis-tutorial) | 2020-07 | Portable, Reproducible HPC in the Cloud |
 
-| Tutorial | Date | Repository | Description |
-|----------|------|------------|-------------|
-| PEARC25 | 2025-07 | [pearc25-tapis-tutorial](https://github.com/tapis-project/pearc25-tapis-tutorial) | 2025 PEARC tutorial |
-| TACCSTER24 | 2024-09 | [taccster24-tapis-tutorial](https://github.com/tapis-project/taccster24-tapis-tutorial) | TACCSTER24 Tutorial |
-| PEARC24 | 2024-07 | [pearc24-tapis-tutorial](https://github.com/tapis-project/pearc24-tapis-tutorial) | PEARC24 Tapis Tutorial |
-| SGX3 | 2024-06 | [sgx3-tapis-tutorial](https://github.com/tapis-project/sgx3-tapis-tutorial) | Science Gateways tutorial |
-| Tapis ML | 2024-06 | [tapis-ml-tutorial](https://github.com/tapis-project/tapis-ml-tutorial) | Tapis tutorial explaining ML workflow |
-| Gateways24 | 2024-02 | [gateways24-tapis-tutorial](https://github.com/tapis-project/gateways24-tapis-tutorial) | Gateways conference tutorial |
-| Workflows | 2023-10 | [workflows-tutorial](https://github.com/tapis-project/workflows-tutorial) | CI/CD for High Performance Computation with Tapis Workflows API |
-| PEARC20 | 2020-07 | [pearc20-tapis-tutorial](https://github.com/tapis-project/pearc20-tapis-tutorial) | Portable, Reproducible HPC in the Cloud |
-
-## Deployment (Pages and Local)
+## Deployment (GH Pages and Local)
 #### Github Pages
 A tutorial page can be deployed via Github Pages by navigating to repository Settings -> Pages -> Build and Deployment -> Branch (select current) -> Set folder to `/docs`.
 
-Currently only `/` or `/docs` are by default are hosted by gh pages. You can also create a github action that publishes a gh-pages branch if preferred.
+Currently only `/` or `/docs` are hosted by gh pages. You can also create a github action that publishes a gh-pages branch if preferred. This means that a user must move tutorial to `/docs` to be rendered by GH pages.
 
 #### Local Development
-A tutorial page can also be deployed locally for development or for viewing by using Jekyll. Each tutorial folder should contain a Gemfile for use with Ruby programming language. You'll need to ensure Ruby, Gem, and bundle are installed and accessible.
+A tutorial page can also be deployed locally for development or for viewing by using Jekyll. Each tutorial folder should contain a Gemfile for use with the Ruby programming language. You'll need to ensure Ruby, Gem, and bundle are installed and accessible.
 
 ```
 # 1. navigate to preferred tutorial folder
@@ -44,14 +42,14 @@ $ bundle exec jekyll serve
 ```
 
 #### Local Development (with Nix)
-Nix is a package manager which is utilized to provide an environment declared by `flake.nix` that provides Ruby, Gem, and bundle in a non-OS wide shell. The shell provided also contains helper messages as shown below. You will need to have `nix` installed. Once you've entered the shell, you can run steps 1, 2, 3 from before without issue.
+Nix is a package manager which is utilized to provide an environment declared by `flake.nix` that provides Ruby, Gem, and bundle in an isolated shell. The shell provided also contains helper messages as shown below. You will need to have `nix` installed. Once you've entered the shell, you can run steps 1, 2, 3 from before without issue.
 
 ```
 # 0. enter the shell from repo root, afterwards, run steps 1, 2, 3 from before
 $ nix develop
 
 Version Information:
-Ruby: ruby 3.4.7 (2025-10-08 revision 7a5688e2a2) +PRISM [x86_64-linux]
+Ruby: ruby 3.4.7
 Gem: 3.7.1
 Jekyll: jekyll 3.1.6
 

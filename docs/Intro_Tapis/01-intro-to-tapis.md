@@ -1,6 +1,6 @@
 ## Tapis Introduction
 
-[Tapis Slides](https://docs.google.com/presentation/d/17ey19-B8VQIqr2kf427Hrlvd9fuS3MXuN0m0WgQBxn4)
+[Tapis Slides](https://docs.google.com/presentation/d/1gykJ0awIswnAUU-qob3MnzGD_5a729RJVnMhknykeVs/edit?usp=sharing)
 ​
 ### Tapis Provides A Cyberinfrastructure Platform For Science Allowing:
 #### IDENTITY AND ACCESS MANAGEMENT
@@ -50,10 +50,15 @@ You don't have to do a lot of complex things to use Tapis.  If you just want som
 
 <img src="/tutorials/assets/tapisui_home.png" alt="Tapis UI Dashboard" width="500">
 
+[Live Documentation of OpenAPI V3 Specs for all Tapis Services](https://tapis-project.github.io/live-docs)
+
+<img src="/tutorials/assets/livedocs.png" alt="Tapis Live-Docs" width="500">
+
 [Full documentation and guides for using Tapis](https://tapis.readthedocs.io/en/latest)
 
 <img src="/tutorials/assets/docs.png" alt="Tapis Documentation" width="500">
 
-[Live Documentation of OpenAPI V3 Specs for all Tapis Services](https://tapis-project.github.io/live-docs)
+[TapisUI specific documentation page](https://tapis.readthedocs.io/en/latest/technical/tapisui.html)
 
-<img src="/tutorials/assets/livedocs.png" alt="Tapis Live-Docs" width="500">
+<img src="/tutorials/assets/docstapisui.png" alt="TapisUI Documentation" width="500">
+
