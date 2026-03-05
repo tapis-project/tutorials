@@ -28,6 +28,8 @@ A tutorial page can be deployed via Github Pages by navigating to repository Set
 
 Currently only `/` or `/docs` are hosted by gh pages. You can also create a github action that publishes a gh-pages branch if preferred. This means that a user must move tutorial to `/docs` to be rendered by GH pages.
 
+The current tutorial is always in the `/docs` folder. To initialize the page for a "new" tutorial, please copy `/docs` to an archive folder in `yyyy-mm-tutorialname` format. The existing `/docs` folder can then be overwritten with the changes needed for that "new" tutorial.
+
 #### Local Development
 A tutorial page can also be deployed locally for development or for viewing by using Jekyll. Each tutorial folder should contain a Gemfile for use with the Ruby programming language. You'll need to ensure Ruby, Gem, and bundle are installed and accessible.
 
