@@ -1,6 +1,6 @@
-# Enabling Reproducible AI Workflows for the NAIRR Ecosystem
+# Tutorial on Trustworthy, Reproducible Machine Learning with Tapis
 
-## NAIRR 2026 Tutorial Schedule
+## Gateways 2025 Tutorial Schedule
 
 [Slides for this tutorial are here.](https://docs.google.com/presentation/d/1gykJ0awIswnAUU-qob3MnzGD_5a729RJVnMhknykeVs/edit?usp=sharing)
 
@@ -17,15 +17,16 @@
 }
 </style>
 
+{: .schedule-table}
 | Time | Duration | Description |
 |------|----------|-------------|
-| 12:00 PM | 30 min | PLACEHOLDER (Lecture) |
-| 12:30 PM | 30 min | PLACEHOLDER (Hands-on) |
-| 12:50 PM | 20 min | PLACEHOLDER (Lecture) |
+| 12:00 PM | 30 min | Introduction to Tapis (Lecture) |
+| 12:30 PM | 30 min | Tapis Authentication, TapisUI (Hands-on) |
+| 12:50 PM | 20 min | Intro to NLP (Transformers, Hugging Face) (Lecture) |
 | 01:00 PM | 10 min | Coffee Break |
-| 01:10 PM | 30 min | PLACEHOLDER (Hands-on) |
-| 01:40 PM | 30 min | PLACEHOLDER (Hands-on) |
-| 02:10 PM | 30 min | PLACEHOLDER (Lecture + Hands-on) |
+| 01:10 PM | 30 min | Tapis Systems, Tapis Apps (Hands-on) |
+| 01:40 PM | 30 min | Running an ML Tapis application using Tapis jobs sentiment analysis (Hands-on) |
+| 02:10 PM | 30 min | Tapis Workflows (Lecture + Hands-on) |
 
 The resources you will be using today are provided by funding from the National Science Foundation.
 
