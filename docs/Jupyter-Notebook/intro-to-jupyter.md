@@ -15,9 +15,9 @@ For this tutorial, we will use [TACC's Public JupyterHub](https://public.jupyter
 You may login with your TACC accounts.
 
 
-### Uploading your notebook
+### Navigating to the $WORK File System
 
-On successful login, upload the sentiment_analysis.ipynb notebook and open it to run. 
+On successful login, ensure that you have access to a folder, `work`, within the Jupyter file system. 
 
 
 

@@ -1,6 +1,6 @@
-## Tapis Introduction
+## AI, The National CI Ecosystem, and the Tapis API Platform
 
-[Tapis Slides](https://docs.google.com/presentation/d/1gykJ0awIswnAUU-qob3MnzGD_5a729RJVnMhknykeVs/edit?usp=sharing)
+[Lecture Slides](https://docs.google.com/presentation/d/1gykJ0awIswnAUU-qob3MnzGD_5a729RJVnMhknykeVs/edit?usp=sharing)
 ​
 ### Tapis Provides A Cyberinfrastructure Platform For Science Allowing:
 #### IDENTITY AND ACCESS MANAGEMENT

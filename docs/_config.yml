@@ -5,14 +5,16 @@ permalink: pretty
 baseurl: "/tutorials"
 nav:
 - AI/ML, The National CI Ecosysystem, and Tapis:
-  - Intro to Tapis: ./Intro_Tapis/01-intro-to-tapis
+  - AI, CI and Tapis: ./Intro_Tapis/01-intro-to-tapis
   - Initial Steps with TapisUI: ./Intro_Tapis/02-initial-tapis-ui
 - AI Models and Fleserv:
-  - Classes of AI Models and the AI Ecosysystem: ./Tapis_Flexserv/01-lecture
-  - Hands-on TapisUI Tutorial: ./Guided_Demo/guided_demo
-- Tapis Services and More:
-  - Intro to Tapis Systems: ./Tapis_Flexserv/02-systems
-  - Executing Flexserv as a Tapis App: ./Tapis_Flexserv/03-apps
-  - Intro to Tapis Jobs: ./Tapis_Flexserv/04-jobs
-
+  - Classes of AI Models and the AI Ecosysystem: ./Tapis_FlexServ/01-lecture
+  - Hands-on Flexserv TapisUI Tutorial: ./Tapis_FlexServ/01b-running-flexserv
+- Vision Models and Jupyter Notebooks:
+  - Vision Models in Science: ./Vision_Models/01-intro-vision-models
+  - Intro to Jupyter: ./Jupyter-Notebook/intro-to-jupyter 
+  - Prompt Engineering: ./Vision_Models/02-prompt-engineering 
+- Fine-tuning Vision Models:
+  - Fine-tuning with Ultralytics: ./Fine_Tuning_Vision/01-intro-fine-tuning
+  - Evaluating our New Model: ./Fine_Tuning_Vision/02-evaluation 
 theme: jekyll-theme-minimal
