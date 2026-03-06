@@ -5,7 +5,6 @@ The Tapis v3 Jobs service is specialized to run containerized applications on an
 Currently, Docker and Singularity containers are supported. The Jobs service uses the Systems, Apps, Files and Security
 Kernel services to process jobs.
 
-
 ### Life cycle of Jobs
 When a job request is received as the payload of an POST call, the following steps are taken:
 
@@ -17,121 +16,147 @@ When a job request is received as the payload of an POST call, the following ste
 
 After these synchronous steps job processing proceeds asynchronously. Each job is assigned a worker thread and job proceeds until it completes successfully, fails or gets blocked.
 
-
 ### Job Status
-**PENDING** - Job processing beginning <br/>
-**PROCESSING_INPUTS** - Identifying input files for staging <br/>
-**STAGING_INPUTS** - Transferring job input data to execution system <br/>
-**STAGING_JOB** - Staging runtime assets to execution system <br/>
-**SUBMITTING_JOB** - Submitting job to execution system <br/>
-**QUEUED** - Job queued to execution system queue <br/>
-**RUNNING** - Job running on execution system <br/>
-**ARCHIVING** - Transferring job output to archive system <br/>
-**BLOCKED** - Job blocked <br/>
-**PAUSED** - Job processing suspended <br/>
-**FINISHED** - Job completed successfully <br/>
-**CANCELLED** - Job execution intentionally stopped <br/>
-**FAILED** - Job failed <br/>
+* **PENDING** - Job processing beginning
+* **PROCESSING_INPUTS** - Identifying input files for staging
+* **STAGING_INPUTS** - Transferring job input data to execution system
+* **STAGING_JOB** - Staging runtime assets to execution system
+* **SUBMITTING_JOB** - Submitting job to execution system
+* **QUEUED** - Job queued to execution system queue
+* **RUNNING** - Job running on execution system
+* **ARCHIVING** - Transferring job output to archive system
+* **BLOCKED** - Job blocked
+* **PAUSED** - Job processing suspended
+* **FINISHED** - Job completed successfully
+* **CANCELLED** - Job execution intentionally stopped
+* **FAILED** - Job failed
+
+---
+
+### Exercise: Running FlexServ on Vista
+
+#### Application Arguments
+With the `appArgs` parameter, you can specify one or more command line arguments for the user application. Arguments specified in the application definition are appended to those in the submission request.
+
+#### Submit a job via TAPIS UI
 
 
-Simple job submission example:
-```
-job_response_vm=client.jobs.submitJob(name='sentiment analysis',description='sentiment analysis with hugging face transformer pipelines',appId=app_id,appVersion='0.2',execSystemId=system_id_vm, **pa)
+**1. Initiate Submission**
 
-```
-* **appId**	- The Tapis application to execute.  This must be a valid application that the user has permission to run.
-* **name**	-  The user selected name for the job.
-* **appVersion** - The version of the application to execute.
-* **execSystemId** - Tapis execution system ID. It can be inherited from the app
-* **parameterSet**	-	Runtime parameters organized by category
- <br/>
-**appId**, **name** and **appVersion** are required parameters.
+In the Tapis UI, navigate to the application **FlexServ-vista-nairr**, click the Submit Job button, and select **SUBMIT WITH JSON**.
 
-Please refer to all the job submission parameters here [Job Submission Parameters](https://tapis.readthedocs.io/en/latest/technical/jobs.html#the-job-submission-request)
+![Step 1: Select Submit with JSON](/docs/images/Step1-submit-with-json.png)
 
+**2. Configure the Payload**
 
-### Exercise: Running mpm app on VM
+Replace the default JSON in the editor with your specific configuration. Copy the json below in the editor and make sure to edit the Project Allocation name that we have provided.
 
-## Application Arguments
-With appArgs parameter you  can specify one or more command line arguments for the user application. <br/>
-Arguments specified in the application definition are appended to those in the submission request. Metadata can be
-attached to any argument.<br/>
+![Step 2: Job Json](/docs/images/Step2-paste-json.png)
 
-
-### Submit a job on VM Host
-
-```
-#Submit job to run the sentiment analysis application
-pa= {
-    "parameterSet": {
+```json
+{
+  "name": "tap_flexserv_vista_test",
+  "appId": "FlexServ-vista-nairr",
+  "appVersion": "1.4.0",
+  "execSystemId": "vista-test-nairr",
+  "tenant": "public",
+  "execSystemLogicalQueue": "gh",
+  "maxMinutes": 60,
+  "parameterSet": {
     "appArgs": [
-            {"arg": "--sentences"},
-            {"arg": "\"This is great\" \"This is not fun\""}
-            
-        ]
-    }}
-
-# Submit a job
-job_response_vm=client.jobs.submitJob(name='sentiment analysis',description='sentiment analysis with hugging face transformer pipelines',appId=app_id,appVersion='0.1',execSystemId=system_id_vm, **pa)
-
-
+      {
+        "arg": "--flexserv-port 8000",
+        "name": "flexServPort"
+      },
+      {
+        "arg": "--model-name Qwen/Qwen2.5-Coder-0.5B",
+        "name": "modelName"
+      },
+      {
+        "arg": "--enable-https",
+        "name": "enableHttps"
+      },
+      {
+        "arg": "--device auto",
+        "name": "device"
+      },
+      {
+        "arg": "--dtype bfloat16",
+        "name": "dtype"
+      },
+      {
+        "arg": "--attn-implementation sdpa",
+        "name": "attnImplementation"
+      },
+      {
+        "arg": "--model-timeout 86400",
+        "name": "modelTimeout"
+      },
+      {
+        "arg": "--quantization none",
+        "name": "quantization"
+      },
+      {
+        "arg": "--is-distributed 0",
+        "name": "isDistributed"
+      }
+    ],
+    "envVariables": [
+      {
+        "key": "PRI_MODEL_HOST",
+        "value": "HOST_EVAL($SCRATCH)/flexserv/models"
+      },
+      {
+        "key": "PUB_MODEL_HOST",
+        "value": "/work/projects/aci/cic/models"
+      }
+    ],
+    "schedulerOptions": [
+      {
+        "arg": "--tapis-profile tacc-apptainer",
+        "name": "TACC Scheduler Profile"
+      },
+      {
+        "name": "Reservation Name",
+        "arg": "--reservation GHTapis+Nairr"
+      },
+      {
+        "name": "TACC Resource Allocation",
+        "description": "The TACC Allocation associated with this job execution",
+        "include": true,
+        "arg": "-A << add allocation >>"
+      }
+    ]
+  }
+}
 ```
+**3. Submit Job**
 
-Everytime a job is submitted, a unique job id (uuid) is generated. We will use this job id with tapipy to get the job
-status, and download the job output.
-
-```
-# Get job uuid from the job submission response
-print("****************************************************")
-job_uuid_vm=job_response_vm.uuid
-print("Job UUID: " + job_uuid_vm)
-print("****************************************************")
-
-```
-
-### Jobs List
-Now, when you do a jobs-list now, you can see your jobUuid.
-
-```
-client.jobs.getJobList()
-
-```
-
-### Jobs Status
-Job status allows you to see the current state of the job.
-
-```  python
-# Check the status of the job
-print("****************************************************")
-print(client.jobs.getJobStatus(jobUuid=job_uuid_vm))
-print("****************************************************")
-
-```
-Job enters into different states throughout the execution. Details about different job states are given here [JOB STATES](https://tapis.readthedocs.io/en/latest/technical/jobs.html#job-status)
+Once the job definition is pasted click on Submit job
+![Step 3: Job Submit](/docs/images/Step3-submitjob.png)
 
 
-### Jobs Output
-To download the output of job you need to give it jobUuid and output path. You can download a directory in the jobs’ outputPath in zip format. The outputPath is relative to archive system specified.
+**4. View Job**
+
+Once job is submitted successfully, you should go to the left panel and in core services click on job. You can see in some time that your job has entered running state, as shown in the image below.
+
+![Step 4: Job running](/docs/images/Jobrunning.png)
 
 
-``` python
-# Download output of the job
-print("Job Output file:")
+**5. View Job Output file to get the Flex server port and Token**
 
-print("****************************************************")
-jobs_output_vm= client.jobs.getJobOutputDownload(jobUuid=job_uuid_vm,outputPath='stdout')
-print(jobs_output_vm)
-print("****************************************************")
-```
+Step 5a) Click on tapisjob.out file and then click view. This should open the file for vieweing
+![Step 5a: Job output file](/docs/images/ViewTapisjobout.png)
+
+Step 5b) Once the file opens, look at the ACCESS INFORMATION Section to grab the url for your flex server with port number and also the TAP token. Save it to your notepad.
+![Step 5b: Vista_url_token](/docs/images/GetFlexServerPortToken.png)
 
 
 ### What's next?
 
-If you made it this far, you have successfully created a new app within a container and have deployed that tool on an
-HPC like system, and now you can run that tool through the cloud from anywhere!  That is quite a lot in one workshop.
+If you made it this far, you have successfully created a new flex serv app, you can go to the url and explore some of the chat completion and responses API.
 
-At this point, it would be a good idea to connect with other developers that are publishing apps and running workflows
-through Tapis by joining the Tapis API Slack channel: [tacc-cloud.slack.com](https://bit.ly/2XHYJEk)
+
 
 
 

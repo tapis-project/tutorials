@@ -38,67 +38,102 @@ At a high level an application represents the following information:
 
 * **version** - Applications are expected to evolve over time. ``Id`` + ``version`` must be unique within a tenant.
 * **description** - An optional more verbose description for the application.
-* **runtime** - Runtime to be used when executing the application. DOCKER, SINGULARITY. Default is DOCKER.
+* **runtime** - Runtime to be used when executing the application. DOCKER, SINGULARITY, ZIP. Default is DOCKER.
 * **containerImage** - Reference to be used when running the container image.
 * **maxJobs** - Maximum total number of jobs that can be queued or running for this application on a given execution  
-  system at a given time. Note that the execution system may also limit the number of jobs on the system which may
-  further restrict the total number of jobs. Set to -1 for unlimited. Default is unlimited.
+  system at a given time. Set to -1 for unlimited.
 * **maxJobsPerUser** - Maximum total number of jobs associated with a specific job owner that can be queued or running for
-  this application on a given execution system at a given time. Note that the execution system may also limit the number
-  of jobs on the system which may further restrict the total number of jobs. Set to -1 for unlimited. Default is unlimited.
-* **strictFileInputs** -  Flag indicating if a job request is allowed to have unnamed file inputs. If set to true then a
-  job request may only use the named file inputs defined in the application. See attribute *fileInputs* in the
-  JobAttributes table. Default is *false*.
-* **Job related attributes** - Various attributes related to job execution such as *execSystemId*, *execSystemExecDir*,
-  *execSystemInputDir*, *execSystemLogicalQueue* *archiveSystemId*, *fileInputs*, etc. Many of these are optional.
+  this application. Set to -1 for unlimited.
+* **strictFileInputs** -  Flag indicating if a job request is allowed to have unnamed file inputs. 
+* **Job related attributes** - Various attributes related to job execution such as *execSystemId*, *parameterSet*, *archiveFilter*, etc.
 
 For more information about applications and the Applications service please see [Tapis Applications Service documentation](https://tapis.readthedocs.io/en/latest/technical/apps.html).
 
 ## Getting Started
 
-Here we review how to create an application and how to retrieve application details. In the examples below we assume you are using the tenant named ``training`` with a base URL of ``https://training.tacc.tapis.io`` and that you have authenticated using ``tapipy``.
+Here we review how to create an application and how to retrieve application details. In the examples below we assume you are using Tapis UI ``https://public.tapis.io`` and that you have authenticated using your TACC credentials and token.
 
-### Creating an Application
+### Creating a FlexServ Application
 
-Here is an example of an application definition:
+The following app is used to run the FlexServer on TACC's Vista System. For the purposes of this tutorial, the application has already been registered with Tapis and is available as a public app for all users to submit jobs.
+
+It is important to note that when users register a new application, it is ``private`` by default and accessible only to the ``owner``. Authors then have the flexibility to share the application with specific users or make it publicly available across the entire tenant.
+
 ``` python
 app_def = {
-    "id": app_id,
-    "version": "0.2",
-    "description": "Application utilizing the sentiment analysis model from Hugging Face.",
-    "jobType": "FORK",
-    "runtime": "DOCKER",
-    "containerImage": "tapis/sentiment-analysis:1.0.0",
+    "id": "FlexServ-vista-nairr",
+    "version": "1.3.0",
+    "description": "A TACC-owned inference server for running AI models.",
+    "owner": "${apiUserId}",
+    "enabled": True,
+    "runtime": "ZIP",
+    "runtimeOptions": ["SINGULARITY_RUN"],
+    "containerImage": "[https://github.com/tapis-project/FlexServ-Deployer/releases/download/tapis-flexserv-1.3.0/Tapis-FlexServ.zip](https://github.com/tapis-project/FlexServ-Deployer/releases/download/tapis-flexserv-1.3.0/Tapis-FlexServ.zip)",
+    "jobType": "BATCH",
+    "maxJobs": -1,
+    "maxJobsPerUser": -1,
+    "strictFileInputs": True,
     "jobAttributes": {
+        "description": "FlexServ run by ${JobOwner}",
+        "dynamicExecSystem": False,
+        "execSystemExecDir": "${JobWorkingDir}",
+        "execSystemInputDir": "${JobWorkingDir}",
+        "execSystemOutputDir": "${JobWorkingDir}/output",
+        "execSystemLogicalQueue": "debug",
+        "archiveSystemDir": "HOST_EVAL($WORK)/tapis-jobs-archive/${JobCreateDate}/${JobName}-${JobUUID}",
+        "archiveMode": "ALWAYS",
         "parameterSet": {
-            "archiveFilter": {
-                "includeLaunchFiles": False
-            }
+            "appArgs": [
+                {
+                    "name": "flexServPort",
+                    "arg": "--flexserv-port 8000",
+                    "inputMode": "INCLUDE_ON_DEMAND"
+                },
+                {
+                    "name": "modelName",
+                    "arg": "--model-name Qwen/Qwen3-0.6B",
+                    "inputMode": "INCLUDE_ON_DEMAND"
+                }
+            ],
+            "schedulerOptions": [
+                {
+                    "name": "TACC Scheduler Profile",
+                    "arg": "--tapis-profile tacc-apptainer",
+                    "inputMode": "FIXED"
+                }
+            ],
+            "envVariables": [
+                {
+                    "key": "HUGGINGFACE_TOKEN",
+                    "value": "",
+                    "inputMode": "INCLUDE_ON_DEMAND"
+                }
+            ],
+            "archiveFilter": { "includeLaunchFiles": True }
         },
-        "memoryMB": 1,
         "nodeCount": 1,
         "coresPerNode": 1,
+        "memoryMB": 256000,
         "maxMinutes": 10
+    },
+    "notes": {
+        "label": "FlexServ",
+        "category": "Utilities",
+        "dynamicExecSystems": ["vista", "stampede3", "ls6"]
     }
 }
 ```
+This is how one can register app directly from Tapis UI. **Note: App is already registered for this tutorial**
+![App Create with Tapis UI](/docs/images/TapisUI_App.png)
 
-#### Using ``tapipy`` to register the application:
-``` python
- import json
- from tapipy.tapis import Tapis
- t = Tapis(base_url='https://training.tapis.io', username='<userid>', password='************')
- t.apps.createAppVersion(**app_def)
-```
+You should see the Flex Server application already registered in your Tapis UI: **FlexServ-vista-nairr version 1.4.0**
+![FlexServ Application](/docs/images/Flexserv_app.png)
 
-### Viewing Applications
+We will now move to the [Jobs](./04-jobs.md) to run this application.
 
-To retrieve details for a specific application, such as the one above:
+### Creating a Ultralytics Fine tuning Application
 
-#### Using ``tapipy``:
-``` python
- t.apps.getAppLatestVersion(appId=app_id)
-```
+
 
 ## Next Steps
 Now that we have our very first application ready to use, we are ready to run it on a system using the Jobs service. 
