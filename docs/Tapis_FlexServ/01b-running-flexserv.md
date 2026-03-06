@@ -190,7 +190,7 @@ Step 5b) Once the file opens, look at the ACCESS INFORMATION Section to grab the
 
 ### What's next?
 
-If you made it this far, you have successfully created a new flex serv app, you can explore the Flexserv UI and work try to sending your first chat
+If you made it this far, you have successfully created a new flex serv app, you can explore the Flexserv UI and try to send your first chat
 
 ### Using the Flexserv UI 
 Todo: 
