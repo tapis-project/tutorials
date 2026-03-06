@@ -24,11 +24,11 @@ This is a list of some archived Tapis tutorial repositories, ordered by recency:
 
 ## Deployment (GH Pages and Local)
 #### Github Pages
-A tutorial page can be deployed via Github Pages by navigating to repository Settings -> Pages -> Build and Deployment -> Branch (select current) -> Set folder to `/docs`.
+A tutorial page can be deployed via Github Pages by navigating to repository Settings -> Pages -> Build and Deployment -> Branch (select current) -> Set folder to `/tutorials`.
 
-Currently only `/` or `/docs` are hosted by gh pages. You can also create a github action that publishes a gh-pages branch if preferred. This means that a user must move tutorial to `/docs` to be rendered by GH pages.
+Currently only `/` or `/tutorials` are hosted by gh pages. You can also create a github action that publishes a gh-pages branch if preferred. This means that a user must move tutorial to `/tutorials` to be rendered by GH pages.
 
-The current tutorial is always in the `/docs` folder. To initialize the page for a "new" tutorial, please copy `/docs` to an archive folder in `yyyy-mm-tutorialname` format. The existing `/docs` folder can then be overwritten with the changes needed for that "new" tutorial.
+The current tutorial is always in the `/tutorials` folder. To initialize the page for a "new" tutorial, please copy `/tutorial` to an archive folder in `yyyy-mm-tutorialname` format. The existing `/tutorials` folder can then be overwritten with the changes needed for that "new" tutorial.
 
 #### Local Development
 A tutorial page can also be deployed locally for development or for viewing by using Jekyll. Each tutorial folder should contain a Gemfile for use with the Ruby programming language. You'll need to ensure Ruby, Gem, and bundle are installed and accessible.

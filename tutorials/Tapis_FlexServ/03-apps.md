@@ -124,10 +124,10 @@ app_def = {
 }
 ```
 This is how one can register app directly from Tapis UI. **Note: App is already registered for this tutorial**
-![App Create with Tapis UI](/docs/images/TapisUI_App.png)
+![App Create with Tapis UI](/tutorials/images/TapisUI_App.png)
 
 You should see the Flex Server application already registered in your Tapis UI: **FlexServ-vista-nairr version 1.4.0**
-![FlexServ Application](/docs/images/Flexserv_app.png)
+![FlexServ Application](/tutorials/images/Flexserv_app.png)
 
 We will now move to the [Jobs](./04-jobs.md) to run this application.
 

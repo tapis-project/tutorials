@@ -55,22 +55,22 @@ Follow these steps to submit the job using the Tapis UI:
 ### Step 1: Initiate Submission
 Navigate to the **Apps** list and select the `ultralytics-fine-tune` app. Click the button to initiate a JSON-based submission.
 
-![Step 1 - Selecting the Ultralytics App in UI](/docs/images/Step1-Ultralyticsapp.png)
+![Step 1 - Selecting the Ultralytics App in UI](/tutorials/images/Step1-Ultralyticsapp.png)
 
 ### Step 2: Edit the JSON Payload
 Paste the job JSON provided above into the editor. Make sure to replace the `<insert here>` placeholders with your actual **Allocation** details and click `Submit`.
 
-![Step 2 - Pasting the Job JSON into the Editor and Submit](/docs/images/Step2-Submit-fine-tune-job.png)
+![Step 2 - Pasting the Job JSON into the Editor and Submit](/tutorials/images/Step2-Submit-fine-tune-job.png)
 
 ### Step 3: Monitor Job Progress
 After clicking **Submit**, navigate to the **Jobs** tab. You can monitor the status as it moves from `PENDING` to `RUNNING` and finally `FINISHED`.
 
-![Step 3 - Monitoring Job Status in the Dashboard](/docs/images/fine-tune-job-running.png) 
+![Step 3 - Monitoring Job Status in the Dashboard](/tutorials/images/fine-tune-job-running.png) 
 Since we are running 100 Epochs to fine-tune, this will take around 15-20 mins to finish.
 
 ### Step 4: Job Output and Results location
  Once the job finishes, you should see output similar to the image below.
- ![Step 4 - After Job completes](/docs/images/fine-tune-job-completion.png) 
+ ![Step 4 - After Job completes](/tutorials/images/fine-tune-job-completion.png) 
  
  You should see a train directory with weights. Inside weights, you can access the best.pt model. This file will be accessible to you Jupyter.
 
