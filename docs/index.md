@@ -19,13 +19,24 @@
 
 | Time | Duration | Description |
 |------|----------|-------------|
-| 12:00 PM | 30 min | PLACEHOLDER (Lecture) |
-| 12:30 PM | 30 min | PLACEHOLDER (Hands-on) |
-| 12:50 PM | 20 min | PLACEHOLDER (Lecture) |
-| 01:00 PM | 10 min | Coffee Break |
-| 01:10 PM | 30 min | PLACEHOLDER (Hands-on) |
-| 01:40 PM | 30 min | PLACEHOLDER (Hands-on) |
-| 02:10 PM | 30 min | PLACEHOLDER (Lecture + Hands-on) |
+| 9:00-10:00 AM | 60 min | (Lecture) AI/ML, the National CyberInfrastructure Ecosystem and Tapis |
+| 10-10:30 AM | 30 min | (Hands-on) Initial Steps With TapisUI |
+| 10:30-11 AM | 30 min | Coffee Break |
+| 11-11:45 AM | 45 min | (Lecture) Classes of AI Models, 3rd Party Model Registries, Flexserv |
+| 11:45-12:30 PM | 45 min | (Hands-on) Executing Large Models on Vista Via Tapis and Flexserv |
+| 12:30-1:30 PM  | 60 min | Lunch  |
+| 1:30-2:00 PM | 30 min | (Lecture) CNNs, Yolo and an Example Scientific Vision Task, Brief Intro to Jupyter |
+| 2:00-2:15 PM | 15 min | (Hands-on) Launching Juptyer Notebook |
+| 2:15-2:30 PM | 15 min | (Lecture) Prompt-Engineering Best Practices |
+| 2:30-3:00 PM | 30 min | (Hands-on) Generating Code for a Vision Task and Executing in Jupyter |
+| 3:00-3:30 PM | 30 min | Coffee Break |
+| 3:30-4:00 PM | 30 min | (Lecture + Hands-on) Fine-tuning the Vision Model with Ultralytics and Tapis | 
+| 4:00-4:30 PM | 30 min | (Hands-on) Re-evaluating Using best.pt within Jupter |
+| 4:30-5:00 PM | 30 min | Additional Use Cases and Discussion |
+
+<!-- | 3:30-3:50 PM | 20 min | (Lecture) Fine-tuning a Vision Model with Ultralytics |
+| 3:40-4:00 PM | 10 min | (Hands-on) Submitting a Fine-tuning job via TapisUI | -->
+
 
 The resources you will be using today are provided by funding from the National Science Foundation.
 
