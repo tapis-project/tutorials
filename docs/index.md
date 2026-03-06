@@ -44,15 +44,6 @@ The resources you will be using today are provided by funding from the National 
 * [Intro to Tapis](./Intro_Tapis/01-intro-to-tapis.md)
  
 
-## More Information on Tapis Services:
-* [Intro to Tapis Systems](./Tapis_Flexserv/02-systems.md)
-* [Intro to Tapis Apps](./Tapis_apps_jobs/03-apps.md)
-* [Intro to Tapis Jobs](./Tapis_apps_jobs/04-jobs.md)
-
-<!-- ## Tapis Workflows
-* [Ultralytics Model Page](https://docs.ultralytics.com/models/yolov9/#supported-tasks-and-modes) -->
-
-
 ## Links & Documentation
 [The tutorial covers TapisUI in the public tenant: public.tapis.io](https://public.tapis.io)
 
@@ -77,3 +68,8 @@ The resources you will be using today are provided by funding from the National 
 <a href="https://tapis.readthedocs.io/en/latest/technical/tapisui.html" target="_blank">
 <img src="/tutorials/assets/docstapisui.png" alt="TapisUI Documentation" width="50%">
 </a>
+
+## More Information on Tapis Services:
+* [Tapis Systems](https://tapis.readthedocs.io/en/latest/technical/systems.html)
+* [Tapis Apps](https://tapis.readthedocs.io/en/latest/technical/apps.html)
+* [Tapis Jobs](https://tapis.readthedocs.io/en/latest/technical/jobs.html)
