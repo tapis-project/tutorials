@@ -11,8 +11,8 @@ Dowload the Jupyter Notebook by clicking the link below:
 
 ### Starting up your Jupyter Notebook Environment
 
-For this tutorial, we will use [TACC JupyterHub](https://tacc-dev.io.jupyter.tacc.cloud) 
-You may login with your training accounts.
+For this tutorial, we will use [TACC's Public JupyterHub](https://public.jupyter.tacc.cloud) 
+You may login with your TACC accounts.
 
 
 ### Uploading your notebook

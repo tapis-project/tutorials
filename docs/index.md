@@ -45,7 +45,7 @@ The resources you will be using today are provided by funding from the National 
  
 
 ## Tapis Service Introductions and More:
-* [Intro to Tapis Systems](./Tapis_systems/02-systems.md)
+* [Intro to Tapis Systems](./Tapis_Flexserv/02-systems.md)
 * [Intro to Tapis Apps](./Tapis_apps_jobs/03-apps.md)
 * [Intro to Tapis Jobs](./Tapis_apps_jobs/04-jobs.md)
 * [Intro to Tapis Pods](./Tapis_pods/05-pods.md)

@@ -4,15 +4,15 @@ remote_theme: marella/jekyll-theme-documentation
 permalink: pretty
 baseurl: "/tutorials"
 nav:
-- Intro to Tapis:
+- AI/ML, The National CI Ecosysystem, and Tapis:
   - Intro to Tapis: ./Intro_Tapis/01-intro-to-tapis
-- Guided TapisUI Tutorial:
+  - Initial Steps with TapisUI: ./Intro_Tapis/02-initial-tapis-ui
+- AI Models and Fleserv:
+  - Classes of AI Models and the AI Ecosysystem: ./Tapis_Flexserv/01-lecture
   - Hands-on TapisUI Tutorial: ./Guided_Demo/guided_demo
 - Tapis Services and More:
-  - Intro to Tapis Systems: ./Tapis_systems/02-systems
-  - Intro to Tapis Apps: ./Tapis_apps_jobs/03-apps
-  - Intro to Tapis Jobs: ./Tapis_apps_jobs/04-jobs
-  - Intro to Tapis Pods: ./Tapis_pods/05-pods
-  - Natural Language Processing: ./NLP/nlp
+  - Intro to Tapis Systems: ./Tapis_Flexserv/02-systems
+  - Executing Flexserv as a Tapis App: ./Tapis_Flexserv/03-apps
+  - Intro to Tapis Jobs: ./Tapis_Flexserv/04-jobs
 
 theme: jekyll-theme-minimal
