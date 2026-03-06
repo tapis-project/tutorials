@@ -73,7 +73,16 @@ app_def = {
 ```
 
 You should see the Flex Server application already registered in your Tapis UI: **FlexServ-vista-nairr version 1.4.0**
-![FlexServ Application](/docs/images/Flexserv_app.png)
+![FlexServ Application](/tutorials/images/Flexserv_app.png)
+
+
+![FlexServ Application](/docs/images/Flexserv_app.png) <-- must set to /tutorials instead of /docs
+
+<a href="https://public.tapis.io" target="_blank">
+<img src="/tutorials/images/Flexserv_app.png" style="max-width:70%;">
+</a>
+
+<img src="/tutorials/images/Flexserv_app.png" style="max-width:70%;">
 
 ## Submit FlexServ Job using TAPIS UI
 
