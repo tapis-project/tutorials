@@ -44,21 +44,19 @@ The resources you will be using today are provided by funding from the National 
 * [Intro to Tapis](./Intro_Tapis/01-intro-to-tapis.md)
  
 
-## Tapis Service Introductions and More:
+## More Information on Tapis Services:
 * [Intro to Tapis Systems](./Tapis_Flexserv/02-systems.md)
 * [Intro to Tapis Apps](./Tapis_apps_jobs/03-apps.md)
 * [Intro to Tapis Jobs](./Tapis_apps_jobs/04-jobs.md)
-* [Intro to Tapis Pods](./Tapis_pods/05-pods.md)
-* [Natural Language Processing (NLP)](./NLP/nlp.md)
 
 <!-- ## Tapis Workflows
 * [Ultralytics Model Page](https://docs.ultralytics.com/models/yolov9/#supported-tasks-and-modes) -->
 
 
 ## Links & Documentation
-[The tutorial covers TapisUI in the training tenant: training.tapis.io](https://training.tapis.io)
+[The tutorial covers TapisUI in the public tenant: public.tapis.io](https://public.tapis.io)
 
-<a href="https://training.tapis.io" target="_blank">
+<a href="https://public.tapis.io" target="_blank">
 <img src="/tutorials/assets/tapisui_home.png" alt="TapisUI Dashboard" width="50%">
 </a>
 
