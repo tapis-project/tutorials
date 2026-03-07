@@ -1,7 +1,7 @@
 # FlexServ API Prompt: YOLO Evaluation Script Generator
 
 ### Task Summary:
-To test the capabilities of the FlexServ inference server, we can provide a complex prompt to the Responses API. This prompt asks the AI to generate a complete Python evaluation script that performs Animal detection on the images from the LILA BC Small Animal dataset. This is a large camera-trap image dataset used for wildlife monitoring and ecological research. It contains millions of images captured by automated cameras, including small mammals and many blank triggers, along with annotations describing the detected species. For training object detection models such as YOLO, the dataset can be downloaded in YOLO format, where each image has a corresponding .txt label file containing normalized bounding-box coordinates in the form <class_id> <x_center> <y_center> <width> <height>.
+To test the capabilities of the FlexServ inference server, we can provide a complex prompt to the Responses API. This prompt asks the AI to generate a complete Python evaluation script that performs Animal detection on the images from the LILA BC Small Animal dataset. This is a large camera-trap image dataset used for wildlife monitoring and ecological research. It contains millions of images captured by automated cameras, including small mammals and many blank triggers, along with annotations describing the detected species. For training object detection models such as YOLO, the dataset can be downloaded in YOLO format, where each image has a corresponding .txt label file containing bounding-box coordinates in the form <class_id> <x_center> <y_center> <width> <height>.
 
 ---
 
@@ -60,19 +60,18 @@ After the code, briefly explain how the program works in plain English.
 ![Paste Prompt](/tutorials/images/Paste_Prompt.png)
 
 -  Change the `temperature` to a value `0.0` for a deterministic solution.
--  Select the model to Run
+-  Select the model to run
     -   `Qwen/Qwen2.5-Coder32B-Instruct-61.0 GB - Text Generation`
 -  Make sure the `Streams` is checked. 
 -  Uncheck `Multi-turn conversation`
--  Click `Run`. In few minutes you should see the code generation starts in the blue box in Responses API. Wait for it to complete.
-After completion you should see a similar output.
+-  Click `Run`. Within a few minutes, you should see the code generation start in the blue box in the Responses API. Wait for it to complete. After completion, you should see output similar to the image below.
 
 ![Code](/tutorials/images/Code.png)
 
 
-### On Jupyter :
+### On Jupyter:
 
-Go to the notebook Code-Detection on your Jupyter path 
+Go to the notebook Code-Detection on your Jupyter path. 
 `ai-tutorial-2026 -> notebooks -> Code-Detection.ipynb`
 
 Copy the generated code from FlexServ UI in a new cell below the cell titled `Put your generated code here`. 
