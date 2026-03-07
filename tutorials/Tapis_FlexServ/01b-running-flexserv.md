@@ -258,7 +258,9 @@ Replace the default JSON in the editor with your job definition. Copy the json b
 
 ![Step 2: Job Json](/tutorials/images/Step2-paste-json.png)
 
-```json
+<div style="max-height:400px; overflow:auto; border:1px solid #ddd; padding:10px;">
+
+<pre><code class="language-json">
 {
   "name": "tap_flexserv_vista_test",
   "appId": "FlexServ-vista-nairr",
@@ -334,7 +336,10 @@ Replace the default JSON in the editor with your job definition. Copy the json b
     ]
   }
 }
-```
+</code></pre>
+
+</div>
+
 **3. Submit Job**
 
 Once the job definition is pasted click on Submit job
