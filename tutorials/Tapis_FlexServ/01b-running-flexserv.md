@@ -237,6 +237,7 @@ app_def = {
   }
 }
 ```
+</div>
 
 You should see the Flex Server application already registered in your Tapis UI: **FlexServ-vista-nairr version 1.4.0**
 ![FlexServ Application](/tutorials/images/Flexserv_app.png)
