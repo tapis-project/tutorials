@@ -149,7 +149,7 @@ These are specific flags passed to the Slurm scheduler on the Vista system:
 #### 3. Environment Variables
 * **`EPOCHS`**: In this job submission, the value is set to `100`. This overrides the default value of `3` in the app definition, allowing for a more thorough training session.
 
-![Step 2 - Pasting the Job JSON into the Editor and Submit](/tutorials/images/Step2-Submit-fine-tune-job.png)
+![Step 2 - Pasting the Job JSON into the Editor and Submit](/tutorials/images/Fine-tune-job.png)
 
 ### Step 3: Monitor Job Progress
 After clicking **Submit**, navigate to the **Jobs** tab. You can monitor the status as it moves from `PENDING` to `RUNNING` and finally `FINISHED`.
