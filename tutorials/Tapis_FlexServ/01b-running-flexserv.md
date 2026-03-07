@@ -18,12 +18,10 @@ You can now view files on Vista, by clicking on the `View Files ` button.
 
 The following app runs the FlexServ on TACC's Vista System. For the purposes of this tutorial, the application has already been registered with Tapis and is available as a public app for all users to submit jobs.
 
-<div style="max-height:400px; overflow:auto;">
+<div style="max-height:400px; overflow:auto; border:1px solid #ddd; padding:10px;">
 
-```json
-
+<pre><code class="language-json">
 {
-
   "id": "FlexServ-vista-nairr",
   "version": "1.4.0",
   "description": "A TACC-owned inference server for running AI models.",
@@ -236,8 +234,10 @@ The following app runs the FlexServ on TACC's Vista System. For the purposes of 
     ]
   }
 }
-```
+</code></pre>
+
 </div>
+
 
 You should see the Flex Server application already registered in your Tapis UI: **FlexServ-vista-nairr version 1.4.0**
 ![FlexServ Application](/tutorials/images/Flexserv_app.png)
