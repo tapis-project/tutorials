@@ -7,73 +7,73 @@ To test the capabilities of the FlexServ inference server, we can provide a comp
 
 ### On FlexServ UI
 
-1. Copy and paste the following text into the FlexServ UI in the `Responses API`, `Input(Markdown)` section 
-![Paste Prompt](/tutorials/images/Paste_Prompt.png)
+1. Copy and paste the following prompt into the FlexServ UI in the `Responses API`, `Input(Markdown)` section, shown in the image below.
+
 
 <div style="max-height:400px; overflow:auto; border:1px solid #ddd; padding:10px;">
 <pre>
 
-> "Write Python code that reads all images from a dataset root directory stored in the variable DATASET_ROOT.
->
-> **TASK DESCRIPTION:**
-> - This is an IMAGE-LEVEL BINARY CLASSIFICATION task implemented using an object detection model.
-> - The goal is to determine whether an image contains an animal or not.
->
-> **DATASET STRUCTURE:**
-> - DATASET_ROOT contains three subdirectories: `train`, `test`, and `val`.
-> - Each directory contains two subdirectories:
->   * images/ → contains image files (.jpg, .jpeg, .png)
->   * labels/ → contains YOLO format .txt files
-> - GROUND-TRUTH LOGIC: An image is considered an `animal` if a corresponding .txt file exists and is not empty in the `labels/` folder.
->
-> **MODEL REQUIREMENTS:**
-> - Use ONLY a pretrained Ultralytics YOLO detection model (e.g., yolov8n.pt).
-> - Load the model using the Ultralytics YOLO API.
-> - Assume YOLO detects animals using class ID `animal` at index 0.
->
-> **DETECTION LOGIC (IMPORTANT):**
-> - Run object detection on each image.
-> - If the model produces AT LEAST ONE detection of an animal class with confidence >= 0.5:
->     → The image-level prediction is `animal`.
->
-> **EVALUATION METRICS:**
-> - Iterate through the images in the `test` split.
-> - Compare the image-level prediction with the ground truth (existence of label file).
-> - Count: True Positives, True Negatives, False Positives, and False Negatives.
->
-> **ACCURACY DEFINITION:**
-> - Overall accuracy = (True Positives + True Negatives) / Total Images
->
-> **OUTPUT REQUIREMENTS:**
-> - Print for each image: filename, ground-truth status, and prediction.
-> - At the end, print a summary report including total images, counts for each metric, and overall detection accuracy.
->
-> **CODING REQUIREMENTS:**
-> - Store the main path in DATASET_ROOT.
-> - Use `pathlib` or `os` for robust file path matching.
-> - Read only .jpg, .jpeg, and .png files.
-> - Include clear comments explaining each step.
->
-> After the code, briefly explain how the program works in plain English."
+TASK DESCRIPTION:
+This is an IMAGE-LEVEL BINARY CLASSIFICATION task implemented using an object detection model.
+The goal is to determine whether an image contains an animal or not.
+
+DATASET STRUCTURE:
+DATASET_ROOT contains three subdirectories: train, test, and val.
+Each directory contains two subdirectories:
+images/ → contains image files (.jpg, .jpeg, .png)
+labels/ → contains YOLO format .txt files
+
+GROUND-TRUTH LOGIC: An image is considered an animal if a corresponding .txt file exists and is not empty in the labels/ folder.
+
+MODEL REQUIREMENTS:
+Use ONLY a pretrained Ultralytics YOLO detection model (e.g., yolov8n.pt).
+Load the model using the Ultralytics YOLO API.
+Assume YOLO detects animals using class ID animal at index 0.
+
+DETECTION LOGIC (IMPORTANT):
+Run object detection on each image.
+If the model produces AT LEAST ONE detection of an animal class with confidence >= 0.5:
+→ The image-level prediction is animal.
+
+EVALUATION METRICS:
+Iterate through the images in the test split.
+Compare the image-level prediction with the ground truth (existence of label file).
+Count: True Positives, True Negatives, False Positives, and False Negatives.
+
+ACCURACY DEFINITION:
+Overall accuracy = (True Positives + True Negatives) / Total Images
+
+OUTPUT REQUIREMENTS:
+Print for each image: filename, ground-truth status, and prediction.
+At the end, print a summary report including total images, counts for each metric, and overall detection accuracy.
+
+CODING REQUIREMENTS:
+Store the main path in DATASET_ROOT.
+Use pathlib or os for robust file path matching.
+Read only .jpg files.
+Include clear comments explaining each step.
+
+After the code, briefly explain how the program works in plain English.
 </pre>
 </div>
 
-2. Change the temperature to 0.0 for a deterministic solution.
+![Paste Prompt](/tutorials/images/Paste_Prompt.png)
+
+2. Change the temperature to a value 0.0 for a deterministic solution.
 3. Select the model to Run
     -   Qwen/Qwen2.5-Coder32B-Instruct-61.0 GB - Text Generation
 4. Make sure the Streams is checked. 
 5. Uncheck Multi-turn conversation
-6. Click Run. You should see the generated code in the blue box in Responses API. Wait for it to complete.
+6. Click Run. In few minutes you should see the code generation starts in the blue box in Responses API. Wait for it to complete.
+After completion you should see a similar output.
 
 ![Code](/tutorials/images/Code.png)
-
-Now, let's test it's performance on the test dataset using the Jupyter Notebook.
 
 
 ### On Jupyter :
 
-Go to the notebook Code-Detection on your Jupyter
-ai-tutorial-2026 -> notebooks -> Code-Detection.ipynb
+Go to the notebook Code-Detection on your Jupyter path 
+`ai-tutorial-2026 -> notebooks -> Code-Detection.ipynb`
 
 Copy the generated code from FlexServ UI in a new cell below the cell titled `Put your generated code here`. 
 
