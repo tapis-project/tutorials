@@ -20,7 +20,7 @@ The following app runs the FlexServ on TACC's Vista System. For the purposes of 
 
 <div style="max-height:400px; overflow:auto;">
 
-```json
+```python
 
 app_def = {
     {
