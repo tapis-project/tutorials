@@ -20,10 +20,10 @@ The following app runs the FlexServ on TACC's Vista System. For the purposes of 
 
 <div style="max-height:400px; overflow:auto;">
 
-```python
+```json
 
-app_def = {
-    {
+{
+
   "id": "FlexServ-vista-nairr",
   "version": "1.4.0",
   "description": "A TACC-owned inference server for running AI models.",
