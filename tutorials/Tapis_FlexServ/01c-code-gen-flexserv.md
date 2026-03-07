@@ -7,7 +7,7 @@ To test the capabilities of the FlexServ inference server, we can provide a comp
 
 ### On FlexServ UI
 
-1. Copy and paste the following prompt into the FlexServ UI in the `Responses API`, `Input(Markdown)` section, shown in the image below.
+- Copy and paste the following prompt into the FlexServ UI in the `Responses API`, `Input(Markdown)` section, shown in the image below.
 
 
 <div style="max-height:400px; overflow:auto; border:1px solid #ddd; padding:10px;">
@@ -59,12 +59,12 @@ After the code, briefly explain how the program works in plain English.
 
 ![Paste Prompt](/tutorials/images/Paste_Prompt.png)
 
-2. Change the temperature to a value 0.0 for a deterministic solution.
-3. Select the model to Run
-    -   Qwen/Qwen2.5-Coder32B-Instruct-61.0 GB - Text Generation
-4. Make sure the Streams is checked. 
-5. Uncheck Multi-turn conversation
-6. Click Run. In few minutes you should see the code generation starts in the blue box in Responses API. Wait for it to complete.
+-  Change the `temperature` to a value `0.0` for a deterministic solution.
+-  Select the model to Run
+    -   `Qwen/Qwen2.5-Coder32B-Instruct-61.0 GB - Text Generation`
+-  Make sure the `Streams` is checked. 
+-  Uncheck `Multi-turn conversation`
+-  Click `Run`. In few minutes you should see the code generation starts in the blue box in Responses API. Wait for it to complete.
 After completion you should see a similar output.
 
 ![Code](/tutorials/images/Code.png)
