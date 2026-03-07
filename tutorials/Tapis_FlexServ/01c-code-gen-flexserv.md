@@ -72,13 +72,14 @@ Now, let's test it's performance on the test dataset using the Jupyter Notebook.
 
 ### On Jupyter :
 
-Go to the notebook Code-Detection
+Go to the notebook Code-Detection on your Jupyter
+ai-tutorial-2026 -> notebooks -> Code-Detection.ipynb
 
-Copy the generated code from FlexServ UI in a new cell in the notebook file. 
+Copy the generated code from FlexServ UI in a new cell below the cell titled `Put your generated code here`. 
 
-Update the variable `DATASET_ROOT` to path `/home/jovyan/work/vista/ai-tutorial-2026/datasets/AnimalEcology.v4i.yolov11`
+Update the variable `DATASET_ROOT` to path `/home/jovyan/work/vista/ai-tutorial-2026/datasets/AnimalEcology.v4i.yolov11` in your generated code
 
-Update the model path to `/home/jovyan/work/vista/ai-tutorial-2026/models/yolov9t_ep200_bs32_lr0.005_baa22147.pt`
+Also update the model path to `/home/jovyan/work/vista/ai-tutorial-2026/models/yolov9t_ep200_bs32_lr0.005_baa22147.pt`
 
 Now run the code. On successful run, you should see output similar to below 
 
