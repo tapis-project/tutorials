@@ -276,7 +276,7 @@ Replace the default JSON in the editor with your job definition. Copy the json b
         "name": "flexServPort"
       },
       {
-        "arg": "--model-name Qwen/Qwen2.5-Coder-0.5B",
+        "arg": "--model-name Qwen/Qwen3.5-0.8B",
         "name": "modelName"
       },
       {
@@ -315,7 +315,15 @@ Replace the default JSON in the editor with your job definition. Copy the json b
       },
       {
         "key": "PUB_MODEL_HOST",
-        "value": "/work/projects/aci/cic/models"
+        "value": "/work/projects/aci/cic/apps/flexserv/models"
+      },
+      {
+        "key": "APPLY_PATCH",
+        "value": "1"
+      },
+      {
+        "key": "APPTAINER_IMAGE",
+        "value": "/work/projects/aci/cic/apps/flexserv/zhangwei217245--flexserv-transformers--1.4.1.sif"
       }
     ],
     "schedulerOptions": [
