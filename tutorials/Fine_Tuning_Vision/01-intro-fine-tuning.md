@@ -1,8 +1,5 @@
 ## Fine-Tuning Vision Models Using Ultralytics and Tapis
 
-[Lecture Slides](https://docs.google.com/presentation/d/1gykJ0awIswnAUU-qob3MnzGD_5a729RJVnMhknykeVs/edit?usp=sharing)
-
-
 This Tapis application allows users to fine-tune Vision models such as YOLO using Ultralytics running in a Singularity container on Vista. It is designed to run on High-Performance Computing (HPC) systems via Tapis, leveraging GPU acceleration for training tasks.
 
 > **Note:** This app is already registered for the tutorial and is available to run via the Tapis UI.

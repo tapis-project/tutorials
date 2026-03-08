@@ -1,11 +1,16 @@
-# FlexServ API Prompt: YOLO Evaluation Script Generator
+## Prompt Engineering and Generating Image Detection Code
 
-### Task Summary:
+[Lecture Slides](https://docs.google.com/presentation/d/1BVLnUbyiWjsaS33zMshW3TXqtfvv6zGklaCNBeX7Go0/edit?slide=id.g3cdba15a02d_6_191#slide=id.g3cdba15a02d_6_191)
+
+
+### FlexServ API Prompt: YOLO Evaluation Script Generator
+
+#### Task Summary:
 To test the capabilities of the FlexServ inference server, we can provide a complex prompt to the Responses API. This prompt asks the AI to generate a complete Python evaluation script that performs Animal detection on the images from the LILA BC Small Animal dataset. This is a large camera-trap image dataset used for wildlife monitoring and ecological research. It contains millions of images captured by automated cameras, including small mammals and many blank triggers, along with annotations describing the detected species. For training object detection models such as YOLO, the dataset can be downloaded in YOLO format, where each image has a corresponding .txt label file containing bounding-box coordinates in the form <class_id> <x_center> <y_center> <width> <height>.
 
 ---
 
-### On FlexServ UI
+#### On FlexServ UI
 
 - Refresh the Model pool so you can see public and private models available for you to run.
 ![Model Pool](/tutorials/images/Model_pool.png)
