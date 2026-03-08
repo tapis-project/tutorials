@@ -13,9 +13,9 @@ nav:
 - Vision Models, Fine-tuning and Jupyter Notebooks:
   - Vision Models in Science: ./Vision_Models/01-intro-vision-models
   - Intro to Jupyter: ./Jupyter-Notebook/intro-to-jupyter 
-  - Vision Task Code Generation: ./Tapis_FlexServ/01c-code-gen-flexserv
+  - Prompt Engineering and Detection Code: ./Tapis_FlexServ/01c-code-gen-flexserv
   - Fine-tuning with Ultralytics: ./Fine_Tuning_Vision/01-intro-fine-tuning
 - Evaluating Fine-tuned Models:
   - Evaluating our New Model: ./Fine_Tuning_Vision/02-evaluation 
-  - Prompt Engineering: ./Vision_Models/02-prompt-engineering 
+  #- Prompt Engineering: ./Vision_Models/02-prompt-engineering 
 theme: jekyll-theme-minimal
