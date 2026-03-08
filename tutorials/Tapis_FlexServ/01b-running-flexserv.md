@@ -375,8 +375,8 @@ Step 5b) Once the `tapisjob.out` opens, look at the ACCESS INFORMATION Section t
 If you made it this far, you are successfully running FlexServ, you can explore the FlexServ UI next and try to send your first chat. 
 
 ### Using the FlexServ UI 
-Todo: 
-* Setting the FlexServ API Key and Sending your first chat 
-* Public and Private Model Pools 
-* Working with Images 
-* Working with Some other Examples 
+Go to the URL hhtps://vista.tacc.utexas.edu:`Port number from above` and enter the TAP token from the tapisjob.out as shown in figure below.
+
+![FlexServ UI](/tutorials/images/FlexservUI.png)
+
+Next, we will use the flexserv to generate a code for small animal detection using vision models and evaluate the model performance.

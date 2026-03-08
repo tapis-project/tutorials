@@ -7,6 +7,9 @@ To test the capabilities of the FlexServ inference server, we can provide a comp
 
 ### On FlexServ UI
 
+- Refresh the Model pool so you can see public and private models available for you to run.
+![Model Pool](/tutorials/images/Model_pool.png)
+
 - Copy and paste the following prompt into the FlexServ UI in the `Responses API`, `Input(Markdown)` section, shown in the image below.
 
 
