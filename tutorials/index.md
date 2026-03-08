@@ -2,7 +2,7 @@
 
 ## NAIRR 2026 Tutorial Schedule
 
-[Slides for this tutorial are here.](https://docs.google.com/presentation/d/1gykJ0awIswnAUU-qob3MnzGD_5a729RJVnMhknykeVs/edit?usp=sharing)
+[Slides for this tutorial are here.](https://docs.google.com/presentation/d/1BVLnUbyiWjsaS33zMshW3TXqtfvv6zGklaCNBeX7Go0/edit?usp=sharing)
 
 <style>
 .schedule-table th:nth-child(1),
