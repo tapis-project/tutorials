@@ -1,4 +1,4 @@
-## Section 4:  Executing Large Models on Vista Via Tapis and Flexserv
+## Section 4:  Executing Large Models on Vista with Tapis and Flexserv
 
 ### Step 4.1: Adding TMS Credentials on the Vista system.
 
