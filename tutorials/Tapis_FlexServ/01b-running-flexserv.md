@@ -370,13 +370,98 @@ Step 5b) Once the `tapisjob.out` opens, look at the ACCESS INFORMATION Section t
 ![Step 5b: Vista_url_token](/tutorials/images/GetFlexServerPortToken.png)
 
 
-### What's next?
+## Play with FlexServ
 
 If you made it this far, you are successfully running FlexServ, you can explore the FlexServ UI next and try to send your first chat. 
 
 ### Using the FlexServ UI 
 Go to the URL hhtps://vista.tacc.utexas.edu:`Port number from above` and enter the TAP token from the tapisjob.out as shown in figure below.
 
-![FlexServ UI](/tutorials/images/FlexservUI.png)
+![FlexServ UI](/tutorials/images/FlexServ_token_setting.png)
 
-Next, we will use the flexserv to generate a code for small animal detection using vision models and evaluate the model performance.
+### FlexServe Resource Monitor
+
+The FlexServ Resource Reporter provides a visualization of the current resource usage of your FlexServ server, including GPU, CPU, and memory utilization. This can help you monitor the performance of your models and optimize resource allocation for better efficiency. You can access the Resource Reporter from the FlexServ UI.
+
+![FlexServe Resource Monitor](/tutorials/images/FlexServ_Resource_Reporter.png)
+
+### FlexServe RESTful API Summary
+
+The FlexServe RESTful APIs allow you to interact with the FlexServ server programmatically. You can use the OpenAI-compatible APIs to perform various operations such as sending chat messages, generating text, creating embeddings, and more. The model management APIs The APIs are designed for your to manage your models local to your FlexServ service. You can visit ``http(s)://your-flexserv-url/redoc`` to see the API documentation.
+
+![FlexServe RESTful APIs](/tutorials/images/FlexServ_APIs.png)
+
+### FlexServe Model Manager
+
+The visual model manager provides an intuitive interface for managing your models on the FlexServ server. You can view the list of available models, check their status, and perform actions such as downloading new models, copying a model from public pool to your private pool, and unpack any downloaded model archive. 
+
+![FlexServe Model Manager](/tutorials/images/FlexServ_model_manager.png)
+
+#### Downloading Models from Hugging Face to FlexServ
+
+To download a model or multiple models from HuggingFace, you need to go to HuggingFace website first, click on models, search for your model of interest, and then click on the model to go to the model page. On the model page, you can find the model name under the model title, and you can use that name to download the model to your FlexServ server. 
+
+![Model Downloading 1](/tutorials/images/Model_downloading_from_HF_to_FS.png)
+
+For example, if you want to download the Qwen3.5-0.8B model, you can search for "Qwen" on HuggingFace, find the Qwen3.5-0.8B model, click on it to go to the model page, and then copy "Qwen/Qwen3.5-0.8B" as the model name to download it to your FlexServ server. Note that on the FlexServ UI, you can add more than one model names in the download section, and you can fetch them all in parallel by clicking the `Run fetch batch` button. You will see the downloading status in the UI and once the model is downloaded, you can use it for inference right away.
+
+![Model Downloading 2](/tutorials/images/Model_downloading_from_HF_to_FS2.png)
+
+
+#### Unpacking your own model to FlexServ
+
+We also support unpack archived models (e.g. tar.gz, zip) directly to the model repository of FlexServ, and this unpack button will unpack the archive for you. However, for self-owned models, we require you to build a model index file to be included in the archive. This is an advanced feature, and we will not cover the details but we will provide a guidance later on our website. 
+
+![FlexServe Unpack](/tutorials/images/FS_model_unpack.png)
+
+### Multi-model Chat with FlexServ
+
+The multi-modal chat feature in FlexServ UI is based on the use of `/v1/chat/completions` API in FlexServ, which is widely used in most of the agentic software today. Our UI feature allows you to have a conversation with the model while also sending images as part of the conversation. This is particularly useful for scenarios where you want to ask questions about images or have a discussion that involves visual context. You can upload an image, and the model will be able to see the image and provide responses based on both the text and the visual information. Note that you have to select `Image-text-to-text` models for multi-modal chat. But you can also use the `Text-to-text` models for plain-text based chat or conversation, such as code generation or question answering without sending any images.
+
+For sending images in the chat, you can click in our Markdown editor, and simply paste either the URI or a screenshot from your clipboard, and the image will be shown around the editor. Press `Run` you will start chatting with your selected model. Also, if you want FlexServ UI to memorize your conversation history, you can check the `multi-turn conversation` checkbox, and the UI will memorize your chat history in your local storage that your browser provides. This is totally local to your browser and hence is with decent privacy, and we **DO NOT** collect any of your data. We provide button to clear the conversation history and you can also clear your web-browser data to clear everything.
+
+Also note that we provide intuitive UI controls for your to easily tune some of the most important parameters for your chat, such as temperature, top_p, and max_tokens. You can adjust those parameters to see how the model response changes accordingly. 
+
+![Multi-modal Chat](/tutorials/images/FS_multi_modal_chat.png)
+
+If everything goes well, you should be able to see the response from the model in the chat window, and the model should be able to understand the image you sent and provide a relevant response based on both the text and the image. You can continue the conversation by sending more text or images, and the model will keep track of the context to provide coherent responses.
+
+![Multi-modal Chat Result](/tutorials/images/Multi-modal-chat_result.png)
+
+### Text Generation with Responses API in FlexServ
+
+This feature is based on the use of `/v1/responses` API in FlexServ, which is an OpenAI-compatible API endpoint for generating responses from the model. Again, our UI provide your a markdown editor to input your prompt, and you can perform the text generation by clicking the `Run` button. You can also adjust the parameters such as temperature, top_p, and max_tokens to see how the model response changes accordingly. The generated response will be shown in the response window, and you can continue to have a conversation with the model by sending more prompts. 
+
+Note that we currently only support text-based generation with the `/v1/responses` API, and the multi-modal chat feature is based on the `/v1/chat/completions` API, so if you want to have multi-modal conversation with images, you will need to use the chat interface instead of the response interface. But this response interface will be playing a critical role for another of our demo in the afternoon, which is to use FlexServ for code generation and get a real image recognition program generated for you to run on Vista, so stay tuned for that!!
+
+![Text Generation with Response API](/tutorials/images/FS_responses.png)
+
+### Text Completion with Completions API in FlexServ
+
+Text completion is another important feature in FlexServ, and it is based on the use of `/v1/completions` API in FlexServ. This is a much simpler feature right now but if you have any unfinished thoughts or sentences, you can use this feature to let the model help you complete the text. You can input your incomplete text in the editor, click `Run`, and the model will generate the completed text for you. 
+
+![Text Completion with Completions API](/tutorials/images/FS_text_completion.png)
+
+### Generating Embeddings with FlexServ
+
+Embedding generation is essential for many AI applications, such as semantic search, clustering, and recommendation systems. With FlexServ, you can easily generate embeddings for your text data using the `/v1/embeddings` API. On FlexServ UI, you can put the sentences you wish to generate embeddings for, one on each line. By clicking `Run`, you will get the embeddings by clicking on `Raw JSON` and you can visually view the embeddings with our embedding visualization on the page.
+
+![Generating Embeddings with FlexServ](/tutorials/images/FS_embeddings.png)
+
+### Audio Transcription with FlexServ
+
+Audio transcription is yet another exciting feature in FlexServ, which allows you to transcribe your audio files into text using the power of ASR models. With FlexServ, you can easily upload your audio files and get the transcriptions in a matter of seconds. This is particularly useful for scenarios such as meeting transcription, podcast transcription, and any other situation where you have audio data that you want to convert into text for easier analysis and reference. You can simply upload your audio file in the UI, click `Run`, and you will get the transcription result in the response window. You can also play your audio file in the UI to confirm that the transcription result matches with your audio content.
+
+![Audio Transcription with FlexServ](/tutorials/images/FS_audio_trans.png)
+
+### Getting cURL Command for the same request in FlexServ UI
+
+Across different sections on the UI, you will see `Show cURL` button, which will show you the cURL command for the request you are making on the UI. This is particularly useful for users who want to use their own custom scripts to interact with FlexServ server, and they can simply copy the cURL command and modify it in their scripts to send requests to the FlexServ server without having to go through the UI. This also makes it easier for users to integrate FlexServ into their existing workflows and applications by providing them with a straightforward way to interact with the server programmatically.
+
+![Show cURL Command](/tutorials/images/FS_cURL_guide.png)
+
+## From Prompt to Program: Build an Animal Detection App with FlexServ
+
+Please come back to our code generation session in the afternoon to see how you can use FlexServ to do some real work - we will show you how to use FlexServ to generate image recognition program for detecting small animals and run the program on Vista with TAPIS Job!
+
+
