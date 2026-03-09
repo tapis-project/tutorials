@@ -10,11 +10,20 @@ img {
 
 ## Logging In
 
-Login to [https://public.tapis.io](https://public.tapis.io). Use the username and password provided to you to authenticate.
+Login to [https://public.tapis.io](https://public.tapis.io). Visit the site and press the "Proceed to login" area.
 
 <a href="https://training.tapis.io" target="_blank">
-<img src="/tutorials/assets/demo/login-tapis.png" style="max-width:70%;">
+<img src="/tutorials/assets/demo/login-proceed.png" style="max-width:70%;">
 </a>
+
+Once you click, you will be redirected to your institute's authentication.
+
+<img src="/tutorials/assets/demo/login-redirect.png" style="max-width:70%;">
+
+You will then be prompted to log-in with username, password, and MFA token.
+
+<img src="/tutorials/assets/demo/login-sso.png" style="max-width:50%;">
+
 
 ### Inspect JWT
 
