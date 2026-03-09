@@ -25,7 +25,7 @@
 | 11-11:45 AM | 45 min | (Lecture) Classes of AI Models, 3rd Party Model Registries, Flexserv |
 | 11:45-12:30 PM | 45 min | (Hands-on) Executing Large Models on Vista Via Tapis and Flexserv |
 | 12:30-1:30 PM  | 60 min | Lunch  |
-| 1:30-2:00 PM | 30 min | (Lecture) CNNs, Yolo and an Example Scientific Vision Task, Brief Intro to Jupyter |
+| 1:30-2:00 PM | 30 min | (Lecture) Computer Vision Models in Scientific Applications |
 | 2:00-2:15 PM | 15 min | (Hands-on) Launching Juptyer Notebook |
 | 2:15-2:45 PM | 30 min | (Hands-on) Generating Code for a Vision Task and Executing in Jupyter |
 | 2:45-3:00 PM | 30 min | (Lecture + Hands-on) Fine-tuning the Vision Model with Ultralytics and Tapis | 

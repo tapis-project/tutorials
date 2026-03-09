@@ -1,7 +1,6 @@
-## Prompt Engineering and Generating Image Detection Code
+## Section 7: Prompt Engineering and Generating Image Detection Code
 
 [Lecture Slides](https://docs.google.com/presentation/d/1BVLnUbyiWjsaS33zMshW3TXqtfvv6zGklaCNBeX7Go0/edit?slide=id.g3cdba15a02d_6_191#slide=id.g3cdba15a02d_6_191)
-
 
 ### FlexServ API Prompt: YOLO Evaluation Script Generator
 
@@ -10,10 +9,14 @@ To test the capabilities of the FlexServ inference server, we can provide a comp
 
 ---
 
-#### On FlexServ UI
+### Exploring the FlexServ UI 
+
+### Step 7.1: Refresh Model Pool
 
 - Refresh the Model pool so you can see public and private models available for you to run.
 ![Model Pool](/tutorials/images/Model_pool.png)
+
+### Step 7.2: Update the Responses API and Parameters
 
 - Copy and paste the following prompt into the FlexServ UI in the `Responses API`, `Input(Markdown)` section, shown in the image below.
 
@@ -72,21 +75,24 @@ After the code, briefly explain how the program works in plain English.
     -   `Qwen/Qwen2.5-Coder32B-Instruct-61.0 GB - Text Generation`
 -  Make sure the `Streams` is checked. 
 -  Uncheck `Multi-turn conversation`
+
+  ### Step 7.3: Run the Responses API
+  
 -  Click `Run`. Within a few minutes, you should see the code generation start in the blue box in the Responses API. Wait for it to complete. After completion, you should see output similar to the image below.
 
 ![Code](/tutorials/images/Code.png)
 
 
-### On Jupyter:
+### Step 7.4: Running Code Detection On Jupyter
 
-Go to the notebook Code-Detection on your Jupyter path. 
+Go to the Jupyter notebook Code-Detection on your Jupyter path. 
 `ai-tutorial-2026 -> notebooks -> Code-Detection.ipynb`
 
 Copy the generated code from FlexServ UI in a new cell below the cell titled `Put your generated code here`. 
 
-Update the variable `DATASET_ROOT` to path `/home/jovyan/work/vista/ai-tutorial-2026/datasets/AnimalEcology.v4i.yolov11` in your generated code
+Update the variable `DATASET_ROOT` to path `/home/jovyan/ai-tutorial-2026/datasets/AnimalEcology.v4i.yolov11` in your generated code
 
-Also update the model path to `/home/jovyan/work/vista/ai-tutorial-2026/models/yolov9t_ep200_bs32_lr0.005_baa22147.pt`
+Also update the model path to `/home/jovyan/ai-tutorial-2026/models/yolov9t_ep200_bs32_lr0.005_baa22147.pt`
 
 Now run the code. On successful run, you should see output similar to below 
 

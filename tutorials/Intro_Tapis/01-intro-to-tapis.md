@@ -1,4 +1,4 @@
-## AI, The National CI Ecosystem, and the Tapis API Platform
+## Section 1: AI, The National CI Ecosystem, and the Tapis API Platform
 
 [Lecture Slides](https://docs.google.com/presentation/d/1BVLnUbyiWjsaS33zMshW3TXqtfvv6zGklaCNBeX7Go0/edit?slide=id.g3cd6a51b6a2_0_21#slide=id.g3cd6a51b6a2_0_21)
 ​
