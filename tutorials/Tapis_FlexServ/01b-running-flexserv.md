@@ -379,23 +379,23 @@ Go to the URL hhtps://vista.tacc.utexas.edu:`Port number from above` and enter t
 
 ![FlexServ UI](/tutorials/images/FlexServ_token_setting.png)
 
-### FlexServe Resource Monitor
+### FlexServ Resource Monitor
 
 The FlexServ Resource Reporter provides a visualization of the current resource usage of your FlexServ server, including GPU, CPU, and memory utilization. This can help you monitor the performance of your models and optimize resource allocation for better efficiency. You can access the Resource Reporter from the FlexServ UI.
 
-![FlexServe Resource Monitor](/tutorials/images/FlexServ_Resource_Reporter.png)
+![FlexServ Resource Monitor](/tutorials/images/FlexServ_Resource_Reporter.png)
 
-### FlexServe RESTful API Summary
+### FlexServ RESTful API Summary
 
-The FlexServe RESTful APIs allow you to interact with the FlexServ server programmatically. You can use the OpenAI-compatible APIs to perform various operations such as sending chat messages, generating text, creating embeddings, and more. The model management APIs The APIs are designed for your to manage your models local to your FlexServ service. You can visit ``http(s)://your-flexserv-url/redoc`` to see the API documentation.
+The FlexServ RESTful APIs allow you to interact with the FlexServ server programmatically. You can use the OpenAI-compatible APIs to perform various operations such as sending chat messages, generating text, creating embeddings, and more. The model management APIs The APIs are designed for your to manage your models local to your FlexServ service. You can visit ``http(s)://your-flexserv-url/redoc`` to see the API documentation.
 
-![FlexServe RESTful APIs](/tutorials/images/FlexServ_APIs.png)
+![FlexServ RESTful APIs](/tutorials/images/FlexServ_APIs.png)
 
-### FlexServe Model Manager
+### FlexServ Model Manager
 
 The visual model manager provides an intuitive interface for managing your models on the FlexServ server. You can view the list of available models, check their status, and perform actions such as downloading new models, copying a model from public pool to your private pool, and unpack any downloaded model archive. 
 
-![FlexServe Model Manager](/tutorials/images/FlexServ_model_manager.png)
+![FlexServ Model Manager](/tutorials/images/FlexServ_model_manager.png)
 
 #### Downloading Models from Hugging Face to FlexServ
 
@@ -412,7 +412,7 @@ For example, if you want to download the Qwen3.5-0.8B model, you can search for 
 
 We also support unpack archived models (e.g. tar.gz, zip) directly to the model repository of FlexServ, and this unpack button will unpack the archive for you. However, for self-owned models, we require you to build a model index file to be included in the archive. This is an advanced feature, and we will not cover the details but we will provide a guidance later on our website. 
 
-![FlexServe Unpack](/tutorials/images/FS_model_unpack.png)
+![FlexServ Unpack](/tutorials/images/FS_model_unpack.png)
 
 ### Multi-model Chat with FlexServ
 
