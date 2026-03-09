@@ -1,4 +1,4 @@
-## Fine-Tuning Vision Models Using Ultralytics and Tapis
+## Section 8: Fine-Tuning Vision Models Using Ultralytics and Tapis
 
 This Tapis application allows users to fine-tune Vision models such as YOLO using Ultralytics running in a Singularity container on Vista. It is designed to run on High-Performance Computing (HPC) systems via Tapis, leveraging GPU acceleration for training tasks.
 
@@ -93,12 +93,12 @@ These parameters define the hardware footprint requested from the Slurm schedule
 
 Follow these steps to submit the job using the Tapis UI:
 
-### Step 1: Initiate Submission
+### Step 8.1: Initiate Submission
 Navigate to the **Apps** list and select the `ultralytics-fine-tune` app. Click the button to initiate a JSON-based submission.
 
 ![Step 1 - Selecting the Ultralytics App in UI](/tutorials/images/Step1-Ultralyticsapp.png)
 
-### Step 2: Edit the JSON Payload
+### Step 8.2: Edit the JSON Payload
 Paste the job JSON provided below into the editor and click `Submit`.
 
 <div style="max-height:400px; overflow:auto; border:1px solid #ddd; padding:10px;">
@@ -148,21 +148,21 @@ These are specific flags passed to the Slurm scheduler on the Vista system:
 
 ![Step 2 - Pasting the Job JSON into the Editor and Submit](/tutorials/images/Fine-tune-job.png)
 
-### Step 3: Monitor Job Progress
+### Step 8.3: Monitor Job Progress
 After clicking **Submit**, navigate to the **Jobs** tab. You can monitor the status as it moves from `PENDING` to `RUNNING` and finally `FINISHED`.
 
 ![Step 3 - Monitoring Job Status in the Dashboard](/tutorials/images/fine-tune-job-running.png) 
 Since we are running 100 Epochs to fine-tune, this will take around 10-12 minutes to finish.
 
 
-### Step 4: Job Output and Results location
+### Step 8.4: Job Output and Results location
  Once the job finishes, you should see output similar to the image below.
  ![Step 4 - After Job completes](/tutorials/images/fine-tune-job-completion.png) 
  
  You should see a train directory with weights. Inside the `weights` directory, you can access the `best.pt model`. This file will be accessible in Jupyter Notebook.
 
 
-### Step 5: Finding best.pt file from Jupyter 
+### Step 8.5: Finding best.pt file from Jupyter 
 
 Inside your work directory, you should see a `vista` folder. In there you can find the directory named with your `jobUUID`. In the above image the job uuid is highlighted. In the job directory you will find the outputs of the job archived with the same train directory containing the best.pt file.
 `$WORK -> vista -> jobUUID -> train -> weights -> best.pt`
