@@ -8,16 +8,18 @@ When you log in to Tapis UI and click on Systems, you should see one public syst
 
 ![TMS Unauthenticated](/tutorials/images/TMS-unauthenticated.png)
 
-Click on Authenticate with TMS Keys and that should add your credentials
+Click on Authenticate with TMS Keys and that should add your credentials. 
+For detailed instructions on how to add TMS credentials, please refer to this  
+<a href="https://tapis-project.github.io/tutorials/Intro_Tapis/02-initial-tapis-ui/#step-24-add-tms-credentials-for-the-nairr-vista-public-system" target="_blank">tutorial here</a>
 
 ![TMS Authenticated](/tutorials/images/TMS-authenticated.png)
 
-You can now view files on Vista, by clicking on the `View Files ` button.
+After completing the authentication, you can now view files on Vista by clicking on the `View Files` button. If you can view the files, that means you have successfully added your TMS credentials and you are authenticated to access the Vista system.
 ![View Files](/tutorials/images/ViewFiles.png)
 
 
 ### Step 4.2:  Running FlexServ Application on Vista
-
+<!-- 
 The following app runs the FlexServ on TACC's Vista System. For the purposes of this tutorial, the application has already been registered with Tapis and is available as a public app for all users to submit jobs.
 
 <div style="max-height:400px; overflow:auto; border:1px solid #ddd; padding:10px;">
@@ -238,10 +240,10 @@ The following app runs the FlexServ on TACC's Vista System. For the purposes of 
 }
 </code></pre>
 
-</div>
+</div> -->
 
 
-You should see the Flex Server application already registered in your Tapis UI: **FlexServ-vista-nairr version 1.4.0**
+In the Tapis UI, you should navigate to `Apps` and you should see the Flex Server application already registered in your Tapis UI: **FlexServ-vista-nairr version 1.4.0**
 ![FlexServ Application](/tutorials/images/Flexserv_app.png)
 
 ### Step 4.3: Submit FlexServ Job using TAPIS UI
@@ -321,11 +323,11 @@ Replace the default JSON in the editor with your job definition. Copy the json b
       },
       {
         "key": "APPLY_PATCH",
-        "value": "1"
+        "value": "0"
       },
       {
         "key": "APPTAINER_IMAGE",
-        "value": "/work/projects/aci/cic/apps/flexserv/zhangwei217245--flexserv-transformers--1.4.1.sif"
+        "value": "/work/projects/aci/cic/apps/flexserv/zhangwei217245--flexserv-transformers--1.4.2.sif"
       }
     ],
     "schedulerOptions": [
@@ -347,7 +349,6 @@ Replace the default JSON in the editor with your job definition. Copy the json b
   }
 }
 </code></pre>
-
 </div>
 
 **3. Submit Job**
