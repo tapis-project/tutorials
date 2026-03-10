@@ -6,5 +6,5 @@
 ### Generating Image Detection Code
 
 * The Prompt 
-* Executing the Prompt in the Flexserv UI 
-* Creating and Executing a new notebook with the Flexserv output 
+* Executing the Prompt in the FlexServ UI 
+* Creating and Executing a new notebook with the FlexServ output 

@@ -1,3 +1,13 @@
+<style>
+img {
+  box-shadow: 0 0 .7rem rgba(0, 0, 0, 0.5);
+}
+.scrollable {
+  max-height: 500px;
+  overflow: auto;
+}
+</style>
+
 ## Section 8: Fine-Tuning Vision Models Using Ultralytics and Tapis
 
 This Tapis application allows users to fine-tune Vision models such as YOLO using Ultralytics running in a Singularity container on Vista. It is designed to run on High-Performance Computing (HPC) systems via Tapis, leveraging GPU acceleration for training tasks.
@@ -10,9 +20,7 @@ This Tapis application allows users to fine-tune Vision models such as YOLO usin
 
 The following JSON represents the application definition that was used to register the fine-tuning service in Tapis:
 
-<div style="max-height:400px; overflow:auto; border:1px solid #ddd; padding:10px;">
-
-<pre><code class="language-json">
+``` json
 {
     "id": "ultralytics-fine-tune",
     "version": "0.1",
@@ -49,9 +57,8 @@ The following JSON represents the application definition that was used to regist
         "maxMinutes": 60
     }
 }
-</code></pre>
-
-</div>
+```
+{:.scrollable}
 
 ---   
 ### Understanding Ultralytics App Parameters
@@ -101,9 +108,7 @@ Navigate to the **Apps** list and select the `ultralytics-fine-tune` app. Click 
 ### Step 8.2: Edit the JSON Payload
 Paste the job JSON provided below into the editor and click `Submit`.
 
-<div style="max-height:400px; overflow:auto; border:1px solid #ddd; padding:10px;">
-
-<pre><code class="language-json">
+``` json
 {
     "name": "ultralytics-fine-job",
     "appId": "ultralytics-fine-tune",
@@ -122,9 +127,8 @@ Paste the job JSON provided below into the editor and click `Submit`.
       ]
     }
 }
-</code></pre>
-
-</div>
+```
+{:.scrollable}
 
 ---
 

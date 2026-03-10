@@ -7,4 +7,4 @@
 * Artificial Neural Networks and Deep Neural Networks
 * Transformer models 
 * Model Registries such as HuggingFace Hub 
-* Using Tapis, ML Hub and Flexserv to deploy models on heterogeneous CI 
+* Using Tapis, ML Hub and FlexServ to deploy models on heterogeneous CI 

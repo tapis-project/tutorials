@@ -1,6 +1,5 @@
 <style>
 img {
-  /* border: 0.1rem solid lightgray; */
   box-shadow: 0 0 .7rem rgba(0, 0, 0, 0.5);
 }
 </style>
@@ -12,22 +11,23 @@ img {
 
 Login to [https://public.tapis.io](https://public.tapis.io). Visit the site and press the "Proceed to login" area.
 
-<a href="https://training.tapis.io" target="_blank">
-<img src="/tutorials/assets/demo/login-proceed.png" style="max-width:70%;">
-</a>
+[![Proceed to Login](/tutorials/assets/demo/login-proceed.png){:style="max-width:85%;"}](https://public.tapis.io){:target="_blank"}
 
 Once you click, you will be redirected to your institute's authentication.
 
-<img src="/tutorials/assets/demo/login-redirect.png" style="max-width:70%;">
+![Login Redirect](/tutorials/assets/demo/login-redirect.png){:style="max-width:85%;"}
 
 You will then be prompted to log-in with username, password, and MFA token.
 
-<img src="/tutorials/assets/demo/login-sso.png" style="max-width:50%;">
+![Login SSO](/tutorials/assets/demo/login-sso.png){:style="max-width:70%;"}
 
 
 ###  Step 2.2: Inspect JWT
 
-Once logged in, you can inspect your JSON Web Token (JWT). The JWT is the authentication token that Tapis uses to verify your identity across all API calls. It contains encoded claims about your user session — including your username, tenant, and token expiration. You can view your token in TapisUI to understand how Tapis manages identity and access.
+Once logged in, you can inspect your JSON Web Token (JWT). The JWT is the authentication token that Tapis uses to verify your identity across all API calls. It contains encoded claims about your user session — including your username, tenant, and token expiration. Press your username at the bottom-left, in the sidebar, and select `View JWT` to view your token.
+
+![Inspect JWT](/tutorials/assets/demo/login-viewjwt.png){:style="max-width:90%;"}
+
 
 ---
 
@@ -100,14 +100,41 @@ FlexServ supports running various AI models from Hugging Face, provides an OpenA
 
 ---
 
-## Tapis ChatBot
+## Tapis Chatbot
 
-TapisUI includes a built-in **ChatBot** feature that allows you to interact with AI models directly from the interface.
+TapisUI includes a built-in **Chatbot** feature that allows you to interact with AI models directly from the interface. To use the chatbot the user can press the chatbot button in the sidebar near the profile button or press the message bubble at the bottom right.
 
-### RAG
+![Chat Open](/tutorials/assets/demo/chat-open.png){:style="max-width:90%;"}
 
-The ChatBot supports **Retrieval-Augmented Generation (RAG)**, which combines a language model with a knowledge retrieval system. This means the ChatBot can answer questions about Tapis documentation, your systems, applications, and jobs by retrieving relevant context before generating a response.
+The chatbot window will appear overtop the page you're currently on. In this window you'll notice operations for clearing history, reseting size, changing agent, and exporting chat in the top bar. Each assistant in the assistants selection consists of a configurable backend model and prompt. Each assistant has some boilerplate example prompts and description in the initial chat window.
+
+![Chat Change Agent](/tutorials/assets/demo/chat-changeagent.png){:style="max-width:90%;"}
+
+Currently the accessible assistants are research cases and only support text generation. The Systems Assistant however supports text generation and agentic calls via an MCP server. This agent allows users to prompt `How many systems do I have access to?`, the agent then makes calls to the Systems API on behalf of the user, returning actual API responses rather than purely generated text.
+
+![Chat System Count](/tutorials/assets/demo/chat-systemcount.png){:style="max-width:90%;"}
+
+The Models Assistant is another MCP based agent, it makes backend calls to retrieve model information from Hugging Face and other platforms, returning the results and rationale as shown.
+
+![Chat Text Gen Models](/tutorials/assets/demo/chat-textgenmodels.png){:style="max-width:90%;"}
+
+This image shows a user asking a question to the Systems Assistant and receiving a generic text response. At the top-right we once again highlight actions that a user can take along with the close chat button.
+
+![Chat Create System](/tutorials/assets/demo/chat-createsystem.png){:style="max-width:90%;"}
+
+
+### RAG (Retrieval-Augmented Generation)
+
+The ChatBot supports **RAG**, which combines a language model with a knowledge retrieval system. This means the ChatBot can answer questions about Tapis documentation, your systems, applications, and jobs by retrieving relevant context before generating a response.
+
+### MCP (Model Context Protocol)
+
+Some assistants leverage **MCP** to go beyond text generation and perform **agentic tasks**. MCP allows the ChatBot to execute actual Tapis API requests on behalf of the user — for example, querying the Systems service to list accessible systems or retrieving model metadata from Hugging Face. Rather than generating a purely text-based answer, MCP-backed agents make real backend calls and return live API responses, enabling users to interact with Tapis resources conversationally.
 
 ### LiteLLM Backend
 
 The ChatBot is powered by a **LiteLLM** backend, which provides a unified interface to multiple LLM providers. This allows the ChatBot to leverage different models while maintaining a consistent API. You can explore the ChatBot from the TapisUI interface to ask questions and get help with Tapis operations.
+
+### Service Deployment
+
+The LiteLLM backend, MCP servers, RAG server, and backend Python API's are deployable through the Tapis Pods Service. Providing a secure, easy to manage, collaborative interface for managing backend utilities.
