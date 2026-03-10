@@ -69,7 +69,7 @@ Replace the default JSON in the editor with your specific configuration. Copy th
         "name": "flexServPort"
       },
       {
-        "arg": "--model-name Qwen/Qwen2.5-Coder-0.5B",
+        "arg": "--model-name Qwen/Qwen3.5-0.8B",
         "name": "modelName"
       },
       {
@@ -108,7 +108,15 @@ Replace the default JSON in the editor with your specific configuration. Copy th
       },
       {
         "key": "PUB_MODEL_HOST",
-        "value": "/work/projects/aci/cic/models"
+        "value": "/work/projects/aci/cic/apps/flexserv/models"
+      },
+      {
+        "key": "APPLY_PATCH",
+        "value": "1"
+      },
+      {
+        "key": "APPTAINER_IMAGE",
+        "value": "/work/projects/aci/cic/apps/flexserv/zhangwei217245--flexserv-transformers--1.4.1.sif"
       }
     ],
     "schedulerOptions": [
@@ -124,7 +132,7 @@ Replace the default JSON in the editor with your specific configuration. Copy th
         "name": "TACC Resource Allocation",
         "description": "The TACC Allocation associated with this job execution",
         "include": true,
-        "arg": "-A << add allocation >>"
+        "arg": "-A TRA24006"
       }
     ]
   }
