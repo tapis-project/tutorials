@@ -27,12 +27,11 @@
 | 12:30-1:30 PM  | 60 min | Lunch  |
 | 1:30-2:00 PM | 30 min | (Lecture) Computer Vision Models in Scientific Applications |
 | 2:00-2:15 PM | 15 min | (Hands-on) Launching Juptyer Notebook |
-| 2:15-2:45 PM | 30 min | (Hands-on) Generating Code for a Vision Task and Executing in Jupyter |
+| 2:15-2:45 PM | 30 min | (Lecture) Prompt-Engineering: Best Practices <br/>(Hands-on) Generating Code for a Vision Task and Executing in Jupyter |
 | 2:45-3:00 PM | 30 min | (Lecture + Hands-on) Fine-tuning the Vision Model with Ultralytics and Tapis | 
 | 3:00-3:30 PM | 30 min | Coffee Break |
 | 3:30-4:15 PM | 45 min | (Hands-on) Re-evaluating Using best.pt within Jupyter |
-| 4:15-4:30 PM | 15 min | (Lecture) Prompt-Engineering Revisited: Best Practices |
-| 4:30-5:00 PM | 30 min | Additional Use Cases and Discussion |
+| 4:15-5:00 PM | 45 min | Additional Use Cases and Discussion |
 
 <!-- | 3:30-3:50 PM | 20 min | (Lecture) Fine-tuning a Vision Model with Ultralytics |
 | 3:40-4:00 PM | 10 min | (Hands-on) Submitting a Fine-tuning job via TapisUI | -->
