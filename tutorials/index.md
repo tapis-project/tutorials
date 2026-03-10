@@ -30,7 +30,7 @@
 | 2:15-2:45 PM | 30 min | (Hands-on) Generating Code for a Vision Task and Executing in Jupyter |
 | 2:45-3:00 PM | 30 min | (Lecture + Hands-on) Fine-tuning the Vision Model with Ultralytics and Tapis | 
 | 3:00-3:30 PM | 30 min | Coffee Break |
-| 3:30-4:15 PM | 45 min | (Hands-on) Re-evaluating Using best.pt within Jupter |
+| 3:30-4:15 PM | 45 min | (Hands-on) Re-evaluating Using best.pt within Jupyter |
 | 4:15-4:30 PM | 15 min | (Lecture) Prompt-Engineering Revisited: Best Practices |
 | 4:30-5:00 PM | 30 min | Additional Use Cases and Discussion |
 
