@@ -1,6 +1,6 @@
-# TPC26 Tapis Tutorial
+# Enabling Reproducible AI Workflows for the NAIRR Ecosystem
 
-## Trillion Parameter Consortium 2026 Tutorial Schedule
+## NAIRR 2026 Tutorial Schedule
 
 [Slides for this tutorial are here.](https://docs.google.com/presentation/d/1BVLnUbyiWjsaS33zMshW3TXqtfvv6zGklaCNBeX7Go0/edit?usp=sharing)
 
@@ -23,7 +23,7 @@ img {
 
 | Time | Duration | Description |
 |------|----------|-------------|
-| 9:00-10:00 AM | 60 min | (Lecture) [Placeholder](./Intro_Tapis/01-intro-to-tapis.md) |
+| 9:00-10:00 AM | 60 min | (Lecture) [AI/ML, the National CyberInfrastructure Ecosystem and Tapis](./Intro_Tapis/01-intro-to-tapis.md) |
 | 10-10:30 AM | 30 min | (Hands-on) [Initial Steps With TapisUI](./Intro_Tapis/02-initial-tapis-ui.md) |
 | 10:30-11 AM | 30 min | Coffee Break |
 | 11-11:45 AM | 45 min | (Lecture) [Classes of AI Models, 3rd Party Model Registries, Flexserv](./Tapis_FlexServ/01-lecture.md) |
@@ -45,34 +45,7 @@ The resources you will be using today are provided by funding from the National 
 
 ## Intro to Tapis 
 * [Intro to Tapis](./Intro_Tapis/01-intro-to-tapis.md)
-
-
-## Tapis Frequest Question
-
-<details>
-<summary><strong>What is Tapis?</strong></summary>
-
-Tapis is an NSF-funded API platform for managing high-performance computing (HPC) systems, running jobs, and managing data across HPC centers. Tapis allows users to manage compute resources, submit jobs, manage files through APIs or TapisUI.
-
-</details>
-
-<details>
-<summary><strong>What is Flexserv?</strong></summary>
-
-Flexserv is a Tapis service that allows you to deploy and serve AI/ML models on HPC or VM resources. It provides inference endpoints and a graphical interface for managing the service.
-
-</details>
-
-
-<details>
-<summary><strong>Where can I ask questions after the tutorial?</strong></summary>
-
-- **During the tutorial:** Raise your hand and a taccster will come help you.
-- **After the tutorial:** Open a ticket at [https://portal.tacc.utexas.edu/tacc-consulting](https://portal.tacc.utexas.edu/tacc-consulting) or post in the [Tapis Slack community](null).
-- **GitHub issues:** For bugs or feature requests, visit [https://github.com/tapis-project](https://github.com/tapis-project).
-
-</details>
-
+ 
 
 ## Links & Documentation
 [The tutorial covers TapisUI in the public tenant: public.tapis.io](https://public.tapis.io)

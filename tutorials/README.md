@@ -1,2 +1,3 @@
-# Enabling Reproducible AI Workflows for the NAIRR Ecosystem 2026
+# Tapis Tutorial for TPC26
+Trillion Parameter Consortium Tapis tutorial 2026
 Link to TapisUI: https://training.tapis.io
