@@ -3,7 +3,7 @@
 ## Trillion Parameter Consortium 2026 Tutorial Schedule
 
 [Slides for this tutorial are here.](https://docs.google.com/presentation/d/1BVLnUbyiWjsaS33zMshW3TXqtfvv6zGklaCNBeX7Go0/edit?usp=sharing)
-
+Day 1 (May 31st) Schedule 
 <style>
 img {
   box-shadow: 0 0 .7rem rgba(0, 0, 0, 0.5);
@@ -28,8 +28,8 @@ img {
 | 3:30-4:00 PM | 30 min | Coffee Break |
 | 4:00-4:45 PM | 45 min | (Lecture) [Classes of AI Models, 3rd Party Model Registries, Flexserv](./Tapis_FlexServ/01-lecture.md) |
 | 4:45-5:30 PM | 45 min | (Hands-on) [Executing Large Models on Vista Via Tapis and Flexserv](./Tapis_FlexServ/01b-running-flexserv.md) |
-
-
+  
+Day 2 (June 1st) Schedule 
 <style>
 img {
   box-shadow: 0 0 .7rem rgba(0, 0, 0, 0.5);
@@ -52,9 +52,9 @@ img {
 | 9:00-9:30 AM | 30 min | (Lecture) [Computer Vision Models in Scientific Applications](./Vision_Models/01-intro-vision-models.md) |
 | 9:30-9:45 AM | 15 min | (Hands-on) [Launching Jupyter Notebook](./Jupyter-Notebook/intro-to-jupyter.md) |
 | 9:45-10:15 AM | 30 min | (Lecture) [Prompt-Engineering: Best Practices](./Vision_Models/02-prompt-engineering.md) <br/>(Hands-on) [Generating Code for a Vision Task and Executing in Jupyter](./Tapis_FlexServ/01c-code-gen-flexserv.md) |
-| 10:15-10:30 AM | 15 min | (Lecture + Hands-on) [Fine-tuning the Vision Model with Ultralytics and Tapis](./Fine_Tuning_Vision/01-intro-fine-tuning.md) |
+| 10:15-10:30 AM | 15 min | (Lecture + Hands-on) [Fine-tuning the Vision Model with Ultralytics and Tapis Part 1](./Fine_Tuning_Vision/01-intro-fine-tuning.md) |
 | 10:30-11:00 AM | 30 min | Coffee Break |
-| 11:00-11:15 AM | 15 min | (Lecture + Hands-on) [Fine-tuning the Vision Model with Ultralytics and Tapis](./Fine_Tuning_Vision/01-intro-fine-tuning.md) |
+| 11:00-11:15 AM | 15 min | (Lecture + Hands-on) [Fine-tuning the Vision Model with Ultralytics and Tapis Part 2](./Fine_Tuning_Vision/01-intro-fine-tuning.md) |
 | 11:15-12:00 PM | 45 min | (Hands-on) [Re-evaluating Using best.pt within Jupyter](./Fine_Tuning_Vision/02-evaluation.md) |
 | 12:00-12:30 PM | 30 min | Additional Use Cases and Discussion |
 
@@ -65,7 +65,7 @@ The resources you will be using today are provided by funding from the National 
 * [Intro to Tapis](./Intro_Tapis/01-intro-to-tapis.md)
 
 
-## Tapis Frequest Question
+## Tapis Frequent Questions
 
 <details>
 <summary><strong>What is Tapis?</strong></summary>
@@ -85,9 +85,9 @@ Flexserv is a Tapis service that allows you to deploy and serve AI/ML models on 
 <details>
 <summary><strong>Where can I ask questions after the tutorial?</strong></summary>
 
-- **During the tutorial:** Raise your hand and a taccster will come help you.
-- **After the tutorial:** Open a ticket at [https://portal.tacc.utexas.edu/tacc-consulting](https://portal.tacc.utexas.edu/tacc-consulting) or post in the [Tapis Slack community](null).
-- **GitHub issues:** For bugs or feature requests, visit [https://github.com/tapis-project](https://github.com/tapis-project).
+* **During the tutorial:** Raise your hand and a taccster will come help you.
+* **After the tutorial:** Open a ticket at [https://portal.tacc.utexas.edu/tacc-consulting](https://portal.tacc.utexas.edu/tacc-consulting) or post in the [Tapis Slack community](null).
+* **GitHub issues:** For bugs or feature requests, visit [https://github.com/tapis-project](https://github.com/tapis-project).
 
 </details>
 
