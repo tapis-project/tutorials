@@ -23,22 +23,40 @@ img {
 
 | Time | Duration | Description |
 |------|----------|-------------|
-| 9:00-10:00 AM | 60 min | (Lecture) [Placeholder](./Intro_Tapis/01-intro-to-tapis.md) |
-| 10-10:30 AM | 30 min | (Hands-on) [Initial Steps With TapisUI](./Intro_Tapis/02-initial-tapis-ui.md) |
-| 10:30-11 AM | 30 min | Coffee Break |
-| 11-11:45 AM | 45 min | (Lecture) [Classes of AI Models, 3rd Party Model Registries, Flexserv](./Tapis_FlexServ/01-lecture.md) |
-| 11:45-12:30 PM | 45 min | (Hands-on) [Executing Large Models on Vista Via Tapis and Flexserv](./Tapis_FlexServ/01b-running-flexserv.md) |
-| 12:30-1:30 PM  | 60 min | Lunch  |
-| 1:30-2:00 PM | 30 min | (Lecture) [Computer Vision Models in Scientific Applications](./Vision_Models/01-intro-vision-models.md) |
-| 2:00-2:15 PM | 15 min | (Hands-on) [Launching Jupyter Notebook](./Jupyter-Notebook/intro-to-jupyter.md) |
-| 2:15-2:45 PM | 30 min | (Lecture) [Prompt-Engineering: Best Practices](./Vision_Models/02-prompt-engineering.md) <br/>(Hands-on) [Generating Code for a Vision Task and Executing in Jupyter](./Tapis_FlexServ/01c-code-gen-flexserv.md) |
-| 2:45-3:00 PM | 30 min | (Lecture + Hands-on) [Fine-tuning the Vision Model with Ultralytics and Tapis](./Fine_Tuning_Vision/01-intro-fine-tuning.md) |
-| 3:00-3:30 PM | 30 min | Coffee Break |
-| 3:30-4:15 PM | 45 min | (Hands-on) [Re-evaluating Using best.pt within Jupyter](./Fine_Tuning_Vision/02-evaluation.md) |
-| 4:15-5:00 PM | 45 min | Additional Use Cases and Discussion |
+| 2:00-3:00 PM | 60 min | (Lecture) [AI/ML, the National CyberInfrastructure Ecosystem and Tapis](./Intro_Tapis/01-intro-to-tapis.md) |
+| 3:00-3:30 PM | 30 min | (Hands-on) [Initial Steps With TapisUI](./Intro_Tapis/02-initial-tapis-ui.md) |
+| 3:30-4:00 PM | 30 min | Coffee Break |
+| 4:00-4:45 PM | 45 min | (Lecture) [Classes of AI Models, 3rd Party Model Registries, Flexserv](./Tapis_FlexServ/01-lecture.md) |
+| 4:45-5:30 PM | 45 min | (Hands-on) [Executing Large Models on Vista Via Tapis and Flexserv](./Tapis_FlexServ/01b-running-flexserv.md) |
 
-<!-- | 3:30-3:50 PM | 20 min | (Lecture) Fine-tuning a Vision Model with Ultralytics |
-| 3:40-4:00 PM | 10 min | (Hands-on) Submitting a Fine-tuning job via TapisUI | -->
+
+<style>
+img {
+  box-shadow: 0 0 .7rem rgba(0, 0, 0, 0.5);
+}
+
+.schedule-table th:nth-child(1),
+.schedule-table td:nth-child(1) {
+  white-space: nowrap;
+  min-width: 6rem;
+}
+.schedule-table th:nth-child(2),
+.schedule-table td:nth-child(2) {
+  white-space: nowrap;
+  min-width: 6rem;
+}
+</style>
+
+| Time | Duration | Description |
+|------|----------|-------------|
+| 9:00-9:30 AM | 30 min | (Lecture) [Computer Vision Models in Scientific Applications](./Vision_Models/01-intro-vision-models.md) |
+| 9:30-9:45 AM | 15 min | (Hands-on) [Launching Jupyter Notebook](./Jupyter-Notebook/intro-to-jupyter.md) |
+| 9:45-10:15 AM | 30 min | (Lecture) [Prompt-Engineering: Best Practices](./Vision_Models/02-prompt-engineering.md) <br/>(Hands-on) [Generating Code for a Vision Task and Executing in Jupyter](./Tapis_FlexServ/01c-code-gen-flexserv.md) |
+| 10:15-10:30 AM | 15 min | (Lecture + Hands-on) [Fine-tuning the Vision Model with Ultralytics and Tapis](./Fine_Tuning_Vision/01-intro-fine-tuning.md) |
+| 10:30-11:00 AM | 30 min | Coffee Break |
+| 11:00-11:15 AM | 15 min | (Lecture + Hands-on) [Fine-tuning the Vision Model with Ultralytics and Tapis](./Fine_Tuning_Vision/01-intro-fine-tuning.md) |
+| 11:15-12:00 PM | 45 min | (Hands-on) [Re-evaluating Using best.pt within Jupyter](./Fine_Tuning_Vision/02-evaluation.md) |
+| 12:00-12:30 PM | 30 min | Additional Use Cases and Discussion |
 
 
 The resources you will be using today are provided by funding from the National Science Foundation.
