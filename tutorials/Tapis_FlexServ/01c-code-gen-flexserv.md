@@ -165,11 +165,15 @@ Once you finished modifying the prompt, copy and paste the prompt into the chat 
 
 ![Paste Prompt](/tutorials/images/sec8/image14.png)
 
+If you paste a prompt that is larger than 500 bytes, we will show that as a large text attachment below the text box. You can click on the text box to view and edit the large text.  
+
+![Code](/tutorials/images/sec8/image15.png)
+
 ### Run the Responses API
   
 -  After sending the prompt, you should see the code generation start in the blue box in the Responses API. Wait for it to complete. After completion, you should see output similar to the image below. Press the copy button to easily copy the code.
 
-![Code](/tutorials/images/sec8/image15.png)
+![Code](/tutorials/images/sec8/image16.png)
 
 
 ### Running Code Detection On Jupyter
@@ -183,12 +187,10 @@ Make sure the variable `DATASET_ROOT` is set to path `/home/jovyan/ai-tutorial-2
 
 Make sure the variable `BASEURL` is set to the Base URL of your FlexServ and `FLEXSERV_TOKEN` is set to your FlexServ token.
 
-You can easily switch `MODEL_TO_USE` between `BASE_YOLO_MODEL` and `FINE_TUNED_YOLO_MODEL` to switch between the base model and the fine-tuned model. 
-
-![Variables](/tutorials/images/sec8/image16.png)
+![Variables](/tutorials/images/sec8/image17.png)
 
 Running the code in Jupyter, and you should be able to see the evaluation result similar to below
 
-![Variables](/tutorials/images/sec8/image17.png)
+![Variables](/tutorials/images/sec8/image18.png)
 
 

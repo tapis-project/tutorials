@@ -4,7 +4,7 @@ Jupyter is an open source project that provides a webapp interface for writing c
 
 ### Starting up your Jupyter Notebook Environment
 
-For this tutorial, we will use [TACC's Public JupyterHub](https://public.jupyter.tacc.cloud) 
+For this tutorial, we will use <a href="https://public.jupyter.tacc.cloud" target="_blank">TACC's Public JupyterHub</a> 
 You may login with your TACC accounts.
 
 ### Navigating to the $WORK File System
