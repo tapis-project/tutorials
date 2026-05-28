@@ -1,4 +1,25 @@
-## Section 9: Evaluating the Fine-tuned Model 
+### Evaluating Fine-tuned Model by Running Code Detection On Jupyter
+
+Go to the Jupyter notebook Code-Detection on your Jupyter path. 
+`ai-tutorial-2026 -> notebooks -> Code-Detection.ipynb`
+
+Copy the generated code from FlexServ UI in a new cell below the cell titled `Put your generated code here`. 
+
+Make sure the variable `DATASET_ROOT` is set to path `/home/jovyan/ai-tutorial-2026/datasets/AnimalEcology.v4i.yolov11` in your generated code. 
+
+Make sure the variable `BASEURL` is set to the Base URL of your FlexServ and `FLEXSERV_TOKEN` is set to your FlexServ token.
+
+You can easily switch `MODEL_TO_USE` between `BASE_YOLO_MODEL` and `FINE_TUNED_YOLO_MODEL` to switch between the base model and the fine-tuned model. 
+
+![Variables](/tutorials/images/sec8/image16.png)
+
+Running the code in Jupyter, and you should be able to see the evaluation result similar to below
+
+![Variables](/tutorials/images/sec8/image17.png)
+
+
+
+<!-- ## Section 9: Evaluating the Fine-tuned Model 
 
 To try this part of the tutorial, we will use the fine-tuned model `best.pt` created by the ultralytics-fine-tune job.
 
@@ -30,4 +51,4 @@ False Negatives: 21
 Overall detection accuracy: 0.75
 ```
 
-As an exercise, you may train your model with more epochs and see if this accuracy can be further improved.
+As an exercise, you may train your model with more epochs and see if this accuracy can be further improved. -->
