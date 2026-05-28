@@ -2,7 +2,7 @@
 
 ## Trillion Parameter Consortium 2026 Tutorial Schedule
 
-[Slides for this tutorial are here.](https://docs.google.com/presentation/d/1BVLnUbyiWjsaS33zMshW3TXqtfvv6zGklaCNBeX7Go0/edit?usp=sharing)
+[Slides for this tutorial are here.](https://docs.google.com/presentation/d/1s7S295ntrG8ZBu67HUuwjj9trcZz1pBsC57D6t5CIkE/edit?usp=sharing)
 Day 1 (May 31st) Schedule 
 <style>
 img {
