@@ -76,7 +76,7 @@ From the left-hand menu, click on the **Files** tab and select the Vista system.
 
 ### Step 2.7: Test Uploading a File
 
-Try uploading a file to the Vista system using the upload functionality in the Files tab. This confirms that your credentials are working and that you have write access to the system.
+Try uploading a file to the Vista system using the upload functionality in the Files tab. This confirms that your credentials are working and that you have write access to the system. Uploaded file will be available in HOME directory of the Vista system.
 
 ---
 
@@ -88,11 +88,11 @@ In this tutorial, instead of creating an application from scratch, we will use t
 
 ### Step 2.8: Navigate to the Tapis Apps List
 
-Click on **Apps** from the left-hand menu in TapisUI. You will see a list of available applications. Toggle between "My Apps" and "Public Apps" to see the full list.
+Click on **Apps** from the left-hand menu in TapisUI. You will see a list of available applications. If users have private apps they can toggle between "My Apps" and "Public Apps" to see the full list.
 
 ### Step 2.9: Find the FlexServ Public App
 
-Look for the application **FlexServ-vista-nairr version 1.4.0** in the public apps list. FlexServ is a TACC-owned inference server for running AI models on HPC systems. It has been pre-registered as a public app for all users to submit jobs.
+Look for the application **FlexServ-1.4.0 version 1.4.0** in the public apps list. FlexServ is a TACC-owned inference server for running AI models on HPC systems. It has been pre-registered as a public app for all users to submit jobs.
 
 ![FlexServ Application](/tutorials/images/Flexserv_app.png)
 
