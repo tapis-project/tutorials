@@ -39,7 +39,7 @@ In this tutorial, instead of creating systems from scratch, we will use a **publ
 
 ### Step 2.3: Navigate the Systems List
 
-When you log in to TapisUI and click on **Systems** from the left-hand menu, you should see one public system available to you. This system has been pre-registered for the tutorial.
+When you log in to TapisUI and click on **Systems** from the left-hand menu, you should see two public systems available to you. This systems have been pre-registered for the tutorial.
 
 ![TMS Unauthenticated](/tutorials/images/TMS-unauthenticated.png)
 

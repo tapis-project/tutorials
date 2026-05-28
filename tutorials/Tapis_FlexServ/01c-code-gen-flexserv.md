@@ -1,6 +1,6 @@
 ## Prompt Engineering and Generating Image Detection Code
 
-[Lecture Slides](https://docs.google.com/presentation/d/1BVLnUbyiWjsaS33zMshW3TXqtfvv6zGklaCNBeX7Go0/edit?slide=id.g3cdba15a02d_6_191#slide=id.g3cdba15a02d_6_191)
+<a href="https://docs.google.com/presentation/d/1s7S295ntrG8ZBu67HUuwjj9trcZz1pBsC57D6t5CIkE/edit?slide=id.g3ce600e223b_3_8#slide=id.g3ce600e223b_3_8" target="_blank">Lecture Slides</a>
 
 ### FlexServ API Prompt: YOLO Evaluation Script Generator
 
@@ -54,54 +54,54 @@ MODEL REQUIREMENTS:
 YOLO INFERENCE APIs:
 
   * Sample CURL Request:
-```
-curl -sS -X POST '${BASEURL}/v1/yolo/infer' \
-  -H 'Authorization: Bearer ${FLEXSERV_TOKEN}' \
-  -H 'Content-Type: application/json' \
-  -d '{"model":"${FLEXSERV_MODEL_ID}","task":"detect","source":{"type":"upload","media_type":"image","content_base64":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL","filename":"NOR3__2019-07-19__11-40-00-1-_JPG.rf.b85ee30f99a803b09f8c5a7da7f9a508.jpg"},"params":{"conf":0.25,"iou":0.7,"imgsz":640,"max_det":300,"show_labels":true,"show_conf":true},"response":{"include":["predictions","timing"],"box_format":"xyxy","classification_topk":5,"return_original_shape":true}}' 
-```
+    ```
+    curl -sS -X POST '${BASEURL}/v1/yolo/infer' \
+    -H 'Authorization: Bearer ${FLEXSERV_TOKEN}' \
+    -H 'Content-Type: application/json' \
+    -d '{"model":"${FLEXSERV_MODEL_ID}","task":"detect","source":{"type":"upload","media_type":"image","content_base64":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL","filename":"NOR3__2019-07-19__11-40-00-1-_JPG.rf.b85ee30f99a803b09f8c5a7da7f9a508.jpg"},"params":{"conf":0.25,"iou":0.7,"imgsz":640,"max_det":300,"show_labels":true,"show_conf":true},"response":{"include":["predictions","timing"],"box_format":"xyxy","classification_topk":5,"return_original_shape":true}}' 
+    ```
 
   * RESPONSE: 
-```
-{
-  "object": "yolo.inference",
-  "task": "detect",
-  "model": "/app/models/private/yolo--yolo26l/model.pt",
-  "media_type": "image",
-  "predictions": [
+    ```
     {
-      "frame_index": 0,
-      "path": "image0.jpg",
-      "original_shape": {
-        "height": 640,
-        "width": 640
-      },
-      "detections": [
+    "object": "yolo.inference",
+    "task": "detect",
+    "model": "/app/models/private/yolo--yolo26l/model.pt",
+    "media_type": "image",
+    "predictions": [
         {
-          "class_id": 61,
-          "class_name": "toilet",
-          "confidence": 0.480474591255188,
-          "bbox": [
-            0,
-            29.76239013671875,
-            637.2445068359375,
-            629.2056274414062
-          ],
-          "bbox_format": "xyxy",
-          "track_id": null
+        "frame_index": 0,
+        "path": "image0.jpg",
+        "original_shape": {
+            "height": 640,
+            "width": 640
+        },
+        "detections": [
+            {
+            "class_id": 61,
+            "class_name": "toilet",
+            "confidence": 0.480474591255188,
+            "bbox": [
+                0,
+                29.76239013671875,
+                637.2445068359375,
+                629.2056274414062
+            ],
+            "bbox_format": "xyxy",
+            "track_id": null
+            }
+        ]
         }
-      ]
+    ],
+    "timing": {
+        "inference_ms": 21.03
+    },
+    "annotated_media": null,
+    "annotated_media_mime_type": null,
+    "annotated_media_filename": null,
+    "warnings": []
     }
-  ],
-  "timing": {
-    "inference_ms": 21.03
-  },
-  "annotated_media": null,
-  "annotated_media_mime_type": null,
-  "annotated_media_filename": null,
-  "warnings": []
-}
-```
+    ```
 For each image, one object in the 'predictions' array, any if anything detected, the 'detections' array will contain
 a list of detected objects, and if nothing detected, there won't be 'detections' array. 
 If any detected object is with class_id=0, an animal is detected. 
@@ -130,7 +130,7 @@ OUTPUT REQUIREMENTS:
 
 CODING REQUIREMENTS:
 
-  * Store the main path in a global varaible DATASET_ROOT. Use Path from the pathlib for this. 
+  * Store the main path in a global varaible DATASET_ROOT.
   * Set global variable for BASEURL and Bearer Auth Token (i.e. FLEXSERV_TOKEN).
   * Set global variable for BASE_YOLO_MODEL and FINE_TUNED_YOLO_MODEL, and also a MODEL_TO_USE for easy model switching.
   * Set global variable for confidence threashold and IoU threashold.
