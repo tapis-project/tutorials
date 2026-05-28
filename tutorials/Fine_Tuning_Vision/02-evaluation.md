@@ -9,13 +9,13 @@ Make sure the variable `DATASET_ROOT` is set to path `/home/jovyan/ai-tutorial-2
 
 Make sure the variable `BASEURL` is set to the Base URL of your FlexServ and `FLEXSERV_TOKEN` is set to your FlexServ token.
 
-You can easily switch `MODEL_TO_USE` between `BASE_YOLO_MODEL` and `FINE_TUNED_YOLO_MODEL` to switch between the base model and the fine-tuned model. 
-
 ![Variables](/tutorials/images/sec8/image17.png)
 
 Running the code in Jupyter, and you should be able to see the evaluation result similar to below
 
 ![Variables](/tutorials/images/sec8/image18.png)
+
+In the code, you can easily switch `MODEL_TO_USE` between `BASE_YOLO_MODEL` and `FINE_TUNED_YOLO_MODEL` to switch between the base model and the fine-tuned model. 
 
 
 
