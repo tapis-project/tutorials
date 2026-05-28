@@ -1,91 +1,86 @@
 # Ultralytics Fine-Tuning App
 
-This application allows users to fine-tune Ultralytics YOLO models using Singularity containers in a batch processing environment. It is designed to run on High-Performance Computing (HPC) systems via Tapis, leveraging GPU acceleration for training tasks.
+This application allows users to fine-tune Ultralytics YOLO 26 models using Singularity containers in a batch processing environment. It is designed to run on High-Performance Computing (HPC) systems via Tapis, leveraging GPU acceleration for training tasks.
 
 > **Note:** This app is already registered for the tutorial and is available to run via the Tapis UI.
 
 ---
 
-## App Definition
+## Locating the App and Configure Job Submission
 
-The following JSON represents the application definition used to register the fine-tuning service in Tapis:
+Go to the **App** tab and find the app with name `yolo-finetuning-arm64`. 
 
-```json
-{
-    "id": "ultralytics-fine-tune",
-    "version": "0.1",
-    "description": "An app to fine-tune ultralytics Yolo using Singularity in batch mode.",
-    "jobType": "BATCH",
-    "runtime": "SINGULARITY",
-    "containerImage": "/work/projects/aci/cic/apps/ultralytics-fine-tune/Ultralytics_FT_Tapis_app.sif",
-    "jobAttributes": {
-        "execSystemExecDir": "${JobWorkingDir}/jobs/${JobUUID}",
-        "execSystemInputDir": "${JobWorkingDir}/jobs/${JobUUID}/data",
-        "execSystemOutputDir": "${JobWorkingDir}/jobs/${JobUUID}/output",
-        "parameterSet": {
-            "containerArgs": [
-                {
-                    "name": "nvidia",
-                    "inputMode": "FIXED",
-                    "arg": "--nv",
-                    "notes": {}
-                }
-            ],
-            "envVariables": [
-                {
-                    "key": "EPOCHS",
-                    "value": "3",
-                    "description": "Number of epochs for the fine-tune job",
-                    "inputMode": "REQUIRED",
-                    "notes": {}
-                }
-            ]
-        },
-        "memoryMB": 1,
-        "nodeCount": 1,
-        "coresPerNode": 1,
-        "maxMinutes": 10
-    }
-}
-```
-# Understanding Ultralytics App Parameters
+![App definition](/tutorials/images/sec8/image1.png)
 
-The `ultralytics-fine-tune` application uses a specific set of parameters to manage how the Singularity container interacts with the HPC hardware and how the training process is executed.
+Click on the **Submit Job** button to and then click on the **USE GUIDED JOB LAUNCHER** button.
 
----
+![USE GUIDED JOB LAUNCHER](/tutorials/images/sec8/image2.png)
 
-## 1. Container Arguments
-Container arguments define how the Tapis runtime (Singularity) is initialized on the execution system.
+Now we are in the job configuration interface. Click **Continue** on the job summary page.
 
-| Parameter | Type | Value | Description |
-| :--- | :--- | :--- | :--- |
-| **nvidia** | `FIXED` | `--nv` | This is the most critical argument. It tells Singularity to bind the host's NVIDIA drivers inside the container, enabling GPU acceleration for YOLO training. |
+![USE GUIDED JOB LAUNCHER](/tutorials/images/sec8/image3.png)
+
+In the **Execution Options** page, select the following: 
+
+  1. Execution System - `vista-test-nairr`
+  2. Job Type - `Batch`
+  3. Batch Logical Queue - `gh`
+
+Click **Continue**
+
+![USE GUIDED JOB LAUNCHER](/tutorials/images/sec8/image4.png)
+
+Click **Continue**
+
+![USE GUIDED JOB LAUNCHER](/tutorials/images/sec8/image5.png)
+
+Click **Continue**
 
 
+![USE GUIDED JOB LAUNCHER](/tutorials/images/sec8/image6.png)
 
----
+Click **Continue**
 
-## 2. Environment Variables
-Environment variables are passed into the training script inside the container to control the YOLO model's behavior.
+![USE GUIDED JOB LAUNCHER](/tutorials/images/sec8/image7.png)
 
-| Variable | Mode | Default | Description |
-| :--- | :--- | :--- | :--- |
-| **EPOCHS** | `REQUIRED` | `3` | Defines the number of full passes through the training dataset. For this tutorial, it is set low (3) to ensure quick completion, but can be increased for real-world accuracy. |
+There are 4 environment variables important for the fine-tuning job. 
 
----
+ 1. EPOCHS - number of learning rounds. 10 or 20 is a good number.
+ 2. YOLO_26_MODEL - the yolo model name. Here we use `yolo26n` for the best trade-off between quality and speed.
+ 3. TWO_STAGE_FINE_TUNE - If true, we use two-stage fine-tuning process where the first stage freezes the backbone and trains only the neck and head, allowing the detection layers to adapt to the new classes without disrupting pretrained features. The second stage unfreezes all layers and trains the full model with a lower learning rate to refine the backbone for the target domain.
+ 4. The freeze parameter accepts an integer. An integer freeze=10 freezes the first 10 layers (0 through 9, which corresponds to the backbone in YOLO26). This speeds up training and reduces overfitting when the dataset is small relative to the model capacity.
 
-## 3. Resource Attributes
-These parameters define the hardware footprint requested from the Slurm scheduler on the execution system.
+Just keep all these settings as is, and click **Continue**.
 
-* **Node Count (`1`):** The number of physical machines requested. Fine-tuning for this tutorial is optimized for a single node.
-* **Cores Per Node (`1`):** The number of CPU cores allocated. Since the primary work is done by the GPU (via the `--nv` flag), CPU requirements are kept minimal.
-* **Memory (`1 MB`):** The RAM allocation. *Note: In many Tapis configurations, 1 implies a minimum default or is managed by the specific queue policy.*
-* **Max Minutes (`10`):** The "Wallclock" time. If the job exceeds 10 minutes, the scheduler will terminate it to prevent hanging processes from wasting allocation credits.
+![USE GUIDED JOB LAUNCHER](/tutorials/images/sec8/image8.png)
+
+Expand **TACC Resource Allocation** and **Reservation Name**
+ 1. For **TACC Resource Allocation**, put a space and then `TRA24006` after `-A`
+ 2. For **Reservation Name**, put a space and then your *reservation code* after `--reservation`
+
+Note that the reservation code for **Sunday** sessions is `Tapis+Tutorial-Sun` and the reservation code for **Monday** sessions is `Tapis+Tutorial-Mon`.
+
+Click **Continue**
+
+![USE GUIDED JOB LAUNCHER](/tutorials/images/sec8/image9.png)
+
+Click **Continue**
+
+![USE GUIDED JOB LAUNCHER](/tutorials/images/sec8/image10.png)
 
 
+## Submit the job
 
+Click **Submit Job**, and this should submit your job. 
 
+![USE GUIDED JOB LAUNCHER](/tutorials/images/sec8/image11.png)
 
----
+It can take roughly 5-10 minutes to finish the job, but depending on the job waiting time, it can be even longer.
 
-> **Note:** These parameters are pre-configured for the tutorial. When using the Tapis UI, you will primarily interact with the **EPOCHS** variable.
+But once finished, you can open the tapisjob.out file and view it. At the end of the output, you should see message indicating that the fine-tuned models are now saved to FlexServ's private model pool (`$SCRATCH/flexserv/models`). 
+
+![USE GUIDED JOB LAUNCHER](/tutorials/images/sec8/image12.png)
+
+## Up Next
+
+In our prompt engineering section, we will use a coding LLM in FlexServ to generate a python code that will call the Yolo inference API in FlexServ to perform the object detection inference using both the `yolo26n` based model and the `yolo26n-fine-tuned` model. We can see the difference in terms of the accuracy of these two models. 
