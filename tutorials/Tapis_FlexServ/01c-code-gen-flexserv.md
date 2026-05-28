@@ -30,27 +30,30 @@ To test the capabilities of the FlexServ inference server, we can provide a comp
 
 <div style="max-height:400px; overflow:auto; border:1px solid #ddd; padding:10px;">
 <pre>
+## Prompt:
+
 TASK DESCRIPTION:
-This is an IMAGE-LEVEL BINARY CLASSIFICATION task implemented using an object detection model.
-The goal is to determine whether an image contains an animal or not.
+  * This is an IMAGE-LEVEL BINARY CLASSIFICATION task implemented using an object detection model.
+  * The goal is to determine whether an image contains an animal or not.
 
 DATASET STRUCTURE:
-DATASET_ROOT contains three subdirectories: train, test, and val.
-Each directory contains two subdirectories:
-images/ → contains image files (.jpg, .jpeg, .png)
-labels/ → contains YOLO format .txt files
+  * DATASET_ROOT contains three subdirectories: train, test, and val.
+  * Each directory contains two subdirectories:
+  * images/ → contains image files (.jpg, .jpeg, .png)
+  * labels/ → contains YOLO format .txt files
 
 GROUND-TRUTH LOGIC: 
-An image is considered an animal if a corresponding .txt file exists and is not empty in the labels/ folder.
-A non-empty file is a file whose size is larger than 0, and the size of an empty image is 0.
+  * An image is considered an animal if a corresponding .txt file exists and is not empty in the labels/ folder.
+  * A non-empty file is a file whose size is larger than 0, and the size of an empty image is 0.
 
 MODEL REQUIREMENTS:
-Use ONLY a pretrained Ultralytics YOLO detection model (e.g., yolov8n.pt).
-Call our RESTful API for yolo inference.
-Assume YOLO detects animals using class ID animal at index 0.
+  * Use ONLY a pretrained Ultralytics YOLO detection model (e.g., yolov8n.pt).
+  * Call our RESTful API for yolo inference.
+  * Assume YOLO detects animals using class ID animal at index 0.
 
 YOLO INFERENCE APIs:
-Sample CURL Request:
+
+  * Sample CURL Request:
 ```
 curl -sS -X POST '${BASEURL}/v1/yolo/infer' \
   -H 'Authorization: Bearer ${FLEXSERV_TOKEN}' \
@@ -58,7 +61,7 @@ curl -sS -X POST '${BASEURL}/v1/yolo/infer' \
   -d '{"model":"${FLEXSERV_MODEL_ID}","task":"detect","source":{"type":"upload","media_type":"image","content_base64":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL","filename":"NOR3__2019-07-19__11-40-00-1-_JPG.rf.b85ee30f99a803b09f8c5a7da7f9a508.jpg"},"params":{"conf":0.25,"iou":0.7,"imgsz":640,"max_det":300,"show_labels":true,"show_conf":true},"response":{"include":["predictions","timing"],"box_format":"xyxy","classification_topk":5,"return_original_shape":true}}' 
 ```
 
-RESPONSE: 
+  * RESPONSE: 
 ```
 {
   "object": "yolo.inference",
@@ -105,50 +108,57 @@ If any detected object is with class_id=0, an animal is detected.
 
 
 DETECTION LOGIC (IMPORTANT):
-Run object detection on each image.
 
-If the model produces AT LEAST ONE detection of an animal class with confidence >= 0.5 and IoU >= 0.7:
-→ The image-level prediction is animal.
+  * Run object detection on each image.
+  * If the model produces AT LEAST ONE detection of an animal class with confidence >= 0.5 and IoU >= 0.7:
+  *   → The image-level prediction is animal.
 
 EVALUATION METRICS:
-Iterate through the images in the test split.
-Compare the image-level prediction with the ground truth (existence of label file).
-Count: True Positives, True Negatives, False Positives, and False Negatives.
+
+  * Iterate through the images in the test split.
+  * Compare the image-level prediction with the ground truth (existence of label file).
+  * Count: True Positives, True Negatives, False Positives, and False Negatives.
 
 ACCURACY DEFINITION:
-Overall accuracy = (True Positives + True Negatives) / Total Images
+
+  * Overall accuracy = (True Positives + True Negatives) / Total Images
 
 OUTPUT REQUIREMENTS:
-Print for each image: filename, ground-truth status, and prediction.
-At the end, print a summary report including total images, counts for each metric, and overall detection accuracy.
+
+  * Print for each image: filename, ground-truth status, and prediction.
+  * At the end, print a summary report including total images, counts for each metric, and overall detection accuracy.
 
 CODING REQUIREMENTS:
-Store the main path in a global varaible DATASET_ROOT.
-Set global variable for BASEURL and Bearer Auth Token.
-Set global variable for BASE_YOLO_MODEL and FINE_TUNED_YOLO_MODEL, and also a MODEL_TO_USE for easy model switching.
-Set global variable for confidence threashold and IoU threashold.
-Make sure we disable SSL/TLS verification and also disable the related warning.
-Make sure we pass image_name into the yolo inference request.
-Use pathlib or os for robust file path matching.
-Read only .jpg files.
-For inference of each image file, print the number of the image versus total number of images, the time spent for each inference request versus the total time spent for the entire inference step (in ms), the ground truth and detection result. 
-Include clear comments explaining each step.
-Output the accuracy in percentage format.
-Don't use any mock or dummy functions. Make sure every line functions. 
-It is okay to capture general Exception instead of every single type of Exceptions.
+
+  * Store the main path in a global varaible DATASET_ROOT. Use Path from the pathlib for this. 
+  * Set global variable for BASEURL and Bearer Auth Token (i.e. FLEXSERV_TOKEN).
+  * Set global variable for BASE_YOLO_MODEL and FINE_TUNED_YOLO_MODEL, and also a MODEL_TO_USE for easy model switching.
+  * Set global variable for confidence threashold and IoU threashold.
+  * Make sure we disable SSL/TLS verification and also disable the related warning.
+  * Make sure we pass image_name into the yolo inference request.
+  * Make sure we pass the correct header for auth token and content-type in the final request.
+  * Make sure we pass the request body correctly in the final request.
+  * The `content_base64` field in the request should start with "data:image/jpeg;base64," and then appended with the base64 encoded image data.
+  * Use pathlib or os for robust file path matching.
+  * Read only .jpg files.
+  * For inference of each image file, print the number of the image versus total number of images, the time spent for each inference request versus the total time spent for the entire inference step (in ms), the ground truth and detection result. 
+  * Include clear comments explaining each step.
+  * Output the accuracy in percentage format.
+  * Don't use any mock or dummy functions. Make sure every line functions. 
+  * It is okay to capture general Exception instead of every single type of Exceptions.
 
 DEFENSIVE PROGRAMMING
-In case of any unexpected conditions, make sure the following: 
-1. Make sure we don't do SSL/TLS verification when sending request. 
-2. Make sure we avoid zero division
+  In case of any unexpected conditions, make sure the following: 
+      1. Make sure we don't do SSL/TLS verification when sending request. 
+      2. Make sure we avoid zero division
 
 FACTS TO KNOW: 
-BASEURL of FLEXSERV inference engine: https://vista.tacc.utexas.edu:60324
-Bearer Auth token for FLEXSERV inference engine: 128374981723089470189234709182734
-FLEXSERV model ID format: FLEX:{PUB|PRI}:author/model[@revision], we only use private model pool, and omit the revision in model ID. 
-DATASET_ROOT address: /home/jovyan/ai-tutorial-2026/datasets/AnimalEcology.v4i.yolov11
-BASE_YOLO_MODEL for the request:  FLEX:PRI:yolo/yolo26n
-FINE_TUNED_YOLO_MODEL for the request:  FLEX:PRI:yolo/yolo26n-fine-tuned
+  * BASEURL of FLEXSERV inference engine: https://vista.tacc.utexas.edu:60324
+  * Bearer Auth token for FLEXSERV inference engine: 31b8148f20a4e8749dc232b48158a64b93ac7a988bd6aba5cc5de90c5654f984
+  * FLEXSERV model ID format: FLEX:{PUB|PRI}:author/model[@revision], we only use private model pool, and omit the revision in model ID. 
+  * DATASET_ROOT address: /home/jovyan/ai-tutorial-2026/datasets/AnimalEcology.v4i.yolov11
+  * BASE_YOLO_MODEL for the request:  FLEX:PRI:yolo/yolo26n
+  * FINE_TUNED_YOLO_MODEL for the request:  FLEX:PRI:yolo/yolo26n-fine-tuned
 
 After the code, briefly explain how the program works in plain English.
 </pre>
