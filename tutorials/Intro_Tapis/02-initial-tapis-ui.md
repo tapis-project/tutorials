@@ -94,7 +94,7 @@ Click on **Apps** from the left-hand menu in TapisUI. You will see a list of ava
 
 Look for the application **FlexServ-1.4.0 version 1.4.0** in the public apps list. FlexServ is a TACC-owned inference server for running AI models on HPC systems. It has been pre-registered as a public app for all users to submit jobs.
 
-![FlexServ Application](/tutorials/images/Flexserv_app.png)
+![FlexServ Application](/tutorials/images/2.9_Flexserv_app.png)
 
 FlexServ supports running various AI models from Hugging Face, provides an OpenAI-compatible API, and includes a built-in UI for chat completion and code generation. We will use it in later sections to run inference jobs and generate code.
 
