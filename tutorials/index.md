@@ -22,13 +22,13 @@ img {
 }
 </style>
 
-| Time         | Duration | Description                                                                                                   |
-| ------------ | -------- | ------------------------------------------------------------------------------------------------------------- |
-| 2:00-3:00 PM | 60 min   | (Lecture) [AI/ML, the National CyberInfrastructure Ecosystem and Tapis](./Intro_Tapis/01-intro-to-tapis.md)   |
-| 3:00-3:30 PM | 30 min   | (Hands-on) [Initial Steps With TapisUI](./Intro_Tapis/02-initial-tapis-ui.md)                                 |
-| 3:30-4:00 PM | 30 min   | Coffee Break                                                                                                  |
-| 4:00-4:45 PM | 45 min   | (Lecture) [Classes of AI Models, 3rd Party Model Registries, Flexserv](./Tapis_FlexServ/01-lecture.md)        |
-| 4:45-5:30 PM | 45 min   | (Hands-on) [Executing Large Models on Vista Via Tapis and Flexserv](./Tapis_FlexServ/01b-running-flexserv.md) |
+| Time | Duration | Description |
+|------|----------|-------------|
+| 2:00-3:00 PM | 60 min | (Lecture) [Section1: AI/ML, the National CyberInfrastructure Ecosystem and Tapis](./Intro_Tapis/01-intro-to-tapis.md) |
+| 3:00-3:30 PM | 30 min | (Hands-on) [Section 2: Initial Steps With TapisUI](./Intro_Tapis/02-initial-tapis-ui.md) |
+| 3:30-4:00 PM | 30 min | Coffee Break |
+| 4:00-4:45 PM | 45 min | (Lecture) [Section 3: Classes of AI Models, 3rd Party Model Registries, Flexserv](./Tapis_FlexServ/01-lecture.md) |
+| 4:45-5:30 PM | 45 min | (Hands-on) [Section 4: Executing Large Models on Vista Via Tapis and Flexserv](./Tapis_FlexServ/01b-running-flexserv.md) |
   
 Day 2 (June 1st) Schedule 
 <style>
@@ -48,16 +48,15 @@ img {
 }
 </style>
 
-| Time           | Duration | Description                                                                                                                                                                                                                                                                                                                                                                           |
-| -------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 9:00-9:30 AM   | 30 min   | (Lecture) [Computer Vision Models in Scientific Applications](./Vision_Models/01-intro-vision-models.md)                                                                                                                                                                                                                                                                              |
+| Time | Duration | Description |
+|------|----------|-------------|
+| 9:00-9:30 AM | 30 min | (Lecture) [Section 5: Computer Vision Models in Scientific Applications](./Vision_Models/01-intro-vision-models.md) |
 | 9:30-10:00 AM  | 30 min   | (Lecture) <a href="https://docs.google.com/presentation/d/1s7S295ntrG8ZBu67HUuwjj9trcZz1pBsC57D6t5CIkE/edit?slide=id.g3cd6a51b6a2_0_42#slide=id.g3cd6a51b6a2_0_42" target="_blank">Fine-tuning the Vision Model with Ultralytics and Tapis Part 1</a> <br/> (Hands-on) [Fine-tuning the Vision Model with Ultralytics and Tapis Part 2](./Fine_Tuning_Vision/01-intro-fine-tuning.md) |
-| 10:00-10:15 AM | 15 min   | (Hands-on) [Launching Jupyter Notebook](./Jupyter-Notebook/intro-to-jupyter.md)                                                                                                                                                                                                                                                                                                       |
-| 10:15-10:30 AM | 15 min   | (Lecture) [Prompt-Engineering: Best Practices](./Vision_Models/02-prompt-engineering.md)                                                                                                                                                                                                                                                                                              |
-| 10:30-11:00 AM | 30 min   | Coffee Break                                                                                                                                                                                                                                                                                                                                                                          |
-| 11:00-11:30 AM | 30 min   | (Hands-on) [Generating Code for a Vision Task and Executing in Jupyter](./Tapis_FlexServ/01c-code-gen-flexserv.md)                                                                                                                                                                                                                                                                    |
-| 11:30-12:00 PM | 30 min   | (Hands-on) [Evaluating fine-tuned model within Jupyter](./Fine_Tuning_Vision/02-evaluation.md)                                                                                                                                                                                                                                                                                        |
-| 12:00-12:30 PM | 30 min   | Additional Use Cases and Discussion                                                                                                                                                                                                                                                                                                                                                   |
+| 10:15-10:30 AM | 15 min | (Lecture) [Prompt-Engineering: Best Practices](./Vision_Models/02-prompt-engineering.md) |
+| 10:30-11:00 AM | 30 min | Coffee Break |
+| 11:00-11:30 AM | 30 min | (Hands-on) [Generating Code for a Vision Task and Executing in Jupyter](./Tapis_FlexServ/01c-code-gen-flexserv.md) |
+| 11:30-12:00 PM | 30 min | (Hands-on) [Evaluating fine-tuned model within Jupyter](./Fine_Tuning_Vision/02-evaluation.md)|
+| 12:00-12:30 PM | 30 min | Additional Use Cases and Discussion |
 
 
 The resources you will be using today are provided by funding from the National Science Foundation.
