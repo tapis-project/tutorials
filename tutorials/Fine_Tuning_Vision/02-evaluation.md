@@ -1,4 +1,4 @@
-### Evaluating Fine-tuned Model by Running Code Detection On Jupyter
+### Section 10: Evaluating Fine-tuned Model by Running Code Detection On Jupyter [Hands-On]
 
 Go to the Jupyter notebook Code-Detection on your Jupyter path. 
 `ai-tutorial-2026 -> notebooks -> Code-Detection.ipynb`
