@@ -11,5 +11,9 @@ You may login with your TACC accounts.
 
 On successful login, ensure that you have access to a folder, `work`, within the Jupyter file system. 
 
+### Restarting your Jupyter Server
+
+Click on **Files** -> **Hub control panel** -> **Stop my server** -> **Start server**
+
 
 
