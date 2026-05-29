@@ -1,10 +1,3 @@
-<style>
-img {
-  box-shadow: 0 0 .7rem rgba(0, 0, 0, 0.5);
-}
-</style>
-
-
 # Section 2: Initial Steps with TapisUI
 
 ## Step 2.1: Logging In

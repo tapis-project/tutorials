@@ -12,22 +12,6 @@
 ## Trillion Parameter Consortium 2026 Tutorial Schedule
 
 Day 1 (May 31st) Schedule 
-<style>
-img {
-  box-shadow: 0 0 .7rem rgba(0, 0, 0, 0.5);
-}
-
-.schedule-table th:nth-child(1),
-.schedule-table td:nth-child(1) {
-  white-space: nowrap;
-  min-width: 6rem;
-}
-.schedule-table th:nth-child(2),
-.schedule-table td:nth-child(2) {
-  white-space: nowrap;
-  min-width: 6rem;
-}
-</style>
 
 | Time | Duration | Description | Speaker |
 |------|----------|-------------|---------|
@@ -38,22 +22,6 @@ img {
 | 4:45-5:30 PM | 45 min | (Hands-on) [Section 4: Executing Large Models on Vista Via Tapis and Flexserv](./Tapis_FlexServ/01b-running-flexserv.md) | Wei Zhang |
   
 Day 2 (June 1st) Schedule 
-<style>
-img {
-  box-shadow: 0 0 .7rem rgba(0, 0, 0, 0.5);
-}
-
-.schedule-table th:nth-child(1),
-.schedule-table td:nth-child(1) {
-  white-space: nowrap;
-  min-width: 6rem;
-}
-.schedule-table th:nth-child(2),
-.schedule-table td:nth-child(2) {
-  white-space: nowrap;
-  min-width: 6rem;
-}
-</style>
 
 | Time | Duration | Description | Speaker |
 |------|----------|-------------|---------|
@@ -92,7 +60,7 @@ Flexserv is a Tapis service that allows you to deploy and serve AI/ML models on 
 </details>
 
 
-<details>
+<details markdown="1">
 <summary><strong>Where can I ask questions after the tutorial?</strong></summary>
 
 * **During the tutorial:** Raise your hand and a taccster will come help you.

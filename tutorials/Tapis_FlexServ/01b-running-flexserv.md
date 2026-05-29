@@ -1,7 +1,4 @@
 <style>
-img {
-  box-shadow: 0 0 .7rem rgba(0, 0, 0, 0.5);
-}
 .scrollable {
   max-height: 500px;
   overflow: auto;
