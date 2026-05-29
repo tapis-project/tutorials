@@ -1,8 +1,15 @@
 # TPC26 Tapis Tutorial
 
-## Trillion Parameter Consortium 2026 Tutorial Schedule
+## Materials
 
-<a href="https://docs.google.com/presentation/d/1s7S295ntrG8ZBu67HUuwjj9trcZz1pBsC57D6t5CIkE/edit?slide=id.p1#slide=id.p1" target="_blank">Slides for this tutorial are here.</a>
+- [Slides for this tutorial](https://docs.google.com/presentation/d/1s7S295ntrG8ZBu67HUuwjj9trcZz1pBsC57D6t5CIkE/edit?slide=id.p1#slide=id.p1){:target="_blank"}
+
+<div class="callout callout-warning">
+⚠️ <strong>Reservation Codes:</strong> Sunday sessions → <code>Tapis+Tutorial-Sun</code> &nbsp;|&nbsp; Monday sessions → <code>Tapis+Tutorial-Mon</code>
+</div>
+
+
+## Trillion Parameter Consortium 2026 Tutorial Schedule
 
 Day 1 (May 31st) Schedule 
 <style>
