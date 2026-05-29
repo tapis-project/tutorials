@@ -18,8 +18,8 @@ Day 1 (May 31st) Schedule
 | 2:00-3:00 PM | 60 min | (Lecture) [Section 1: AI/ML, the National CyberInfrastructure Ecosystem and Tapis](./Intro_Tapis/01-intro-to-tapis.md) | Anagha Jamthe  | 
 | 3:00-3:30 PM | 30 min | (Hands-on) [Section 2: Initial Steps With TapisUI](./Intro_Tapis/02-initial-tapis-ui.md) | Christian R. Garcia | 
 | 3:30-4:00 PM | 30 min | Coffee Break | | 
-| 4:00-4:45 PM | 45 min | (Lecture) [Section 3: Classes of AI Models, 3rd Party Model Registries, Flexserv](./Tapis_FlexServ/01-lecture.md) | Wei Zhang |
-| 4:45-5:30 PM | 45 min | (Hands-on) [Section 4: Executing Large Models on Vista Via Tapis and Flexserv](./Tapis_FlexServ/01b-running-flexserv.md) | Wei Zhang |
+| 4:00-4:45 PM | 45 min | (Lecture) [Section 3: Classes of AI Models, 3rd Party Model Registries, FlexServ](./Tapis_FlexServ/01-lecture.md) | Wei Zhang |
+| 4:45-5:30 PM | 45 min | (Hands-on) [Section 4: Executing Large Models on Vista Via Tapis and FlexServ](./Tapis_FlexServ/01b-running-flexserv.md) | Wei Zhang |
   
 Day 2 (June 1st) Schedule 
 
