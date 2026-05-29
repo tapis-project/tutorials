@@ -45,26 +45,22 @@ You don't have to do a lot of complex things to use Tapis.  If you just want som
 ​
 
 ## Links & Documentation
-[The tutorial covers TapisUI in the public tenant: public.tapis.io](https://public.tapis.io)
 
-<a href="https://public.tapis.io" target="_blank">
-<img src="/tutorials/assets/tapisui_home.png" alt="TapisUI Dashboard" width="50%">
-</a>
-
-[Live Documentation of OpenAPI V3 Specs for all Tapis Services](https://tapis-project.github.io/live-docs)
-
-<a href="https://tapis-project.github.io/live-docs" target="_blank">
-<img src="/tutorials/assets/livedocs.png" alt="Tapis Live-Docs" width="50%">
-</a>
-
-[Full documentation and guides for using Tapis](https://tapis.readthedocs.io/en/latest)
-
-<a href="https://tapis.readthedocs.io/en/latest" target="_blank">
-<img src="/tutorials/assets/docs.png" alt="Tapis Documentation" width="50%">
-</a>
-
-[TapisUI specific documentation page](https://tapis.readthedocs.io/en/latest/technical/tapisui.html)
-
-<a href="https://tapis.readthedocs.io/en/latest/technical/tapisui.html" target="_blank">
-<img src="/tutorials/assets/docstapisui.png" alt="TapisUI Documentation" width="50%">
-</a>
+<div class="doc-grid">
+  <div class="doc-grid-item">
+    <a href="https://public.tapis.io" target="_blank">TapisUI — public tenant (public.tapis.io)</a>
+    <a href="https://public.tapis.io" target="_blank"><img src="/tutorials/assets/tapisui_home.png" alt="TapisUI Dashboard"></a>
+  </div>
+  <div class="doc-grid-item">
+    <a href="https://tapis-project.github.io/live-docs" target="_blank">Live Documentation of OpenAPI V3 Specs for all Tapis Services</a>
+    <a href="https://tapis-project.github.io/live-docs" target="_blank"><img src="/tutorials/assets/livedocs.png" alt="Tapis Live-Docs"></a>
+  </div>
+  <div class="doc-grid-item">
+    <a href="https://tapis.readthedocs.io/en/latest" target="_blank">Full documentation and guides for using Tapis</a>
+    <a href="https://tapis.readthedocs.io/en/latest" target="_blank"><img src="/tutorials/assets/docs.png" alt="Tapis Documentation"></a>
+  </div>
+  <div class="doc-grid-item">
+    <a href="https://tapis.readthedocs.io/en/latest/technical/tapisui.html" target="_blank">TapisUI specific documentation page</a>
+    <a href="https://tapis.readthedocs.io/en/latest/technical/tapisui.html" target="_blank"><img src="/tutorials/assets/docstapisui.png" alt="TapisUI Documentation"></a>
+  </div>
+</div>

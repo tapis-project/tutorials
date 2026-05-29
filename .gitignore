@@ -108,3 +108,5 @@ venv.bak/
 
 # jekyll pages :)
 _site
+.jekyll-metadata
+.jekyll-cache

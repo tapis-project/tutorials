@@ -1,11 +1,14 @@
 # TPC26 Tapis Tutorial
 
-## Materials
+## Tutorial Materials
 
-- [Slides for this tutorial](https://docs.google.com/presentation/d/1s7S295ntrG8ZBu67HUuwjj9trcZz1pBsC57D6t5CIkE/edit?slide=id.p1#slide=id.p1){:target="_blank"}
-
-<div class="callout callout-warning">
-⚠️ <strong>Reservation Codes:</strong> Sunday sessions → <code>Tapis+Tutorial-Sun</code> &nbsp;|&nbsp; Monday sessions → <code>Tapis+Tutorial-Mon</code> . <strong>Allocation Code: </strong><code>TRA24006</code>
+<div class="callout callout-info">
+  <strong>Tutorial Slides</strong><br/>
+  <a href="https://docs.google.com/presentation/d/1s7S295ntrG8ZBu67HUuwjj9trcZz1pBsC57D6t5CIkE/edit?slide=id.p1#slide=id.p1" target="_blank">Slides for this tutorial</a><br/><br/>
+📝 <strong>Reservation Info</strong><br/>
+<strong>Allocation Code:</strong> <code>TRA24006</code><br/>
+<strong>Sunday sessions:</strong> <code>Tapis+Tutorial-Sun</code><br/>
+<strong>Monday sessions:</strong> <code>Tapis+Tutorial-Mon</code>
 </div>
 
 

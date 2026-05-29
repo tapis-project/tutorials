@@ -63,7 +63,10 @@ Expand **TACC Resource Allocation** and **Reservation Name**
  2. For **Reservation Name**, put a space and then your *reservation code* after `--reservation`
 
 <div class="callout callout-warning">
-⚠️ <strong>Reservation Codes:</strong> Sunday sessions → <code>Tapis+Tutorial-Sun</code> &nbsp;|&nbsp; Monday sessions → <code>Tapis+Tutorial-Mon</code>
+⚠️ <strong>Reservation Info</strong><br/>
+<strong>Allocation Code:</strong> <code>TRA24006</code><br/>
+<strong>Sunday sessions:</strong> <code>Tapis+Tutorial-Sun</code><br/>
+<strong>Monday sessions:</strong> <code>Tapis+Tutorial-Mon</code>
 </div>
 
 Click **Continue**
