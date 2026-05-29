@@ -45,9 +45,9 @@ You don't have to do a lot of complex things to use Tapis.  If you just want som
 ​
 
 ## Links & Documentation
-[The tutorial covers TapisUI in the training tenant: training.tapis.io](https://training.tapis.io)
+[The tutorial covers TapisUI in the public tenant: public.tapis.io](https://public.tapis.io)
 
-<a href="https://training.tapis.io" target="_blank">
+<a href="https://public.tapis.io" target="_blank">
 <img src="/tutorials/assets/tapisui_home.png" alt="TapisUI Dashboard" width="50%">
 </a>
 

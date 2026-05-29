@@ -1,5 +1,7 @@
 # Section 6: Ultralytics Fine-Tuning App
 
+[Lecture Slides](https://docs.google.com/presentation/d/1s7S295ntrG8ZBu67HUuwjj9trcZz1pBsC57D6t5CIkE/edit?slide=id.g3cd6a51b6a2_0_42#slide=id.g3cd6a51b6a2_0_42){:target="_blank"}
+
 This application allows users to fine-tune Ultralytics YOLO 26 models using Singularity containers in a batch processing environment. It is designed to run on High-Performance Computing (HPC) systems via Tapis, leveraging GPU acceleration for training tasks.
 
 > **Note:** This app is already registered for the tutorial and is available to run via the Tapis UI.
