@@ -88,7 +88,7 @@ Once you open a notebook, you can write and run python code. To execute a line o
 press `shift + Enter`. 
 
 ## Next Steps
-With the environmnet setup, we're now ready for the Hello, Tapis tutorial.
+With the environment setup, we're now ready for the Hello, Tapis tutorial.
 [Next-> Hello, Tapis](../hello/hello.md)
 
 ## Additional Resources
