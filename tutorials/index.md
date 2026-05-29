@@ -5,7 +5,7 @@
 - [Slides for this tutorial](https://docs.google.com/presentation/d/1s7S295ntrG8ZBu67HUuwjj9trcZz1pBsC57D6t5CIkE/edit?slide=id.p1#slide=id.p1){:target="_blank"}
 
 <div class="callout callout-warning">
-⚠️ <strong>Reservation Codes:</strong> Sunday sessions → <code>Tapis+Tutorial-Sun</code> &nbsp;|&nbsp; Monday sessions → <code>Tapis+Tutorial-Mon</code>
+⚠️ <strong>Reservation Codes:</strong> Sunday sessions → <code>Tapis+Tutorial-Sun</code> &nbsp;|&nbsp; Monday sessions → <code>Tapis+Tutorial-Mon</code> . <strong>Allocation Code: </strong><code>TRA24006</code>
 </div>
 
 
@@ -123,5 +123,3 @@ Flexserv is a Tapis service that allows you to deploy and serve AI/ML models on 
 * [Tapis Systems](https://tapis.readthedocs.io/en/latest/technical/systems.html)
 * [Tapis Apps](https://tapis.readthedocs.io/en/latest/technical/apps.html)
 * [Tapis Jobs](https://tapis.readthedocs.io/en/latest/technical/jobs.html)
-
-## 
