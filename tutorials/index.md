@@ -26,7 +26,7 @@ Day 2 (June 1st) Schedule
 | Time | Duration | Description | Speaker |
 |------|----------|-------------|---------|
 | 9:00-9:30 AM | 30 min | (Lecture) [Section 5: Computer Vision Models in Scientific Applications](./Vision_Models/01-intro-vision-models.md) | Christian R. Garcia | 
-| 9:30-10:00 AM  | 30 min   | (Lecture) <a href="https://docs.google.com/presentation/d/1s7S295ntrG8ZBu67HUuwjj9trcZz1pBsC57D6t5CIkE/edit?slide=id.g3cd6a51b6a2_0_42#slide=id.g3cd6a51b6a2_0_42" target="_blank">Section 6: Fine-tuning the Vision Model with Ultralytics and Tapis Part 1</a> <br/> (Hands-on) [Section 6: Fine-tuning the Vision Model with Ultralytics and Tapis Part 2](./Fine_Tuning_Vision/01-intro-fine-tuning.md) | Anagha Jamthe | 
+| 9:30-10:00 AM  | 30 min | (Lecture + Hands-on) [Section 6: Fine-tuning the Vision Model with Ultralytics and Tapis](./Fine_Tuning_Vision/01-intro-fine-tuning.md) | Anagha Jamthe | 
 | 10:00-10:15 AM | 15 min | (Hands-on) [Section 7: Launching Jupyter Notebook](./Jupyter-Notebook/intro-to-jupyter.md) | Christian R. Garcia |
 | 10:15-10:30 AM | 15 min | (Lecture) [Section 8: Prompt-Engineering: Best Practices](./Vision_Models/02-prompt-engineering.md) | Anagha Jamthe |
 | 10:30-11:00 AM | 30 min | Coffee Break | | 
