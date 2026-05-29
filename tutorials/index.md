@@ -24,11 +24,11 @@ img {
 
 | Time | Duration | Description |
 |------|----------|-------------|
-| 2:00-3:00 PM | 60 min | (Lecture) [AI/ML, the National CyberInfrastructure Ecosystem and Tapis](./Intro_Tapis/01-intro-to-tapis.md) |
-| 3:00-3:30 PM | 30 min | (Hands-on) [Initial Steps With TapisUI](./Intro_Tapis/02-initial-tapis-ui.md) |
+| 2:00-3:00 PM | 60 min | (Lecture) [Section1: AI/ML, the National CyberInfrastructure Ecosystem and Tapis](./Intro_Tapis/01-intro-to-tapis.md) |
+| 3:00-3:30 PM | 30 min | (Hands-on) [Section 2: Initial Steps With TapisUI](./Intro_Tapis/02-initial-tapis-ui.md) |
 | 3:30-4:00 PM | 30 min | Coffee Break |
-| 4:00-4:45 PM | 45 min | (Lecture) [Classes of AI Models, 3rd Party Model Registries, Flexserv](./Tapis_FlexServ/01-lecture.md) |
-| 4:45-5:30 PM | 45 min | (Hands-on) [Executing Large Models on Vista Via Tapis and Flexserv](./Tapis_FlexServ/01b-running-flexserv.md) |
+| 4:00-4:45 PM | 45 min | (Lecture) [Section 3: Classes of AI Models, 3rd Party Model Registries, Flexserv](./Tapis_FlexServ/01-lecture.md) |
+| 4:45-5:30 PM | 45 min | (Hands-on) [Section 4: Executing Large Models on Vista Via Tapis and Flexserv](./Tapis_FlexServ/01b-running-flexserv.md) |
   
 Day 2 (June 1st) Schedule 
 <style>
@@ -50,7 +50,7 @@ img {
 
 | Time | Duration | Description |
 |------|----------|-------------|
-| 9:00-9:30 AM | 30 min | (Lecture) [Computer Vision Models in Scientific Applications](./Vision_Models/01-intro-vision-models.md) |
+| 9:00-9:30 AM | 30 min | (Lecture) [Section 5: Computer Vision Models in Scientific Applications](./Vision_Models/01-intro-vision-models.md) |
 | 9:30-10:00 AM | 30 min | (Lecture + Hands-on) [Fine-tuning the Vision Model with Ultralytics and Tapis Part 1](./Fine_Tuning_Vision/01-intro-fine-tuning.md) <br/> (Lecture) [Fine-tuning the Vision Model with Ultralytics and Tapis Part 2](./Fine_Tuning_Vision/01-intro-fine-tuning.md) |
 | 10:00-10:15 AM | 15 min | (Hands-on) [Launching Jupyter Notebook](./Jupyter-Notebook/intro-to-jupyter.md) |
 | 10:15-10:30 AM | 15 min | (Lecture) [Prompt-Engineering: Best Practices](./Vision_Models/02-prompt-engineering.md) |
