@@ -104,15 +104,14 @@ Put
 
 **3. Submit Job**
 
-Once you went through all the processes, you can go ahead and submit the job. 
+Once you went through all the processes, you can go ahead and submit the job. After you submit the job, you should see a confirmation message indicating that your job has been submitted successfully. You can close the job submission window and go to the Jobs tab in the left panel to see your submitted job.
 ![Step 3: Job Submission](/tutorials/images/sec4/image13.png)
 
 
 **4. View Job**
 
-
-Once the job is submitted successfully, you should:
- 1. Go to the left panel and in core services click on the Jobs tab. 
+To view a submitted job, you can: 
+ 1. Go to the Jobs tab in the left panel to see your submitted job.
  2. You can see an active job in the job list. 
  3. If you job starts to run and you should be seeing the output file.
  4. You can select the file and click on **View** button to see the job output, where you should be able to find the FlexServ address and FlexServ token.
@@ -164,6 +163,8 @@ The very first thing you need to do is to refresh the model pools by clicking on
 
 In FlexServ, we have two model pools, the `Public Pool` and `Private Pool`. The public pool is mounted at a specific project directory which is shared to everyone in the same project, and the private pool is mounted to the `flexserv/models` directory of your `$SCRATCH` directory, which is pertinent to the each individual user. This means, none of the models in your private model pool is shared with other users. 
 
+Each model is shown as a model sticker in the UI, and you can view each of them as a sticky note of a model, which include some metadata regarding the model it represents (e.g. model name, source, pipeline tag, task, size in bytes). We choose the coloring of each model sticker based on its model ID. 
+
 We provide **Reset Model Cache in Inference Engine** button to unload all the models from the transformers backend. We also provide **Rebuild Index** button for you to rebuild the model index of both model pools.
 
 
@@ -183,6 +184,8 @@ In order to run the tutorial properly, we need to make sure you have the followi
  * NousResearch/Hermes-4.3-36B
 
 If you don't see any of these models in your private model pool, you can find them in the public model pool and drag them into your private pool. This will copy the model you drag from the public pool to your private pool. Note that we can only drag one model at a time. When model transferring is in progress, you cannot drag another model until the current transferring process is finished. 
+
+Also, please wait until the model is fully transferred to your private pool. Once the model is transferred, you can right click on the model and select **Load** to load the model into the transformers inference backend.
 
 #### Download a Model
 
@@ -225,6 +228,11 @@ Once the model loading starts, you will see a progress bar.
 When loading finishes, you should see the start becomes amber indicating that it is loaded now. 
 ![FlexServ Model Manager - Loading a Model](/tutorials/images/sec4/image23.png)
 
+Note: If you encounter any issue when loading the model, you can try the following depending on the situation:
+
+  1. if you see error message indicating that some files are missing (No such file or directory), that means some of the model files are not downloaded successfully or have been deleted by accident or periodical data retention on $SCRATCH directory. In this case, you can simply right click the model and select **Delete** in the menu re-transfer it from the public pool or re-download one using the model fetching functionality.
+  2. if you see error message indicating that the model loading fails due to out of memory issue, you can try to load a smaller model, or you can try to unload all models and load the model again. You can also check the metrics page to see if your GPU memory or system memory is hitting the high watermark. If so, unloading some models or all models should help with that.
+  3. if you see error message indicating that the model loading fails due to some unexpected error, you can try to refresh the webpage and load the model again. 
 
 ### Step 4.2.4: Multi-model Chat with FlexServ
 

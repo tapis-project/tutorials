@@ -56,7 +56,7 @@ Click on **Authenticate with TMS Keys** on the Vista system.
 
 Once your TMS credentials are added, your system is ready to use.
 
-### Step 2.5: Use "Go to Home" to Get to Files
+### Step 2.5: Use "View Files" to Get to Files
 
 After authenticating, you can verify your system access by clicking the **View Files** button, which will take you to the file listing on the Vista system.
 
