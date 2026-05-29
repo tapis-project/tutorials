@@ -58,7 +58,9 @@ Expand **TACC Resource Allocation** and **Reservation Name**
  1. For **TACC Resource Allocation**, put a space and then `TRA24006` after `-A`
  2. For **Reservation Name**, put a space and then your *reservation code* after `--reservation`
 
-Note that the reservation code for **Sunday** sessions is `Tapis+Tutorial-Sun` and the reservation code for **Monday** sessions is `Tapis+Tutorial-Mon`.
+<div class="callout callout-warning">
+⚠️ <strong>Reservation Codes:</strong> Sunday sessions → <code>Tapis+Tutorial-Sun</code> &nbsp;|&nbsp; Monday sessions → <code>Tapis+Tutorial-Mon</code>
+</div>
 
 Click **Continue**
 

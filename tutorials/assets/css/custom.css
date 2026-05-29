@@ -1,0 +1,25 @@
+/* Global image styling — override per-page with an inline <style> block */
+.markdown-body img {
+  box-shadow: 0 0 .7rem rgba(0, 0, 0, 0.5);
+}
+
+/* Callout boxes — use <div class="callout callout-warning"> etc. */
+.callout {
+  padding: 12px 16px;
+  border-radius: 4px;
+  border-left: 4px solid;
+  margin: 1em 0;
+}
+.callout-warning {
+  background: #fff8e1;
+  border-color: #f0ad4e;
+}
+
+/* Schedule table column widths — applied to all markdown tables */
+.markdown-body table th:nth-child(1),
+.markdown-body table td:nth-child(1),
+.markdown-body table th:nth-child(2),
+.markdown-body table td:nth-child(2) {
+  white-space: nowrap;
+  min-width: 6rem;
+}
