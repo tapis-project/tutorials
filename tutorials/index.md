@@ -71,21 +71,25 @@ Flexserv is a Tapis service that allows you to deploy and serve AI/ML models on 
 
 
 ## Links & Documentation
-[The tutorial covers TapisUI in the public tenant: public.tapis.io](https://public.tapis.io)
 
-[![TapisUI Dashboard](/tutorials/assets/tapisui_home.png){:style="max-width:50%;"}](https://public.tapis.io){:target="_blank"}
-
-[Live Documentation of OpenAPI V3 Specs for all Tapis Services](https://tapis-project.github.io/live-docs)
-
-[![Tapis Live-Docs](/tutorials/assets/livedocs.png){:style="max-width:50%;"}](https://tapis-project.github.io/live-docs){:target="_blank"}
-
-[Full documentation and guides for using Tapis](https://tapis.readthedocs.io/en/latest)
-
-[![Tapis Documentation](/tutorials/assets/docs.png){:style="max-width:50%;"}](https://tapis.readthedocs.io/en/latest){:target="_blank"}
-
-[TapisUI specific documentation page](https://tapis.readthedocs.io/en/latest/technical/tapisui.html)
-
-[![TapisUI Documentation](/tutorials/assets/docstapisui.png){:style="max-width:50%;"}](https://tapis.readthedocs.io/en/latest/technical/tapisui.html){:target="_blank"}
+<div class="doc-grid">
+  <div class="doc-grid-item">
+    <a href="https://public.tapis.io" target="_blank">TapisUI — public tenant (public.tapis.io)</a>
+    <a href="https://public.tapis.io" target="_blank"><img src="/tutorials/assets/tapisui_home.png" alt="TapisUI Dashboard"></a>
+  </div>
+  <div class="doc-grid-item">
+    <a href="https://tapis-project.github.io/live-docs" target="_blank">Live Documentation of OpenAPI V3 Specs for all Tapis Services</a>
+    <a href="https://tapis-project.github.io/live-docs" target="_blank"><img src="/tutorials/assets/livedocs.png" alt="Tapis Live-Docs"></a>
+  </div>
+  <div class="doc-grid-item">
+    <a href="https://tapis.readthedocs.io/en/latest" target="_blank">Full documentation and guides for using Tapis</a>
+    <a href="https://tapis.readthedocs.io/en/latest" target="_blank"><img src="/tutorials/assets/docs.png" alt="Tapis Documentation"></a>
+  </div>
+  <div class="doc-grid-item">
+    <a href="https://tapis.readthedocs.io/en/latest/technical/tapisui.html" target="_blank">TapisUI specific documentation page</a>
+    <a href="https://tapis.readthedocs.io/en/latest/technical/tapisui.html" target="_blank"><img src="/tutorials/assets/docstapisui.png" alt="TapisUI Documentation"></a>
+  </div>
+</div>
 
 ## More Information on Tapis Services:
 * [Tapis Systems](https://tapis.readthedocs.io/en/latest/technical/systems.html)

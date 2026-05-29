@@ -15,6 +15,29 @@
   border-color: #f0ad4e;
 }
 
+/* 2-column documentation link grid */
+.doc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 1em 0;
+}
+.doc-grid-item {
+  display: flex;
+  flex-direction: column;
+}
+.doc-grid-item a:first-child {
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+.doc-grid-item a:last-child {
+  margin-top: auto;
+}
+.doc-grid-item img {
+  width: 100%;
+  height: auto;
+}
+
 /* Schedule table column widths — applied to all markdown tables */
 .markdown-body table th:nth-child(1),
 .markdown-body table td:nth-child(1),
