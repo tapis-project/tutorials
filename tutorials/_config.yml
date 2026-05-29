@@ -6,17 +6,18 @@ permalink: pretty
 baseurl: "/tutorials"
 nav:
 - AI/ML, The National CI Ecosysystem, and Tapis:
-  - (Lecture) AI, CI and Tapis: ./Intro_Tapis/01-intro-to-tapis
-  - (Hands-on) Initial Steps with TapisUI: ./Intro_Tapis/02-initial-tapis-ui
+  - (Lecture) Section 1 - AI/ML, the National CyberInfrastructure Ecosystem and Tapis: ./Intro_Tapis/01-intro-to-tapis
+  - (Hands-on) Section 2 - Initial Steps with TapisUI: ./Intro_Tapis/02-initial-tapis-ui
 - AI Models and Fleserv:
-  - (Lecture) Classes of AI Models, 3rd Party Model Registries, Flexserv: ./Tapis_FlexServ/01-lecture
-  - (Hands-on) Executing Large Models on Vista Via Tapis and Flexserv: ./Tapis_FlexServ/01b-running-flexserv
+  - (Lecture) Section 3 - Classes of AI Models, 3rd Party Model Registries, Flexserv: ./Tapis_FlexServ/01-lecture
+  - (Hands-on) Section 4 - Executing Large Models on Vista Via Tapis and Flexserv: ./Tapis_FlexServ/01b-running-flexserv
 - Vision Models, Fine-tuning and Jupyter Notebooks:
-  - Vision Models in Science: ./Vision_Models/01-intro-vision-models
-  - Fine-tuning with Ultralytics: ./Fine_Tuning_Vision/01-intro-fine-tuning
-  - (Hands-on) Launching Juptyer Notebook: ./Jupyter-Notebook/intro-to-jupyter 
-  - Prompt Engineering and Detection Code: ./Tapis_FlexServ/01c-code-gen-flexserv
+  - (Lecture) Section 5 - Vision Models in Science: ./Vision_Models/01-intro-vision-models
+  - (Lecture + Hands-on) Section 6 - Fine-tuning the Vision Model with Ultralytics and Tapis: ./Fine_Tuning_Vision/01-intro-fine-tuning
+  - (Hands-on) Section 7- Launching Juptyer Notebook: ./Jupyter-Notebook/intro-to-jupyter 
+  - Section 8 - Prompt Engineering and Detection Code: ./Vision_Models/02-prompt-engineering.md
+  - Section 9 - Generating Code for a Vision Task and Executing in Jupyter: ./Tapis_FlexServ/01c-code-gen-flexserv.md 
 - Evaluating Fine-tuned Models:
-  - Evaluating our New Model: ./Fine_Tuning_Vision/02-evaluation 
+  - Section 10 - Evaluating fine-tuned model withing Jupyter: ./Fine_Tuning_Vision/02-evaluation.md
   #- Prompt Engineering: ./Vision_Models/02-prompt-engineering 
 theme: jekyll-theme-minimal
