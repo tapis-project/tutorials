@@ -10,6 +10,8 @@ This application allows users to fine-tune Ultralytics YOLO 26 models using Sing
 
 ## Locating the App and Configure Job Submission
 
+Login to [public.tapis.io](https://public.tapis.io){:target="_blank"} using your TACC username and password.
+
 Go to the **App** tab and find the app with name `yolo-finetuning-arm64`. 
 
 ![App definition](/tutorials/images/sec8/image1.png)
