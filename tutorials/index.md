@@ -16,26 +16,26 @@
 
 Day 1 (May 31st) Schedule 
 
-| Time | Duration | Description | Speaker |
-|------|----------|-------------|---------|
-| 2:00-3:00 PM | 60 min | (Lecture) [Section 1: AI/ML, the National CyberInfrastructure Ecosystem and Tapis](./Intro_Tapis/01-intro-to-tapis.md) | Anagha Jamthe  | 
-| 3:00-3:30 PM | 30 min | (Hands-on) [Section 2: Initial Steps With TapisUI](./Intro_Tapis/02-initial-tapis-ui.md) | Christian R. Garcia | 
-| 3:30-4:00 PM | 30 min | Coffee Break | | 
-| 4:00-4:45 PM | 45 min | (Lecture) [Section 3: Classes of AI Models, 3rd Party Model Registries, FlexServ](./Tapis_FlexServ/01-lecture.md) | Wei Zhang |
-| 4:45-5:30 PM | 45 min | (Hands-on) [Section 4: Executing Large Models on Vista Via Tapis and FlexServ](./Tapis_FlexServ/01b-running-flexserv.md) | Wei Zhang |
+| Time         | Duration | Description                                                                                                                    | Speaker             |
+| ------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------- |
+| 2:00-3:00 PM | 60 min   | (Lecture) [Section 1: AI/ML, the National CyberInfrastructure Ecosystem and Tapis](./Intro_Tapis/01-intro-to-tapis.md)         | Anagha Jamthe       |
+| 3:00-3:30 PM | 30 min   | (Hands-on) [Section 2: Initial Steps With TapisUI](./Intro_Tapis/02-initial-tapis-ui.md)                                       | Christian R. Garcia |
+| 3:30-4:00 PM | 30 min   | Coffee Break                                                                                                                   |                     |
+| 4:00-4:45 PM | 45 min   | (Lecture) [Section 3: Modern AI, Scientific Workflow and Infrastructure Gaps, Tapis Solutions](./Tapis_FlexServ/01-lecture.md) | Wei Zhang           |
+| 4:45-5:30 PM | 45 min   | (Hands-on) [Section 4: Executing Large Models on Vista Via Tapis and FlexServ](./Tapis_FlexServ/01b-running-flexserv.md)       | Wei Zhang           |
   
 Day 2 (June 1st) Schedule 
 
-| Time | Duration | Description | Speaker |
-|------|----------|-------------|---------|
-| 9:00-9:30 AM | 30 min | (Lecture) [Section 5: Computer Vision Models in Scientific Applications](./Vision_Models/01-intro-vision-models.md) | Christian R. Garcia | 
-| 9:30-10:00 AM  | 30 min | (Lecture + Hands-on) [Section 6: Fine-tuning the Vision Model with Ultralytics and Tapis](./Fine_Tuning_Vision/01-intro-fine-tuning.md) | Anagha Jamthe | 
-| 10:00-10:15 AM | 15 min | (Hands-on) [Section 7: Launching Jupyter Notebook](./Jupyter-Notebook/intro-to-jupyter.md) | Christian R. Garcia |
-| 10:15-10:30 AM | 15 min | (Lecture) [Section 8: Prompt-Engineering: Best Practices](./Vision_Models/02-prompt-engineering.md) | Anagha Jamthe |
-| 10:30-11:00 AM | 30 min | Coffee Break | | 
-| 11:00-11:30 AM | 30 min | (Hands-on) [Section 9: Generating Code for a Vision Task and Executing in Jupyter](./Tapis_FlexServ/01c-code-gen-flexserv.md) | Wei Zhang | 
-| 11:30-12:00 PM | 30 min | (Hands-on) [Section 10: Evaluating fine-tuned model within Jupyter](./Fine_Tuning_Vision/02-evaluation.md)| Wei Zhang |
-| 12:00-12:30 PM | 30 min | Additional Use Cases and Discussion | Christian R. Garcia |
+| Time           | Duration | Description                                                                                                                             | Speaker             |
+| -------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| 9:00-9:30 AM   | 30 min   | (Lecture) [Section 5: Computer Vision Models in Scientific Applications](./Vision_Models/01-intro-vision-models.md)                     | Christian R. Garcia |
+| 9:30-10:00 AM  | 30 min   | (Lecture + Hands-on) [Section 6: Fine-tuning the Vision Model with Ultralytics and Tapis](./Fine_Tuning_Vision/01-intro-fine-tuning.md) | Anagha Jamthe       |
+| 10:00-10:15 AM | 15 min   | (Hands-on) [Section 7: Launching Jupyter Notebook](./Jupyter-Notebook/intro-to-jupyter.md)                                              | Christian R. Garcia |
+| 10:15-10:30 AM | 15 min   | (Lecture) [Section 8: Prompt-Engineering: Best Practices](./Vision_Models/02-prompt-engineering.md)                                     | Anagha Jamthe       |
+| 10:30-11:00 AM | 30 min   | Coffee Break                                                                                                                            |                     |
+| 11:00-11:30 AM | 30 min   | (Hands-on) [Section 9: Generating Code for a Vision Task and Executing in Jupyter](./Tapis_FlexServ/01c-code-gen-flexserv.md)           | Wei Zhang           |
+| 11:30-12:00 PM | 30 min   | (Hands-on) [Section 10: Evaluating fine-tuned model within Jupyter](./Fine_Tuning_Vision/02-evaluation.md)                              | Wei Zhang           |
+| 12:00-12:30 PM | 30 min   | Additional Use Cases and Discussion                                                                                                     | Christian R. Garcia |
 
 
 
