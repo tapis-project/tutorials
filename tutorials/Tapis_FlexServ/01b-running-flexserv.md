@@ -5,7 +5,7 @@
 }
 </style>
 
-# Section 4:  Executing Large Models on Vista with Tapis and FlexServ
+# Section 4:  Running AI Inference on Vista with Tapis and FlexServ
 
 ## Stage 4.1: Running FlexServ on Vista with TAPIS
 

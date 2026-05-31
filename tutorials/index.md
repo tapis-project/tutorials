@@ -22,7 +22,7 @@ Day 1 (May 31st) Schedule
 | 3:00-3:30 PM | 30 min   | (Hands-on) [Section 2: Initial Steps With TapisUI](./Intro_Tapis/02-initial-tapis-ui.md)                                       | Christian R. Garcia |
 | 3:30-4:00 PM | 30 min   | Coffee Break                                                                                                                   |                     |
 | 4:00-4:45 PM | 45 min   | (Lecture) [Section 3: Modern AI, Scientific Workflow and Infrastructure Gaps, Tapis Solutions](./Tapis_FlexServ/01-lecture.md) | Wei Zhang           |
-| 4:45-5:30 PM | 45 min   | (Hands-on) [Section 4: Executing Large Models on Vista Via Tapis and FlexServ](./Tapis_FlexServ/01b-running-flexserv.md)       | Wei Zhang           |
+| 4:45-5:30 PM | 45 min   | (Hands-on) [Section 4: Running AI Inference on Vista Via Tapis and FlexServ](./Tapis_FlexServ/01b-running-flexserv.md)         | Wei Zhang           |
   
 Day 2 (June 1st) Schedule 
 

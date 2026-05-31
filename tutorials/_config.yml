@@ -10,7 +10,7 @@ nav:
       - (Hands-on) Initial Steps with TapisUI: ./Intro_Tapis/02-initial-tapis-ui
   - AI Models and Fleserv:
       - (Lecture) Modern AI, Scientific Workflow and Infrastructure Gaps, Tapis Solutions: ./Tapis_FlexServ/01-lecture
-      - (Hands-on) Executing Large Models on Vista Via Tapis and Flexserv: ./Tapis_FlexServ/01b-running-flexserv
+      - (Hands-on) Running AI Inference on Vista Via Tapis and FlexServ: ./Tapis_FlexServ/01b-running-flexserv
   - Vision Models, Fine-tuning and Jupyter Notebooks:
       - Vision Models in Science: ./Vision_Models/01-intro-vision-models
       - Fine-tuning with Ultralytics: ./Fine_Tuning_Vision/01-intro-fine-tuning
