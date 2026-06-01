@@ -1,4 +1,22 @@
-### Section 10: Evaluating Fine-tuned Model by Running Code Detection On Jupyter [Hands-On]
+# Section 10: Evaluating Fine-tuned Model by Running Code Detection On Jupyter [Hands-On]
+
+We use our Jupyter Notebook Environment to run the evaluation code on the test dataset and see the accuracy of our fine-tuned model.
+
+
+## Starting up your Jupyter Notebook Environment
+
+For this tutorial, we will use <a href="https://public.jupyter.tacc.cloud" target="_blank">TACC's Public JupyterHub</a> 
+You may login with your TACC accounts.
+
+### Navigating to the $WORK File System
+
+On successful login, ensure that you have access to a folder, `work`, within the Jupyter file system. 
+
+### Restarting your Jupyter Server
+
+Click on **Files** -> **Hub control panel** -> **Stop my server** -> **Start server**
+
+## Running the evaluation code
 
 Go to the Jupyter notebook Code-Detection on your Jupyter path. 
 `ai-tutorial-2026 -> notebooks -> Code-Detection.ipynb`
