@@ -1,3 +1,3 @@
-# Tapis Tutorial for TPC26
-Trillion Parameter Consortium Tapis tutorial 2026
-Link to TapisUI: https://training.tapis.io
+# Tapis Tutorial for PEARC26
+PEARC Tapis tutorial 2026
+Link to TapisUI: https://public.tapis.io
