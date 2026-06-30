@@ -1,14 +1,13 @@
-# TPC26 Tapis Tutorial
+# PEARC26 Tapis Tutorial
 
 ## Tutorial Materials
 
 <div class="callout callout-info">
   <strong>Tutorial Slides</strong><br/>
-  <a href="https://docs.google.com/presentation/d/1s7S295ntrG8ZBu67HUuwjj9trcZz1pBsC57D6t5CIkE/edit?slide=id.p1#slide=id.p1" target="_blank">Slides for this tutorial</a><br/><br/>
+  <a href="https://docs.google.com/presentation/d/1fAVcmHwJi5wq4cHvSWFYw778mBJxm9YYMm9fwPTv1MM/edit?slide=id.p1#slide=id.p1" target="_blank">Slides for this tutorial</a><br/><br/>
 📝 <strong>Reservation Info</strong><br/>
-<strong>Allocation Code:</strong> <code>TRA24006</code><br/>
-<strong>Sunday sessions:</strong> <code>Tapis+Tutorial-Sun</code><br/>
-<strong>Monday sessions:</strong> <code>Tapis+Tutorial-Mon</code>
+<strong>Allocation Code:</strong> <code></code><br/>
+<strong>Monday:</strong> <code></code>
 </div>
 
 
@@ -25,12 +24,6 @@ July 27, Schedule
 | 3:30-4:00 PM | 30 min   | Coffee Break                                                                                                     
 | 4:00-4:30 PM   | 30 min   | (Lecture) [Section 4: Computer Vision Models in Scientific Applications](./Vision_Models/01-intro-vision-models.md)                     | Swathi Vallabhajosyula |
 | 4:30-5:00 PM  | 30 min   | (Hands-on) [Section 5: ICICLE Data Labeler](./Vision_Models/03-data-labeler.md) | Hari Subramoni and Brijesh Brunda     |
-<!-- | 10:00-10:15 AM | 15 min   | (Hands-on) [Section 7: Launching Jupyter Notebook](./Jupyter-Notebook/intro-to-jupyter.md)                                              | Christian R. Garcia |
-| 10:15-10:30 AM | 15 min   | (Lecture) [Section 8: Prompt-Engineering: Best Practices](./Vision_Models/02-prompt-engineering.md)                                     | Anagha Jamthe       |
-| 10:30-11:00 AM | 30 min   | Coffee Break                                                                                                                            |                     |
-| 11:00-11:30 AM | 30 min   | (Hands-on) [Section 9: Generating Code for a Vision Task and Executing in Jupyter](./Tapis_FlexServ/01c-code-gen-flexserv.md)           | Wei Zhang           |
-| 11:30-12:00 PM | 30 min   | (Hands-on) [Section 10: Evaluating fine-tuned model within Jupyter](./Fine_Tuning_Vision/02-evaluation.md)                              | Wei Zhang           |
-| 12:00-12:30 PM | 30 min   | Additional Use Cases and Discussion                                                                                                     | Christian R. Garcia | -->
 
 
 
