@@ -1,6 +1,6 @@
 ## Prompt Engineering and Generating Image Detection Code
 
-<a href="https://docs.google.com/presentation/d/1s7S295ntrG8ZBu67HUuwjj9trcZz1pBsC57D6t5CIkE/edit?slide=id.g3cdba15a02d_6_191#slide=id.g3cdba15a02d_6_191" target="_blank">Lecture Slides</a>
+<a href="https://docs.google.com/presentation/d/1fAVcmHwJi5wq4cHvSWFYw778mBJxm9YYMm9fwPTv1MM/edit?slide=id.g3cdba15a02d_6_191#slide=id.g3cdba15a02d_6_191" target="_blank">Lecture Slides</a>
 
 
 ### Generating Image Detection Code

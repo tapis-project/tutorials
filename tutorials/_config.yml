@@ -1,6 +1,6 @@
 # theme: jekyll-theme-minimal
 remote_theme: marella/jekyll-theme-documentation
-title: TPC26 Tapis Tutorial
+title: PEARC26 Tapis Tutorial
 
 permalink: pretty
 baseurl: "/tutorials"
@@ -13,10 +13,11 @@ nav:
       - (Hands-on) Running AI Inference on Vista Via Tapis and FlexServ: ./Tapis_FlexServ/01b-running-flexserv
   - Vision Models, Fine-tuning and Jupyter Notebooks:
       - Vision Models in Science: ./Vision_Models/01-intro-vision-models
-      - Fine-tuning with Ultralytics: ./Fine_Tuning_Vision/01-intro-fine-tuning
-      - (Hands-on) Launching Juptyer Notebook: ./Jupyter-Notebook/intro-to-jupyter
-      - Prompt Engineering and Detection Code: ./Tapis_FlexServ/01c-code-gen-flexserv
-  - Evaluating Fine-tuned Models:
-      - Evaluating our New Model: ./Fine_Tuning_Vision/02-evaluation
+      - Data Labeler Service : ./Vision_Models/03-data-labeler
+      #- Fine-tuning with Ultralytics: ./Fine_Tuning_Vision/01-intro-fine-tuning
+     # - (Hands-on) Launching Juptyer Notebook: ./Jupyter-Notebook/intro-to-jupyter
+      #- Prompt Engineering and Detection Code: ./Tapis_FlexServ/01c-code-gen-flexserv
+ # - Evaluating Fine-tuned Models:
+  #    - Evaluating our New Model: ./Fine_Tuning_Vision/02-evaluation
     #- Prompt Engineering: ./Vision_Models/02-prompt-engineering
 theme: jekyll-theme-minimal
