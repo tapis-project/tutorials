@@ -11,7 +11,7 @@
 </div>
 
 
-## Trillion Parameter Consortium 2026 Tutorial Schedule
+## PEARC 2026 Tutorial Schedule
 
 July 27, Schedule 
 
