@@ -1,3 +1,10 @@
+<style>
+.scrollable {
+  max-height: 500px;
+  overflow: auto;
+}
+</style>
+
 # PEARC26 Tapis Tutorial
 
 ## Tutorial Materials
@@ -6,35 +13,22 @@
   <strong>Tutorial Slides</strong><br/>
   <a href="https://docs.google.com/presentation/d/1fAVcmHwJi5wq4cHvSWFYw778mBJxm9YYMm9fwPTv1MM/edit?slide=id.p1#slide=id.p1" target="_blank">Slides for this tutorial</a><br/><br/>
 📝 <strong>Reservation Info</strong><br/>
-<strong>Allocation Code:</strong> <code></code><br/>
-<strong>Monday:</strong> <code></code>
+<strong>Allocation Code:</strong> <code>TBD</code><br/>
+<strong>Monday:</strong> <code>TBD</code>
 </div>
-
 
 ## PEARC 2026 Tutorial Schedule
 
-July 27, Schedule 
+July 27, 2026
 
-| Time         | Duration | Description                                                                                                                    | Speaker             |
-| ------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------- |
-| 1:30-2:00 PM | 30 min   | (Lecture) [Section 1: AI/ML, the National CyberInfrastructure Ecosystem and Tapis](./Intro_Tapis/01-intro-to-tapis.md)         | Joe Stubbs       |
-      |                     |
-| 2:00-2:30 PM | 45 min   | (Lecture) [Section 2: Modern AI, Scientific Workflow and Infrastructure Gaps, Tapis Solutions](./Tapis_FlexServ/01-lecture.md) | Wei Zhang           |
-| 2:30-3:30 PM | 60 min   | (Hands-on) [Section 3: Running AI Inference on Vista Via Tapis and FlexServ](./Tapis_FlexServ/01b-running-flexserv.md)         | Wei Zhang           |
-| 3:30-4:00 PM | 30 min   | Coffee Break                                                                                                     
-| 4:00-4:30 PM   | 30 min   | (Lecture) [Section 4: Computer Vision Models in Scientific Applications](./Vision_Models/01-intro-vision-models.md)                     | Swathi Vallabhajosyula |
-| 4:30-5:00 PM  | 30 min   | (Hands-on) [Section 5: ICICLE Data Labeler](./Vision_Models/03-data-labeler.md) | Hari Subramoni and Brijesh Brunda     |
-
-
-
-
-The resources you will be using today are provided by funding from the National Science Foundation.
-
-## Intro to Tapis 
-* [Intro to Tapis](./Intro_Tapis/01-intro-to-tapis.md)
-
-
-## Tapis Frequent Questions
+| Time         | Duration | Description                                                                                                                    | Speaker                           |
+| ------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------ | --------------------------------- |
+| 1:30-2:00 PM | 30 min   | (Lecture) [Section 1: AI/ML, the National CyberInfrastructure Ecosystem and Tapis](./Intro_Tapis/01-intro-to-tapis.md)         | Joe Stubbs                        |
+| 2:00-2:30 PM | 45 min   | (Lecture) [Section 2: Modern AI, Scientific Workflow and Infrastructure Gaps, Tapis Solutions](./Tapis_FlexServ/01-lecture.md) | Wei Zhang                         |
+| 2:30-3:30 PM | 60 min   | (Hands-on) [Section 3: Running AI Inference on Vista Via Tapis and FlexServ](./Tapis_FlexServ/01b-running-flexserv.md)         | Wei Zhang                         |
+| 3:30-4:00 PM | 30 min   | Coffee Break                                                                                                                   | —                                 |
+| 4:00-4:30 PM | 30 min   | (Lecture) [Section 4: Computer Vision Models in Scientific Applications](./Vision_Models/01-intro-exploring-data-and-model-cards.md)            | Swathi Vallabhajosyula            |
+| 4:30-5:00 PM | 30 min   | (Hands-on) [Section 5: ICICLE Data Labeler](./Vision_Models/03-data-labeler.md)                                                | Hari Subramoni and Brijesh Brunda |
 
 <details>
 <summary><strong>What is Tapis?</strong></summary>
@@ -50,16 +44,14 @@ Flexserv is a Tapis service that allows you to deploy and serve AI/ML models on 
 
 </details>
 
-
 <details markdown="1">
 <summary><strong>Where can I ask questions after the tutorial?</strong></summary>
 
-* **During the tutorial:** Raise your hand and a taccster will come help you.
-* **After the tutorial:** Open a ticket at [https://portal.tacc.utexas.edu/tacc-consulting](https://portal.tacc.utexas.edu/tacc-consulting) or post in the [Tapis Slack community](null).
-* **GitHub issues:** For bugs or feature requests, visit [https://github.com/tapis-project](https://github.com/tapis-project).
+- **During the tutorial:** Raise your hand and a taccster will come help you.
+- **After the tutorial:** Open a ticket at [https://portal.tacc.utexas.edu/tacc-consulting](https://portal.tacc.utexas.edu/tacc-consulting) or post in the [Tapis Slack community](null).
+- **GitHub issues:** For bugs or feature requests, visit [https://github.com/tapis-project](https://github.com/tapis-project).
 
 </details>
-
 
 ## Links & Documentation
 
@@ -83,6 +75,7 @@ Flexserv is a Tapis service that allows you to deploy and serve AI/ML models on 
 </div>
 
 ## More Information on Tapis Services:
-* [Tapis Systems](https://tapis.readthedocs.io/en/latest/technical/systems.html)
-* [Tapis Apps](https://tapis.readthedocs.io/en/latest/technical/apps.html)
-* [Tapis Jobs](https://tapis.readthedocs.io/en/latest/technical/jobs.html)
+
+- [Tapis Systems](https://tapis.readthedocs.io/en/latest/technical/systems.html)
+- [Tapis Apps](https://tapis.readthedocs.io/en/latest/technical/apps.html)
+- [Tapis Jobs](https://tapis.readthedocs.io/en/latest/technical/jobs.html)
