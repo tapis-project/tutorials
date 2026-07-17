@@ -27,7 +27,7 @@ July 27, 2026
 | 2:00-2:30 PM | 45 min   | (Lecture) [Section 2: Modern AI, Scientific Workflow and Infrastructure Gaps, Tapis Solutions](./Tapis_FlexServ/01-lecture.md) | Wei Zhang                         |
 | 2:30-3:30 PM | 60 min   | (Hands-on) [Section 3: Running AI Inference on Vista Via Tapis and FlexServ](./Tapis_FlexServ/01b-running-flexserv.md)         | Wei Zhang                         |
 | 3:30-4:00 PM | 30 min   | Coffee Break                                                                                                                   | —                                 |
-| 4:00-4:30 PM | 30 min   | (Lecture) [Section 4: Computer Vision Models in Scientific Applications](./Vision_Models/01-intro-exploring-data-and-model-cards.md)            | Swathi Vallabhajosyula            |
+| 4:00-4:30 PM | 30 min   | (Lecture) [Section 4: Discovering AI/ML Assets with Patra](./Vision_Models/01-intro-exploring-data-and-model-cards.md)            | Swathi Vallabhajosyula            |
 | 4:30-5:00 PM | 30 min   | (Hands-on) [Section 5: ICICLE Data Labeler](./Vision_Models/03-data-labeler.md)                                                | Hari Subramoni and Brijesh Brunda |
 
 <details>

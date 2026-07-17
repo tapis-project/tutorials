@@ -12,7 +12,7 @@ nav:
       - (Lecture) Modern AI, Scientific Workflow and Infrastructure Gaps, Tapis Solutions: ./Tapis_FlexServ/01-lecture
       - (Hands-on) Running AI Inference on Vista Via Tapis and FlexServ: ./Tapis_FlexServ/01b-running-flexserv
   - Vision Models, Fine-tuning and Jupyter Notebooks:
-      - Vision Models in Science: ./Vision_Models/01-intro-exploring-data-and-model-cards
+      - Discovering AI/ML Assets: ./Vision_Models/01-intro-exploring-data-and-model-cards
       - Data Labeler Service : ./Vision_Models/03-data-labeler
       #- Fine-tuning with Ultralytics: ./Fine_Tuning_Vision/01-intro-fine-tuning
      # - (Hands-on) Launching Juptyer Notebook: ./Jupyter-Notebook/intro-to-jupyter
