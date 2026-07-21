@@ -38,6 +38,10 @@ then reviewed rather than labeled entirely by hand.
 
 ### Step 1.1: Open Smart Labeler
 
+Log in to https://public.tapis.io/, then click on the service as shown below.
+
+![Tapis dashboard](../images/data-labeler/public_tenant_dashboard.png)
+
 Navigate to the Smart Labeler. The landing page introduces the
 service and gives you two entry points: **Get started**, which takes you into your own
 pipelines, and **Live demo**, which opens a pre-loaded pipeline you can explore without
