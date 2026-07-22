@@ -1,4 +1,4 @@
-# Smart Labeling Service for Object Detection
+## Section 6: Smart Labeling Service for Object Detection
 
 **AI-Assisted Data Labeling for Every Research Domain**
 
@@ -10,33 +10,33 @@ then reviewed rather than labeled entirely by hand.
 
 **Contents**
 
-- [Stage 1: Getting Started](#stage-1-getting-started)
-  - [Step 1.1: Open Smart Labeler](#step-11-open-smart-labeler)
-  - [Step 1.2: The Pipelines Dashboard](#step-12-the-pipelines-dashboard)
-  - [Step 1.3: Upload Data to Tapis](#step-13-upload-data-to-tapis)
-  - [Step 1.4: Create a New Pipeline](#step-14-create-a-new-pipeline)
-- [Stage 2: Annotation](#stage-2-annotation)
-  - [Step 2.1: The Image Annotator Layout](#step-21-the-image-annotator-layout)
-  - [Step 2.2: Browsing Images with the File Explorer](#step-22-browsing-images-with-the-file-explorer)
-  - [Step 2.3: Zero Shot Annotation and Filtering Tools](#step-23-zero-shot-annotation-and-filtering-tools)
-  - [Step 2.4: AI-Assisted Annotation with SAM 3](#step-24-ai-assisted-annotation-with-sam-3)
-  - [Step 2.5: Saving, Importing, and Downloading Annotations](#step-25-saving-importing-and-downloading-annotations)
-- [Stage 3: Build Class Supports](#stage-3-build-class-supports)
-  - [Step 3.1: Generate Class Supports](#step-31-generate-class-supports)
-- [Stage 4: Optimize Patch Size](#stage-4-optimize-patch-size)
-  - [Step 4.1: Compare Crop Sizes](#step-41-compare-crop-sizes)
-- [Stage 5: Configure and Run Detection](#stage-5-configure-and-run-detection)
-  - [Step 5.1: Configure the Detection Job](#step-51-configure-the-detection-job)
-  - [Step 5.2: Visualize Proposals](#step-52-visualize-proposals)
-- [Stage 6: Classification](#stage-6-classification)
-  - [Step 6.1: Configure the Classification Job](#step-61-configure-the-classification-job)
-  - [Step 6.2: Review Object Classification Results](#step-62-review-object-classification-results)
+- [Stage 6.1: Getting Started](#stage-1-getting-started)
+  - [Step 6.1.1: Open Smart Labeler](#step-11-open-smart-labeler)
+  - [Step 6.1.2: The Pipelines Dashboard](#step-12-the-pipelines-dashboard)
+  - [Step 6.1.3: Upload Data to Tapis](#step-13-upload-data-to-tapis)
+  - [Step 6.1.4: Create a New Pipeline](#step-14-create-a-new-pipeline)
+- [Stage 6.2: Annotation](#stage-2-annotation)
+  - [Step 6.2.1: The Image Annotator Layout](#step-21-the-image-annotator-layout)
+  - [Step 6.2.2: Browsing Images with the File Explorer](#step-22-browsing-images-with-the-file-explorer)
+  - [Step 6.2.3: Zero Shot Annotation and Filtering Tools](#step-23-zero-shot-annotation-and-filtering-tools)
+  - [Step 6.2.4: AI-Assisted Annotation with SAM 3](#step-24-ai-assisted-annotation-with-sam-3)
+  - [Step 6.2.5: Saving, Importing, and Downloading Annotations](#step-25-saving-importing-and-downloading-annotations)
+- [Stage 6.3: Build Class Supports](#stage-3-build-class-supports)
+  - [Step 6.3.1: Generate Class Supports](#step-31-generate-class-supports)
+- [Stage 6.4: Optimize Patch Size](#stage-4-optimize-patch-size)
+  - [Step 6.4.1: Compare Crop Sizes](#step-41-compare-crop-sizes)
+- [Stage 6.5: Configure and Run Detection](#stage-5-configure-and-run-detection)
+  - [Step 6.5.1: Configure the Detection Job](#step-51-configure-the-detection-job)
+  - [Step 6.5.2: Visualize Proposals](#step-52-visualize-proposals)
+- [Stage 6.6: Classification](#stage-6-classification)
+  - [Step 6.6.1: Configure the Classification Job](#step-61-configure-the-classification-job)
+  - [Step 6.6.2: Review Object Classification Results](#step-62-review-object-classification-results)
 
 ---
 
-## Stage 1: Getting Started
+## Stage 6.1: Getting Started
 
-### Step 1.1: Open Smart Labeler
+### Step 6.1.1: Open Smart Labeler
 
 Log in to https://public.tapis.io/, then click on the service as shown below.
 
@@ -49,7 +49,7 @@ uploading any data.
 
 ![Smart Labeler Home](../images/data-labeler/Home.png)
 
-### Step 1.2: The Pipelines Dashboard
+### Step 6.1.2: The Pipelines Dashboard
 
 Every dataset you annotate lives inside a **pipeline**. The Pipelines dashboard lists all
 pipelines you have access to, including a **Demo Pipeline** at the bottom that comes
@@ -64,7 +64,7 @@ A few things worth noting on this page:
 - If your images aren't yet on a Tapis-managed cluster, use **Upload Data** first (Step 1.3).
 - To start annotating a brand-new dataset, use **New Pipeline** (Step 1.4).
 
-### Step 1.3: Upload Data to Tapis
+### Step 6.1.3: Upload Data to Tapis
 
 If your images live on your local machine, click **Upload Data** from the Pipelines
 dashboard. This opens a dialog where you select the target Tapis storage system and
@@ -76,7 +76,7 @@ Directory** to choose what to upload.
 Once the upload finishes, your images are available on the target system and can be
 referenced when you configure a pipeline or a detection job later in this tutorial.
 
-### Step 1.4: Create a New Pipeline
+### Step 6.1.4: Create a New Pipeline
 
 Click **New Pipeline** to create a pipeline for your own dataset. Give it a **Pipeline
 Name**, confirm the **SLURM Account** used for compute jobs, and optionally add a
@@ -92,13 +92,13 @@ Click **Create & Open** to create the pipeline and jump straight into the Annota
 
 ---
 
-## Stage 2: Annotation
+## Stage 6.2: Annotation
 
 Opening a pipeline drops you into the **Image Annotator**, the first stage in the pipeline
 breadcrumb at the top of the screen. This is also where you'll return later to review and
 correct AI-generated detections.
 
-### Step 2.1: The Image Annotator Layout
+### Step 6.2.1: The Image Annotator Layout
 
 The Image Annotator is split into three areas: the **File Explorer** on the left (collapsed
 by default), the image canvas in the center, and the annotation controls on the right. The
@@ -116,7 +116,7 @@ Across the top toolbar:
 - **Thickness** — change the line weight used to render boxes.
 - **AI Annotator** — open the SAM 3 segmentation-assisted annotation dialog (covered in Step 2.4).
 
-### Step 2.2: Browsing Images with the File Explorer
+### Step 6.2.2: Browsing Images with the File Explorer
 
 Click the **File Explorer** tab on the left edge of the Annotator to expand it. It lists the
 images available in the current pipeline's source folder, along with pagination controls at
@@ -124,7 +124,7 @@ the bottom. Click any thumbnail or filename to load that image into the canvas.
 
 ![File Explorer panel](../images/data-labeler/File_Explorer.png)
 
-### Step 2.3: Zero Shot Annotation and Filtering Tools
+### Step 6.2.3: Zero Shot Annotation and Filtering Tools
 
 The right-hand panel gives you fine-grained control over which annotations are visible and
 lets you manage them individually.
@@ -139,7 +139,7 @@ lets you manage them individually.
 The list at the bottom shows every annotation for the current image, with its bounding box
 coordinates and confidence score, grouped by class.
 
-### Step 2.4: AI-Assisted Annotation with SAM 3
+### Step 6.2.4: AI-Assisted Annotation with SAM 3
 
 Rather than drawing every box by hand, you can click the **AI Annotator** icon to open the
 **Segmentation Assisted Annotation (SAM 3)** dialog. SAM 3 supports two modes:
@@ -164,7 +164,7 @@ Both modes share the same tuning controls:
 Click **ENTER** to run the detection and populate the canvas with proposed annotations, which
 you can then review using the filtering and editing tools from Step 2.3.
 
-### Step 2.5: Saving, Importing, and Downloading Annotations
+### Step 6.2.5: Saving, Importing, and Downloading Annotations
 
 Once you're happy with a set of annotations, click the **Save Annotations** icon in the
 toolbar. Choose the target Tapis system and enter a **File Path**, or toggle **Default JSON**
@@ -186,13 +186,13 @@ confirms the expected structure before upload.
 
 ---
 
-## Stage 3: Build Class Supports
+## Stage 6.3: Build Class Supports
 
 Once you have a set of labeled reference examples, the next stage generates **class support
 embeddings** — reference feature vectors for each class that the detection and classification
 jobs later compare new proposals against.
 
-### Step 3.1: Generate Class Supports
+### Step 6.3.1: Generate Class Supports
 
 From the pipeline breadcrumb, open **Build Class Supports**. Fill in:
 
@@ -210,14 +210,14 @@ you'll reference in Stage 5 when configuring the detection job.
 
 ---
 
-## Stage 4: Optimize Patch Size
+## Stage 6.4: Optimize Patch Size
 
 Detection accuracy on aerial or wide-angle imagery is sensitive to the crop size used during
 inference — too large and small objects get lost, too small and context is lost. The
 **Optimize Patch Size** stage lets you compare candidate crop sizes side by side on real
 imagery before committing to one.
 
-### Step 4.1: Compare Crop Sizes
+### Step 6.4.1: Compare Crop Sizes
 
 Each entry under **Class Supports Files** corresponds to a job that was run with a different
 crop size (for example, `314`, `960`, `1024`, and `2500` pixels). Select an entry to overlay
@@ -242,9 +242,9 @@ useful confirmation to weigh alongside the visual comparison before clicking **S
 
 ---
 
-## Stage 5: Configure and Run Detection
+## Stage 6.5: Configure and Run Detection
 
-### Step 5.1: Configure the Detection Job
+### Step 6.5.1: Configure the Detection Job
 
 Open **Configure Detection Job** from the breadcrumb. The left panel defines the job:
 
@@ -273,7 +273,7 @@ Node, Memory, and Max Minutes) for the compute job itself.
 
 Once every field is set, click **Submit Detection Job** to launch the run.
 
-### Step 5.2: Visualize Proposals
+### Step 6.5.2: Visualize Proposals
 
 After the detection job completes, open **Visualize Proposals** to review what the models
 found. The canvas shows each proposed box, and the right panel summarizes the exact job
@@ -304,12 +304,12 @@ moving on to classification.
 
 ---
 
-## Stage 6: Classification
+## Stage 6.6: Classification
 
 With detection proposals in hand, the final stage assigns each proposed box a class label by
 comparing it against the class support embeddings built in Stage 3.
 
-### Step 6.1: Configure the Classification Job
+### Step 6.6.1: Configure the Classification Job
 
 Open **Configure Classification Job**. Set a **Job Name** and confirm the **System**, then
 tune:
@@ -321,7 +321,7 @@ tune:
 
 Click **Submit Job** to run classification across all mapped proposal files.
 
-### Step 6.2: Review Object Classification Results
+### Step 6.6.2: Review Object Classification Results
 
 Once classification completes, open **Object Classification**, the final stage in the
 breadcrumb, to see the fully labeled result. Each detected object is now outlined and tagged
