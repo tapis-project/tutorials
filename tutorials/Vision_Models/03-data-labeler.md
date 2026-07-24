@@ -346,3 +346,22 @@ This completes the end-to-end Smart Labeler workflow: annotate a seed set of exa
 class supports, tune your patch size, run and visualize detection proposals, classify them,
 and review the results — turning a handful of manually labeled images into a fully annotated
 dataset with AI assistance at every step.
+
+Launching the Jupyter Notebook Environment
+
+Jupyter is an open source project that provides a webapp interface for writing code and documents. Throughout this tutorial, we will be using a Jupyter Notebook environment for making Tapis User Requests. 
+
+### To evaluate the model, start up your Jupyter Notebook Environment
+
+Login with TACC credentials on <a href="https://public.jupyter.tacc.cloud" target="_blank">TACC's Public JupyterHub</a> 
+
+### Navigating to the $WORK File System
+
+On successful login, you should see a **ai-tutorial-2026 folder**, within the Jupyter file system. 
+
+### Restarting your Jupyter Server
+
+Click on **Files** -> **Hub control panel** -> **Stop my server** -> **Start server**
+
+
+
