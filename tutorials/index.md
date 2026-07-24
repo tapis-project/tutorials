@@ -13,8 +13,8 @@
   <strong>Tutorial Slides</strong><br/>
   <a href="https://docs.google.com/presentation/d/1fAVcmHwJi5wq4cHvSWFYw778mBJxm9YYMm9fwPTv1MM/edit?slide=id.p1#slide=id.p1" target="_blank">Slides for this tutorial</a><br/><br/>
 📝 <strong>Reservation Info</strong><br/>
-<strong>Allocation Code:</strong> <code>TBD</code><br/>
-<strong>Monday:</strong> <code>TBD</code>
+<strong>Allocation Code:</strong> <code>TRA24006</code><br/>
+<strong>Monday:</strong> <code>Tapis+PEARC-Mon</code>
 </div>
 
 ## PEARC 2026 Tutorial Schedule
