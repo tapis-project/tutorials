@@ -331,8 +331,8 @@ Note: **if you don't see Pipeline API tab, try to refresh the entire webpage.**
 
 
 
-## Upcoming Next: From Prompt to Program - Build an Animal Detection App with FlexServ
+<!-- ## Upcoming Next: From Prompt to Program - Build an Animal Detection App with FlexServ
 
-Please come back to our prompt engineering session on Monday to see how you can use FlexServ to do some real work - we will show you how to use FlexServ to generate image recognition program for detecting small animals and run the program on Vista with TAPIS Job!
+Please come back to our prompt engineering session on Monday to see how you can use FlexServ to do some real work - we will show you how to use FlexServ to generate image recognition program for detecting small animals and run the program on Vista with TAPIS Job! -->
 
 
