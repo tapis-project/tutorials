@@ -3,7 +3,7 @@ remote_theme: marella/jekyll-theme-documentation
 title: Science Gateways 2026 Tapis Tutorial
 
 permalink: pretty
-baseurl: "/tutorial"
+baseurl: "/tutorials"
 nav:
   - AI/ML, The National CI Ecosysystem, and Tapis:
       - (Lecture) AI, CI and Tapis: ./Intro_Tapis/01-intro-to-tapis
