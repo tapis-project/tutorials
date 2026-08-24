@@ -1,0 +1,52 @@
+/* Global image styling — override per-page with an inline <style> block */
+.markdown-body img {
+  box-shadow: 0 0 .7rem rgba(0, 0, 0, 0.5);
+}
+
+/* Callout boxes — use <div class="callout callout-warning"> etc. */
+.callout {
+  padding: 12px 16px;
+  border-radius: 4px;
+  border-left: 4px solid;
+  margin: 1em 0;
+}
+.callout-warning {
+  background: #fff8e1;
+  border-color: #f0ad4e;
+}
+.callout-info {
+  background: #e7f3ff;
+  border-color: #2196f3;
+}
+
+/* 2-column documentation link grid */
+.doc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 1em 0;
+}
+.doc-grid-item {
+  display: flex;
+  flex-direction: column;
+}
+.doc-grid-item a:first-child {
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+.doc-grid-item a:last-child {
+  margin-top: auto;
+}
+.doc-grid-item img {
+  width: 100%;
+  height: auto;
+}
+
+/* Schedule table column widths — applied to all markdown tables */
+.markdown-body table th:nth-child(1),
+.markdown-body table td:nth-child(1),
+.markdown-body table th:nth-child(2),
+.markdown-body table td:nth-child(2) {
+  white-space: nowrap;
+  min-width: 6rem;
+}
