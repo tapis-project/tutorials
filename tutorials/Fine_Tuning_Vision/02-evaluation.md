@@ -1,4 +1,4 @@
-# Section 6: Preparing JupyterHub Environment
+# Section 5: Preparing JupyterHub Environment
 
 ## JupyterHub Environment
 
@@ -22,12 +22,11 @@ If not Jupyter notebook is not running the code, we need to restart your Jupyter
 Click on **Files** -> **Hub control panel** -> **Stop my server** -> **Start server**
 
 
-# Section 7: Prompt Engineering and Generating Image Detection Code [Hands-on]
+## Generating Vision Model Evaluation Code using FlexServ 
 
 
 <!-- <a href="https://docs.google.com/presentation/d/1s7S295ntrG8ZBu67HUuwjj9trcZz1pBsC57D6t5CIkE/edit?slide=id.g3cdba15a02d_6_191#slide=id.g3cdba15a02d_6_191" target="_blank">Lecture Slides</a> -->
 
-## FlexServ API Prompt: YOLO Evaluation Script Generator
 
 ### Task Summary:
 To test the capabilities of the FlexServ inference server, we can provide a complex prompt to the Responses API. This prompt asks the AI to generate a complete Python evaluation script that performs Animal detection on the images from the LILA BC Small Animal dataset. This is a large camera-trap image dataset used for wildlife monitoring and ecological research. It contains millions of images captured by automated cameras, including small mammals and many blank triggers, along with annotations describing the detected species. For training object detection models such as YOLO, the dataset can be downloaded in YOLO format, where each image has a corresponding .txt label file containing bounding-box coordinates in the form <class_id> <x_center> <y_center> <width> <height>.
@@ -217,10 +216,7 @@ If you paste a prompt that is larger than 500 bytes, we will show that as a larg
 
 
 
-# Section 8: Evaluating Fine-tuned Model by Running Code Detection On Jupyter [Hands-On]
-
-
-## Running the evaluation code
+## Evaluating Fine-tuned Model by Running Code Detection On Jupyter 
 
 Copy the generated code from FlexServ UI in a new cell below the cell titled `Put your generated code here`. 
 

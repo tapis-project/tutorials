@@ -5,11 +5,11 @@
 }
 </style>
 
-# Section 4:  Running AI Inference on Vista with Tapis and FlexServ
+# Section 3:  Running AI Inference on Vista with Tapis and FlexServ
 
-## Stage 4.1: Running FlexServ on Vista with TAPIS
+## Stage 3.1: Running FlexServ on Vista with TAPIS
 
-### Step 4.1.1: Adding TMS Credentials on the Vista system.
+### Step 3.1.1: Adding TMS Credentials on the Vista system.
 
 **If you have set up TMS credentials in our <a href="https://tapis-project.github.io/tutorials/Intro_Tapis/02-initial-tapis-ui/#step-24-add-tms-credentials-for-the-nairr-vista-public-system" target="_blank">previous hands-on session</a>, you are good to go and can skip this step. If you haven't set up TMS credentials yet, please follow the instructions below to add TMS credentials for the Vista system.**
 
@@ -33,12 +33,12 @@ After completing the authentication, you can now view files on Vista by clicking
 ![View Files](/tutorials/images/ViewFiles.png)
 
 
-### Step 4.1.2:  Running FlexServ Application on Vista
+### Step 3.1.2:  Running FlexServ Application on Vista
 
 In the Tapis UI, you should navigate to `Apps` and you should see the Flex Server application already registered in your Tapis UI: **FlexServ-1.4.0 version 1.4.0**
 ![FlexServ Application](/tutorials/images/sec4/image1.png)
 
-### Step 4.1.3: Submit FlexServ Job using TAPIS UI
+### Step 3.1.3: Submit FlexServ Job using TAPIS UI
 
 **1. Initiate Submission**
 
@@ -124,11 +124,11 @@ To view a submitted job, you can:
  Once the `tapisjob.out` opens, look at the **ACCESS INFORMATION** Section to grab the FlexServ URL and also the FlexServ token. Save it to your notepad.
 
 
-## Stage 4.2: Play with FlexServ
+## Stage 3.2: Play with FlexServ
 
 With the FlexServ URL, you should be able to open the landing page of FlexServ, which shows you the FlexServ UI. The UI is provided through the FlexServ gateway, and the inference service is provided through our customized transformers inference backend, which largely relies on the `transformers` library from HuggingFace.
 
-### Step 4.2.1 Enter you tokens and check readiness. 
+### Step 3.2.1 Enter you tokens and check readiness. 
 Put the FlexServ Token on the FlexServ input box which is on the top right corner of the UI. If you have a HuggingFace token, you can also put your HuggingFace token in the input box next to it. Please visit <a href="https://huggingface.co/docs/hub/en/security-tokens" target="_blank">this page</a> to know how to get a HuggingFace token. 
 
 ![FlexServ UI](/tutorials/images/sec4/image16.png)
@@ -137,7 +137,7 @@ Click on the **Run** button in the **Gateway Readiness** area, and when you see 
 
 You are more than welcome to click on the **Run** button in the **OpenAPI Summary** area to see the summary of major FlexServ APIs.
 
-### Step 4.2.2 View Metrics in FlexServ
+### Step 3.2.2 View Metrics in FlexServ
 
 From the left side bar, select **Metrics**, you will see a series of metrics that can help you understand the usage of your CPU/GPU/MEMORY/VRAM on your compute node.
 
@@ -148,7 +148,7 @@ Please pay close attention on the **System Memory** and **GPU Memory** (vRAM), i
 
 ![FlexServ Model Manager - Model Pools](/tutorials/images/sec4/image18.png)
 
-### Step 4.2.3 Meet FlexServ Model Manager
+### Step 3.2.3 Meet FlexServ Model Manager
 
 From the left side bar, click **Models** tab, and you will see the model manager UI of FlexServ. 
 
@@ -231,7 +231,7 @@ Note: If you encounter any issue when loading the model, you can try the followi
   2. if you see error message indicating that the model loading fails due to out of memory issue, you can try to load a smaller model, or you can try to unload all models and load the model again. You can also check the metrics page to see if your GPU memory or system memory is hitting the high watermark. If so, unloading some models or all models should help with that.
   3. if you see error message indicating that the model loading fails due to some unexpected error, you can try to refresh the webpage and load the model again. 
 
-### Step 4.2.4: Multi-model Chat with FlexServ
+### Step 3.2.4: Multi-model Chat with FlexServ
 
 
 Congratulations! Now you are ready to chat! Click **Tests** tab and you will get to the FlexServ API playground. 
@@ -253,7 +253,7 @@ If everything goes well, you should be able to see the response from the model i
 
 ![Multi-modal Chat Result](/tutorials/images/sec4/Multi-modal-chat_result.png)
 
-### Step 4.2.5: Text Generation with Responses API in FlexServ
+### Step 3.2.5: Text Generation with Responses API in FlexServ
 
 This feature is based on the use of `/v1/responses` API in FlexServ, which is another less popular OpenAI-compatible API endpoint for generating responses from the model. Again, our UI provide your a markdown editor to input your prompt, and you can perform the text generation by clicking the big round send button. You can also adjust the parameters such as temperature, top_p, seed, and max_output_tokens to see how the model response changes accordingly. The generated response will be shown in the response window, and you can continue to have a conversation with the model by sending more prompts. 
 
@@ -261,33 +261,33 @@ This feature is based on the use of `/v1/responses` API in FlexServ, which is an
 
 Note that we currently only support text-based generation with the `/v1/responses` API, and the multi-modal chat feature is only available in the `/v1/chat/completions` API, so if you want to have multi-modal conversation with images, you will need to use the chat interface instead of the response interface. But this response interface will be playing a critical role for another of our demo in the afternoon, which is to use FlexServ for code generation and get a real image recognition program generated for you to run on Vista, so stay tuned for that!!
 
-### Step 4.2.6: Text Completion with Completions API in FlexServ
+### Step 3.2.6: Text Completion with Completions API in FlexServ
 
 Text completion is another important feature in FlexServ, and it is based on the use of `/v1/completions` API in FlexServ. This is a much simpler feature right now but if you have any unfinished thoughts or sentences, you can use this feature to let the model help you complete the text. You can input your incomplete text in the editor, click **Run** button, and the model will generate the completed text for you. 
 
 
 ![FlexServ API Tests - Completions](/tutorials/images/sec4/image27.png)
 
-### Step 4.2.7: Generating Embeddings with FlexServ
+### Step 3.2.7: Generating Embeddings with FlexServ
 
 Embedding generation is essential for many AI applications, such as semantic search, clustering, and recommendation systems. With FlexServ, you can easily generate embeddings for your text data using the `/v1/embeddings` API. On FlexServ UI, you can put the sentences you wish to generate embeddings for, one on each line. By clicking `Run`, you will get the embeddings by clicking on `Raw JSON` and you can visually view the embeddings with our embedding visualization on the page.
 
 ![FlexServ API Tests - Completions](/tutorials/images/sec4/image28.png)
 
-### Step 4.2.8: Audio Transcription with FlexServ
+### Step 3.2.8: Audio Transcription with FlexServ
 
 Audio transcription is yet another exciting feature in FlexServ, which allows you to transcribe your audio files into text using the power of ASR models. With FlexServ, you can easily upload your audio files and get the transcriptions in a matter of seconds. This is particularly useful for scenarios such as meeting transcription, podcast transcription, and any other situation where you have audio data that you want to convert into text for easier analysis and reference. You can simply upload your audio file in the UI, click `Run`, and you will get the transcription result in the response window. You can also play your audio file in the UI to confirm that the transcription result matches with your audio content.
 
 ![FlexServ API Tests - Audio Transcription](/tutorials/images/sec4/image29.png)
 
-### Step 4.2.9: Getting cURL Command for the same request in FlexServ UI
+### Step 3.2.9: Getting cURL Command for the same request in FlexServ UI
 
 Across different sections on the UI, you shall see `Show cURL` button, which will show you the cURL command for the request you are making on the UI. This is particularly useful for users who want to use their own custom scripts to interact with FlexServ server, and they can simply copy the cURL command and modify it in their scripts to send requests to the FlexServ server without having to go through the UI. This also makes it easier for users to integrate FlexServ into their existing workflows and applications by providing them with a straightforward way to interact with the server programmatically. If you encounter any SSL verification issue with cURL command, just put `-k` option to disable that verification.
 
 ![Show cURL Command](/tutorials/images/sec4/FS_cURL_guide.png)
 
 
-### Step 4.2.10: Yolo Inference API
+### Step 3.2.10: Yolo Inference API
 
 CV models like Ultralytics yolo models are widely used for object detection use cases. Traditionally, users can call the Python API to run these models in their pipeline. But now, with FlexServ, you can use this model via our RESTful Yolo inference API. This is particularly useful if you want to create an app or an agentic system that needs to call this Yolo inference but don't necessarily have to install related packages in your software distribution.
 
@@ -308,7 +308,7 @@ Note that once you run `yolo26n` model, you will see this model in your private 
 
 Ignore the fine-tuned model for now, we will talk about it tomorrow. 
 
-### Step 4.2.11: Try to run any inference pipeline using Pipeline API
+### Step 3.2.11: Try to run any inference pipeline using Pipeline API
 
 The long-term goal of FlexServ is to enable multi-modal inference with any model. We provide a RESTful pipeline inference API that utilizes the pipeline API in transformers library to enable multi-modal inference. This feature is very experimental as the modality of input/output of different pipelines are largely diverse and different models requires different hardware/software support, this API currently only works when the supported model matches with the right pipeline. 
 
