@@ -12,7 +12,7 @@
 </div>
 
 
-## Trillion Parameter Consortium 2026 Tutorial Schedule
+## Science Gateway 2026 Tutorial Schedule
 
 Schedule 
 
@@ -22,8 +22,8 @@ Schedule
 | 1:30-1:50 PM |20 min   | (Lecture + Hands-on) [Section 2: Initial Steps With TapisUI](./Intro_Tapis/02-initial-tapis-ui.md)                                       | Nathan Freeman |
 | 1:50-2:50 PM | 60 min   | (Lecture + Hands-on) [Section 3: Running AI Inference on Vista Via Tapis and FlexServ](./Tapis_FlexServ/01b-running-flexserv.md)         | Wei Zhang           |
 | 2:50-3.00PM  | 10 min   | Break  |
-| 3:00 PM-3.30PM  | 30 min   | ( Hands-on) [Section 4: Fine-tuning the Vision Model with Ultralytics and Tapis](./Fine_Tuning_Vision/01-intro-fine-tuning.md) | Christian Garcia      |
-|3:30-3.50 PM | 20 min   | (Hands-on) [Section 5: Evaluating fine-tuned model within Jupyter](./Fine_Tuning_Vision/02-evaluation.md)                              | Christian Garcia           |
+| 3:00 PM-3.30PM  | 20 min   | ( Hands-on) [Section 4: Fine-tuning the Vision Model with Ultralytics and Tapis](./Fine_Tuning_Vision/01-intro-fine-tuning.md) | Christian Garcia      |
+|3:30-3.50 PM | 30 min   | (Hands-on) [Section 5: Evaluating fine-tuned model within Jupyter](./Fine_Tuning_Vision/02-evaluation.md)                              | Wei Zhang           |
 |3:50-4.00 PM | 10 min   | Tutorial wrap-up, Q/A          |
 
 
