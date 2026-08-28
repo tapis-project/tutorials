@@ -24,6 +24,9 @@ Click on **Files** -> **Hub control panel** -> **Stop my server** -> **Start ser
 
 ## Generating Vision Model Evaluation Code using FlexServ 
 
+If you have done this part in the previous FlexServ section, you can skip this and jump to . 
+
+But if you haven't, you can quickly do the following: 
 
 <!-- <a href="https://docs.google.com/presentation/d/1s7S295ntrG8ZBu67HUuwjj9trcZz1pBsC57D6t5CIkE/edit?slide=id.g3cdba15a02d_6_191#slide=id.g3cdba15a02d_6_191" target="_blank">Lecture Slides</a> -->
 

@@ -1,6 +1,6 @@
-## Section 9: Prompt Engineering and Generating Image Detection Code [Hands-on]
+## Prompt Engineering and Generating Image Detection Code
 
-<a href="https://docs.google.com/presentation/d/1s7S295ntrG8ZBu67HUuwjj9trcZz1pBsC57D6t5CIkE/edit?slide=id.g3cdba15a02d_6_191#slide=id.g3cdba15a02d_6_191" target="_blank">Lecture Slides</a>
+<!-- <a href="https://docs.google.com/presentation/d/1s7S295ntrG8ZBu67HUuwjj9trcZz1pBsC57D6t5CIkE/edit?slide=id.g3cdba15a02d_6_191#slide=id.g3cdba15a02d_6_191" target="_blank">Lecture Slides</a> -->
 
 ### FlexServ API Prompt: YOLO Evaluation Script Generator
 
@@ -15,8 +15,8 @@ To test the capabilities of the FlexServ inference server, we can provide a comp
 
 - Refresh the Model pool so you can see public and private models available for you to run. 
 - Drag the following model from public pool to private pool.
-  - Qwen/Qwen2.5-Coder-14B-Instruct
   - Qwen/Qwen2.5-Coder-32B-Instruct
+  - Qwen/Qwen2.5-Coder-14B-Instruct
 - Right click one of the above models and click **Load** in the menu.
 - Wait until the progress bar completes. If load fails, try again. 
 
@@ -185,7 +185,7 @@ If you paste a prompt that is larger than 500 bytes, we will show that as a larg
 
 ![Code](/tutorials/images/sec8/image16.png)
 
-
+<!-- 
 ### Running Code Detection On Jupyter
 
 Go to the Jupyter notebook Code-Detection on your Jupyter path. 
@@ -203,4 +203,4 @@ Running the code in Jupyter, and you should be able to see the evaluation result
 
 ![Variables](/tutorials/images/sec8/image18.png)
 
-
+ -->
