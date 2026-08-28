@@ -1,8 +1,56 @@
-# Section 6: Ultralytics Fine-Tuning App
+# Section 5: Ultralytics Fine-Tuning App
 
 [Lecture Slides](https://docs.google.com/presentation/d/1s7S295ntrG8ZBu67HUuwjj9trcZz1pBsC57D6t5CIkE/edit?slide=id.g3cd6a51b6a2_0_42#slide=id.g3cd6a51b6a2_0_42){:target="_blank"}
 
-This application allows users to fine-tune Ultralytics YOLO 26 models using Singularity containers in a batch processing environment. It is designed to run on High-Performance Computing (HPC) systems via Tapis, leveraging GPU acceleration for training tasks.
+This application allows users to fine-tune Ultralytics YOLO 26 models using Singularity containers in a batch processing environment. 
+
+The YOLO 26 base model `yolo26n` has been downloaded to FlexServ private model pool, and this fine-tuning task will use that as a base model and fine-tune it using a set of camera-trap images. The fine-tuned model will be save into FlexServ private model pool, and later we will generate model performance evaluation code using FlexServ, and run that code in our Jupyter Notebook Environment. The evaluation code will send camera-trap images to our yolo inference API in FlexServ to get the model inference result and compare that with the ground truth labels in our Jupyter Notebook Environment to get the model evaluation result. 
+
+
+```mermaid
+flowchart LR
+    subgraph Training["1. Model Fine-Tuning"]
+        direction TB
+        Base["YOLO26 Base Model<br/>yolo26n"]
+        TrainData["Camera-Trap<br/>Training Images"]
+        FineTune["FlexServ<br/>Fine-Tuning Task"]
+        Base --> FineTune
+        TrainData --> FineTune
+    end
+
+    subgraph FlexServ["2. FlexServ Private Model Pool"]
+        direction TB
+        PrivatePool["Private Model Pool"]
+        TunedModel["Fine-Tuned<br/>YOLO26 Model"]
+        API["YOLO Inference API"]
+        PrivatePool --> Base
+        FineTune --> TunedModel
+        TunedModel --> PrivatePool
+        TunedModel --> API
+    end
+
+    subgraph Evaluation["3. Model Evaluation"]
+        direction TB
+        CodeGen["FlexServ-Generated<br/>Evaluation Code"]
+        Notebook["Jupyter Notebook<br/>Environment"]
+        EvalImages["Camera-Trap<br/>Evaluation Images"]
+        GroundTruth["Ground-Truth<br/>Labels"]
+        Compare["Compare Predictions<br/>with Ground Truth"]
+        Metrics["Model Evaluation<br/>Results and Metrics"]
+
+        CodeGen --> Notebook
+        EvalImages --> Notebook
+        Notebook -->|"Send images"| API
+        API -->|"Return inference results"| Notebook
+        Notebook --> Compare
+        GroundTruth --> Compare
+        Compare --> Metrics
+    end
+
+    TunedModel --> CodeGen
+```
+
+It is designed to run on High-Performance Computing (HPC) systems via Tapis, leveraging GPU acceleration for training tasks.
 
 > **Note:** This app is already registered for the tutorial and is available to run via the Tapis UI.
 
