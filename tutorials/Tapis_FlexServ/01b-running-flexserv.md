@@ -44,15 +44,15 @@ In the Tapis UI, you should navigate to `Apps` and you should see the Flex Serve
 
 In the Tapis UI, navigate to the application **FlexServ-1.4.0**, click the Submit Job button, and select **Use Guided Job Launcher**.
 
-![Step 1a: Select Submit with JSON](/tutorials/images/sec4/image2.png)
+![Step 1a: Select Submit with JSON](/tutorials/images/sec3/image2.png)
 
-![Step 1b: Use Guided Job Launcher](/tutorials/images/sec4/image3.png)
+![Step 1b: Use Guided Job Launcher](/tutorials/images/sec3/image3.png)
 
 **2. Configure the FlexServ Job**
 
 First you will see Job summary, press **Continue**.
 
-![Step 2a: Job Summary](/tutorials/images/sec4/image4.png)
+![Step 2a: Job Summary](/tutorials/images/sec3/image4.png)
 
 In `Execution Options` card:
   1. For **Execution System**, select  `vista-test-nairr`
@@ -331,8 +331,8 @@ Note: **if you don't see Pipeline API tab, try to refresh the entire webpage.**
 
 
 
-## Upcoming Next: From Prompt to Program - Build an Animal Detection App with FlexServ
+<!-- ## Upcoming Next: From Prompt to Program - Build an Animal Detection App with FlexServ
 
-Please come back to our prompt engineering session on Monday to see how you can use FlexServ to do some real work - we will show you how to use FlexServ to generate image recognition program for detecting small animals and run the program on Vista with TAPIS Job!
+Please come back to our prompt engineering session on Monday to see how you can use FlexServ to do some real work - we will show you how to use FlexServ to generate image recognition program for detecting small animals and run the program on Vista with TAPIS Job! -->
 
 
