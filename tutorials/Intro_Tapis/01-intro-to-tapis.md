@@ -1,6 +1,6 @@
 ## Section 1: AI, The National CI Ecosystem, and the Tapis API Platform
 
-<a href="https://docs.google.com/presentation/d/1s7S295ntrG8ZBu67HUuwjj9trcZz1pBsC57D6t5CIkE/edit?slide=id.p1#slide=id.p1" target="_blank">Lecture Slides</a>
+<a href="https://docs.google.com/presentation/d/1l13lRedG7Bp0_nguU6zxvOOEanGdzqsIFLlCTZ8FIvY/edit?usp=sharing" target="_blank">Lecture Slides</a>
 ​
 ### Tapis Provides A Cyberinfrastructure Platform For Science Allowing:
 #### IDENTITY AND ACCESS MANAGEMENT
@@ -22,7 +22,6 @@ All this is hosted for you, you don't have to stand up your own servers to acces
 
 * [ICICLE](https://icicle.osu.edu)
 * [Design-safe](https://www.designsafe-ci.org/#!#research)
-* [VDJ](https://vdjserver.org/)
 
 
 All these gateways leverage Tapis to provide access to data, software and compute resources.
