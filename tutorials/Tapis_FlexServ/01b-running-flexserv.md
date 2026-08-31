@@ -36,7 +36,7 @@ After completing the authentication, you can now view files on Vista by clicking
 ### Step 3.1.2:  Running FlexServ Application on Vista
 
 In the Tapis UI, you should navigate to `Apps` and you should see the Flex Server application already registered in your Tapis UI: **FlexServ-1.4.0 version 1.4.0**
-![FlexServ Application](/tutorials/images/sec4/image1.png)
+![FlexServ Application](/tutorials/images/sec3/image1.png)
 
 ### Step 3.1.3: Submit FlexServ Job using TAPIS UI
 
@@ -44,65 +44,65 @@ In the Tapis UI, you should navigate to `Apps` and you should see the Flex Serve
 
 In the Tapis UI, navigate to the application **FlexServ-1.4.0**, click the Submit Job button, and select **Use Guided Job Launcher**.
 
-![Step 1a: Select Submit with JSON](/tutorials/images/sec4/image2.png)
+![Step 1a: Select Submit with JSON](/tutorials/images/sec3/image2.png)
 
-![Step 1b: Use Guided Job Launcher](/tutorials/images/sec4/image3.png)
+![Step 1b: Use Guided Job Launcher](/tutorials/images/sec3/image3.png)
 
 **2. Configure the FlexServ Job**
 
 First you will see Job summary, press **Continue**.
 
-![Step 2a: Job Summary](/tutorials/images/sec4/image4.png)
+![Step 2a: Job Summary](/tutorials/images/sec3/image4.png)
 
 In `Execution Options` card:
   1. For **Execution System**, select  `vista-test-nairr`
   2. For **Job Type**, select  `Batch`
-  3. For **Batch Logical Queue**, select  `gh`
+  3. For **Batch Logical Queue**, select  `gh-shared`
 
 Press **Continue**
 
-![Step 2a: Execution Options](/tutorials/images/sec4/image5.png)
+![Step 2a: Execution Options](/tutorials/images/sec3/image5.png)
 
 **Continue**
 
-![Step 2a: File Inputs](/tutorials/images/sec4/image6.png)
+![Step 2a: File Inputs](/tutorials/images/sec3/image6.png)
 
 **Continue**
 
-![Step 2a: File Input Arrays](/tutorials/images/sec4/image7.png)
+![Step 2a: File Input Arrays](/tutorials/images/sec3/image7.png)
 
 **Continue**
 
-![Step 2a: Job Arguments](/tutorials/images/sec4/image8.png)
+![Step 2a: Job Arguments](/tutorials/images/sec3/image8.png)
 
 **Continue**
 
-![Step 2a: Job Environment Variables](/tutorials/images/sec4/image9.png)
+![Step 2a: Job Environment Variables](/tutorials/images/sec3/image9.png)
 
 Expand **TACC Resource Allocation** and **Reservation Name**
  1. For **TACC Resource Allocation**, put a space and then `TRA24006` after `-A`
  2. For **Reservation Name**, put a space and then your *reservation code* after `--reservation`
 
-Note that the reservation code for **Sunday** sessions is `Tapis+Tutorial-Sun` and the reservation code for **Monday** sessions is `Tapis+Tutorial-Mon`.
+Note that the reservation code for the sessions is `Tapis+Tutorial+Gateways` 
 
 **Continue**
 
-![Step 2a: Scheduler Options](/tutorials/images/sec4/image10.png)
+![Step 2a: Scheduler Options](/tutorials/images/sec3/image10.png)
 
 Put 
 **Continue**
 
-![Step 2a: Scheduler Options Bottom](/tutorials/images/sec4/image11.png)
+![Step 2a: Scheduler Options Bottom](/tutorials/images/sec3/image11.png)
 
 **Continue**
 
-![Step 2a: Archiving ](/tutorials/images/sec4/image12.png)
+![Step 2a: Archiving ](/tutorials/images/sec3/image12.png)
 
 
 **3. Submit Job**
 
 Once you went through all the processes, you can go ahead and submit the job. After you submit the job, you should see a confirmation message indicating that your job has been submitted successfully. You can close the job submission window and go to the Jobs tab in the left panel to see your submitted job.
-![Step 3: Job Submission](/tutorials/images/sec4/image13.png)
+![Step 3: Job Submission](/tutorials/images/sec3/image13.png)
 
 
 **4. View Job**
@@ -114,12 +114,12 @@ To view a submitted job, you can:
  4. You can select the file and click on **View** button to see the job output, where you should be able to find the FlexServ address and FlexServ token.
 
 
-![Step 4: View Job](/tutorials/images/sec4/image14.png)
+![Step 4: View Job](/tutorials/images/sec3/image14.png)
 
 
 **5. View Job Output file to get the Flex server port and Token**
 
-![Step 5: View Job](/tutorials/images/sec4/image15.png)
+![Step 5: View Job](/tutorials/images/sec3/image15.png)
 
  Once the `tapisjob.out` opens, look at the **ACCESS INFORMATION** Section to grab the FlexServ URL and also the FlexServ token. Save it to your notepad.
 
@@ -131,7 +131,7 @@ With the FlexServ URL, you should be able to open the landing page of FlexServ, 
 ### Step 3.2.1 Enter you tokens and check readiness. 
 Put the FlexServ Token on the FlexServ input box which is on the top right corner of the UI. If you have a HuggingFace token, you can also put your HuggingFace token in the input box next to it. Please visit <a href="https://huggingface.co/docs/hub/en/security-tokens" target="_blank">this page</a> to know how to get a HuggingFace token. 
 
-![FlexServ UI](/tutorials/images/sec4/image16.png)
+![FlexServ UI](/tutorials/images/sec3/image16.png)
 
 Click on the **Run** button in the **Gateway Readiness** area, and when you see **READY** in a HTTP 200 response, that means your backend is ready to work, and you can refresh the whole webpage, and you are good to go! 
 
@@ -141,12 +141,12 @@ You are more than welcome to click on the **Run** button in the **OpenAPI Summar
 
 From the left side bar, select **Metrics**, you will see a series of metrics that can help you understand the usage of your CPU/GPU/MEMORY/VRAM on your compute node.
 
-![FlexServ Model Manager - Model Pools](/tutorials/images/sec4/image17.png)
+![FlexServ Model Manager - Model Pools](/tutorials/images/sec3/image17.png)
 
 Many 30B models are very large (60GB+) and can take a significant amount of system memory and GPU memory. But this is not all. As you chat with LLM/VLM more and more, the GPU memory consumption can go up as the KVCache in the GPU increases.
 Please pay close attention on the **System Memory** and **GPU Memory** (vRAM), if any of them hits the high watermark, we will warn you with a message. Then it is time for you to unload all models and reload some smaller models. 
 
-![FlexServ Model Manager - Model Pools](/tutorials/images/sec4/image18.png)
+![FlexServ Model Manager - Model Pools](/tutorials/images/sec3/image18.png)
 
 ### Step 3.2.3 Meet FlexServ Model Manager
 
@@ -154,7 +154,7 @@ From the left side bar, click **Models** tab, and you will see the model manager
 
 The very first thing you need to do is to refresh the model pools by clicking on **Refresh pools** button.
 
-![FlexServ Model Manager - Model Pools](/tutorials/images/sec4/image19.png)
+![FlexServ Model Manager - Model Pools](/tutorials/images/sec3/image19.png)
 
 #### The Model Pools
 
@@ -192,13 +192,13 @@ Now, go to the **Fetch model** section. We support batch model download from 3 d
 
 The most common way to use a model is to find and download a model from HuggingFace. Go to <a href="https://huggingface.co" target="_blank">https://huggingface.co</a> and click on **Models** on the navigation bar which is on top of the page. Then in the input box beside **Models**, enter `llama` and you should be able to see a list of models being filtered out, where you can find the `Llama-3.1-8B-Instruct` model.
 
-![HuggingFace - find llama3](/tutorials/images/sec4/image34.png)
+![HuggingFace - find llama3](/tutorials/images/sec3/image34.png)
 
 Click on that model, and you will get into the model info page. Models like Llama3 is a gated model since its publisher only allow you to use it with your signature. Therefore, if you never asked for access, you will be asked for filling a form to apply for the access. Usually you will get access within a limited amount of time. Once access is granted, you will see a prompt indicating that you have been granted for the access of this model. 
 
 Click on the small icon beside the model ID, you will be able to copy the model ID. 
 
-![HuggingFace - copy model ID](/tutorials/images/sec4/image35.png)
+![HuggingFace - copy model ID](/tutorials/images/sec3/image35.png)
 
 If you don't want to use a gated model, you can pick some other open-weight models, like `Qwen/Qwen3.6-27B`.
 
@@ -206,7 +206,7 @@ In the `Fetch Model` section of the model manager UI, you can paste the model ID
 
 Click on **Download Models**, and the download will begin and you will see the model fetching progress. 
 
-![FlexServ Model Manager - Download](/tutorials/images/sec4/image20.png)
+![FlexServ Model Manager - Download](/tutorials/images/sec3/image20.png)
 
 In addition to downloading a model from the public pool, you can also drag a model from the public pool into your private model pool. This is the easiest way to use a model tested and approved by your organization. 
 
@@ -214,16 +214,16 @@ In addition to downloading a model from the public pool, you can also drag a mod
 
 We also support unpack archived models (e.g. tar.gz, zip) directly to the model repository of FlexServ, and this unpack button will unpack the archive for you. However, for self-owned models, we require you to build a model index file to be included in the archive. This is an advanced feature, and we will not cover the details but we will provide a guidance later on our website. 
 
-![FlexServ Unpack](/tutorials/images/sec4/FS_model_unpack.png)
+![FlexServ Unpack](/tutorials/images/sec3/FS_model_unpack.png)
 
 #### Load Your Model For Inference
 
 Once you have a model in your private model pool, you can right click on it, and select **Load** menu item, so you can load the model into the transformers inference backend of FlexServ.
-![FlexServ Model Manager - Loading a Model](/tutorials/images/sec4/image21.png)
+![FlexServ Model Manager - Loading a Model](/tutorials/images/sec3/image21.png)
 Once the model loading starts, you will see a progress bar.
-![FlexServ Model Manager - Loading a Model](/tutorials/images/sec4/image22.png)
+![FlexServ Model Manager - Loading a Model](/tutorials/images/sec3/image22.png)
 When loading finishes, you should see the start becomes amber indicating that it is loaded now. 
-![FlexServ Model Manager - Loading a Model](/tutorials/images/sec4/image23.png)
+![FlexServ Model Manager - Loading a Model](/tutorials/images/sec3/image23.png)
 
 Note: If you encounter any issue when loading the model, you can try the following depending on the situation:
 
@@ -236,12 +236,12 @@ Note: If you encounter any issue when loading the model, you can try the followi
 
 Congratulations! Now you are ready to chat! Click **Tests** tab and you will get to the FlexServ API playground. 
 
-![FlexServ API Tests - ChatCompletions - Select Model](/tutorials/images/sec4/image24.png)
+![FlexServ API Tests - ChatCompletions - Select Model](/tutorials/images/sec3/image24.png)
 
 The **Chat Completions** feature in FlexServ UI is based on the use of `/v1/chat/completions` API in FlexServ, which is an OpenAI-compatible API widely used in most of the agentic software today. Our UI feature allows you to have a conversation with the model while also sending images as part of the conversation. This is particularly useful for scenarios where you want to ask questions about images or have a discussion that involves visual context. You can upload an image, and the model will be able to see the image and provide responses based on both the text and the visual information. Note that you have to select `Image-text-to-text` models for multi-modal chat. But you can also use the `Text-to-text` models for plain-text based chat or conversation, such as code generation or question answering without sending any images. 
 
 
-![FlexServ API Tests - ChatCompletions - Start Chat](/tutorials/images/sec4/image25.png)
+![FlexServ API Tests - ChatCompletions - Start Chat](/tutorials/images/sec3/image25.png)
 
 For sending images in the chat, you can click in our Markdown editor, and simply paste either the URI or a screenshot from your clipboard, and the image will be shown around the editor. 
 You can simply choose a `Image-text-to-text` model like `Qwen/Qwen3.5-0.8B` and throw a screenshot of the FlexServ UI, and see what this model can say about our FlexServ UI. 
@@ -251,13 +251,13 @@ Also note that we provide intuitive UI controls for your to easily tune some of 
 
 If everything goes well, you should be able to see the response from the model in the chat window, and the model should be able to understand the image you sent and provide a relevant response based on both the text and the image. You can continue the conversation by sending more text or images, and the model will keep track of the context to provide coherent responses.
 
-![Multi-modal Chat Result](/tutorials/images/sec4/Multi-modal-chat_result.png)
+![Multi-modal Chat Result](/tutorials/images/sec3/Multi-modal-chat_result.png)
 
 ### Step 3.2.5: Text Generation with Responses API in FlexServ
 
 This feature is based on the use of `/v1/responses` API in FlexServ, which is another less popular OpenAI-compatible API endpoint for generating responses from the model. Again, our UI provide your a markdown editor to input your prompt, and you can perform the text generation by clicking the big round send button. You can also adjust the parameters such as temperature, top_p, seed, and max_output_tokens to see how the model response changes accordingly. The generated response will be shown in the response window, and you can continue to have a conversation with the model by sending more prompts. 
 
-![FlexServ API Tests - Responses - Start Chat](/tutorials/images/sec4/image26.png)
+![FlexServ API Tests - Responses - Start Chat](/tutorials/images/sec3/image26.png)
 
 Note that we currently only support text-based generation with the `/v1/responses` API, and the multi-modal chat feature is only available in the `/v1/chat/completions` API, so if you want to have multi-modal conversation with images, you will need to use the chat interface instead of the response interface. But this response interface will be playing a critical role for another of our demo in the afternoon, which is to use FlexServ for code generation and get a real image recognition program generated for you to run on Vista, so stay tuned for that!!
 
@@ -266,25 +266,25 @@ Note that we currently only support text-based generation with the `/v1/response
 Text completion is another important feature in FlexServ, and it is based on the use of `/v1/completions` API in FlexServ. This is a much simpler feature right now but if you have any unfinished thoughts or sentences, you can use this feature to let the model help you complete the text. You can input your incomplete text in the editor, click **Run** button, and the model will generate the completed text for you. 
 
 
-![FlexServ API Tests - Completions](/tutorials/images/sec4/image27.png)
+![FlexServ API Tests - Completions](/tutorials/images/sec3/image27.png)
 
 ### Step 3.2.7: Generating Embeddings with FlexServ
 
 Embedding generation is essential for many AI applications, such as semantic search, clustering, and recommendation systems. With FlexServ, you can easily generate embeddings for your text data using the `/v1/embeddings` API. On FlexServ UI, you can put the sentences you wish to generate embeddings for, one on each line. By clicking `Run`, you will get the embeddings by clicking on `Raw JSON` and you can visually view the embeddings with our embedding visualization on the page.
 
-![FlexServ API Tests - Completions](/tutorials/images/sec4/image28.png)
+![FlexServ API Tests - Completions](/tutorials/images/sec3/image28.png)
 
 ### Step 3.2.8: Audio Transcription with FlexServ
 
 Audio transcription is yet another exciting feature in FlexServ, which allows you to transcribe your audio files into text using the power of ASR models. With FlexServ, you can easily upload your audio files and get the transcriptions in a matter of seconds. This is particularly useful for scenarios such as meeting transcription, podcast transcription, and any other situation where you have audio data that you want to convert into text for easier analysis and reference. You can simply upload your audio file in the UI, click `Run`, and you will get the transcription result in the response window. You can also play your audio file in the UI to confirm that the transcription result matches with your audio content.
 
-![FlexServ API Tests - Audio Transcription](/tutorials/images/sec4/image29.png)
+![FlexServ API Tests - Audio Transcription](/tutorials/images/sec3/image29.png)
 
 ### Step 3.2.9: Getting cURL Command for the same request in FlexServ UI
 
 Across different sections on the UI, you shall see `Show cURL` button, which will show you the cURL command for the request you are making on the UI. This is particularly useful for users who want to use their own custom scripts to interact with FlexServ server, and they can simply copy the cURL command and modify it in their scripts to send requests to the FlexServ server without having to go through the UI. This also makes it easier for users to integrate FlexServ into their existing workflows and applications by providing them with a straightforward way to interact with the server programmatically. If you encounter any SSL verification issue with cURL command, just put `-k` option to disable that verification.
 
-![Show cURL Command](/tutorials/images/sec4/FS_cURL_guide.png)
+![Show cURL Command](/tutorials/images/sec3/FS_cURL_guide.png)
 
 
 ### Step 3.2.10: Yolo Inference API
@@ -296,15 +296,15 @@ From the model dropdown list, you can see a list of models related to the corres
 
 Want to see how yolo model works with the following sample image? 
 
-![FlexServ API Tests - Yolo Inference API - SampleImage](/tutorials/images/sec4/lighter.jpeg)
+![FlexServ API Tests - Yolo Inference API - SampleImage](/tutorials/images/sec3/lighter.jpeg)
 
 For example, in Object Detection task, you select `yolo26n` model, and you can save the above sample image to you local disk. Then you select the downloaded image and then click on **Run Image Inference** button, you should be able to see the inference result. 
 
-![FlexServ API Tests - Yolo Inference API - TestUI](/tutorials/images/sec4/image31.png)
+![FlexServ API Tests - Yolo Inference API - TestUI](/tutorials/images/sec3/image31.png)
 
 Note that once you run `yolo26n` model, you will see this model in your private model pool.
 
-![FlexServ API Tests - Yolo Inference API - What happens to your model pool](/tutorials/images/sec4/image32.png)
+![FlexServ API Tests - Yolo Inference API - What happens to your model pool](/tutorials/images/sec3/image32.png)
 
 Ignore the fine-tuned model for now, we will talk about it tomorrow. 
 
@@ -327,12 +327,12 @@ By `supported model` we refer to the models that can be loaded into transformers
 
 Note: **if you don't see Pipeline API tab, try to refresh the entire webpage.**
 
-![FlexServ API Tests - Pipeline API](/tutorials/images/sec4/image30.png)
+![FlexServ API Tests - Pipeline API](/tutorials/images/sec3/image30.png)
 
 
 
-## Upcoming Next: From Prompt to Program - Build an Animal Detection App with FlexServ
+<!-- ## Upcoming Next: From Prompt to Program - Build an Animal Detection App with FlexServ
 
-Please come back to our prompt engineering session on Monday to see how you can use FlexServ to do some real work - we will show you how to use FlexServ to generate image recognition program for detecting small animals and run the program on Vista with TAPIS Job!
+Please come back to our prompt engineering session on Monday to see how you can use FlexServ to do some real work - we will show you how to use FlexServ to generate image recognition program for detecting small animals and run the program on Vista with TAPIS Job! -->
 
 

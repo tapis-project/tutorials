@@ -1,4 +1,4 @@
-# Gateways Tapis Tutorial
+# Science Gateways Tapis Tutorial
 
 ## Tutorial Materials
 
@@ -7,14 +7,12 @@
   <a href="https://docs.google.com/presentation/d/1l13lRedG7Bp0_nguU6zxvOOEanGdzqsIFLlCTZ8FIvY/edit?slide=id.p1#slide=id.p1" target="_blank">Slides for this tutorial</a><br/><br/>
 📝 <strong>Reservation Info</strong><br/>
 <strong>Allocation Code:</strong> <code>TRA24006</code><br/>
-<strong>Sunday sessions:</strong> <code>Tapis+Tutorial-Sun</code><br/>
-<strong>Monday sessions:</strong> <code>Tapis+Tutorial-Mon</code>
+<strong>Reservation:</strong> <code>Tapis+Tutorial+Gateways</code><br/>
 </div>
 
 
-## Science Gateway 2026 Tutorial Schedule
+## Tutorial Schedule
 
-Schedule 
 
 | Time         | Duration | Description                                                                                                                    | Speaker             |
 | ------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------- |
@@ -53,8 +51,8 @@ Flexserv is a Tapis service that allows you to deploy and serve AI/ML models on 
 <details markdown="1">
 <summary><strong>Where can I ask questions after the tutorial?</strong></summary>
 
-* **During the tutorial:** Raise your hand and a taccster will come help you.
-* **After the tutorial:** Open a ticket at [https://portal.tacc.utexas.edu/tacc-consulting](https://portal.tacc.utexas.edu/tacc-consulting) or post in the [Tapis Slack community](null).
+* **During the tutorial:** You can post your questions on zoom chat.
+* **After the tutorial:** Open a ticket at [https://portal.tacc.utexas.edu/tacc-consulting](https://portal.tacc.utexas.edu/tacc-consulting).
 * **GitHub issues:** For bugs or feature requests, visit [https://github.com/tapis-project](https://github.com/tapis-project).
 
 </details>
