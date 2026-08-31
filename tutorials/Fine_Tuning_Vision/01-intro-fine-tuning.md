@@ -80,9 +80,9 @@ In the **Execution Options** page, select the following:
   2. Job Type - `Batch`
   3. Batch Logical Queue - `gh-shared`
 
-Click **Continue**
+<!-- Click **Continue**
 
-![USE GUIDED JOB LAUNCHER](/tutorials/images/sec8/image4.png)
+![USE GUIDED JOB LAUNCHER](/tutorials/images/sec8/image4.png) -->
 
 Click **Continue**
 
@@ -100,7 +100,7 @@ Click **Continue**
 There are 4 environment variables important for the fine-tuning job. 
 
  1. EPOCHS - number of learning rounds. 10 or 20 is a good number.
- 2. YOLO_26_MODEL - the yolo model name. Here we use `yolo26n` for the best trade-off between quality and speed.
+ 2. YOLO_26_MODEL - the yolo model name. Here we use `yolo26n` for the best trade-off between quality and speed. Note that you have to make sure you used `yolo26n` model previously during the FlexServ section so that the `yolo/yolo26n` model shows up in your private model pool of your FlexServ. If you happen to have used a different yolo26 model during our FlexServ section, say `yolo26l`, you should put `yolo26l` here for `YOLO_26_MODEL` instead.
  3. TWO_STAGE_FINE_TUNE - If true, we use two-stage fine-tuning process where the first stage freezes the backbone and trains only the neck and head, allowing the detection layers to adapt to the new classes without disrupting pretrained features. The second stage unfreezes all layers and trains the full model with a lower learning rate to refine the backbone for the target domain.
  4. The freeze parameter accepts an integer. An integer freeze=10 freezes the first 10 layers (0 through 9, which corresponds to the backbone in YOLO26). This speeds up training and reduces overfitting when the dataset is small relative to the model capacity.
 
