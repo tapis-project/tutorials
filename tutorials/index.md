@@ -4,7 +4,7 @@
 
 <div class="callout callout-info">
   <strong>Tutorial Slides</strong><br/>
-  <a href="https://docs.google.com/presentation/d/1s7S295ntrG8ZBu67HUuwjj9trcZz1pBsC57D6t5CIkE/edit?slide=id.p1#slide=id.p1" target="_blank">Slides for this tutorial</a><br/><br/>
+  <a href="https://docs.google.com/presentation/d/1l13lRedG7Bp0_nguU6zxvOOEanGdzqsIFLlCTZ8FIvY/edit?slide=id.p1#slide=id.p1" target="_blank">Slides for this tutorial</a><br/><br/>
 📝 <strong>Reservation Info</strong><br/>
 <strong>Allocation Code:</strong> <code>TRA24006</code><br/>
 <strong>Sunday sessions:</strong> <code>Tapis+Tutorial-Sun</code><br/>

@@ -78,7 +78,7 @@ In the **Execution Options** page, select the following:
 
   1. Execution System - `vista-test-nairr`
   2. Job Type - `Batch`
-  3. Batch Logical Queue - `gh`
+  3. Batch Logical Queue - `gh-shared`
 
 Click **Continue**
 

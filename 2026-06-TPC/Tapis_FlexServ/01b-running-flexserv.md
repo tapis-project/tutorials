@@ -57,7 +57,7 @@ First you will see Job summary, press **Continue**.
 In `Execution Options` card:
   1. For **Execution System**, select  `vista-test-nairr`
   2. For **Job Type**, select  `Batch`
-  3. For **Batch Logical Queue**, select  `gh`
+  3. For **Batch Logical Queue**, select  `gh-shared`
 
 Press **Continue**
 
@@ -330,9 +330,9 @@ Note: **if you don't see Pipeline API tab, try to refresh the entire webpage.**
 ![FlexServ API Tests - Pipeline API](/tutorials/images/sec4/image30.png)
 
 
-
+<!-- 
 ## Upcoming Next: From Prompt to Program - Build an Animal Detection App with FlexServ
 
 Please come back to our prompt engineering session on Monday to see how you can use FlexServ to do some real work - we will show you how to use FlexServ to generate image recognition program for detecting small animals and run the program on Vista with TAPIS Job!
 
-
+ -->
