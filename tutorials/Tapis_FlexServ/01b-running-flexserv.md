@@ -298,7 +298,7 @@ Want to see how yolo model works with the following sample image?
 
 ![FlexServ API Tests - Yolo Inference API - SampleImage](/tutorials/images/sec3/lighter.jpeg)
 
-For example, in Object Detection task, you select `yolo26n` model, and you can save the above sample image to you local disk. Then you select the downloaded image and then click on **Run Image Inference** button, you should be able to see the inference result. 
+In Object Detection task, select `yolo26n` model, and you can save the above sample image to you local disk. Then you select the downloaded image and then click on **Run Image Inference** button, you should be able to see the inference result. 
 
 ![FlexServ API Tests - Yolo Inference API - TestUI](/tutorials/images/sec3/image31.png)
 
@@ -306,7 +306,7 @@ Note that once you run `yolo26n` model, you will see this model in your private 
 
 ![FlexServ API Tests - Yolo Inference API - What happens to your model pool](/tutorials/images/sec3/image32.png)
 
-Ignore the fine-tuned model for now, we will talk about it tomorrow. 
+Ignore the fine-tuned model for now, we will talk about it later. 
 
 ### Step 3.2.11: Try to run any inference pipeline using Pipeline API
 

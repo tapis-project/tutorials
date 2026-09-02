@@ -104,7 +104,16 @@ There are 4 environment variables important for the fine-tuning job.
  3. TWO_STAGE_FINE_TUNE - If true, we use two-stage fine-tuning process where the first stage freezes the backbone and trains only the neck and head, allowing the detection layers to adapt to the new classes without disrupting pretrained features. The second stage unfreezes all layers and trains the full model with a lower learning rate to refine the backbone for the target domain.
  4. The freeze parameter accepts an integer. An integer freeze=10 freezes the first 10 layers (0 through 9, which corresponds to the backbone in YOLO26). This speeds up training and reduces overfitting when the dataset is small relative to the model capacity.
 
-Just keep all these settings as is, and click **Continue**.
+<!-- Just keep all these settings as is, and click **Continue**. -->
+
+Go back to FlexServ UI, click on "Models" on the left navigation panel, and you can scroll up and down to see if you have a yolo model named `yolo/yolo26n` there in your private model pool. 
+
+![FlexServ API Tests - Yolo Inference API - What happens to your model pool](/tutorials/images/sec3/image32.png)
+
+This is because we have run yolo inference test during our FlexServ section. 
+
+Since the yolo model you see is `yolo26n`, that means you should fill `yolo26n` in the `YOLO_26_MODEL` field. 
+
 
 ![USE GUIDED JOB LAUNCHER](/tutorials/images/sec8/image8.png)
 
