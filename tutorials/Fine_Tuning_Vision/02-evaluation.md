@@ -1,5 +1,16 @@
 # Section 5: Preparing JupyterHub Environment
 
+
+<div style="
+  position:relative;
+  width:100%;
+  height:450px;
+  overflow:hidden;
+  border:1px solid #d9e0ea;
+  border-radius:12px;
+">
+
+
 ## JupyterHub Environment
 
 We use <a href="https://public.jupyter.tacc.cloud/user/wzhang217/lab/tree/ai-tutorial-2026" target="_blank">TACC's Public JupyterHub</a>  to run the evaluation code on the test dataset and see the accuracy of our fine-tuned model.
@@ -24,11 +35,30 @@ Click on **Files** -> **Hub control panel** -> **Stop my server** -> **Start ser
 
 ## Generating Vision Model Evaluation Code using FlexServ 
 
-If you have done this part in the previous FlexServ section, you can skip this and jump to . 
+In this step, we will use FlexServ to generate a python script for evaluating the yolo model performance. 
 
-But if you haven't, you can quickly do the following: 
+<iframe
+    src="{{ '/assets/FlexServ_AI_Closed_Loop.html' | relative_url }}?step-to-show=3"
+    title="FlexServ AI closed loop — Fine-tuning"
+    style="
+      position:absolute;
+      inset:0;
+      width:200%;
+      height:900px;
+      border:0;
+      transform:scale(0.5);
+      transform-origin:top left;
+    ">
+  </iframe>
+</div>
 
-<!-- <a href="https://docs.google.com/presentation/d/1s7S295ntrG8ZBu67HUuwjj9trcZz1pBsC57D6t5CIkE/edit?slide=id.g3cdba15a02d_6_191#slide=id.g3cdba15a02d_6_191" target="_blank">Lecture Slides</a> -->
+<p>
+  <a href="{{ '/assets/FlexServ_AI_Closed_Loop.html' | relative_url }}?step-to-show=3"
+     target="_blank"
+     rel="noopener">
+    Open the interactive diagram in a new tab
+  </a>
+</p>
 
 
 ### Task Summary:
@@ -51,9 +81,9 @@ To test the capabilities of the FlexServ inference server, we can provide a comp
 
 ### Update the Responses API and Parameters
 
-Below is the prompt for our code generation. You will see it has 3 major elements:
+<!-- Below is the prompt for our code generation. You will see it has 3 major elements:
 1. Overall task
-2. 
+2.  -->
 
 
 Before pasting it into the chat box of FlexServ, make sure you update the following FACTS in the `FACTS TO KNOW` section:
@@ -145,20 +175,69 @@ DETECTION LOGIC (IMPORTANT):
   * If the model produces AT LEAST ONE detection of an animal class with confidence >= 0.5 and IoU >= 0.7:
   *   → The image-level prediction is animal.
 
+Namely, the response contains a `predictions` list. Each prediction may contain a `detections` list. Treat a missing or null `detections` value as an empty list.
+
+Predict `animal` when at least one detection has:
+
+```python
+class_id == 0
+```
+
+and:
+
+```python
+confidence >= CONFIDENCE_THRESHOLD
+```
+
+Otherwise predict `no_animal`.
+
+The IoU threshold is only an inference/NMS request parameter. Do not look for an IoU value in each detection.
+
 EVALUATION METRICS:
 
   * Iterate through the images in the test split.
   * Compare the image-level prediction with the ground truth (existence of label file).
   * Count: True Positives, True Negatives, False Positives, and False Negatives.
 
-ACCURACY DEFINITION:
+  Update exactly one confusion-matrix counter per successfully evaluated image:
 
-  * Overall accuracy = (True Positives + True Negatives) / Total Images
+  - TP: ground truth and prediction are both `animal`
+  - TN: ground truth and prediction are both `no_animal`
+  - FP: prediction is `animal`, but ground truth is `no_animal`
+  - FN: prediction is `no_animal`, but ground truth is `animal`
+
+  Calculate:
+
+  ```python
+  accuracy = (TP + TN) / (TP + TN + FP + FN)
+  precision = TP / (TP + FP)
+  recall = TP / (TP + FN)
+  ```
+
+  Use a helper that returns `0.0` when a denominator is zero. Print all three metrics as percentages with two decimal places.
+
+  An API failure must not be treated as `no_animal`. Record failed images separately and exclude them from the metric denominators.
+
 
 OUTPUT REQUIREMENTS:
 
-  * Print for each image: filename, ground-truth status, and prediction.
-  * At the end, print a summary report including total images, counts for each metric, and overall detection accuracy.
+  For every image, print:
+
+  ```text
+  [index/total] filename | ground_truth=... | prediction=... | result=TP/TN/FP/FN | request_ms=...
+  ```
+
+  At the end, print:
+
+  - model ID;
+  - total images;
+  - successfully evaluated images;
+  - failed images;
+  - TP, TN, FP, and FN;
+  - accuracy;
+  - precision;
+  - recall;
+  - total inference time.
 
 CODING REQUIREMENTS:
 
@@ -167,6 +246,7 @@ CODING REQUIREMENTS:
   * Set global variable for BASE_YOLO_MODEL and FINE_TUNED_YOLO_MODEL, and also a MODEL_TO_USE for easy model switching.
   * Set global variable for confidence threashold and IoU threashold.
   * Make sure we disable SSL/TLS verification and also disable the related warning.
+  * Use `requests.post(..., verify=False)` and suppress the related insecure-request warning.
   * Make sure we pass image_name into the yolo inference request.
   * Make sure we pass the correct header for auth token and content-type in the final request.
   * Make sure we pass the request body correctly in the final request.
@@ -178,6 +258,13 @@ CODING REQUIREMENTS:
   * Output the accuracy in percentage format.
   * Don't use any mock or dummy functions. Make sure every line functions. 
   * It is okay to capture general Exception instead of every single type of Exceptions.
+  * Use Python 3, `requests`, `pathlib`, `base64`, and `time`.
+  * Make requests sequentially.
+  * Do not shuffle images or use randomness.
+  * Include a request timeout and clear exception handling.
+  * Do not use mock data or pseudocode.
+  * Keep the implementation simple and readable.
+  * Return one complete Python code block followed by a brief plain-English explanation.
 
 DEFENSIVE PROGRAMMING
   In case of any unexpected conditions, make sure the following: 
@@ -191,8 +278,6 @@ FACTS TO KNOW:
   * DATASET_ROOT address: /home/jovyan/ai-tutorial-2026/datasets/AnimalEcology.v4i.yolov11
   * BASE_YOLO_MODEL for the request:  FLEX:PRI:yolo/yolo26n
   * FINE_TUNED_YOLO_MODEL for the request:  FLEX:PRI:yolo/yolo26n-fine-tuned
-
-After the code, briefly explain how the program works in plain English.
 </pre>
 </div>
 
@@ -220,6 +305,34 @@ If you paste a prompt that is larger than 500 bytes, we will show that as a larg
 
 
 ## Evaluating Fine-tuned Model by Running Code Detection On Jupyter 
+
+
+In this step, we will run the generated code to perform model performance evaluation to see the effect of our fine-tuning process on the yolo26n models. 
+
+
+<iframe
+    src="{{ '/assets/FlexServ_AI_Closed_Loop.html' | relative_url }}?step-to-show=4"
+    title="FlexServ AI closed loop — Fine-tuning"
+    style="
+      position:absolute;
+      inset:0;
+      width:200%;
+      height:900px;
+      border:0;
+      transform:scale(0.5);
+      transform-origin:top left;
+    ">
+  </iframe>
+</div>
+
+<p>
+  <a href="{{ '/assets/FlexServ_AI_Closed_Loop.html' | relative_url }}?step-to-show=4"
+     target="_blank"
+     rel="noopener">
+    Open the interactive diagram in a new tab
+  </a>
+</p>
+
 
 Copy the generated code from FlexServ UI in a new cell below the cell titled `Put your generated code here`. 
 

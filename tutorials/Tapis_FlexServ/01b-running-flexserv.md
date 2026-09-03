@@ -5,6 +5,39 @@
 }
 </style>
 
+
+<div style="
+  position:relative;
+  width:100%;
+  height:450px;
+  overflow:hidden;
+  border:1px solid #d9e0ea;
+  border-radius:12px;
+">
+  <iframe
+    src="{{ '/assets/FlexServ_AI_Closed_Loop.html' | relative_url }}?step-to-show=1"
+    title="FlexServ AI closed loop — Fine-tuning"
+    style="
+      position:absolute;
+      inset:0;
+      width:200%;
+      height:900px;
+      border:0;
+      transform:scale(0.5);
+      transform-origin:top left;
+    ">
+  </iframe>
+</div>
+
+<p>
+  <a href="{{ '/assets/FlexServ_AI_Closed_Loop.html' | relative_url }}?step-to-show=1"
+     target="_blank"
+     rel="noopener">
+    Open the interactive diagram in a new tab
+  </a>
+</p>
+
+
 # Section 3:  Running AI Inference on Vista with Tapis and FlexServ
 
 ## Stage 3.1: Running FlexServ on Vista with TAPIS

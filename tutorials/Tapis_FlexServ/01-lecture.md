@@ -3,7 +3,7 @@
 <a href="https://docs.google.com/presentation/d/1l13lRedG7Bp0_nguU6zxvOOEanGdzqsIFLlCTZ8FIvY/edit?slide=id.g3cd6a51b6a2_0_26#slide=id.g3cd6a51b6a2_0_26" target="_blank">Lecture Slides</a>
 
 
-### Closed AI Loop
+### Looping the AI Lifecycle
 
 <div style="
   position:relative;
@@ -29,7 +29,7 @@
 </div>
 
 <p>
-  <a href="{{ '/assets/FlexServ_AI_Closed_Loop.html' | relative_url }}"
+  <a href="{{ '/assets/FlexServ_AI_Closed_Loop.html' | relative_url }}?step-to-show=all"
      target="_blank"
      rel="noopener">
     Open the interactive diagram in a new tab
