@@ -5,12 +5,28 @@
 
 ### Closed AI Loop
 
-<iframe
-  src="{{ '/assets/FlexServ_AI_Closed_Loop.html' | relative_url }}"
-  title="Interactive FlexServ AI closed-loop workflow"
-  style="width:100%; height:900px; border:1px solid #d9e0ea; border-radius:12px;"
-  loading="lazy">
-</iframe>
+<div style="
+  position:relative;
+  width:100%;
+  height:450px;
+  overflow:hidden;
+  border:1px solid #d9e0ea;
+  border-radius:12px;
+">
+  <iframe
+    src="{{ '/assets/FlexServ_AI_Closed_Loop.html' | relative_url }}?step-to-show=all"
+    title="FlexServ AI closed loop — Fine-tuning"
+    style="
+      position:absolute;
+      inset:0;
+      width:200%;
+      height:900px;
+      border:0;
+      transform:scale(0.5);
+      transform-origin:top left;
+    ">
+  </iframe>
+</div>
 
 <p>
   <a href="{{ '/assets/FlexServ_AI_Closed_Loop.html' | relative_url }}"
