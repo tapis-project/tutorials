@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,7 +24,10 @@
       --shadow: 0 12px 32px rgba(24, 40, 72, .10), 0 2px 8px rgba(24, 40, 72, .06);
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       color: var(--ink);
@@ -31,7 +35,11 @@
       font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
-    .app-shell { min-height: 100vh; padding: 20px; }
+    .app-shell {
+      min-height: 100vh;
+      padding: 20px;
+    }
+
     .toolbar {
       max-width: 1400px;
       margin: 0 auto 14px;
@@ -41,16 +49,37 @@
       align-items: center;
       justify-content: space-between;
       gap: 14px;
-      background: rgba(255,255,255,.90);
+      background: rgba(255, 255, 255, .90);
       border: 1px solid #dfe5ef;
       border-radius: 14px;
-      box-shadow: 0 6px 22px rgba(24,40,72,.06);
+      box-shadow: 0 6px 22px rgba(24, 40, 72, .06);
       backdrop-filter: blur(12px);
     }
-    .toolbar-copy { min-width: 220px; }
-    .toolbar-copy strong { display: block; font-size: 13px; font-weight: 700; }
-    .toolbar-copy span { display: block; margin-top: 2px; color: var(--muted); font-size: 12px; }
-    .step-controls { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 7px; }
+
+    .toolbar-copy {
+      min-width: 220px;
+    }
+
+    .toolbar-copy strong {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .toolbar-copy span {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .step-controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 7px;
+    }
+
     .step-controls button {
       min-height: 34px;
       padding: 7px 12px;
@@ -64,8 +93,17 @@
       cursor: pointer;
       transition: background .18s ease, border-color .18s ease, color .18s ease, transform .18s ease;
     }
-    .step-controls button:hover { transform: translateY(-1px); border-color: #b8c4d6; }
-    .step-controls button[aria-pressed="true"] { color: #fff; background: #172033; border-color: #172033; }
+
+    .step-controls button:hover {
+      transform: translateY(-1px);
+      border-color: #b8c4d6;
+    }
+
+    .step-controls button[aria-pressed="true"] {
+      color: #fff;
+      background: #172033;
+      border-color: #172033;
+    }
 
     .viewport {
       max-width: 1400px;
@@ -74,25 +112,28 @@
       background: #fff;
       border: 1px solid #dfe5ef;
       border-radius: 18px;
-      box-shadow: 0 18px 54px rgba(24,40,72,.10);
+      box-shadow: 0 18px 54px rgba(24, 40, 72, .10);
     }
+
     .diagram {
       position: relative;
       width: 1360px;
       height: 748px;
       margin: 0 auto;
       background:
-        radial-gradient(circle at 58% 25%, rgba(45,107,231,.04), transparent 27%),
-        radial-gradient(circle at 74% 72%, rgba(123,63,242,.04), transparent 28%),
+        radial-gradient(circle at 58% 25%, rgba(45, 107, 231, .04), transparent 27%),
+        radial-gradient(circle at 74% 72%, rgba(123, 63, 242, .04), transparent 28%),
         #fff;
       overflow: hidden;
     }
+
     .zone {
       position: absolute;
       border-radius: 18px;
       border: 1.5px dashed;
       z-index: 1;
     }
+
     .zone h2 {
       position: absolute;
       top: 18px;
@@ -103,12 +144,46 @@
       letter-spacing: .08em;
       font-weight: 750;
     }
-    .zone-tune { left: 20px; top: 20px; width: 380px; height: 560px; border-color: #f8a85d; background: rgba(255,247,237,.58); }
-    .zone-tune h2 { color: #c5490b; }
-    .zone-flex { left: 430px; top: 20px; width: 910px; height: 350px; border-style: solid; border-color: #83b7ff; background: rgba(238,245,255,.76); }
-    .zone-flex h2 { color: #1f57cc; }
-    .zone-jupyter { left: 430px; top: 400px; width: 910px; height: 300px; border-color: #bda7ff; background: rgba(250,247,255,.75); }
-    .zone-jupyter h2 { color: #6c32dc; }
+
+    .zone-tune {
+      left: 20px;
+      top: 20px;
+      width: 380px;
+      height: 560px;
+      border-color: #f8a85d;
+      background: rgba(255, 247, 237, .58);
+    }
+
+    .zone-tune h2 {
+      color: #c5490b;
+    }
+
+    .zone-flex {
+      left: 430px;
+      top: 20px;
+      width: 910px;
+      height: 350px;
+      border-style: solid;
+      border-color: #83b7ff;
+      background: rgba(238, 245, 255, .76);
+    }
+
+    .zone-flex h2 {
+      color: #1f57cc;
+    }
+
+    .zone-jupyter {
+      left: 430px;
+      top: 400px;
+      width: 910px;
+      height: 300px;
+      border-color: #bda7ff;
+      background: rgba(250, 247, 255, .75);
+    }
+
+    .zone-jupyter h2 {
+      color: #6c32dc;
+    }
 
     .privacy {
       position: absolute;
@@ -135,121 +210,571 @@
       box-shadow: var(--shadow);
       transition: opacity .22s ease, filter .22s ease, transform .22s ease, box-shadow .22s ease;
     }
-    .node:hover { transform: translateY(-2px); box-shadow: 0 16px 36px rgba(24,40,72,.15); }
-    .node h3 { margin: 0; font-size: 16px; line-height: 1.2; font-weight: 750; }
-    .node p { margin: 8px 0 0; color: var(--muted); font-size: 12px; line-height: 1.55; }
-    .node .eyebrow { margin-bottom: 8px; color: var(--muted); font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 
-    .fine-app { left: 70px; top: 120px; width: 300px; height: 165px; padding: 54px 24px 18px; border-color: #fdba74; }
-    .window-bar {
-      position: absolute; left: 0; right: 0; top: 0; height: 38px;
-      display: flex; align-items: center; gap: 7px; padding: 0 15px;
-      border-radius: 13px 13px 0 0; background: #ffedd5;
+    .node:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(24, 40, 72, .15);
     }
-    .window-bar i { width: 8px; height: 8px; border-radius: 50%; background: #fb7185; }
-    .window-bar i:nth-child(2) { background: #fbbf24; }
-    .window-bar i:nth-child(3) { background: #34d399; }
-    .fine-app h3 { text-align: center; margin-bottom: 11px; }
-    .fine-app ul { margin: 0; padding: 0; list-style: none; color: #4d5a6e; font-size: 12px; font-weight: 650; line-height: 1.75; }
-    .fine-app li::before { content: "✓"; color: var(--orange); margin-right: 8px; font-weight: 900; }
 
-    .dataset { left: 85px; top: 365px; width: 270px; height: 145px; padding: 22px; text-align: center; border-color: #fb923c; }
-    .dataset .test-item { width: 88px; }
+    .node h3 {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.2;
+      font-weight: 750;
+    }
+
+    .node p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .node .eyebrow {
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .fine-app {
+      left: 70px;
+      top: 120px;
+      width: 300px;
+      height: 165px;
+      padding: 54px 24px 18px;
+      border-color: #fdba74;
+    }
+
+    .window-bar {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 0 15px;
+      border-radius: 13px 13px 0 0;
+      background: #ffedd5;
+    }
+
+    .window-bar i {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #fb7185;
+    }
+
+    .window-bar i:nth-child(2) {
+      background: #fbbf24;
+    }
+
+    .window-bar i:nth-child(3) {
+      background: #34d399;
+    }
+
+    .fine-app h3 {
+      text-align: center;
+      margin-bottom: 11px;
+    }
+
+    .fine-app ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      color: #4d5a6e;
+      font-size: 12px;
+      font-weight: 650;
+      line-height: 1.75;
+    }
+
+    .fine-app li::before {
+      content: "✓";
+      color: var(--orange);
+      margin-right: 8px;
+      font-weight: 900;
+    }
+
+    .dataset {
+      left: 85px;
+      top: 365px;
+      width: 270px;
+      height: 145px;
+      padding: 22px;
+      text-align: center;
+      border-color: #fb923c;
+    }
+
+    .dataset .test-item {
+      width: 88px;
+    }
 
     .pool {
-      left: 465px; top: 92px; width: 275px; height: 220px;
+      left: 465px;
+      top: 92px;
+      width: 275px;
+      height: 220px;
       padding: 42px 24px 18px;
-      border: 2px solid #16a34a; border-radius: 50% / 15%;
-      background: linear-gradient(180deg,#effdf5,#dcfce7);
+      border: 2px solid #16a34a;
+      border-radius: 50% / 15%;
+      background: linear-gradient(180deg, #effdf5, #dcfce7);
     }
-    .pool::before, .pool::after { content: ""; position: absolute; left: -2px; right: -2px; height: 34px; border: 2px solid #16a34a; border-radius: 50%; }
-    .pool::before { top: -2px; background: #dcfce7; }
-    .pool::after { bottom: -2px; background: transparent; }
-    .pool h3, .pool > p, .pool-models { position: relative; z-index: 2; text-align: center; }
-    .pool > p { margin: 5px 0 10px; }
-    .scratch { display: inline-block; padding: 5px 18px; color: #fff; background: #166534; border-radius: 999px; font-family: ui-monospace, monospace; font-size: 12px; font-weight: 800; }
-    .pool-models { margin-top: 8px; display: grid; gap: 7px; }
-    .model-row { height: 34px; padding: 0 12px; display: flex; align-items: center; gap: 9px; text-align: left; background: #fff; border: 1px solid #86efac; border-radius: 8px; color: #166534; font-size: 12px; font-weight: 750; }
-    .model-row::before { content: "YOLO"; width: 23px; height: 23px; display: grid; place-items: center; color: #fff; background: #16a34a; border-radius: 50%; font-size: 6px; }
-    .model-row.tuned { color: #5b21b6; background: #ede9fe; border-color: #8b5cf6; }
-    .model-row.tuned::before { content: "✓"; background: #7c3aed; font-size: 12px; }
 
-    .api { left: 800px; top: 205px; width: 200px; height: 140px; padding: 14px; text-align: center; border-color: #a78bfa; }
-    .api-mark { width: 40px; height: 40px; margin: 0 auto 8px; display: grid; place-items: center; color: #6d28d9; background: #ede9fe; border: 2px solid #8b5cf6; clip-path: polygon(50% 0,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%); font-size: 10px; font-weight: 850; }
-    .api h3 { font-size: 14px; }
-    .api p { margin-top: 4px; font-size: 11px; line-height: 1.35; }
+    .pool::before,
+    .pool::after {
+      content: "";
+      position: absolute;
+      left: -2px;
+      right: -2px;
+      height: 34px;
+      border: 2px solid #16a34a;
+      border-radius: 50%;
+    }
 
-    .responses { left: 800px; top: 80px; width: 200px; height: 105px; padding: 10px 15px; text-align: center; border-color: #60a5fa; }
-    .responses .endpoint { margin: 0 auto 6px; padding: 8px; color: #fff; background: #2563eb; border-radius: 9px; font: 750 13px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
-    .responses h3 { font-size: 14px; }
-    .responses p { margin-top: 3px; font-size: 11px; line-height: 1.25; }
+    .pool::before {
+      top: -2px;
+      background: #dcfce7;
+    }
 
-    .generator { left: 1080px; top: 80px; width: 240px; height: 130px; padding: 14px 18px; text-align: center; border-color: #60a5fa; }
-    .generator h3 { font-size: 15px; }
-    .generator .mini-code { margin-bottom: 8px; padding: 7px 10px; }
-    .mini-code { margin-bottom: 14px; padding: 10px 12px; text-align: left; color: #93c5fd; background: #111827; border-radius: 8px; font: 10px/1.55 ui-monospace, SFMono-Regular, Menlo, monospace; }
-    .mini-code b { color: #86efac; }
+    .pool::after {
+      bottom: -2px;
+      background: transparent;
+    }
 
-    .test-set { left: 480px; top: 500px; width: 220px; height: 145px; padding: 22px; text-align: center; border-color: #fbbf24; }
-    .test-items { margin-top: 18px; display: flex; justify-content: center; gap: 14px; }
-    .test-item { width: 73px; padding: 11px 4px 8px; color: #7a5810; background: #fffbeb; border: 1px solid #fbbf24; border-radius: 8px; font-size: 11px; }
-    .test-item span { display: block; margin-bottom: 5px; font-size: 22px; }
+    .pool h3,
+    .pool>p,
+    .pool-models {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
 
-    .notebook { left: 780px; top: 490px; width: 310px; height: 175px; padding: 22px; text-align: center; border-color: #8b5cf6; }
-    .notebook .mini-code { margin-bottom: 14px; text-align: left; }
-    .notebook h3 { margin-top: 2px; }
-    .metrics-line { margin-top: 9px; color: #6d28d9; background: #f1eafe; border-radius: 999px; font-size: 10px; font-weight: 750; padding: 5px 8px; }
+    .pool>p {
+      margin: 5px 0 10px;
+    }
 
-    .metrics { left: 1150px; top: 510px; width: 160px; height: 145px; padding: 20px 14px; text-align: center; border-color: #4ade80; }
-    .check { width: 40px; height: 40px; margin: 0 auto 12px; display: grid; place-items: center; color: var(--green); background: #dcfce7; border-radius: 50%; font-size: 24px; font-weight: 900; }
+    .scratch {
+      display: inline-block;
+      padding: 5px 18px;
+      color: #fff;
+      background: #166534;
+      border-radius: 999px;
+      font-family: ui-monospace, monospace;
+      font-size: 12px;
+      font-weight: 800;
+    }
 
-    .connectors { position: absolute; inset: 0; z-index: 5; pointer-events: none; overflow: visible; }
-    .flow { fill: none; stroke-width: 2.6; stroke-linecap: square; stroke-linejoin: round; transition: opacity .22s ease, filter .22s ease; }
-    .flow.blue { stroke: var(--blue); marker-end: url(#arrow-blue); }
-    .flow.green { stroke: var(--green); marker-end: url(#arrow-green); }
-    .flow.orange { stroke: var(--orange); marker-end: url(#arrow-orange); }
-    .flow.purple { stroke: var(--purple); marker-end: url(#arrow-purple); }
-    .flow.gray { stroke: var(--gray); stroke-dasharray: 7 5; marker-end: url(#arrow-gray); }
-    .flow.feedback { stroke-dasharray: 10 6; }
-    .flow-label rect { fill: rgba(255,255,255,.96); stroke: #e5eaf1; rx: 5; }
-    .flow-label text { font-size: 11px; font-weight: 750; dominant-baseline: middle; text-anchor: middle; }
-    .flow-label.blue text { fill: var(--blue); }
-    .flow-label.green text { fill: var(--green); }
-    .flow-label.orange text { fill: var(--orange); }
-    .flow-label.purple text { fill: var(--purple); }
-    .flow-label.gray text { fill: var(--gray); }
+    .pool-models {
+      margin-top: 8px;
+      display: grid;
+      gap: 7px;
+    }
+
+    .model-row {
+      height: 34px;
+      padding: 0 12px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      text-align: left;
+      background: #fff;
+      border: 1px solid #86efac;
+      border-radius: 8px;
+      color: #166534;
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+    .model-row::before {
+      content: "YOLO";
+      width: 23px;
+      height: 23px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: #16a34a;
+      border-radius: 50%;
+      font-size: 6px;
+    }
+
+    .model-row.tuned {
+      color: #5b21b6;
+      background: #ede9fe;
+      border-color: #8b5cf6;
+    }
+
+    .model-row.tuned::before {
+      content: "✓";
+      background: #7c3aed;
+      font-size: 12px;
+    }
+
+    .api {
+      left: 800px;
+      top: 205px;
+      width: 200px;
+      height: 140px;
+      padding: 14px;
+      text-align: center;
+      border-color: #a78bfa;
+    }
+
+    .api-mark {
+      width: 40px;
+      height: 40px;
+      margin: 0 auto 8px;
+      display: grid;
+      place-items: center;
+      color: #6d28d9;
+      background: #ede9fe;
+      border: 2px solid #8b5cf6;
+      clip-path: polygon(50% 0, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+      font-size: 10px;
+      font-weight: 850;
+    }
+
+    .api h3 {
+      font-size: 14px;
+    }
+
+    .api p {
+      margin-top: 4px;
+      font-size: 11px;
+      line-height: 1.35;
+    }
+
+    .responses {
+      left: 800px;
+      top: 80px;
+      width: 200px;
+      height: 105px;
+      padding: 10px 15px;
+      text-align: center;
+      border-color: #60a5fa;
+    }
+
+    .responses .endpoint {
+      margin: 0 auto 6px;
+      padding: 8px;
+      color: #fff;
+      background: #2563eb;
+      border-radius: 9px;
+      font: 750 13px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+
+    .responses h3 {
+      font-size: 14px;
+    }
+
+    .responses p {
+      margin-top: 3px;
+      font-size: 11px;
+      line-height: 1.25;
+    }
+
+    .generator {
+      left: 1080px;
+      top: 80px;
+      width: 240px;
+      height: 130px;
+      padding: 14px 18px;
+      text-align: center;
+      border-color: #60a5fa;
+    }
+
+    .generator h3 {
+      font-size: 15px;
+    }
+
+    .generator .mini-code {
+      margin-bottom: 8px;
+      padding: 7px 10px;
+    }
+
+    .mini-code {
+      margin-bottom: 14px;
+      padding: 10px 12px;
+      text-align: left;
+      color: #93c5fd;
+      background: #111827;
+      border-radius: 8px;
+      font: 10px/1.55 ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+
+    .mini-code b {
+      color: #86efac;
+    }
+
+    .test-set {
+      left: 480px;
+      top: 500px;
+      width: 220px;
+      height: 145px;
+      padding: 22px;
+      text-align: center;
+      border-color: #fbbf24;
+    }
+
+    .test-items {
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .test-item {
+      width: 73px;
+      padding: 11px 4px 8px;
+      color: #7a5810;
+      background: #fffbeb;
+      border: 1px solid #fbbf24;
+      border-radius: 8px;
+      font-size: 11px;
+    }
+
+    .test-item span {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 22px;
+    }
+
+    .notebook {
+      left: 780px;
+      top: 490px;
+      width: 310px;
+      height: 175px;
+      padding: 22px;
+      text-align: center;
+      border-color: #8b5cf6;
+    }
+
+    .notebook .mini-code {
+      margin-bottom: 14px;
+      text-align: left;
+    }
+
+    .notebook h3 {
+      margin-top: 2px;
+    }
+
+    .metrics-line {
+      margin-top: 9px;
+      color: #6d28d9;
+      background: #f1eafe;
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 750;
+      padding: 5px 8px;
+    }
+
+    .metrics {
+      left: 1150px;
+      top: 510px;
+      width: 160px;
+      height: 145px;
+      padding: 20px 14px;
+      text-align: center;
+      border-color: #4ade80;
+    }
+
+    .check {
+      width: 40px;
+      height: 40px;
+      margin: 0 auto 12px;
+      display: grid;
+      place-items: center;
+      color: var(--green);
+      background: #dcfce7;
+      border-radius: 50%;
+      font-size: 24px;
+      font-weight: 900;
+    }
+
+    .connectors {
+      position: absolute;
+      inset: 0;
+      z-index: 5;
+      pointer-events: none;
+      overflow: visible;
+    }
+
+    .flow {
+      fill: none;
+      stroke-width: 2.6;
+      stroke-linecap: square;
+      stroke-linejoin: round;
+      transition: opacity .22s ease, filter .22s ease;
+    }
+
+    .flow.blue {
+      stroke: var(--blue);
+      marker-end: url(#arrow-blue);
+    }
+
+    .flow.green {
+      stroke: var(--green);
+      marker-end: url(#arrow-green);
+    }
+
+    .flow.orange {
+      stroke: var(--orange);
+      marker-end: url(#arrow-orange);
+    }
+
+    .flow.purple {
+      stroke: var(--purple);
+      marker-end: url(#arrow-purple);
+    }
+
+    .flow.gray {
+      stroke: var(--gray);
+      stroke-dasharray: 7 5;
+      marker-end: url(#arrow-gray);
+    }
+
+    .flow.feedback {
+      stroke-dasharray: 10 6;
+    }
+
+    .flow-label rect {
+      fill: rgba(255, 255, 255, .96);
+      stroke: #e5eaf1;
+      rx: 5;
+    }
+
+    .flow-label text {
+      font-size: 11px;
+      font-weight: 750;
+      dominant-baseline: middle;
+      text-anchor: middle;
+    }
+
+    .flow-label.blue text {
+      fill: var(--blue);
+    }
+
+    .flow-label.green text {
+      fill: var(--green);
+    }
+
+    .flow-label.orange text {
+      fill: var(--orange);
+    }
+
+    .flow-label.purple text {
+      fill: var(--purple);
+    }
+
+    .flow-label.gray text {
+      fill: var(--gray);
+    }
+
     .legend {
-      position: absolute; left: 52px; right: 52px; bottom: 12px; z-index: 5;
-      display: flex; align-items: center; gap: 23px; color: var(--muted); font-size: 11px;
+      position: absolute;
+      left: 52px;
+      right: 52px;
+      bottom: 12px;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      gap: 23px;
+      color: var(--muted);
+      font-size: 11px;
     }
-    .legend strong { color: #536074; font-size: 10px; letter-spacing: .08em; }
-    .legend span { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
-    .legend i { width: 30px; height: 3px; background: currentColor; }
-    .legend .lg-blue { color: var(--blue); } .legend .lg-green { color: var(--green); }
-    .legend .lg-orange { color: var(--orange); } .legend .lg-purple { color: var(--purple); }
-    .legend .lg-gray { color: var(--gray); }
+
+    .legend strong {
+      color: #536074;
+      font-size: 10px;
+      letter-spacing: .08em;
+    }
+
+    .legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      white-space: nowrap;
+    }
+
+    .legend i {
+      width: 30px;
+      height: 3px;
+      background: currentColor;
+    }
+
+    .legend .lg-blue {
+      color: var(--blue);
+    }
+
+    .legend .lg-green {
+      color: var(--green);
+    }
+
+    .legend .lg-orange {
+      color: var(--orange);
+    }
+
+    .legend .lg-purple {
+      color: var(--purple);
+    }
+
+    .legend .lg-gray {
+      color: var(--gray);
+    }
 
     .diagram[data-focus]:not([data-focus="all"]) .node,
     .diagram[data-focus]:not([data-focus="all"]) .flow,
     .diagram[data-focus]:not([data-focus="all"]) .flow-label,
-    .diagram[data-focus]:not([data-focus="all"]) .model-row { opacity: .15; filter: grayscale(.65); }
+    .diagram[data-focus]:not([data-focus="all"]) .model-row {
+      opacity: .15;
+      filter: grayscale(.65);
+    }
+
     .diagram[data-focus="1"] [data-step~="1"],
     .diagram[data-focus="2"] [data-step~="2"],
     .diagram[data-focus="3"] [data-step~="3"],
-    .diagram[data-focus="4"] [data-step~="4"] { opacity: 1 !important; filter: none !important; }
-    .diagram[data-focus]:not([data-focus="all"]) .node[data-step] { box-shadow: 0 0 0 3px rgba(123,63,242,.13), var(--shadow); }
+    .diagram[data-focus="4"] [data-step~="4"] {
+      opacity: 1 !important;
+      filter: none !important;
+    }
+
+    .diagram[data-focus]:not([data-focus="all"]) .node[data-step] {
+      box-shadow: 0 0 0 3px rgba(123, 63, 242, .13), var(--shadow);
+    }
 
     @media (max-width: 760px) {
-      .app-shell { padding: 10px; }
-      .toolbar { align-items: flex-start; flex-direction: column; }
-      .step-controls { justify-content: flex-start; }
-      .viewport { border-radius: 13px; }
+      .app-shell {
+        padding: 10px;
+      }
+
+      .toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .step-controls {
+        justify-content: flex-start;
+      }
+
+      .viewport {
+        border-radius: 13px;
+      }
     }
+
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { transition-duration: .01ms !important; }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+      }
     }
   </style>
 </head>
+
 <body>
   <main class="app-shell">
     <section class="toolbar" aria-label="Diagram controls">
@@ -268,101 +793,168 @@
 
     <div class="viewport" aria-label="Interactive FlexServ architecture diagram">
       <div class="diagram" id="flexserv-diagram" data-focus="all">
-        <section class="zone zone-tune"><h2>SCIENCE GATEWAY · FINE-TUNING</h2></section>
-        <section class="zone zone-flex"><h2>FLEXSERV · PRIVATE MODEL &amp; INFERENCE LAYER</h2><div class="privacy">▣ USER-PRIVATE</div></section>
-        <section class="zone zone-jupyter"><h2>JUPYTERHUB · USER NOTEBOOK ENVIRONMENT</h2></section>
+        <section class="zone zone-tune">
+          <h2>SCIENCE GATEWAY · FINE-TUNING</h2>
+        </section>
+        <section class="zone zone-flex">
+          <h2>FLEXSERV · PRIVATE MODEL &amp; INFERENCE LAYER</h2>
+          <div class="privacy">▣ USER-PRIVATE</div>
+        </section>
+        <section class="zone zone-jupyter">
+          <h2>JUPYTERHUB · USER NOTEBOOK ENVIRONMENT</h2>
+        </section>
 
         <svg class="connectors" viewBox="0 0 1360 748" aria-hidden="true">
           <defs>
-            <marker id="arrow-blue" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#2866e6"/></marker>
-            <marker id="arrow-green" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#08966d"/></marker>
-            <marker id="arrow-orange" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#e95b0c"/></marker>
-            <marker id="arrow-purple" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#7b3ff2"/></marker>
-            <marker id="arrow-gray" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#64748b"/></marker>
+            <marker id="arrow-blue" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+              <path d="M0,0 L10,4 L0,8 Z" fill="#2866e6" />
+            </marker>
+            <marker id="arrow-green" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+              <path d="M0,0 L10,4 L0,8 Z" fill="#08966d" />
+            </marker>
+            <marker id="arrow-orange" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+              <path d="M0,0 L10,4 L0,8 Z" fill="#e95b0c" />
+            </marker>
+            <marker id="arrow-purple" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+              <path d="M0,0 L10,4 L0,8 Z" fill="#7b3ff2" />
+            </marker>
+            <marker id="arrow-gray" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+              <path d="M0,0 L10,4 L0,8 Z" fill="#64748b" />
+            </marker>
           </defs>
 
-          <path class="flow orange" data-step="2" d="M220 365 V325 H220 V285"/>
-          <g class="flow-label orange" data-step="2"><rect x="230" y="316" width="102" height="22"/><text x="281" y="327">training data</text></g>
+          <path class="flow orange" data-step="2" d="M220 365 V325 H220 V285" />
+          <g class="flow-label orange" data-step="2">
+            <rect x="230" y="316" width="102" height="22" /><text x="281" y="327">training data</text>
+          </g>
 
-          <path class="flow blue" data-step="2" d="M489 218 H370"/>
-          <g class="flow-label blue" data-step="2"><rect x="412" y="185" width="46" height="22"/><text x="435" y="196">load</text></g>
+          <path class="flow blue" data-step="2" d="M489 218 H370" />
+          <g class="flow-label blue" data-step="2">
+            <rect x="412" y="185" width="46" height="22" /><text x="435" y="196">load</text>
+          </g>
 
-          <path class="flow purple" data-step="2" stroke-dasharray="7 4" d="M370 264 H489"/>
-          <g class="flow-label purple" data-step="2"><rect x="426" y="276" width="50" height="22"/><text x="451" y="287">save</text></g>
+          <path class="flow purple" data-step="2" stroke-dasharray="7 4" d="M370 264 H489" />
+          <g class="flow-label purple" data-step="2">
+            <rect x="426" y="276" width="50" height="22" /><text x="451" y="287">save</text>
+          </g>
 
-          <path class="flow green" data-step="4" d="M716 269 H800"/>
-          <g class="flow-label green" data-step="4"><rect x="751" y="237" width="50" height="22"/><text x="776" y="248">serve</text></g>
+          <path class="flow green" data-step="4" d="M716 269 H800" />
+          <g class="flow-label green" data-step="4">
+            <rect x="751" y="237" width="50" height="22" /><text x="776" y="248">serve</text>
+          </g>
 
-          <path class="flow blue" data-step="3" d="M1200 210 V390 H1070 V490"/>
-          <g class="flow-label blue" data-step="3"><rect x="1082" y="402" width="142" height="22"/><text x="1153" y="413">generated evaluation code</text></g>
+          <path class="flow blue" data-step="3" d="M1200 210 V390 H1070 V490" />
+          <g class="flow-label blue" data-step="3">
+            <rect x="1082" y="402" width="142" height="22" /><text x="1153" y="413">generated evaluation code</text>
+          </g>
 
-          <path class="flow purple" data-step="3" d="M1000 132 H1080"/>
-          <g class="flow-label purple" data-step="3"><rect x="1040" y="144" width="69" height="22"/><text x="1074.5" y="155">generate</text></g>
+          <path class="flow purple" data-step="3" d="M1000 132 H1080" />
+          <g class="flow-label purple" data-step="3">
+            <rect x="1040" y="144" width="69" height="22" /><text x="1074.5" y="155">generate</text>
+          </g>
 
-          <path class="flow purple" data-step="4" d="M860 490 V345"/>
-          <g class="flow-label purple" data-step="4"><rect x="741" y="385" width="107" height="22"/><text x="794.5" y="396">send test image</text></g>
+          <path class="flow purple" data-step="4" d="M860 490 V345" />
+          <g class="flow-label purple" data-step="4">
+            <rect x="741" y="385" width="107" height="22" /><text x="794.5" y="396">send test image</text>
+          </g>
 
-          <path class="flow gray" data-step="4" d="M960 345 V490"/>
-          <g class="flow-label gray" data-step="4"><rect x="974" y="385" width="76" height="22"/><text x="1012" y="396">prediction</text></g>
+          <path class="flow gray" data-step="4" d="M960 345 V490" />
+          <g class="flow-label gray" data-step="4">
+            <rect x="974" y="385" width="76" height="22" /><text x="1012" y="396">prediction</text>
+          </g>
 
-          <path class="flow orange" data-step="4" d="M700 550 H740 V550 H780"/>
-          <g class="flow-label orange" data-step="4"><rect x="710" y="520" width="58" height="22"/><text x="739" y="531">images</text></g>
+          <path class="flow orange" data-step="4" d="M700 550 H740 V550 H780" />
+          <g class="flow-label orange" data-step="4">
+            <rect x="710" y="520" width="58" height="22" /><text x="739" y="531">images</text>
+          </g>
 
-          <path class="flow green" data-step="4" d="M700 625 H740 V625 H780"/>
-          <g class="flow-label green" data-step="4"><rect x="710" y="633" width="54" height="22"/><text x="737" y="644">labels</text></g>
+          <path class="flow green" data-step="4" d="M700 625 H740 V625 H780" />
+          <g class="flow-label green" data-step="4">
+            <rect x="710" y="633" width="54" height="22" /><text x="737" y="644">labels</text>
+          </g>
 
-          <path class="flow green" data-step="4" d="M1090 580 H1150"/>
-          <g class="flow-label green" data-step="4"><rect x="1103" y="548" width="45" height="22"/><text x="1125" y="559">score</text></g>
+          <path class="flow green" data-step="4" d="M1090 580 H1150" />
+          <g class="flow-label green" data-step="4">
+            <rect x="1103" y="548" width="45" height="22" /><text x="1125" y="559">score</text>
+          </g>
 
-          <path class="flow purple feedback" data-step="4" d="M1230 655 V685 H15 V248 H70"/>
-          <g class="flow-label purple" data-step="4"><rect x="508" y="673" width="339" height="24"/><text x="678" y="685">review metrics → refine data/settings → fine-tune again</text></g>
+          <path class="flow purple feedback" data-step="4" d="M1230 655 V685 H15 V248 H70" />
+          <g class="flow-label purple" data-step="4">
+            <rect x="508" y="673" width="339" height="24" /><text x="678" y="685">review metrics → refine data/settings
+              → fine-tune again</text>
+          </g>
         </svg>
 
         <article class="node fine-app" data-step="2">
           <div class="window-bar"><i></i><i></i><i></i></div>
           <h3>Fine-tuning App</h3>
-          <ul><li>Loads the base model</li><li>Trains on user datasets</li><li>Saves tuned weights</li></ul>
+          <ul>
+            <li>Loads the base model</li>
+            <li>Trains on user datasets</li>
+            <li>Saves tuned weights</li>
+          </ul>
         </article>
 
         <article class="node dataset" data-step="2">
-          <h3>Training Dataset</h3><div class="test-items"><div class="test-item"><span>▧</span>images</div><div class="test-item"><span>≡</span>annotations</div></div>
+          <h3>Training Dataset</h3>
+          <div class="test-items">
+            <div class="test-item"><span>▧</span>images</div>
+            <div class="test-item"><span>≡</span>annotations</div>
+          </div>
         </article>
 
         <article class="node pool" data-step="1 2 4">
-          <h3>Private Model Pool</h3><p>FlexServ storage on users’ <span class="scratch">$SCRTCH</span></p>
+          <h3>Private Model Pool</h3>
+          <p>FlexServ storage on users’ <span class="scratch">$SCRTCH</span></p>
           <div class="pool-models">
             <div class="model-row" data-step="1 2">yolo26n</div>
             <div class="model-row tuned" data-step="2 4">yolo26n-fine-tuned</div>
           </div>
         </article>
 
-        <article class="node api" data-step="4">
-          <div class="api-mark">API</div><h3>YOLO Inference API</h3><p>Runs <strong>yolo26n-fine-tuned</strong> for every test image</p>
+        <article class="node api" data-step="1 4">
+          <div class="api-mark">API</div>
+          <h3>YOLO Inference API</h3>
+          <p>Runs <strong>yolo26n-fine-tuned</strong> for every test image</p>
         </article>
 
-        <article class="node responses" data-step="3">
-          <div class="endpoint">/v1/responses</div><h3>Responses API</h3><p>Vibe coding endpoint</p>
+        <article class="node responses" data-step="1 3">
+          <div class="endpoint">/v1/responses</div>
+          <h3>Responses API</h3>
+          <p>Vibe coding endpoint</p>
         </article>
 
         <article class="node generator" data-step="3">
-          <div class="mini-code">for image in test:<br><b>&nbsp;&nbsp;infer(image)</b></div><h3>Evaluation Code</h3><p>Generated by FlexServ</p>
+          <div class="mini-code">for image in test:<br><b>&nbsp;&nbsp;infer(image)</b></div>
+          <h3>Evaluation Code</h3>
+          <p>Generated by FlexServ</p>
         </article>
 
         <article class="node test-set" data-step="4">
-          <h3>Test Set</h3><div class="test-items"><div class="test-item"><span>▧</span>images</div><div class="test-item"><span>≡</span>labels</div></div>
+          <h3>Test Set</h3>
+          <div class="test-items">
+            <div class="test-item"><span>▧</span>images</div>
+            <div class="test-item"><span>≡</span>labels</div>
+          </div>
         </article>
 
         <article class="node notebook" data-step="4">
           <div class="mini-code">prediction = flexserv.infer(image)<br><b>metrics.update(prediction, label)</b></div>
-          <h3>Evaluation Notebook</h3><p>Compares FlexServ predictions with actual labels</p><div class="metrics-line">accuracy · precision · recall · mAP</div>
+          <h3>Evaluation Notebook</h3>
+          <p>Compares FlexServ predictions with actual labels</p>
+          <div class="metrics-line">accuracy · precision · recall · mAP</div>
         </article>
 
         <article class="node metrics" data-step="4">
-          <div class="check">✓</div><h3>Model Metrics</h3><p>performance report for the tuned model</p>
+          <div class="check">✓</div>
+          <h3>Model Metrics</h3>
+          <p>performance report for the tuned model</p>
         </article>
 
         <div class="legend" aria-label="Flow legend">
-          <strong>FLOW LEGEND</strong><span class="lg-blue"><i></i>model / code</span><span class="lg-green"><i></i>stored data / result</span><span class="lg-orange"><i></i>images</span><span class="lg-purple"><i></i>API / iteration</span><span class="lg-gray"><i></i>response</span>
+          <strong>FLOW LEGEND</strong><span class="lg-blue"><i></i>model / code</span><span
+            class="lg-green"><i></i>stored data / result</span><span class="lg-orange"><i></i>images</span><span
+            class="lg-purple"><i></i>API / iteration</span><span class="lg-gray"><i></i>response</span>
         </div>
       </div>
     </div>
@@ -403,4 +995,5 @@
     })();
   </script>
 </body>
+
 </html>
