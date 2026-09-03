@@ -1,14 +1,7 @@
 # Section 5: Preparing JupyterHub Environment
 
 
-<div style="
-  position:relative;
-  width:100%;
-  height:450px;
-  overflow:hidden;
-  border:1px solid #d9e0ea;
-  border-radius:12px;
-">
+
 
 
 ## JupyterHub Environment
@@ -37,6 +30,15 @@ Click on **Files** -> **Hub control panel** -> **Stop my server** -> **Start ser
 
 In this step, we will use FlexServ to generate a python script for evaluating the yolo model performance. 
 
+
+<div style="
+  position:relative;
+  width:100%;
+  height:450px;
+  overflow:hidden;
+  border:1px solid #d9e0ea;
+  border-radius:12px;
+">
 <iframe
     src="{{ '/assets/FlexServ_AI_Closed_Loop.html' | relative_url }}?step-to-show=3"
     title="FlexServ AI closed loop — Fine-tuning"
@@ -309,7 +311,14 @@ If you paste a prompt that is larger than 500 bytes, we will show that as a larg
 
 In this step, we will run the generated code to perform model performance evaluation to see the effect of our fine-tuning process on the yolo26n models. 
 
-
+<div style="
+  position:relative;
+  width:100%;
+  height:450px;
+  overflow:hidden;
+  border:1px solid #d9e0ea;
+  border-radius:12px;
+">
 <iframe
     src="{{ '/assets/FlexServ_AI_Closed_Loop.html' | relative_url }}?step-to-show=4"
     title="FlexServ AI closed loop — Fine-tuning"
