@@ -92,8 +92,12 @@ Before pasting it into the chat box of FlexServ, make sure you update the follow
   - BASEURL of FLEXSERV inference engine: (your FlexServ URL here)
   - Bearer Auth token for FLEXSERV inference engine: (your FlexServ Token here)
 
-<div style="max-height:400px; overflow:auto; border:1px solid #ddd; padding:10px;">
-<pre>
+<div style="border:1px solid #ddd; border-radius:6px;">
+  <div style="display:flex; justify-content:flex-end; padding:6px 10px; background:#f6f8fa; border-bottom:1px solid #ddd;">
+    <button type="button" onclick="copyPromptText(this)" style="padding:4px 10px; font-size:12px; cursor:pointer; background:#fff; border:1px solid #d0d7de; border-radius:6px;">Copy</button>
+  </div>
+  <div style="max-height:400px; overflow:auto; padding:10px;">
+<pre id="flexserv-prompt-block">
 ## Prompt:
 
 TASK DESCRIPTION:
@@ -281,7 +285,19 @@ FACTS TO KNOW:
   * BASE_YOLO_MODEL for the request:  FLEX:PRI:yolo/yolo26n
   * FINE_TUNED_YOLO_MODEL for the request:  FLEX:PRI:yolo/yolo26n-fine-tuned
 </pre>
+  </div>
 </div>
+
+<script>
+function copyPromptText(btn) {
+  var pre = document.getElementById('flexserv-prompt-block');
+  navigator.clipboard.writeText(pre.innerText).then(function () {
+    var original = btn.innerText;
+    btn.innerText = 'Copied!';
+    setTimeout(function () { btn.innerText = original; }, 1500);
+  });
+}
+</script>
 
 Once you finished modifying the prompt, copy and paste the prompt into the chat box of FlexServ `responses` API test page.
 
