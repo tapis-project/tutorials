@@ -113,7 +113,7 @@ Once you went through all the processes, you can go ahead and submit the job. Af
 To view a submitted job, you can: 
  1. Go to the Jobs tab in the left panel to see your submitted job.
  2. You can see an active job in the job list. 
- 3. If you job starts to run and you should be seeing the output file.
+ 3. If you job starts to run and you should be seeing the `flexserv_access_info.txt` file.
  4. You can select the file and click on **View** button to see the job output, where you should be able to find the FlexServ address and FlexServ token.
 
 
@@ -124,7 +124,7 @@ To view a submitted job, you can:
 
 ![Step 5: View Job](/tutorials/images/sec3/image15.png)
 
- Once the `tapisjob.out` opens, look at the **ACCESS INFORMATION** Section to grab the FlexServ URL and also the FlexServ token. Save it to your notepad.
+ Once the `flexserv_access_info.txt` opens, you can find the FlexServ URL and also the FlexServ token in the file. Save it to your notepad.
 
 
 ## Stage 3.2: Play with FlexServ
@@ -203,18 +203,16 @@ We provide **Reset Model Cache in Inference Engine** button to unload all the mo
 
 #### Drag Models into Private Pool for Use
 
-In order to run the tutorial properly, we need to make sure you have the following models in the private pool:
+In order to run the tutorial properly, you can drag the following models from the public model pool into your private model pool:
 
  * hustvl/yolos-base
  * facebook/musicgen-stereo-small
- * Qwen/Qwen3.5-0.8B
- * Qwen/Qwen3-0.6B
- * Qwen/Qwen3-Embedding-0.6B
  * openai/whisper-tiny
  * suno/bark-small
- * Qwen/Qwen2.5-Coder-14B-Instruct
- * Qwen/Qwen2.5-Coder-32B-Instruct
- * NousResearch/Hermes-4.3-36B
+ * BAAI/bge-m3
+ * BAAI/bge-reranker-v2-m3
+ * KaLM-Embedding/KaLM-Reranker-V1-Nano
+ * SamLowe/roberta-base-go_emotions
 
 If you don't see any of these models in your private model pool, you can find them in the public model pool and drag them into your private pool. This will copy the model you drag from the public pool to your private pool. Note that we can only drag one model at a time. When model transferring is in progress, you cannot drag another model until the current transferring process is finished. 
 
@@ -236,7 +234,7 @@ Click on the small icon beside the model ID, you will be able to copy the model 
 
 ![HuggingFace - copy model ID](/tutorials/images/sec3/image35.png)
 
-If you don't want to use a gated model, you can pick some other open-weight models, like `Qwen/Qwen3.6-27B`.
+If you don't want to use a gated model, you can pick some other open-weight models, like `Qwen/Qwen3.8-27B`.
 
 In the `Fetch Model` section of the model manager UI, you can paste the model ID into the `Model ID` box, and keep other boxes as default. If you want to download more than 1 model at a single shot, you can click on the `+` sign to add one more request for an additional model.
 
@@ -304,11 +302,31 @@ Text completion is another important feature in FlexServ, and it is based on the
 
 ![FlexServ API Tests - Completions](/tutorials/images/sec3/image27.png)
 
-### Step 3.2.7: Generating Embeddings with FlexServ
+### Step 3.2.7: Embedding, Reranking, and Pooling with FlexServ
+
+#### Embeddings
 
 Embedding generation is essential for many AI applications, such as semantic search, clustering, and recommendation systems. With FlexServ, you can easily generate embeddings for your text data using the `/v1/embeddings` API. On FlexServ UI, you can put the sentences you wish to generate embeddings for, one on each line. By clicking `Run`, you will get the embeddings by clicking on `Raw JSON` and you can visually view the embeddings with our embedding visualization on the page.
 
-![FlexServ API Tests - Completions](/tutorials/images/sec3/image28.png)
+![FlexServ API Tests - Embeddings](/tutorials/images/sec3/image28.png)
+
+#### Rerank, Score, Classify and Pooling
+
+In addition to embeddings API, we also provide users with `/v1/rerank` API for them to evaluate the relevance of the documents as compared to the given query, so they can always put the most relevant document at the top. 
+
+![FlexServ API Tests - Reranking](/tutorials/images/sec3/image36.png)
+
+`/v1/score` is another way for evaluating the relevance of documents versus the query. 
+
+![FlexServ API Tests - Scoring](/tutorials/images/sec3/image37.png)
+
+`/v1/classify` provides users with capability to perform sentence classification tasks, such as sentiment analysis.
+
+![FlexServ API Tests - Classification](/tutorials/images/sec3/image38.png)
+
+`/v1/pooling` provides users with advanced embedding generation capability. 
+
+![FlexServ API Tests - Pooling](/tutorials/images/sec3/image39.png)
 
 ### Step 3.2.8: Audio Transcription with FlexServ
 
@@ -343,6 +361,8 @@ Note that once you run `yolo26n` model, you will see this model in your private 
 ![FlexServ API Tests - Yolo Inference API - What happens to your model pool](/tutorials/images/sec3/image32.png)
 
 Ignore the fine-tuned model for now, we will talk about it later. 
+
+
 
 ### Step 3.2.11: Try to run any inference pipeline using Pipeline API
 
