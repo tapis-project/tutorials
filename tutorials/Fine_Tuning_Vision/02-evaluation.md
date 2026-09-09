@@ -6,7 +6,7 @@
 
 ## JupyterHub Environment
 
-We use <a href="https://public.jupyter.tacc.cloud/user/wzhang217/lab/tree/ai-tutorial-2026" target="_blank">TACC's Public JupyterHub</a>  to run the evaluation code on the test dataset and see the accuracy of our fine-tuned model.
+We use <a href="https://public.jupyter.tacc.cloud/" target="_blank">TACC's Public JupyterHub</a>  to run the evaluation code on the test dataset and see the accuracy of our fine-tuned model.
 
 You may login with your TACC accounts.
 
@@ -74,8 +74,7 @@ To test the capabilities of the FlexServ inference server, we can provide a comp
 
 - Refresh the Model pool so you can see public and private models available for you to run. 
 - Drag the following model from public pool to private pool.
-  - Qwen/Qwen2.5-Coder-14B-Instruct
-  - Qwen/Qwen2.5-Coder-32B-Instruct
+  - Qwen/Qwen3.8-27B
 - Right click one of the above models and click **Load** in the menu.
 - Wait until the progress bar completes. If load fails, try again. 
 
@@ -88,9 +87,9 @@ To test the capabilities of the FlexServ inference server, we can provide a comp
 2.  -->
 
 
-Before pasting it into the chat box of FlexServ, make sure you update the following FACTS in the `FACTS TO KNOW` section:
-  - BASEURL of FLEXSERV inference engine: (your FlexServ URL here)
-  - Bearer Auth token for FLEXSERV inference engine: (your FlexServ Token here)
+Before pasting it into the chat box of FlexServ, **make sure you update the following FACTS** in the `FACTS TO KNOW` section:
+  - **BASEURL of FLEXSERV inference engine**: (your FlexServ URL here)
+  - **Bearer Auth token for FLEXSERV inference engine**: (your FlexServ Token here)
 
 <div style="border:1px solid #ddd; border-radius:6px;">
   <div style="display:flex; justify-content:flex-end; padding:6px 10px; background:#f6f8fa; border-bottom:1px solid #ddd;">
@@ -271,6 +270,7 @@ CODING REQUIREMENTS:
   * Do not use mock data or pseudocode.
   * Keep the implementation simple and readable.
   * Return one complete Python code block followed by a brief plain-English explanation.
+  * You can write a wrapper function to the major model evaluation procedure, and in main function, you can call this wrapper function twice - once with the base yolo model and the once with the fine-tuned yolo model. The wrapper function can return the overall evaluation results so the main function can collect the evaluation results from both runs and print them out side-by-side for clear comparison. 
 
 DEFENSIVE PROGRAMMING
   In case of any unexpected conditions, make sure the following: 
