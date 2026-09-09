@@ -1,4 +1,4 @@
-## Section 3: Modern AI, Scientific Workflow and Infrastructure Gaps, Tapis Solutions
+## Section 3: Looping the Modern AI Lifecycle
 
 <a href="https://docs.google.com/presentation/d/1l13lRedG7Bp0_nguU6zxvOOEanGdzqsIFLlCTZ8FIvY/edit?slide=id.g3cd6a51b6a2_0_26#slide=id.g3cd6a51b6a2_0_26" target="_blank">Lecture Slides</a>
 
