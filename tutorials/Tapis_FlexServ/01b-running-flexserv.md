@@ -72,10 +72,6 @@ Press **Continue**
 
 **Continue**
 
-![Step 2a: File Input Arrays](/tutorials/images/sec3/image7.png)
-
-**Continue**
-
 ![Step 2a: Job Arguments](/tutorials/images/sec3/image8.png)
 
 **Continue**
@@ -91,15 +87,6 @@ Note that the reservation code for the sessions is `Tapis+Tutorial+Gateways`
 **Continue**
 
 ![Step 2a: Scheduler Options](/tutorials/images/sec3/image10.png)
-
-Put 
-**Continue**
-
-![Step 2a: Scheduler Options Bottom](/tutorials/images/sec3/image11.png)
-
-**Continue**
-
-![Step 2a: Archiving ](/tutorials/images/sec3/image12.png)
 
 
 **3. Submit Job**
