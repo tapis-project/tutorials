@@ -1,24 +1,16 @@
 # Section 5: Preparing JupyterHub Environment
 
-
-
-
-
 ## JupyterHub Environment
 
 We use <a href="https://public.jupyter.tacc.cloud/" target="_blank">TACC's Public JupyterHub</a>  to run the evaluation code on the test dataset and see the accuracy of our fine-tuned model.
 
 You may login with your TACC accounts.
 
-After login, you should see a Jupyter notebook file named `Code-Detection.ipynb` in the file tree view on the left side. 
+After login, in the file tree view, go with `ai-tutorial-2026 -> notebooks -> Code-Detection.ipynb`, then you double-click on Jupyter notebook file named `Code-Detection.ipynb`. 
 
 ## Trouble shooting tips: 
 
 In case if you run into some issues in the JupyterHub environment, here are some trouble shooting guides: 
-
-#### Not able to find the `Code-Detection.ipynb` file: 
-
-In the file tree view, go with `ai-tutorial-2026 -> notebooks -> Code-Detection.ipynb`
 
 #### Restarting your Jupyter Server
 
@@ -305,7 +297,8 @@ Once you finished modifying the prompt, copy and paste the prompt into the chat 
 -  The prompt is very long, so you might see it becomes a long prompt button below the chat box, which is normal
 -  Change the `temperature` and `seed` to 0 for a deterministic solution.
 -  Make sure the `Streams` is checked. 
--  Check `Multi-turn conversation`. If you need to clear the conversation history, click the **Clear Responses History** button.
+-  Check `Multi-turn conversation` in case if you need to ask follow-up questions to the model.
+-  If you need to clear the conversation history, click the **Clear Responses History** button.
 -  Press the send button.
 
 ![Paste Prompt](/tutorials/images/sec8/image14.png)
@@ -320,10 +313,7 @@ If you paste a prompt that is larger than 500 bytes, we will show that as a larg
 
 ![Code](/tutorials/images/sec8/image16.png)
 
-
-
 ## Evaluating Fine-tuned Model by Running Code Detection On Jupyter 
-
 
 In this step, we will run the generated code to perform model performance evaluation to see the effect of our fine-tuning process on the yolo26n models. 
 

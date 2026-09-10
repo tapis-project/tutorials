@@ -224,17 +224,15 @@ Now, go to the **Fetch model** section. We support batch model download from 3 d
 
 <!-- ![FlexServ Model Manager - Model Pools](/tutorials/images/sec4/image20.png) -->
 
-The most common way to use a model is to find and download a model from HuggingFace. Go to <a href="https://huggingface.co" target="_blank">https://huggingface.co</a> and click on **Models** on the navigation bar which is on top of the page. Then in the input box beside **Models**, enter `llama` and you should be able to see a list of models being filtered out, where you can find the `Llama-3.1-8B-Instruct` model.
+The most common way to use a model is to find and download a model from HuggingFace. Go to <a href="https://huggingface.co" target="_blank">https://huggingface.co</a> and click on **Models** on the navigation bar which is on top of the page. Then in the input box beside **Models**, enter `Qwen3.8` and you should be able to see a list of models being filtered out, where you can find the `Qwen/Qwen3.8-27B` model.
 
-![HuggingFace - find llama3](/tutorials/images/sec3/image34.png)
+![HuggingFace - find qwen3.8](/tutorials/images/sec3/image34.png)
 
-Click on that model, and you will get into the model info page. Models like Llama3 is a gated model since its publisher only allow you to use it with your signature. Therefore, if you never asked for access, you will be asked for filling a form to apply for the access. Usually you will get access within a limited amount of time. Once access is granted, you will see a prompt indicating that you have been granted for the access of this model. 
+Click on that model, and you will get into the model info page. 
 
 Click on the small icon beside the model ID, you will be able to copy the model ID. 
 
 ![HuggingFace - copy model ID](/tutorials/images/sec3/image35.png)
-
-If you don't want to use a gated model, you can pick some other open-weight models, like `Qwen/Qwen3.8-27B`.
 
 In the `Fetch Model` section of the model manager UI, you can paste the model ID into the `Model ID` box, and keep other boxes as default. If you want to download more than 1 model at a single shot, you can click on the `+` sign to add one more request for an additional model.
 
@@ -243,6 +241,9 @@ Click on **Download Models**, and the download will begin and you will see the m
 ![FlexServ Model Manager - Download](/tutorials/images/sec3/image20.png)
 
 In addition to downloading a model from the public pool, you can also drag a model from the public pool into your private model pool. This is the easiest way to use a model tested and approved by your organization. 
+
+
+> Note on gated model: Models like `Llama-3.1-8B-Instruct` is a gated model since its publisher only allow you to use it with your signature. Therefore, if you never asked for access, you will be asked for filling a form to apply for the access. Usually you will get access within a limited amount of time. Once access is granted, you will see a prompt indicating that you have been granted for the access of this model. For downloading a gated model, you will have to [**create a HuggingFace Token**](https://huggingface.co/docs/hub/en/security-tokens), and you put that HF_TOKEN on the FlexServ UI before you download an authorized gated model. Therefore, for convenience, we pick un-gated models, like `Qwen/Qwen3.8-27B`.
 
 #### Unpacking Your Own Model to FlexServ
 
@@ -259,11 +260,11 @@ Once the model loading starts, you will see a progress bar.
 When loading finishes, you should see the start becomes amber indicating that it is loaded now. 
 ![FlexServ Model Manager - Loading a Model](/tutorials/images/sec3/image23.png)
 
-Note: If you encounter any issue when loading the model, you can try the following depending on the situation:
-
-  1. if you see error message indicating that some files are missing (No such file or directory), that means some of the model files are not downloaded successfully or have been deleted by accident or periodical data retention on $SCRATCH directory. In this case, you can simply right click the model and select **Delete** in the menu re-transfer it from the public pool or re-download one using the model fetching functionality.
-  2. if you see error message indicating that the model loading fails due to out of memory issue, you can try to load a smaller model, or you can try to unload all models and load the model again. You can also check the metrics page to see if your GPU memory or system memory is hitting the high watermark. If so, unloading some models or all models should help with that.
-  3. if you see error message indicating that the model loading fails due to some unexpected error, you can try to refresh the webpage and load the model again. 
+> Note: If you encounter any issue when loading the model, you can try the following depending on the situation:
+>  1. if you see error message indicating that some files are missing (No such file or directory), that means some of the model files are not downloaded successfully or have been deleted by accident or periodical data retention on `$SCRATCH` directory. In this case, you can simply right click the model and select **Delete** in the menu and re-transfer it from the public pool or re-download one using the model fetching functionality.
+>  2. if you see error message indicating that the model loading fails due to out-of-memory issue, you can try to load a smaller model, or you can try to unload all models and load the model again. We provide you a **Reset Model Cache in Inference Engine** button for you to unload all models with a single click. You can also check the metrics page to see if your GPU memory or system memory is hitting the high watermark. If so, unloading some models or all models should help with that.
+>  3. if you see error message indicating that the model loading fails due to some unexpected error, you can try to refresh the webpage and load the model again. 
+>  4. There are over 3 millions of models on HuggingFace today, and the numbers are increasing each day. Each major open-weight LLM/VLM models will have many variations, including quantized variations, fine-tuned variations, etc. As we are using the transformers backend now, in most cases, the official original release of a model in safetensors format should be supported. However, compatibility exception may occur due to the support of that model in the transformers library we include in our FlexServ distribution.
 
 ### Step 3.2.4: Multi-model Chat with FlexServ
 
