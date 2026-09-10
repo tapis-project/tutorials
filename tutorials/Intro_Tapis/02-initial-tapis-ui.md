@@ -2,22 +2,22 @@
 
 ## Step 2.1: Logging In
 
-Login to [https://public.tapis.io](https://public.tapis.io). Visit the site and press the "Proceed to login" area.
+Login to [https://public.tapis.io](https://public.tapis.io). Visit the site and press the "Log in with single sign-on" button.
 
-[![Proceed to Login](/tutorials/assets/demo/login-proceed.png){:style="max-width:85%;"}](https://public.tapis.io){:target="_blank"}
+[![Log in view](/tutorials/assets/demo/login-proceed.png){:style="max-width:80%;"}](https://public.tapis.io){:target="_blank"}
 
-Once you click, you will be redirected to your institute's authentication.
+Once you click, you will be redirected to your institute's authentication and prompted to log-in with username, password, and MFA token.
 
-![Login Redirect](/tutorials/assets/demo/login-redirect.png){:style="max-width:85%;"}
-
-You will then be prompted to log-in with username, password, and MFA token.
-
-![Login SSO](/tutorials/assets/demo/login-sso.png){:style="max-width:70%;"}
+![Login SSO](/tutorials/assets/demo/login-sso.png){:style="max-width:80%;"}
 
 
 ###  Step 2.2: Inspect JWT
 
-Once logged in, you can inspect your JSON Web Token (JWT). The JWT is the authentication token that Tapis uses to verify your identity across all API calls. It contains encoded claims about your user session — including your username, tenant, and token expiration. Press your username at the bottom-left, in the sidebar, and select `View JWT` to view your token.
+Once logged in, you can inspect your JSON Web Token (JWT). The JWT is the authentication token that Tapis uses to verify your identity across all API calls. It contains encoded claims about your user session — including your username, tenant, and token expiration. 
+
+Press your username at the bottom-left to bring up an session overview menu, open "Access token object" to view sensitive full token and decoded claims.
+
+From this page you can logout and view other Tapis client side settings.
 
 ![Inspect JWT](/tutorials/assets/demo/login-viewjwt.png){:style="max-width:90%;"}
 
