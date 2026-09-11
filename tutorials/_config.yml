@@ -20,5 +20,6 @@ nav:
   #- Evaluating Fine-tuned Models:   
     #- Prompt Engineering: ./Vision_Models/02-prompt-engineering
   - Materials:
-      - (Reference) System and App Definitions: ./Materials/system-and-app-definitions
+      - "TapisUI Page Overview [ref]": ./Materials/tapisui-page-overview
+      - "System and App Definitions [ref]": ./Materials/system-and-app-definitions
 theme: jekyll-theme-minimal

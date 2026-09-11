@@ -79,7 +79,7 @@ Flexserv is a Tapis service that allows you to deploy and serve AI/ML models on 
   </div>
 </div>
 
-## More Information on Tapis Services:
+## More Information on Tapis Services
 * [Tapis Systems](https://tapis.readthedocs.io/en/latest/technical/systems.html)
 * [Tapis Apps](https://tapis.readthedocs.io/en/latest/technical/apps.html)
 * [Tapis Jobs](https://tapis.readthedocs.io/en/latest/technical/jobs.html)
