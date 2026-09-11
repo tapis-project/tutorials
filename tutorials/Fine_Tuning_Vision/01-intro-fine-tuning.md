@@ -35,7 +35,7 @@
   </a>
 </p>
 
-In the previous section, the YOLO 26 base model `yolo26l` has been downloaded to FlexServ private model pool, and this fine-tuning task will use that as a base model and fine-tune it using a set of camera-trap images. The fine-tuned model will be save into FlexServ private model pool, and later we will generate model performance evaluation code using FlexServ, and run that code in our Jupyter Notebook Environment. The evaluation code will send camera-trap images to our yolo inference API in FlexServ to get the model inference result and compare that with the ground truth labels in our Jupyter Notebook Environment to get the model evaluation result. 
+In the previous section, the YOLO 26 base model `yolo26n` has been downloaded to FlexServ private model pool, and this fine-tuning task will use that as a base model and fine-tune it using a set of camera-trap images. The fine-tuned model will be save into FlexServ private model pool, and later we will generate model performance evaluation code using FlexServ, and run that code in our Jupyter Notebook Environment. The evaluation code will send camera-trap images to our yolo inference API in FlexServ to get the model inference result and compare that with the ground truth labels in our Jupyter Notebook Environment to get the model evaluation result. 
 
 This application allows users to fine-tune Ultralytics YOLO 26 models using Singularity containers in a batch processing environment. 
 
