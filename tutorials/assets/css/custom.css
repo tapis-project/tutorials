@@ -3,6 +3,16 @@
   box-shadow: 0 0 .7rem rgba(0, 0, 0, 0.5);
 }
 
+/* Linked images glow in the Submit Job blue so they read as links — opt in with {:.link-glow} */
+.markdown-body img.link-glow {
+  box-shadow: 0 0 0 2px rgba(21, 101, 192, 0.5), 0 0 1rem rgba(21, 101, 192, 0.6);
+  transition: box-shadow 0.15s ease-in-out;
+}
+.markdown-body a:hover img.link-glow,
+.markdown-body a:focus-visible img.link-glow {
+  box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.8), 0 0 1.5rem rgba(21, 101, 192, 0.8);
+}
+
 /* Callout boxes — use <div class="callout callout-warning"> etc. */
 .callout {
   padding: 12px 16px;

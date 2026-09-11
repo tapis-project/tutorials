@@ -4,7 +4,7 @@
 
 Login to [https://public.tapis.io](https://public.tapis.io). Visit the site and press the "Log in with single sign-on" button.
 
-[![Log in view](/tutorials/assets/demo/login-proceed.png){:style="max-width:80%;"}](https://public.tapis.io){:target="_blank"}
+[![Log in view](/tutorials/assets/demo/login-proceed.png){:.link-glow style="max-width:64%;"}](https://public.tapis.io){:target="_blank"}
 
 Once you click, you will be redirected to your institute's authentication and prompted to log-in with username, password, and MFA token.
 
@@ -90,6 +90,22 @@ Look for the application **FlexServ-1.4.0 version 1.4.0** **(2)** in the public 
 ![FlexServ Application](/tutorials/images/2.9_Flexserv_app.png)
 
 FlexServ supports running various AI models from Hugging Face, provides an OpenAI-compatible API, and includes a built-in UI for chat completion and code generation. We will use it in later sections to run inference jobs and generate code.
+
+---
+
+## TapisUI Page Overview
+We've created these helpful diagrams to outline our page layouts.
+
+In the **Systems** page overview here you'll see the sidebar, nav bar, and overview section grouped along with quick setting explanations to view documentation and change page layout.
+
+![Overview of Systems Page Components](/tutorials/images/systemOverview.png)
+
+In the **Jobs** page overview here you'll see the search, sort, and grouping bar shown in red. In blue you'll find the job overview section with detailed sections on lifecycle, access, and working resources. If a Flexserv or other interactive session (Paraview, Jupyter) are running you'll conditionally see a "FlexServ Session" or other box which will guide users to viewable urls based off of tapisjob.out.
+
+You'll find a file explorer on this page once a job is running which will quickly navigate users to output files. The pink noted section provides quick buttons to preview job-pertinent directories.
+
+![Overview of Job Page Components](/tutorials/images/jobOverview.png)
+
 
 ---
 
