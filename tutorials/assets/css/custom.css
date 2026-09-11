@@ -50,3 +50,85 @@
   white-space: nowrap;
   min-width: 6rem;
 }
+
+/* Click-to-zoom images — behavior in assets/js/image-zoom.js */
+.markdown-body img.img-zoomable {
+  cursor: zoom-in;
+}
+.img-zoom-lock {
+  overflow: hidden;
+}
+.img-zoom-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  overflow: auto;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.85);
+}
+.img-zoom-overlay.is-open {
+  display: flex;
+}
+.img-zoom-overlay img {
+  flex: none;
+  margin: auto;
+  max-width: calc(100vw - 5rem);
+  max-height: calc(100vh - 5rem);
+  background: #fff;
+  cursor: zoom-in;
+  user-select: none;
+}
+.img-zoom-overlay.is-zoomed img {
+  max-width: none;
+  max-height: none;
+  cursor: zoom-out;
+}
+.img-zoom-overlay.is-dragging img {
+  cursor: grabbing;
+}
+.img-zoom-close {
+  position: fixed;
+  top: 0.75rem;
+  right: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  cursor: pointer;
+  appearance: none;
+}
+.img-zoom-close:hover {
+  background: rgba(0, 0, 0, 0.85);
+}
+.img-zoom-close svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+.img-zoom-caption {
+  position: fixed;
+  left: 50%;
+  bottom: 1.25rem;
+  transform: translateX(-50%);
+  max-width: 90vw;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  background: #1565c0; /* TapisUI's Submit Job blue (ACTION_BLUE) */
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
