@@ -113,12 +113,6 @@ If unfortunately the FlexServ session box does not appear, you can still access 
 ![Step 4: View Job](/tutorials/images/sec3/image14.png)
 
 
-**5. View Job Output file to get the Flex server port and Token**
-
-![Step 5: View Job](/tutorials/images/sec3/image15.png)
-
- Once the `flexserv_access_info.txt` opens, you can find the FlexServ URL and also the FlexServ token in the file. Save it to your notepad.
-
 
 ## Stage 3.2: Play with FlexServ
 
