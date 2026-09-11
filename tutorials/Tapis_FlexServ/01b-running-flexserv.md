@@ -274,6 +274,18 @@ Also note that we provide intuitive UI controls for your to easily tune some of 
 
 If everything goes well, you should be able to see the response from the model in the chat window, and the model should be able to understand the image you sent and provide a relevant response based on both the text and the image. You can continue the conversation by sending more text or images, and the model will keep track of the context to provide coherent responses.
 
+
+#### Sample Images to Try
+
+No image handy? Click one to download it, or right-click and **Copy Image** to paste it straight into the chat.
+<div markdown="1" style="text-align: center;">
+
+[![Sample image: red panda](/tutorials/images/rpanda.png){:.link-glow style="max-height:180px; margin-right:1.5rem; max-width:30%"}](/tutorials/images/rpanda.png){:download="" title="Download rpanda.png"}
+[![Sample image: tiger](/tutorials/images/tigert.png){:.link-glow style="margin-right:1.5rem; max-height:180px; max-width:30%"}](/tutorials/images/tigert.png){:download="" title="Download tigert.png"}
+[![Sample image: fish](/tutorials/images/fish.png){:.link-glow style="max-width:30%; max-height:180px"}](/tutorials/images/fish.png){:download="" title="Download fish.png"}
+
+</div>
+
 ![Multi-modal Chat Result](/tutorials/images/sec3/Multi-modal-chat_result.png)
 
 ### Step 3.2.5: Text Generation with Responses API in FlexServ
