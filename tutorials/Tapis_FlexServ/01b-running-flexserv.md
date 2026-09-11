@@ -200,6 +200,7 @@ In order to run the tutorial properly, you can drag the following models from th
  * BAAI/bge-reranker-v2-m3
  * KaLM-Embedding/KaLM-Reranker-V1-Nano
  * SamLowe/roberta-base-go_emotions
+ * Qwen/Qwen3.6-35B-A3B
 
 If you don't see any of these models in your private model pool, you can find them in the public model pool and drag them into your private pool. This will copy the model you drag from the public pool to your private pool. Note that we can only drag one model at a time. When model transferring is in progress, you cannot drag another model until the current transferring process is finished. 
 
