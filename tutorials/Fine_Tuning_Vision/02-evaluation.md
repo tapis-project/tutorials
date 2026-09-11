@@ -20,7 +20,7 @@ Click on **Files** -> **Hub control panel** -> **Stop my server** -> **Start ser
 
 ## Generating Vision Model Evaluation Code using FlexServ 
 
-In this step, we will use FlexServ to generate a python script for evaluating the yolo model performance. 
+In this step, we will use FlexServ to generate a python script for evaluating the performance of both the original `yolo26n` model as well as its fine-tuned model (i.e. `yolo26n-fine-tuned`). 
 
 
 <div style="
@@ -361,7 +361,5 @@ Running the code in Jupyter, and you should be able to see the evaluation result
 
 ![Variables](/tutorials/images/sec8/image18.png)
 
-In the code, you can easily switch `MODEL_TO_USE` between `BASE_YOLO_MODEL` and `FINE_TUNED_YOLO_MODEL` to switch between the base model and the fine-tuned model. 
-
-
+You should see that the accuracy of the fine tuned model is better than the original, The precision of the fine-tuned model is lower because the model may have become more sensitive to detecting objects, leading to more false positives. The recall large increase indicates that the model is able to detect more true positives, even if it comes at the cost of more false positives. Overall, the improved accuracy and recall suggest that the fine-tuned model is more effective at detecting objects in the dataset.
 
