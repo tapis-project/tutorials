@@ -19,4 +19,6 @@ nav:
       - Evaluating Fine-tuned Model within Jupyter: ./Fine_Tuning_Vision/02-evaluation
   #- Evaluating Fine-tuned Models:   
     #- Prompt Engineering: ./Vision_Models/02-prompt-engineering
+  - Materials:
+      - (Reference) System and App Definitions: ./Materials/system-and-app-definitions
 theme: jekyll-theme-minimal

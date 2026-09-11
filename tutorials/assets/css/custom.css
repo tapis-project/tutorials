@@ -142,3 +142,48 @@
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
   pointer-events: none;
 }
+
+/* Accordion panels — <details class="accordion" markdown="1"><summary>Title</summary> ... </details> */
+.markdown-body details.accordion {
+  margin: 1rem 0;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+}
+.markdown-body details.accordion > summary {
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  background: #f6f8fa;
+  font-weight: 600;
+  cursor: pointer;
+}
+.markdown-body details.accordion[open] > summary {
+  border-bottom: 1px solid #d0d7de;
+  border-radius: 6px 6px 0 0;
+}
+.markdown-body details.accordion > :not(summary) {
+  margin: 1rem;
+}
+.markdown-body details.accordion div.highlight {
+  position: relative;
+}
+.markdown-body details.accordion pre {
+  max-height: 32rem;
+}
+
+/* Copy button on accordion code blocks — behavior in assets/js/copy-code.js */
+.copy-code {
+  position: absolute;
+  top: 0.5rem;
+  right: 1.5rem;
+  padding: 0.25rem 0.75rem;
+  border: 0;
+  border-radius: 6px;
+  background: #1565c0;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.copy-code:hover {
+  background: #0d47a1;
+}
