@@ -106,6 +106,11 @@ You'll find a file explorer on this page once a job is running which will quickl
 
 ![Overview of Job Page Components](/tutorials/images/jobOverview.png)
 
+In the **File** explorer you can interact with remote **Systems**. The explorer toolbar provides transfer, upload, renaming, new dir, and other functionality. Users can double-click a file or folder to preview it. Toolbar taking up too much room? At the top left in blue is a button to reduce toolbar size. The red highlighted path bar provides history and quick switching functionality.
+
+![Overview of File Explorer](/tutorials/images/explorerOverview.png)
+
+
 
 ---
 
