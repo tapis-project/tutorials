@@ -100,8 +100,14 @@ Once you went through all the processes, you can go ahead and submit the job. Af
 To view a submitted job, you can: 
  1. Go to the Jobs tab in the left panel to see your submitted job.
  2. You can see an active job in the job list. 
- 3. If you job starts to run and you should be seeing the `flexserv_access_info.txt` file.
- 4. You can select the file and click on **View** button to see the job output, where you should be able to find the FlexServ address and FlexServ token.
+ 3. If your job starts to run, you should be able to see a running circle icon next to the new job
+ 4. Click on the job. For FlexServ job, if the access information is available, you should be able to see a **FlexServ session** box where you can click on **Open FlexServ**, and that will open another window with the FlexServ interface. The copy button besides the FlexServ token field will save the FlexServ token to your clipboard, so later you can paste it into your FlexServ UI. 
+
+![Step 4: View Job](/tutorials/images/sec3/image40.png)
+
+If unfortunately the FlexServ session box does not appear, you can still access the FlexServ information through the job output file.
+ 1. If you job starts to run and you should be seeing the `flexserv_access_info.txt` file.
+ 2. You can double-click on the file view the content of that file, where you should be able to find the FlexServ address and FlexServ token.
 
 
 ![Step 4: View Job](/tutorials/images/sec3/image14.png)
