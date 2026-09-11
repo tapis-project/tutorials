@@ -32,7 +32,7 @@ In this tutorial, instead of creating systems from scratch, we will use a **publ
 
 ### Step 2.3: Navigate the Systems List
 
-When you log in to TapisUI and click on **Systems** from the left-hand menu, you should see two public systems available to you. This systems have been pre-registered for the tutorial.
+When you log in to TapisUI and click on **Systems** from the left-hand menu, you should see two public systems available to you. These systems have been pre-registered for the tutorial, **vista-test-nairr** and **Stampede3-Public**.
 
 ![TMS Unauthenticated](/tutorials/images/TMS-unauthenticated.png)
 
@@ -49,11 +49,11 @@ Click on **Authenticate with TMS Keys** on the Vista system.
 
 Once your TMS credentials are added, your system is ready to use.
 
-### Step 2.5: Use "View Files" to Get to Files
+### Step 2.5: Use "Browse Files" to Get to Files
 
-After authenticating, you can verify your system access by clicking the **View Files** button, which will take you to the file listing on the Vista system.
+After authenticating, you can verify your system access by clicking the **Browse Files** button, which will take you to the file listing on the Vista system. Press the Systems sidebar tab **(1)**, click the system to browse **(2)**, click browse files **(3)** and optionally view files in current page at **(4)**.
 
-![View Files](/tutorials/images/ViewFiles.png)
+![Browse Files](/tutorials/images/ViewFiles.png)
 
 ---
 
@@ -63,13 +63,13 @@ The Tapis Files service provides a unified interface for managing files across a
 
 ### Step 2.6: Navigate the Files in Vista System
 
-From the left-hand menu, click on the **Files** tab and select the Vista system. You should see a listing of files on the system. You can navigate directories, view file details, and open files directly.
+From the left-hand menu, click on the **Files** sidebar tab **(1)** and select the Vista system **(2)**. You should see a listing of files on the system. You can navigate directories, view file details, and open files directly.
 
 ![System View Files](/tutorials/images/System_View_Files.png)
 
 ### Step 2.7: Test Uploading a File
 
-Try uploading a file to the Vista system using the upload functionality in the Files tab. This confirms that your credentials are working and that you have write access to the system. Uploaded file will be available in HOME directory of the Vista system.
+Try uploading a file to the Vista system using the upload functionality in the Files tab. Either drag-and-drop to upload or press the toolbar upload button. This confirms that your credentials are working and that you have write access to the system. Uploaded files will be available in directory specified on the Vista system.
 
 ---
 
@@ -81,11 +81,11 @@ In this tutorial, instead of creating an application from scratch, we will use t
 
 ### Step 2.8: Navigate to the Tapis Apps List
 
-Click on **Apps** from the left-hand menu in TapisUI. You will see a list of available applications. If users have private apps they can toggle between "My Apps" and "Public Apps" to see the full list.
+Click on **Apps** on the sidebar in TapisUI **(1)**. You will see a list of available applications. If users have private apps they can filter between "Public Apps" and "Mine & Shared Apps" along with other filters.
 
 ### Step 2.9: Find the FlexServ Public App
 
-Look for the application **FlexServ-1.4.0 version 1.4.0** in the public apps list. FlexServ is a TACC-owned inference server for running AI models on HPC systems. It has been pre-registered as a public app for all users to submit jobs.
+Look for the application **FlexServ-1.4.0 version 1.4.0** **(2)** in the public apps list. FlexServ is a TACC-owned inference server for running AI models on HPC systems. It has been pre-registered as a public app for all users to submit jobs.
 
 ![FlexServ Application](/tutorials/images/2.9_Flexserv_app.png)
 

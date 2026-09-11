@@ -32,7 +32,7 @@ For detailed instructions on how to add TMS credentials, please refer to this
 
 ![TMS Authenticated](/tutorials/images/TMS-authenticated.png)
 
-After completing the authentication, you can now view files on Vista by clicking on the `View Files` button. If you can view the files, that means you have successfully added your TMS credentials and you are authenticated to access the Vista system.
+After completing the authentication, you can now browse files on Vista by clicking on the `Browse Files` button **(3)** If you can view the files, that means you have successfully added your TMS credentials and you are authenticated to access the Vista system.
 ![View Files](/tutorials/images/ViewFiles.png)
 
 
@@ -45,7 +45,7 @@ In the Tapis UI, you should navigate to `Apps` and you should see the Flex Serve
 
 **1. Initiate Submission**
 
-In the Tapis UI, navigate to the application **FlexServ-1.4.0**, click the Submit Job button, and select **Use Guided Job Launcher**.
+In the Tapis UI, navigate to the application **FlexServ-1.4.0**, click the Submit Job button, and select **Use Guided Job Launcher (V2)**.
 
 ![Step 1a: Select Submit with JSON](/tutorials/images/sec3/image2.png)
 
@@ -53,7 +53,7 @@ In the Tapis UI, navigate to the application **FlexServ-1.4.0**, click the Submi
 
 **2. Configure the FlexServ Job**
 
-First you will see Job summary, press **Continue**.
+First you will see Job Basic, press **Continue** at the bottom left. Here you can reverse page, continue, skip to end, press the bottom left hint button or select the steps in the side panel to move between pages.
 
 ![Step 2a: Job Summary](/tutorials/images/sec3/image4.png)
 
